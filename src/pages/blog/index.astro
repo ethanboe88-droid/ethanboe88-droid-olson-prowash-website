@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import Icon from '../../components/Icon.astro';
-import { breadcrumbLd } from '../../data/schema';
+import { breadcrumbLd, webPageLd } from '../../data/schema';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
@@ -16,7 +16,15 @@ const [featured, ...others] = posts;
   title="Journal — Pressure Washing & Roof Care Tips for the PNW"
   description="Practical advice on roof cleaning, moss control, soft washing and exterior maintenance for homes and businesses in Lake Stevens and the Puget Sound region."
   canonical="/blog"
-  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog' }])}
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog' }]),
+    webPageLd({
+      type: 'CollectionPage',
+      name: 'Journal — Olson Pro Wash',
+      description: 'Roof cleaning, moss control and exterior maintenance guides for Lake Stevens and the Puget Sound region.',
+      path: '/blog',
+    }),
+  ]}
 >
   <PageHero
     eyebrow="Journal"

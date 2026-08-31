@@ -16,6 +16,10 @@ interface Props {
   jsonLd?: Record<string, unknown> | Record<string, unknown>[];
   publishedTime?: string;
   modifiedTime?: string;
+  /** LCP image to preload (e.g. the hero photo) */
+  preloadImage?: string;
+  /** override the meta keywords hint */
+  keywords?: string;
 }
 
 const {
@@ -28,6 +32,8 @@ const {
   jsonLd,
   publishedTime,
   modifiedTime,
+  preloadImage,
+  keywords,
 } = Astro.props;
 
 const siteUrl = Astro.site ?? new URL(SITE.domain);
@@ -46,11 +52,22 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="alternate" hreflang="en-us" href={canonicalUrl} />
+    <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
+    )}
+    {keywords && <meta name="keywords" content={keywords} />}
 
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="color-scheme" content="dark" />
     <meta name="author" content={SITE.legalName} />
+    <meta name="publisher" content={SITE.legalName} />
     <meta name="geo.region" content={`US-${SITE.address.region}`} />
     <meta name="geo.placename" content={SITE.address.locality} />
     <meta name="geo.position" content={`${SITE.geo.latitude};${SITE.geo.longitude}`} />
@@ -78,6 +95,8 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
+
+    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

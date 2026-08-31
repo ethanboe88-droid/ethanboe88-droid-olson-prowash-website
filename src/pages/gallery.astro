@@ -5,7 +5,7 @@ import SectionHeading from '../components/SectionHeading.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
 import GalleryGrid from '../components/GalleryGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
-import { breadcrumbLd } from '../data/schema';
+import { breadcrumbLd, webPageLd } from '../data/schema';
 
 const shots = [
   { src: '/images/p-roof.jpg', cat: 'Roof Cleaning', alt: 'Olson Pro Wash technician soft-washing a roof from the ridge' },
@@ -24,7 +24,15 @@ const shots = [
   title="Gallery — Before & After Roof Cleaning & Pressure Washing"
   description="Before-and-after photos of roof soft washing, house washing, driveway cleaning, deck restoration and landscaping across Lake Stevens, Snohomish & King County, WA."
   canonical="/gallery"
-  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Gallery', path: '/gallery' }])}
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Gallery', path: '/gallery' }]),
+    webPageLd({
+      type: 'CollectionPage',
+      name: 'Gallery — Before & After',
+      description: 'Before-and-after and job photos of roof cleaning, house washing, driveways, decks and landscaping across Snohomish & King County, WA.',
+      path: '/gallery',
+    }),
+  ]}
 >
   <PageHero
     eyebrow="Gallery"

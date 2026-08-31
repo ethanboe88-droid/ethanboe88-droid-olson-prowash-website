@@ -15,6 +15,7 @@ type Props = { post: CollectionEntry<'blog'>; posts: CollectionEntry<'blog'>[] }
 const { post, posts } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await post.render();
 const { data } = post;
+const wordCount = post.body.trim().split(/\s+/).length;
 const fmt = (d: Date) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
 const related = posts
@@ -36,6 +37,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
     blogPostingLd({
       title: data.title, description: data.description, slug: post.slug,
       pubDate: data.pubDate, updatedDate: data.updatedDate, image: data.heroImage, author: data.author,
+      wordCount, section: data.category,
     }),
     breadcrumbLd([
       { name: 'Home', path: '/' },

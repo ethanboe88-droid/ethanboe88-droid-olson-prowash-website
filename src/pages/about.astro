@@ -7,7 +7,7 @@ import CtaBanner from '../components/CtaBanner.astro';
 import JetDivider from '../components/JetDivider.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
-import { breadcrumbLd } from '../data/schema';
+import { breadcrumbLd, personLd, webPageLd } from '../data/schema';
 
 const milestones = [
   {
@@ -38,7 +38,18 @@ const values = [
   title={`About ${SITE.name} — Meet Ethan Olson`}
   description={`Olson Pro Wash is owner-operated by Ethan Olson, born and raised in Marysville and Lake Stevens, WA. Licensed and insured, serving Snohomish & King County since ${SITE.founded}.`}
   canonical="/about"
-  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])}
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]),
+    webPageLd({
+      type: 'AboutPage',
+      name: `About ${SITE.name} — Meet Ethan Olson`,
+      description: `Olson Pro Wash is owner-operated by Ethan Olson, serving Snohomish & King County since ${SITE.founded}.`,
+      path: '/about',
+      image: '/images/founder.jpg',
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    personLd,
+  ]}
 >
   <PageHero
     eyebrow="About · Meet the owner"

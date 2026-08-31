@@ -12,7 +12,7 @@ import HousecallProWidget from '../components/HousecallProWidget.astro';
 import Faq from '../components/Faq.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
-import { localBusinessLd, websiteLd, faqLd } from '../data/schema';
+import { localBusinessLd, websiteLd, faqLd, personLd, webPageLd } from '../data/schema';
 
 const homeFaqs = [
   {
@@ -41,7 +41,21 @@ const homeFaqs = [
   title={`${SITE.name} — Pressure Washing & Roof Cleaning in ${SITE.address.locality}, ${SITE.address.region}`}
   description={SITE.description}
   canonical="/"
-  jsonLd={[localBusinessLd, websiteLd, faqLd(homeFaqs)]}
+  preloadImage="/images/hero.jpg"
+  keywords="pressure washing Lake Stevens WA, roof cleaning Lake Stevens, moss removal, soft washing, house washing, gutter cleaning, gutter guards, Snohomish County, King County, Olson Pro Wash"
+  jsonLd={[
+    localBusinessLd,
+    websiteLd,
+    personLd,
+    webPageLd({
+      name: `${SITE.name} — Pressure Washing & Roof Cleaning in ${SITE.address.locality}, ${SITE.address.region}`,
+      description: SITE.description,
+      path: '/',
+      image: '/images/hero.jpg',
+      speakableSelectors: ['h1', '.eyebrow'],
+    }),
+    faqLd(homeFaqs),
+  ]}
 >
   <Hero />
 

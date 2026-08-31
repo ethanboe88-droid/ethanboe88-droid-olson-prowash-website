@@ -7,13 +7,22 @@ import HousecallProWidget from '../components/HousecallProWidget.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
-import { breadcrumbLd } from '../data/schema';
+import { breadcrumbLd, webPageLd } from '../data/schema';
 ---
 <BaseLayout
   title="Contact & Free Quote"
   description={`Request a free pressure washing, roof cleaning or landscaping quote from Olson Pro Wash. Call ${SITE.phone} or send a message. Serving Lake Stevens, Snohomish & King County, WA.`}
   canonical="/contact"
-  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }])}
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]),
+    webPageLd({
+      type: 'ContactPage',
+      name: 'Contact & Free Quote — Olson Pro Wash',
+      description: `Request a free quote or call ${SITE.phone}. Serving Lake Stevens, Snohomish & King County, WA.`,
+      path: '/contact',
+      speakableSelectors: ['h1', 'h2'],
+    }),
+  ]}
 >
   <PageHero
     eyebrow="Contact"
@@ -95,7 +104,10 @@ import { breadcrumbLd } from '../data/schema';
             <li class="rounded-full border border-hairline bg-white/[0.03] px-3.5 py-1.5 text-sm text-text-dim">{c}, {SITE.address.region}</li>
           ))}
         </ul>
-        <a href="#quote" data-magnetic class="btn btn-primary mt-8">Check my address <Icon name="arrow" class="h-4 w-4" /></a>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#quote" data-magnetic class="btn btn-primary">Check my address <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/service-area" class="btn btn-ghost">See all cities we serve</a>
+        </div>
       </div>
       <div class="reveal bezel overflow-hidden rounded-2xl">
         {/* Swap for an embedded Google Map iframe when ready. */}
