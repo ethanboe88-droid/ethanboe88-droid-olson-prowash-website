@@ -47,7 +47,7 @@ import { SERVICES } from '../data/services';
         <h2 class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text">Services</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           {SERVICES.slice(0, 6).map((s) => (
-            <li><a href={`/services#${s.slug}`} class="text-text-dim transition hover:text-text link-underline">{s.title}</a></li>
+            <li><a href={s.detailPage ?? `/services#${s.slug}`} class="text-text-dim transition hover:text-text link-underline">{s.title}</a></li>
           ))}
         </ul>
       </div>

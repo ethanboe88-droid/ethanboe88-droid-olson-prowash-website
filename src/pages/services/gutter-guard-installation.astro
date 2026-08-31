@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import BeforeAfter from '../../components/BeforeAfter.astro';
+import Faq from '../../components/Faq.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import JetDivider from '../../components/JetDivider.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE } from '../../data/site';
+import { getService } from '../../data/services';
+import { breadcrumbLd, serviceLd, faqLd } from '../../data/schema';
+
+const svc = getService('gutter-guard-installation')!;
+
+const problems = [
+  { icon: 'leaf', t: 'Conifer country', d: 'Fir and cedar needles are fine enough to slip through screens and pack a trough solid — twice a year, every year.' },
+  { icon: 'drop', t: 'Overflow damage', d: 'A clogged gutter dumps water down the fascia and against the foundation. Rot, mold and settling follow.' },
+  { icon: 'roof', t: 'Moss & grit', d: 'Roof grit and moss debris wash straight into open gutters and cement into a sludge that screens can’t stop.' },
+  { icon: 'clock', t: 'Ladder season', d: 'Nobody wants to be on a wet ladder in November. Guards end the cleaning cycle for good.' },
+];
+
+const system = [
+  { t: 'Surgical stainless micro-mesh', d: '~50-micron 304/316 stainless mesh — the same weave used to filter grit from water. Needles, seeds, shingle grit and pollen stay out; every drop of rain passes.' },
+  { t: 'Rigid aluminum frame', d: 'A powder-coated aluminum support frame, not a floppy plastic insert. It carries snow load and won’t sag, warp or pop out in a windstorm.' },
+  { t: 'Fitted to your roofline', d: 'Trimmed under the first course of shingles at the correct pitch so water sheets across the mesh and in — never behind the gutter or over the front lip.' },
+];
+
+const steps = [
+  { n: '01', t: 'Assess & measure', d: 'We check gutter condition, pitch, fascia and downspouts, and measure every run. Rotten sections are flagged before we quote.' },
+  { n: '02', t: 'Clean & re-pitch', d: 'Existing gutters are hand-cleared, flushed, re-sealed at the seams and re-pitched to the downspouts so they actually drain.' },
+  { n: '03', t: 'Install the guard', d: 'Panels are cut to length, tucked under the shingles and screwed to the gutter — no staples, no adhesive-only installs.' },
+  { n: '04', t: 'Flow test & clean-up', d: 'We run water across every section, confirm full flow through the downspouts, and haul away every scrap.' },
+];
+
+const compare = [
+  ['Fine fir needles & grit', 'Passes straight through', 'Mostly blocked', 'Blocked'],
+  ['Heavy PNW rain (flow rate)', 'Full — until it clogs', 'Reduced by foam', 'Full'],
+  ['Snow / ice load', 'N/A', 'Can crush', 'Rigid frame holds'],
+  ['Wind & UV over 10 yrs', 'N/A', 'Warps, discolors', 'Powder-coated, stable'],
+  ['Re-cleaning needed', 'Twice a year', 'Yearly', 'Rare rinse only'],
+];
+
+const faqs = [
+  {
+    q: 'Do I still need to have my gutters cleaned after guards are installed?',
+    a: 'Almost never. Fine dust and pollen can build a thin film on top of the mesh over several years — a quick rinse from a ladder or a soft wash clears it. You will not be scooping needles out again.',
+  },
+  {
+    q: 'Will micro-mesh keep up with a Pacific Northwest downpour?',
+    a: 'Yes. The mesh has far more open area than the gutter can carry, and it is pitched so water sheets in rather than skating over the front. Reverse-curve and foam systems are the ones that struggle with our rain — mesh does not.',
+  },
+  {
+    q: 'Does it work with a moss-prone roof or a metal roof?',
+    a: 'Yes on both. On shingle roofs we recommend pairing it with a <a href="/services#roof-cleaning">roof soft wash</a> so you are not sending years of moss debris onto fresh guards. On metal and standing-seam roofs we use the appropriate no-penetration mounting.',
+  },
+  {
+    q: 'What’s the warranty?',
+    a: 'The mesh and frame carry a manufacturer warranty (typically 20+ years and a no-clog performance guarantee), and Olson Pro Wash backs the installation workmanship. If water gets past a section we installed, we come back.',
+  },
+  {
+    q: 'Can you use my existing gutters, or do I need new ones?',
+    a: 'If your gutters are structurally sound we clean, re-seal and re-pitch them and fit guards to what you have. If sections are rusted through or pulling off the fascia we will show you photos and quote replacement separately — no surprises.',
+  },
+];
+
+const priceRanges = [
+  { t: 'Single-story home', d: '120–180 linear ft', p: '$960 – $1,650' },
+  { t: 'Two-story home', d: '180–260 linear ft', p: '$1,650 – $2,400' },
+  { t: 'Add-on to a wash', d: 'Bundled with roof / house wash', p: 'Discounted rate' },
+];
+---
+<BaseLayout
+  title="Gutter Guard Installation in Lake Stevens, WA — Micro-Mesh, Installed Right"
+  description="Professional stainless micro-mesh gutter guard installation across Lake Stevens, Snohomish & King County. Gutters cleaned and re-pitched, guards fitted to your roofline, workmanship guaranteed. From $8/linear ft."
+  canonical="/services/gutter-guard-installation"
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+      { name: 'Gutter Guard Installation', path: '/services/gutter-guard-installation' },
+    ]),
+    serviceLd(svc),
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow="Service · Gutter protection"
+    title="Gutter Guard Installation, <span class='text-jet-grad'>done right</span>"
+    intro={svc.short}
+    crumbs={[{ label: 'Services', href: '/services' }, { label: 'Gutter Guard Installation' }]}
+  />
+
+  <!-- Intro + before/after -->
+  <section class="section">
+    <div class="container-x grid items-center gap-12 lg:grid-cols-2">
+      <div class="reveal">
+        <SectionHeading eyebrow="Why it matters here" title="Open gutters lose in the Northwest" class="!max-w-none" />
+        <p class="mt-6 text-lg leading-relaxed text-text-dim">{svc.description}</p>
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="/contact#quote" data-magnetic class="btn btn-primary">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+          <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{svc.price}</span>
+        </div>
+      </div>
+      <BeforeAfter class="reveal" before="/images/gg-before.svg" after="/images/gg-after.svg" start="52"
+        label="Open gutter vs. micro-mesh guard" beforeAlt="Open gutter clogged with fir needles and moss debris"
+        afterAlt="Gutter fitted with stainless micro-mesh guard" />
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <!-- The problem -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="The problem" title="What clogged gutters actually cost you" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {problems.map((p, i) => (
+          <div class="reveal panel p-6" style={`--reveal-delay:${i * 65}ms`}>
+            <span class="grid h-10 w-10 place-items-center rounded-lg border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={p.icon} class="h-5 w-5" /></span>
+            <h3 class="mt-4 font-display text-[15px] font-bold text-text">{p.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-text-dim">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- The system -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="What we install" title="Not a screen. A <span class='text-jet-grad'>filter</span>." intro="Foam inserts break down and reverse-curve systems overshoot in heavy rain. We install rigid stainless micro-mesh — the format that actually holds up in fir country." />
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        {system.map((s, i) => (
+          <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 70}ms`}>
+            <div class="font-display text-2xl font-extrabold text-jet/40">{String(i + 1).padStart(2, '0')}</div>
+            <h3 class="mt-3 font-display text-lg font-bold text-text">{s.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-dim">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="How it compares" title="Open gutter vs. screen/foam vs. Olson micro-mesh" />
+      <div class="reveal mt-10 overflow-x-auto rounded-2xl border border-hairline">
+        <table class="w-full min-w-[640px] text-sm">
+          <thead>
+            <tr class="bg-ink-2 text-left font-display uppercase tracking-eyebrow text-text-mute">
+              <th class="p-4 font-semibold"> </th>
+              <th class="p-4 font-semibold">Open gutter</th>
+              <th class="p-4 font-semibold">Screen / foam</th>
+              <th class="p-4 font-semibold text-jet-hi">Olson micro-mesh</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-hairline">
+            {compare.map((row) => (
+              <tr>
+                <td class="p-4 font-medium text-text">{row[0]}</td>
+                <td class="p-4 text-text-dim">{row[1]}</td>
+                <td class="p-4 text-text-dim">{row[2]}</td>
+                <td class="p-4 font-medium text-text">{row[3]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="How it works" title="Four steps, <span class='text-jet-grad'>one visit</span>" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {steps.map((s, i) => (
+          <div class="reveal panel p-6" style={`--reveal-delay:${i * 70}ms`}>
+            <div class="font-display text-2xl font-extrabold text-jet/40">{s.n}</div>
+            <h3 class="mt-3 font-display text-lg font-bold text-text">{s.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-text-dim">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits + pricing -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x grid gap-12 lg:grid-cols-[1fr_0.9fr]">
+      <div>
+        <SectionHeading eyebrow="What you get" title="Climb the ladder once — for the install" />
+        <ul class="mt-8 grid gap-3 sm:grid-cols-2">
+          {svc.benefits.map((b, i) => (
+            <li class="reveal panel flex items-start gap-3 p-4 text-sm text-text" style={`--reveal-delay:${i * 45}ms`}>
+              <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-jet-hi" /><span set:html={b} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="reveal panel p-6 sm:p-7">
+        <span class="eyebrow">Ballpark pricing</span>
+        <p class="mt-3 text-sm text-text-dim">Priced by the linear foot ({svc.price}), quoted firm after a measure. Typical ranges:</p>
+        <ul class="mt-4 divide-y divide-hairline">
+          {priceRanges.map((r) => (
+            <li class="flex items-center justify-between gap-4 py-3">
+              <span><span class="block font-display text-sm font-semibold text-text">{r.t}</span><span class="text-xs text-text-mute">{r.d}</span></span>
+              <span class="shrink-0 font-display text-sm font-bold tabular-nums text-jet-hi">{r.p}</span>
+            </li>
+          ))}
+        </ul>
+        <a href="/contact#quote" class="btn btn-primary mt-5 w-full text-sm">Get my exact number <Icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow="Gutter guard FAQ" title="Before you book" />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <CtaBanner heading="Done cleaning gutters twice a year?" sub="Free measure and a firm per-foot quote. Bundles with a roof or house wash for a lower rate." />
+</BaseLayout>

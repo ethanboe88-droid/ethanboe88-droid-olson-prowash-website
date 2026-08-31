@@ -11,7 +11,7 @@ const spanClass = {
 <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 [grid-auto-flow:dense]">
   {SERVICES.map((s, i) => (
     <a
-      href={`/services#${s.slug}`}
+      href={s.detailPage ?? `/services#${s.slug}`}
       id={s.slug}
       class:list={[
         'reveal panel lift group relative flex scroll-mt-28 flex-col overflow-hidden p-6',

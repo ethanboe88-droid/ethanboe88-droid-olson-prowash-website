@@ -25,8 +25,8 @@ const serviceFaqs = [
 ];
 ---
 <BaseLayout
-  title="Services — Pressure Washing, Roof Cleaning, Soft Washing & Landscaping"
-  description={`Roof cleaning, house washing, pressure & soft washing, gutter cleaning, deck, driveway, commercial exterior maintenance and landscaping across Snohomish & King County, WA. Licensed & insured.`}
+  title="Services — Roof Cleaning, Pressure Washing, Gutter Guards & Landscaping"
+  description={`Roof cleaning, house washing, pressure & soft washing, gutter cleaning, gutter guard installation, deck, driveway, commercial exterior maintenance and landscaping across Snohomish & King County, WA. Licensed & insured.`}
   canonical="/services"
   jsonLd={[
     breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]),
@@ -44,7 +44,7 @@ const serviceFaqs = [
   <div class="sticky top-[76px] z-30 border-b border-hairline bg-ink/80 backdrop-blur">
     <div class="container-x flex gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {SERVICES.map((s) => (
-        <a href={`#${s.slug}`} class="whitespace-nowrap rounded-full border border-hairline px-3.5 py-1.5 text-xs font-medium text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}</a>
+        <a href={s.detailPage ?? `#${s.slug}`} class="whitespace-nowrap rounded-full border border-hairline px-3.5 py-1.5 text-xs font-medium text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}{s.detailPage && ' →'}</a>
       ))}
     </div>
   </div>
@@ -69,14 +69,18 @@ const serviceFaqs = [
                 ))}
               </ul>
               <div class="reveal mt-7 flex flex-wrap items-center gap-3">
-                <a href="/contact#quote" data-magnetic class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
+                {s.detailPage ? (
+                  <a href={s.detailPage} data-magnetic class="btn btn-primary">Explore {s.title} <Icon name="arrow" class="h-4 w-4" /></a>
+                ) : (
+                  <a href="/contact#quote" data-magnetic class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
+                )}
                 <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
               </div>
             </div>
             <div class:list={['reveal', i % 2 === 1 && 'lg:order-1']}>
               <BeforeAfter
-                before={`/images/before-${(i % 3) + 1}.svg`}
-                after={`/images/after-${(i % 3) + 1}.svg`}
+                before={s.slug === 'gutter-guard-installation' ? '/images/gg-before.svg' : `/images/before-${(i % 3) + 1}.svg`}
+                after={s.slug === 'gutter-guard-installation' ? '/images/gg-after.svg' : `/images/after-${(i % 3) + 1}.svg`}
                 start={52 + (i % 3) * 6}
                 label={`${s.title} — before / after`}
                 beforeAlt={`${s.title} before`}

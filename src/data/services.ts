@@ -7,9 +7,13 @@ export type Service = {
   description: string;
   benefits: string[];
   price: string;
-  icon: 'roof' | 'jet' | 'foam' | 'house' | 'gutter' | 'deck' | 'driveway' | 'commercial' | 'leaf';
+  icon:
+    | 'roof' | 'jet' | 'foam' | 'house' | 'gutter' | 'gutterGuard'
+    | 'deck' | 'driveway' | 'commercial' | 'leaf';
   /** bento footprint on the homepage grid */
   span: 'xl' | 'wide' | 'unit';
+  /** when set, links point to a dedicated page instead of /services#slug */
+  detailPage?: string;
 };
 
 export const SERVICES: Service[] = [
@@ -92,6 +96,24 @@ export const SERVICES: Service[] = [
     price: 'from $149',
     icon: 'gutter',
     span: 'unit',
+  },
+  {
+    slug: 'gutter-guard-installation',
+    title: 'Gutter Guard Installation',
+    short: 'Stop cleaning your gutters. Pro-grade micro-mesh guards, installed to last.',
+    description:
+      'In fir and cedar country, open gutters clog every season. We install professional stainless micro-mesh gutter guards that keep needles, leaves, seeds and roof grit out while letting every inch of rain through — so water goes where it should and you never climb a ladder in November again. Existing gutters cleaned and re-pitched first; guards fitted to your roofline, not stapled on.',
+    benefits: [
+      'Surgical-grade stainless micro-mesh — blocks fir needles and grit',
+      'Full flow rate: handles Pacific Northwest downpours',
+      'Gutters cleaned, sealed and re-pitched before install',
+      'Trims into the shingles correctly — no lifted roofing',
+      'Manufacturer warranty + our workmanship guarantee',
+    ],
+    price: 'from $8 / linear ft',
+    icon: 'gutterGuard',
+    span: 'wide',
+    detailPage: '/services/gutter-guard-installation',
   },
   {
     slug: 'deck-patio-cleaning',

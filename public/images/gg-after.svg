@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141518"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <linearGradient id="jet" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="transparent"/><stop offset="0.3" stop-color="#1f6f9e"/><stop offset="0.55" stop-color="#3b9fd4"/><stop offset="0.72" stop-color="#8fd0f0"/><stop offset="1" stop-color="transparent"/></linearGradient>
+    <radialGradient id="gl" cx="28%" cy="18%" r="80%"><stop offset="0" stop-color="#3b9fd4" stop-opacity="0.5"/><stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/></radialGradient>
+    <pattern id="mesh" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V18M9 0V18" stroke="#8fd0f0" stroke-width="1.5" opacity="0.7"/>
+      <path d="M0 0H18M0 9H18" stroke="#8fd0f0" stroke-width="1.5" opacity="0.7"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#gl)"/>
+  <g transform="rotate(-18 800 500)">
+    <rect x="-60" y="180" width="1400" height="4" fill="url(#jet)"/><rect x="-40" y="470" width="1350" height="3" fill="url(#jet)"/><rect x="-60" y="760" width="1400" height="4" fill="url(#jet)"/>
+  </g>
+  <rect x="16" y="16" width="1568" height="968" fill="none" stroke="#fff" stroke-opacity="0.06" rx="16"/>
+  <path d="M20 20h18M20 20v18M1580 20h-18M1580 20v18M20 980h18M20 980v-18M1580 980h-18M1580 980v-18" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <g transform="translate(0 40)">
+    <path d="M240 520 h1120 l-60 220 h-1000 z" fill="#12141a" stroke="#3b9fd4" stroke-width="4"/>
+    <path d="M240 520 h1120 l-10 34 h-1100 z" fill="url(#mesh)" stroke="#3b9fd4" stroke-width="3"/>
+    <path d="M180 520 L400 320 h800 L1420 520" fill="none" stroke="#3b9fd4" stroke-width="5"/>
+    <g fill="none" stroke="#8fd0f0" stroke-width="4" stroke-linecap="round"><path d="M600 300 v180M800 290 v190M1000 300 v180"/></g>
+  </g>
+  <text x="70" y="110" font-family="Archivo, Segoe UI, sans-serif" font-size="30" font-weight="700" letter-spacing="8" fill="#8fd0f0">AFTER</text>
+  <text x="800" y="120" text-anchor="middle" font-family="Archivo, Segoe UI, sans-serif" font-size="58" font-weight="800" fill="#fff" letter-spacing="-2">Micro-mesh guard · debris out, rain through</text>
+</svg>
