@@ -73,8 +73,8 @@ export const SITE = {
     youtube: '',
   },
 
-  // Open Graph fallback image (replace with a real 1200x630 asset).
-  ogImage: '/images/og-default.svg',
+  // Open Graph fallback image (1200x630).
+  ogImage: '/images/og-default.png',
 } as const;
 
 export const NAV_LINKS = [
