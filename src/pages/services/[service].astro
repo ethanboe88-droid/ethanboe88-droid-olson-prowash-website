@@ -36,6 +36,9 @@ const groups = [
 
 const related = SERVICES.filter((x) => x.slug !== s.slug).slice(0, 6);
 
+// lowercased title for mid-sentence use, keeping proper nouns capitalised
+const titleLc = s.title.toLowerCase().replace(/\bchristmas\b/g, 'Christmas');
+
 const title = `${s.title} in Lake Stevens & Snohomish County, ${SITE.address.region}`;
 const description = `${s.title} across Snohomish & King County, WA. ${s.short} Licensed & insured, ${s.price}. Free quotes: ${SITE.phone}.`;
 const heroTitle = `${s.title}, <span class='text-jet-grad'>${s.edge}</span>`;
@@ -119,7 +122,7 @@ const heroTitle = `${s.title}, <span class='text-jet-grad'>${s.edge}</span>`;
   <!-- Why it matters here -->
   <section class="section bg-ink-1/50">
     <div class="container-x">
-      <SectionHeading eyebrow="Why it matters here" title={`What ${s.title.toLowerCase()} is up against in the Northwest`} />
+      <SectionHeading eyebrow="Why it matters here" title={`What ${titleLc} is up against in the Northwest`} />
       <div class="mt-12 grid gap-5 md:grid-cols-3">
         {s.whyLocal.map((p, i) => (
           <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 70}ms`}>
@@ -183,7 +186,7 @@ const heroTitle = `${s.title}, <span class='text-jet-grad'>${s.edge}</span>`;
       <SectionHeading
         eyebrow="Service area"
         title={`${s.title} in every city we serve`}
-        intro={`Same crew, same standard, no travel fee inside the area. Pick your city for local notes on ${s.title.toLowerCase()} — conditions, neighborhoods and a free quote.`}
+        intro={`Same crew, same standard, no travel fee inside the area. Pick your city for local notes on ${titleLc} — conditions, neighborhoods and a free quote.`}
       />
       <div class="mt-10 grid gap-10 lg:grid-cols-2">
         {groups.map((g) => (
@@ -242,7 +245,7 @@ const heroTitle = `${s.title}, <span class='text-jet-grad'>${s.edge}</span>`;
   </section>
 
   <CtaBanner
-    heading={`Ready for ${s.title.toLowerCase()} that actually lasts?`}
+    heading={`Ready for ${titleLc} that actually lasts?`}
     sub={`Free, itemized quotes across ${CITIES.length}+ cities in Snohomish & King County. Most estimates back the same day.`}
   />
 </BaseLayout>

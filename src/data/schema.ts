@@ -18,6 +18,7 @@ export const KNOWS_ABOUT = [
   'Deck and patio cleaning',
   'Commercial exterior cleaning',
   'Landscaping',
+  'Christmas light installation',
   'Exterior home maintenance',
   'Algae and mildew removal',
 ];

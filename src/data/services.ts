@@ -18,7 +18,7 @@ export type Service = {
   price: string;
   icon:
     | 'roof' | 'jet' | 'foam' | 'house' | 'gutter' | 'gutterGuard'
-    | 'deck' | 'driveway' | 'commercial' | 'leaf';
+    | 'deck' | 'driveway' | 'commercial' | 'leaf' | 'lights';
   /** bento footprint on the homepage grid */
   span: 'xl' | 'wide' | 'unit';
   /** every service has its own page */
@@ -415,6 +415,44 @@ export const SERVICES: Service[] = [
     ],
     priceNote:
       'Clean-ups and bed refreshes typically start around $179 and scale with property size and how much cutting back and mulch is involved. Quoted firm after a walk-through.',
+  },
+  {
+    slug: 'christmas-light-installation',
+    title: 'Christmas Light Installation',
+    short: 'Custom-cut commercial-grade lights, professionally hung, serviced, taken down and stored — you never touch a ladder.',
+    description:
+      'A custom-cut Christmas light service, not a box of 25-foot strings. We measure every roofline, ridge, peak, gable and window run on your house, then cut and end-cap each strand to the exact length for that section — no bunching at the corners, no dark gaps, no looped-up slack. Commercial-grade C9, C7 or mini bulbs and weather-rated wire go up on your scheduled date, tied into a timer. We swap any bulbs that fail during the season, take everything down in January, and store your labeled custom set so every year after is a fast, cheaper re-hang.',
+    benefits: [
+      'Every run cut to your exact rooflines, peaks and window trim — no bunching, no gaps',
+      'Commercial-grade C9 / C7 / mini bulbs and weather-rated wire, not big-box strings',
+      'Clips sized to your shingles or gutters; wiring routed out of sight and put on a timer',
+      'In-season service — burnt-out bulbs swapped free',
+      'January takedown plus labeled storage for a quick re-hang next year',
+    ],
+    price: 'from $399 first season',
+    icon: 'lights',
+    span: 'wide',
+    detailPage: '/services/christmas-light-installation',
+    edge: 'cut to your rooflines',
+    whyLocal: [
+      { icon: 'clock', t: 'Dark by 4:30', d: 'Puget Sound winters are long and grey. Lights up right after Thanksgiving buy months of curb appeal exactly when the neighborhood needs it.' },
+      { icon: 'shield', t: 'Weather-rated for here', d: 'Commercial bulbs and wire that hold up to Northwest wind, rain and freeze — not the store strings that half-fail by New Year\'s.' },
+      { icon: 'house', t: 'No ladder in December', d: 'Steep, wet, moss-slick winter roofs are the worst place to be on a ladder. We measure, hang, service and take down — you stay inside.' },
+    ],
+    process: [
+      { t: 'Measure & design', d: 'We measure every roofline, ridge, peak, gable and window run, then lay out the design with you — warm white or multicolor, C9, C7 or minis, plus wreaths, garland and tree wraps.' },
+      { t: 'Custom-cut the strands', d: 'Each run is cut and end-capped to the exact length for that section of the house, so the line is even and tight with no slack looped at the corners.' },
+      { t: 'Install on your date', d: 'Clips sized to your shingles or gutters, wiring routed out of sight and tied into a timer. Everything is up and tested before we leave.' },
+      { t: 'Service, takedown & storage', d: 'We swap any bulbs that fail during the season, take it all down in January, and store your labeled custom set for a fast re-hang next year.' },
+    ],
+    faqs: [
+      { q: 'What does "custom-cut" actually mean?', a: 'Instead of hanging pre-made 25-foot sets and hiding the leftover, we measure your house and cut every strand to the exact length of that roofline, ridge or window. You get a clean, even line with no bunching and no gaps — and it goes up faster and cheaper every year after.' },
+      { q: 'Do I own the lights, or is it a rental?', a: 'You own them. The first season covers the measure, the custom-cut commercial-grade lights and the install. After that you are mostly paying for labor — hang, in-season service, takedown and storage — so the price drops.' },
+      { q: 'When do you install and take down?', a: 'Installs run early November through mid-December and we book up fast, so reserve early. Takedown is in January, weather permitting. Your set comes down labeled and stored for next year.' },
+      { q: 'Can you match a specific look?', a: 'Yes — all warm white, multicolor, C9 or C7 bulbs, mini-lights, plus wreath and garland lighting and tree wraps. Tell us the look you want and we design to it.' },
+    ],
+    priceNote:
+      'The first season covers the measure, custom-cut commercial-grade lights and installation — most homes run $399–$1,200 depending on roofline length and design. Re-hang seasons (service, takedown and storage included) are a lower flat rate.',
   },
 ];
 
