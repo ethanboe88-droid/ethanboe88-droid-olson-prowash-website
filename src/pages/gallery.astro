@@ -8,6 +8,11 @@ import CtaBanner from '../components/CtaBanner.astro';
 import { breadcrumbLd, webPageLd } from '../data/schema';
 
 const shots = [
+  { src: '/images/ba-roof-1.jpg', cat: 'Before & After', alt: 'Before and after roof soft washing in Snohomish County — a leaf-covered, moss-stained asphalt roof cleared back to clean shingles' },
+  { src: '/images/ba-roof-gutter-1.jpg', cat: 'Before & After', alt: 'Before and after combined roof and gutter cleaning on a forested Washington home — packed needle debris cleared from the roof and gutters' },
+  { src: '/images/ba-gutter-1.jpg', cat: 'Before & After', alt: 'Before and after gutter cleaning — a gutter run packed solid with maple leaves scooped out, flushed and left flowing' },
+  { src: '/images/ba-roof-2.jpg', cat: 'Before & After', alt: 'Before and after roof cleaning near the Mountain Loop — pine needles and moss along the valley removed with a low-pressure soft wash' },
+  { src: '/images/ba-roof-3.jpg', cat: 'Before & After', alt: 'Before and after roof soft wash on a low-slope roof valley — heavy pine-needle buildup rinsed to a clean finish' },
   { src: '/images/p-roof.jpg', cat: 'Roof Cleaning', alt: 'Olson Pro Wash technician soft-washing a roof from the ridge' },
   { src: '/images/p-house-truck.jpg', cat: 'House Washing', alt: 'Soft-washing a large two-story home with the Olson Pro Wash rig alongside' },
   { src: '/images/p-driveway.jpg', cat: 'Pressure Washing', alt: 'Running a rotary surface cleaner on a residential driveway' },
@@ -57,7 +62,6 @@ const shots = [
         <SectionHeading eyebrow="Project grid" title="Recent work around the region" />
       </div>
       <div class="mt-10"><GalleryGrid shots={shots} /></div>
-      <p class="mt-6 text-sm text-text-mute reveal">Photos are branded placeholders — replace the files in <code class="rounded bg-white/5 px-1">public/images/</code> with real project shots.</p>
     </div>
   </section>
 

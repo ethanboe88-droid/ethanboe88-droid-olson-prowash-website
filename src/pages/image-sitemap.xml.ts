@@ -28,6 +28,11 @@ const home: Entry = {
 const gallery: Entry = {
   loc: `${base}/gallery/`,
   images: [
+    { url: `${base}/images/ba-roof-1.jpg`, caption: 'Before and after roof soft washing in Snohomish County — leaf-covered mossy roof cleared to clean shingles' },
+    { url: `${base}/images/ba-roof-gutter-1.jpg`, caption: 'Before and after combined roof and gutter cleaning on a forested Washington home' },
+    { url: `${base}/images/ba-gutter-1.jpg`, caption: 'Before and after gutter cleaning — trough packed with maple leaves cleared and flushed' },
+    { url: `${base}/images/ba-roof-2.jpg`, caption: 'Before and after roof cleaning near the Mountain Loop — pine needles and moss removed by soft washing' },
+    { url: `${base}/images/ba-roof-3.jpg`, caption: 'Before and after roof soft wash on a low-slope roof valley — heavy needle buildup rinsed clean' },
     { url: `${base}/images/roof-before.jpg`, caption: 'Roof before soft washing — heavy moss and lichen' },
     { url: `${base}/images/roof-after.jpg`, caption: 'Roof after soft washing — clean shingles, no pressure damage' },
     { url: `${base}/images/p-roof.jpg`, caption: 'Roof soft wash in progress on a Snohomish County home' },
