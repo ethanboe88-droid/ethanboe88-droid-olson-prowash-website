@@ -21,46 +21,66 @@ const problems = [
 ];
 
 const system = [
-  { t: 'Surgical stainless micro-mesh', d: '~50-micron 304/316 stainless mesh — the same weave used to filter grit from water. Needles, seeds, shingle grit and pollen stay out; every drop of rain passes.' },
-  { t: 'Rigid aluminum frame', d: 'A powder-coated aluminum support frame, not a floppy plastic insert. It carries snow load and won’t sag, warp or pop out in a windstorm.' },
-  { t: 'Fitted to your roofline', d: 'Trimmed under the first course of shingles at the correct pitch so water sheets across the mesh and in — never behind the gutter or over the front lip.' },
+  { t: 'Type 304 stainless micro-mesh', d: 'Raptor uses a corrosion-proof Type 304 stainless steel mesh with roughly 900 openings per square inch — fine enough to stop fir needles, seed pods, shingle grit and pollen, open enough to pass every drop of rain.' },
+  { t: 'Patented V-bend on an aluminum frame', d: 'A raised V-bend runs the length of every panel. It stiffens the mesh so it carries snow load without sagging, and it keeps leaves and debris from lying flat and sticking.' },
+  { t: 'Trough front lip, fitted to your roofline', d: 'Raptor\'s patented front trough pulls water off the mesh and into the gutter instead of letting it sheet over the edge. Panels are trimmed to the roofline and fastened with Raptor\'s stainless self-tapping screws.' },
+];
+
+const raptorSpecs = [
+  { k: 'Mesh material', v: 'Type 304 stainless steel' },
+  { k: 'Mesh density', v: '~900 openings per square inch' },
+  { k: 'Frame', v: 'Aluminum, patented V-bend' },
+  { k: 'Fasteners', v: 'Stainless self-tapping screws (no staples or adhesive)' },
+  { k: 'Fits', v: 'Most existing 5", 6" and 7" gutters' },
+  { k: 'Fire', v: 'Slows flame spread by 30+ minutes' },
+  { k: 'Warranty', v: '25-year Raptor manufacturer warranty' },
+  { k: 'Materials', v: '100% recyclable — no plastic or PVC' },
 ];
 
 const steps = [
   { n: '01', t: 'Assess & measure', d: 'We check gutter condition, pitch, fascia and downspouts, and measure every run. Rotten sections are flagged before we quote.' },
   { n: '02', t: 'Clean & re-pitch', d: 'Existing gutters are hand-cleared, flushed, re-sealed at the seams and re-pitched to the downspouts so they actually drain.' },
-  { n: '03', t: 'Install the guard', d: 'Panels are cut to length, tucked under the shingles and screwed to the gutter — no staples, no adhesive-only installs.' },
+  { n: '03', t: 'Install the Raptor guard', d: 'Panels are cut to length, lapped at the seams and fastened with Raptor\'s stainless self-tapping screws, trimmed into the roofline — no staples, no adhesive-only installs.' },
   { n: '04', t: 'Flow test & clean-up', d: 'We run water across every section, confirm full flow through the downspouts, and haul away every scrap.' },
 ];
 
 const compare = [
-  ['Fine fir needles & grit', 'Passes straight through', 'Mostly blocked', 'Blocked'],
-  ['Heavy PNW rain (flow rate)', 'Full — until it clogs', 'Reduced by foam', 'Full'],
-  ['Snow / ice load', 'N/A', 'Can crush', 'Rigid frame holds'],
-  ['Wind & UV over 10 yrs', 'N/A', 'Warps, discolors', 'Powder-coated, stable'],
+  ['Fine fir needles & grit', 'Passes straight through', 'Mostly blocked', 'Blocked — ~900 openings/in²'],
+  ['Heavy PNW rain (flow rate)', 'Full — until it clogs', 'Reduced by foam', 'Full — trough pulls water in'],
+  ['Snow / ice load', 'N/A', 'Can crush', 'V-bend holds shape'],
+  ['Corrosion over 10+ yrs', 'N/A', 'Rusts, discolors', '304 stainless — rustproof'],
   ['Re-cleaning needed', 'Twice a year', 'Yearly', 'Rare rinse only'],
+  ['Warranty', 'None', 'Varies', '25-year manufacturer'],
 ];
 
 const faqs = [
   {
-    q: 'Do I still need to have my gutters cleaned after guards are installed?',
-    a: 'Almost never. Fine dust and pollen can build a thin film on top of the mesh over several years — a quick rinse from a ladder or a soft wash clears it. You will not be scooping needles out again.',
+    q: 'Which gutter guard do you install?',
+    a: 'Raptor contractor-grade stainless steel micro-mesh — a Type 304 stainless mesh with roughly 900 openings per square inch, set on an aluminum frame with a patented V-bend and front trough. It is the format that actually holds up to fir needles and roof grit in the Pacific Northwest.',
   },
   {
-    q: 'Will micro-mesh keep up with a Pacific Northwest downpour?',
-    a: 'Yes. The mesh has far more open area than the gutter can carry, and it is pitched so water sheets in rather than skating over the front. Reverse-curve and foam systems are the ones that struggle with our rain — mesh does not.',
+    q: 'Do I still need to have my gutters cleaned after guards are installed?',
+    a: 'Almost never. Fine dust and pollen can build a thin film on top of the mesh over several years — a quick rinse from a ladder or a <a href="/services/gutter-cleaning">soft wash</a> clears it. You will not be scooping needles out again.',
+  },
+  {
+    q: 'Will Raptor micro-mesh keep up with a Pacific Northwest downpour?',
+    a: 'Yes. The mesh has far more open area than the gutter can carry, and Raptor\'s patented trough pulls water off the surface and into the gutter rather than letting it skate over the front. Reverse-curve and foam systems are the ones that struggle with our rain — micro-mesh does not.',
+  },
+  {
+    q: 'Is it really stainless steel? Will it rust near saltwater?',
+    a: 'The mesh is Type 304 stainless steel, which is highly corrosion resistant, and the screws are stainless too. Type 304 handles Puget Sound marine air well. Very close to open saltwater the manufacturer adjusts the warranty term — we will confirm the exact coverage for your address before you book.',
   },
   {
     q: 'Does it work with a moss-prone roof or a metal roof?',
-    a: 'Yes on both. On shingle roofs we recommend pairing it with a <a href="/services/roof-cleaning">roof soft wash</a> so you are not sending years of moss debris onto fresh guards. On metal and standing-seam roofs we use the appropriate no-penetration mounting.',
+    a: 'Yes on both. On shingle roofs we recommend pairing it with a <a href="/services/roof-cleaning">roof soft wash</a> so you are not sending years of moss debris onto fresh guards. On metal and standing-seam roofs we fasten Raptor appropriately to the gutter and fascia without penetrating the roofing.',
   },
   {
-    q: 'What’s the warranty?',
-    a: 'The mesh and frame carry a manufacturer warranty (typically 20+ years and a no-clog performance guarantee), and Olson Pro Wash backs the installation workmanship. If water gets past a section we installed, we come back.',
+    q: 'What is the warranty?',
+    a: 'Raptor backs the guard with a 25-year manufacturer warranty, and Olson Pro Wash backs the installation workmanship. If water gets past a section we installed, we come back and fix it.',
   },
   {
     q: 'Can you use my existing gutters, or do I need new ones?',
-    a: 'If your gutters are structurally sound we clean, re-seal and re-pitch them and fit guards to what you have. If sections are rusted through or pulling off the fascia we will show you photos and quote replacement separately — no surprises.',
+    a: 'If your gutters are structurally sound we clean, re-seal and re-pitch them and fit Raptor to what you have — it is sized for standard 5", 6" and 7" gutters. If sections are rusted through or pulling off the fascia we will show you photos and quote replacement separately, no surprises.',
   },
 ];
 
@@ -71,10 +91,10 @@ const priceRanges = [
 ];
 ---
 <BaseLayout
-  title="Gutter Guard Installation in Lake Stevens, WA — Micro-Mesh, Installed Right"
-  description="Professional stainless micro-mesh gutter guard installation across Lake Stevens, Snohomish & King County. Gutters cleaned and re-pitched, guards fitted to your roofline, workmanship guaranteed. From $8/linear ft."
+  title="Raptor Gutter Guard Installation in Lake Stevens, WA — Stainless Micro-Mesh"
+  description="Olson Pro Wash installs Raptor Type 304 stainless steel micro-mesh gutter guards across Snohomish & King County. Gutters cleaned and re-pitched first. 25-year warranty. From $8/ft."
   canonical="/services/gutter-guard-installation"
-  keywords="gutter guard installation Lake Stevens WA, micro-mesh gutter guards, gutter protection Snohomish County, stop cleaning gutters, fir needle gutter guard"
+  keywords="Raptor gutter guard installation Lake Stevens WA, stainless steel micro-mesh gutter guards, Raptor gutter guard installer Snohomish County, stop cleaning gutters, fir needle gutter guard, 304 stainless gutter guard"
   jsonLd={[
     breadcrumbLd([
       { name: 'Home', path: '/' },
@@ -82,16 +102,16 @@ const priceRanges = [
       { name: 'Gutter Guard Installation', path: '/services/gutter-guard-installation' },
     ]),
     webPageLd({
-      name: 'Gutter Guard Installation in Lake Stevens, WA',
-      description: 'Professional stainless micro-mesh gutter guard installation across Snohomish & King County.',
+      name: 'Raptor Gutter Guard Installation in Lake Stevens, WA',
+      description: 'Professional installation of Raptor Type 304 stainless steel micro-mesh gutter guards across Snohomish & King County.',
       path: '/services/gutter-guard-installation',
       image: '/images/p-gutterguard.jpg',
       speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
     }),
     serviceLd(svc),
     howToLd({
-      name: 'How Olson Pro Wash installs gutter guards',
-      description: 'Assess, clean and re-pitch, install the micro-mesh guard, then flow-test — in one visit.',
+      name: 'How Olson Pro Wash installs Raptor gutter guards',
+      description: 'Assess, clean and re-pitch the gutters, install the Raptor stainless micro-mesh guard, then flow-test — in one visit.',
       path: '/services/gutter-guard-installation',
       steps: steps.map((s) => ({ name: s.t, text: s.d })),
     }),
@@ -100,7 +120,7 @@ const priceRanges = [
 >
   <PageHero
     eyebrow="Service · Gutter protection"
-    title="Gutter Guard Installation, <span class='text-jet-grad'>done right</span>"
+    title="Raptor gutter guards, <span class='text-jet-grad'>installed right</span>"
     intro={svc.short}
     crumbs={[{ label: 'Services', href: '/services' }, { label: 'Gutter Guard Installation' }]}
   />
@@ -117,9 +137,9 @@ const priceRanges = [
         </div>
       </div>
       <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2">
-        <Photo src="/images/p-gutterguard.jpg" alt="Ethan Olson fitting a stainless micro-mesh gutter guard on a shingle roof"
+        <Photo src="/images/p-gutterguard.jpg" alt="Ethan Olson fitting a Raptor stainless steel micro-mesh gutter guard on a shingle roof"
                width={1500} height={1000} sizes="(min-width: 1024px) 560px, 100vw" class="aspect-[3/2] w-full object-cover" />
-        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Micro-mesh guard, fitted to the roofline · Snohomish County</figcaption>
+        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Raptor stainless micro-mesh, fitted to the roofline · Snohomish County</figcaption>
       </figure>
     </div>
   </section>
@@ -145,7 +165,7 @@ const priceRanges = [
   <!-- The system -->
   <section class="section">
     <div class="container-x">
-      <SectionHeading eyebrow="What we install" title="Not a screen. A <span class='text-jet-grad'>filter</span>." intro="Foam inserts break down and reverse-curve systems overshoot in heavy rain. We install rigid stainless micro-mesh — the format that actually holds up in fir country." />
+      <SectionHeading eyebrow="What we install" title="Raptor: not a screen, a <span class='text-jet-grad'>filter</span>." intro="Foam inserts break down and reverse-curve systems overshoot in heavy rain. We install Raptor contractor-grade stainless steel micro-mesh — the format that actually holds up in fir country." />
       <div class="mt-12 grid gap-5 md:grid-cols-3">
         {system.map((s, i) => (
           <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 70}ms`}>
@@ -155,13 +175,32 @@ const priceRanges = [
           </div>
         ))}
       </div>
+
+      <div class="reveal panel mt-8 p-6 sm:p-8">
+        <div class="flex flex-wrap items-baseline justify-between gap-3">
+          <h3 class="font-display text-lg font-bold text-text">Raptor stainless micro-mesh — the spec</h3>
+          <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Contractor grade</span>
+        </div>
+        <dl class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+          {raptorSpecs.map((s) => (
+            <div class="flex items-baseline justify-between gap-4 border-b border-hairline pb-2.5">
+              <dt class="text-sm text-text-mute">{s.k}</dt>
+              <dd class="text-right font-display text-sm font-semibold text-text">{s.v}</dd>
+            </div>
+          ))}
+        </dl>
+        <p class="mt-5 text-xs text-text-mute">
+          Raptor is contractor-grade micro-mesh sold for professional and DIY install. We fit and finish it to a
+          Northwest roofline — cleaned, sealed and re-pitched gutters first, then panels lapped and screwed, never stapled.
+        </p>
+      </div>
     </div>
   </section>
 
   <!-- Comparison -->
   <section class="section bg-ink-1/50">
     <div class="container-x">
-      <SectionHeading eyebrow="How it compares" title="Open gutter vs. screen/foam vs. Olson micro-mesh" />
+      <SectionHeading eyebrow="How it compares" title="Open gutter vs. screen/foam vs. Raptor micro-mesh" />
       <div class="reveal mt-10 overflow-x-auto rounded-2xl border border-hairline">
         <table class="w-full min-w-[640px] text-sm">
           <thead>
@@ -169,7 +208,7 @@ const priceRanges = [
               <th class="p-4 font-semibold"> </th>
               <th class="p-4 font-semibold">Open gutter</th>
               <th class="p-4 font-semibold">Screen / foam</th>
-              <th class="p-4 font-semibold text-jet-hi">Olson micro-mesh</th>
+              <th class="p-4 font-semibold text-jet-hi">Raptor micro-mesh</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-hairline">
@@ -235,10 +274,16 @@ const priceRanges = [
   <!-- FAQ -->
   <section class="section">
     <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-      <SectionHeading eyebrow="Gutter guard FAQ" title="Before you book" />
+      <div>
+        <SectionHeading eyebrow="Gutter guard FAQ" title="Before you book" />
+        <div class="mt-6 flex flex-col gap-2.5 text-sm">
+          <a href="/faq/gutter-guards" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Full gutter guard FAQ <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/blog/raptor-gutter-guards-pacific-northwest" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Why we chose Raptor for the PNW <Icon name="arrow" class="h-4 w-4" /></a>
+        </div>
+      </div>
       <Faq items={faqs} />
     </div>
   </section>
 
-  <CtaBanner heading="Done cleaning gutters twice a year?" sub="Free measure and a firm per-foot quote. Bundles with a roof or house wash for a lower rate." />
+  <CtaBanner heading="Done cleaning gutters twice a year?" sub="Free measure and a firm per-foot quote on Raptor. Bundles with a roof or house wash for a lower rate." />
 </BaseLayout>

@@ -26,6 +26,7 @@ export default defineConfig({
         else if (/\/(services|contact)\/?$/.test(u)) item.priority = 0.9;
         else if (/\/services\//.test(u)) item.priority = 0.8;
         else if (/\/(gallery|about|service-area|faq)\/?$/.test(u)) item.priority = 0.7;
+        else if (/\/faq\/[^/]+\/?$/.test(u)) item.priority = 0.6;
         else if (/\/service-area\/[^/]+\/?$/.test(u)) item.priority = 0.6;
         else if (/\/blog\/[^/]+\/?$/.test(u)) { item.priority = 0.6; item.changefreq = 'monthly'; }
         else if (/\/blog\/?$/.test(u)) item.priority = 0.6;

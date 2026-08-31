@@ -1,0 +1,188 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import JetDivider from '../../components/JetDivider.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Faq from '../../components/Faq.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE } from '../../data/site';
+import { breadcrumbLd, webPageLd, faqLd } from '../../data/schema';
+
+const groups: { heading: string; items: { q: string; a: string }[] }[] = [
+  {
+    heading: 'The Raptor guard',
+    items: [
+      {
+        q: 'What gutter guard does Olson Pro Wash install?',
+        a: 'Raptor contractor-grade stainless steel micro-mesh. The filter is a Type 304 stainless steel mesh with roughly 900 openings per square inch, set into an aluminum frame with a patented V-bend and a front trough lip.',
+      },
+      {
+        q: 'Is it actually stainless steel?',
+        a: 'Yes. The mesh is Type 304 stainless steel and the fasteners are stainless as well. Type 304 is highly corrosion resistant, which is why we use it in a wet, marine-influenced climate rather than aluminum or plastic mesh.',
+      },
+      {
+        q: 'What does the V-bend do?',
+        a: 'The raised V-bend runs the length of every panel. It stiffens the mesh so it carries snow load without sagging between hangers, and it stops flat debris — leaves, blossom, needle mats — from lying flush against the surface and sealing off water.',
+      },
+      {
+        q: 'How fine is the mesh — will it stop fir needles?',
+        a: 'Yes. At about 900 openings per square inch the mesh stops Douglas fir and cedar needles, maple seeds, blossom and even fine shingle grit at the surface. That is the debris that slips through screens and packs a trough solid here.',
+      },
+      {
+        q: 'Is Raptor a "professional-only" system like the big brand-name guards?',
+        a: 'No. Raptor is sold as a contractor-grade product that a capable homeowner can also install. What a professional install adds is the prep and finish — cleaning and re-pitching the gutters first, lapping and screwing the panels correctly, and flow-testing every run.',
+      },
+    ],
+  },
+  {
+    heading: 'Performance in the Pacific Northwest',
+    items: [
+      {
+        q: 'Will micro-mesh keep up with heavy Northwest rain?',
+        a: 'Yes. The mesh passes far more water than the gutter and downspouts can carry away, so even with part of the surface covered in debris it stays ahead of the flow. Raptor\'s front trough is shaped to pull the sheet of water off the mesh and down into the gutter rather than letting it skate over the edge.',
+      },
+      {
+        q: 'Isn\'t "water going over the front" the classic gutter-guard problem?',
+        a: 'That is a reverse-curve ("helmet") problem — those rely on surface tension around a curved nose and lose it in a downpour. Flat micro-mesh with a trough lip does not work that way. In our experience on real roofs through real November storms, Raptor stays ahead of the water.',
+      },
+      {
+        q: 'What about moss and roof grit washing down from the roof?',
+        a: 'The mesh blocks grit at the surface, where it dries out and blows or rinses off. On a shingle roof we strongly recommend a <a href="/services/roof-cleaning">roof soft wash</a> before or with the install so you are not sending years of loosened moss onto brand-new guards.',
+      },
+      {
+        q: 'Does it hold up to snow and ice?',
+        a: 'The V-bend and aluminum frame keep the panel rigid under snow load, and the stainless mesh does not become brittle in the cold the way some plastics do. Ice dams are a roof and insulation issue rather than a guard issue — guards neither cause nor cure them.',
+      },
+      {
+        q: 'Is it fire resistant?',
+        a: 'Raptor\'s stainless mesh is rated to slow the spread of flame by at least 30 minutes, which matters on the wooded edges of Granite Falls, Arlington, Monroe and similar areas where embers can land in gutter debris.',
+      },
+    ],
+  },
+  {
+    heading: 'Installation & your gutters',
+    items: [
+      {
+        q: 'Can you use my existing gutters?',
+        a: 'If they are structurally sound, yes. We hand-clear, flush, re-seal the seams and re-pitch them toward the downspouts, then fit Raptor to what you have. It is sized for standard 5", 6" and 7" gutters.',
+      },
+      {
+        q: 'What if my gutters are rusted or pulling off the fascia?',
+        a: 'We will show you photos and quote gutter replacement separately before doing any guard work. Putting guards on a failing gutter just hides the problem.',
+      },
+      {
+        q: 'How is it attached — do you screw into my roof?',
+        a: 'Panels are fastened with Raptor\'s stainless self-tapping screws to the gutter, and trimmed to meet the roofline. No staples, no adhesive-only installs. On metal and standing-seam roofs we fasten to the gutter and fascia without penetrating the roofing.',
+      },
+      {
+        q: 'Will installing guards void my shingle warranty?',
+        a: 'The way we install Raptor, no — we do not lift or drill the shingles. Some reverse-curve systems bolt through the roof, which can void a shingle warranty; that is one more reason we use flat micro-mesh.',
+      },
+      {
+        q: 'How long does the job take?',
+        a: 'Most single-family homes are a one-visit job: assess and measure, clean and re-pitch the gutters, install the guard, then flow-test every run before we pack up.',
+      },
+      {
+        q: 'Do you install on commercial buildings?',
+        a: `Yes — storefronts, offices, HOA and property-management buildings across Snohomish and King County. Call <a href="${SITE.phoneHref}">${SITE.phone}</a> for a site walk-through.`,
+      },
+    ],
+  },
+  {
+    heading: 'Cost & warranty',
+    items: [
+      {
+        q: 'How much does it cost?',
+        a: 'Pricing starts around $8 per linear foot with Raptor material and installation included, quoted firm after we measure. A typical single-story home runs $960–$1,650 and a two-story home $1,650–$2,400, depending on linear footage, access and gutter condition.',
+      },
+      {
+        q: 'Is it cheaper if I bundle it with other work?',
+        a: 'Yes. Adding gutter guards to a <a href="/services/roof-cleaning">roof wash</a> or <a href="/services/house-washing">house wash</a> visit is discounted because we are already on site and set up.',
+      },
+      {
+        q: 'What is the warranty?',
+        a: 'Raptor backs the guard with a 25-year manufacturer warranty. Olson Pro Wash backs the installation workmanship — if water gets past a section we installed, we come back and fix it.',
+      },
+      {
+        q: 'Does the warranty change near saltwater?',
+        a: 'Very close to open saltwater the manufacturer adjusts the warranty term. If you are on a bluff or waterfront in Mukilteo, Everett or Kirkland, we will confirm the exact coverage for your address before you book.',
+      },
+    ],
+  },
+  {
+    heading: 'After it\'s installed',
+    items: [
+      {
+        q: 'Will I ever have to clean my gutters again?',
+        a: 'Not the way you do now. Over several years a thin film of dust and pollen can build on top of the mesh — a quick rinse from a ladder or a <a href="/services/gutter-cleaning">soft wash</a> clears it. The twice-a-year scoop-out of wet needle sludge is done.',
+      },
+      {
+        q: 'What if a section stops draining later?',
+        a: `Call us. Under our workmanship guarantee we come back and diagnose it — usually it is debris on top that needs a rinse, or a downspout clog below the guard. Reach us at <a href="${SITE.phoneHref}">${SITE.phone}</a>.`,
+      },
+      {
+        q: 'Can the guards be removed if I need roof work done?',
+        a: 'Yes. Because they are screwed rather than glued, a roofer can lift the affected panels and we (or they) can re-set them afterward.',
+      },
+    ],
+  },
+];
+
+const allItems = groups.flatMap((g) => g.items);
+---
+<BaseLayout
+  title="Raptor Gutter Guard FAQ — Stainless Micro-Mesh, Answered"
+  description="Answers on Raptor stainless steel micro-mesh gutter guards: the spec, heavy-rain performance, fitting to existing gutters, cost and the 25-year warranty. Lake Stevens, WA."
+  canonical="/faq/gutter-guards"
+  keywords="raptor gutter guard FAQ, stainless steel micro-mesh gutter guard questions, do micro-mesh gutter guards work in heavy rain, gutter guard cost Snohomish County, raptor gutter guard warranty"
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'FAQ', path: '/faq' },
+      { name: 'Gutter Guards', path: '/faq/gutter-guards' },
+    ]),
+    webPageLd({
+      name: 'Raptor Gutter Guard FAQ — Olson Pro Wash',
+      description: 'Common questions about Raptor Type 304 stainless steel micro-mesh gutter guards and professional installation in Snohomish & King County, WA.',
+      path: '/faq/gutter-guards',
+      speakableSelectors: ['h1', 'summary'],
+    }),
+    faqLd(allItems),
+  ]}
+>
+  <PageHero
+    eyebrow="Answers · Gutter guards"
+    title="Raptor gutter guard <span class='text-jet-grad'>FAQ</span>"
+    intro="Everything homeowners ask us about Raptor stainless steel micro-mesh — the spec, how it handles our rain, fitting it to your gutters, cost and warranty."
+    crumbs={[{ label: 'FAQ', href: '/faq' }, { label: 'Gutter Guards' }]}
+  />
+
+  <section class="section">
+    <div class="container-x">
+      <div class="reveal flex flex-wrap gap-2.5">
+        <a href="/services/gutter-guard-installation" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">Gutter guard installation <Icon name="arrow" class="h-3.5 w-3.5" /></a>
+        <a href="/blog/raptor-gutter-guards-pacific-northwest" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Why we chose Raptor</a>
+        <a href="/faq" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">General FAQ</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container-x space-y-14">
+      {groups.map((g, i) => (
+        <div>
+          <SectionHeading eyebrow={`0${i + 1}`} title={g.heading} class="mb-6" />
+          <Faq items={g.items} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <CtaBanner
+    heading="Ready to stop cleaning your gutters?"
+    sub={`Free measure and a firm per-foot quote on Raptor. Call ${SITE.phone} or send photos of your gutters and roofline.`}
+  />
+</BaseLayout>

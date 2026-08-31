@@ -153,9 +153,9 @@ const allItems = groups.flatMap((g) => g.items);
       <SectionHeading eyebrow="Keep looking" title="Where to go next" />
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
+          { href: '/faq/gutter-guards', t: 'Gutter guard FAQ', d: 'Raptor stainless micro-mesh — spec, rain performance, cost and warranty.' },
           { href: '/services', t: 'All services', d: 'Ten exterior services, each with its own page and pricing.' },
           { href: '/service-area', t: 'Service area', d: `Local detail for all ${CITIES.length} cities we cover.` },
-          { href: '/gallery', t: 'Before & after', d: 'Real job photos from around Snohomish County.' },
           { href: '/blog', t: 'The Journal', d: 'Guides on moss, methods and maintenance timing.' },
         ].map((c) => (
           <a href={c.href} class="reveal panel lift group p-5">
