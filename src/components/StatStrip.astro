@@ -2,14 +2,37 @@
 import { STATS } from '../data/site';
 interface Props { class?: string; }
 const { class: className = '' } = Astro.props;
+
+// 240° arc (from -120deg to +120deg). Build tick marks.
+const ticks = Array.from({ length: 9 }, (_, i) => -120 + (240 / 8) * i);
 ---
-<div class:list={['grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line md:grid-cols-4', className]}>
+<div class:list={['grid grid-cols-2 gap-4 md:grid-cols-4', className]}>
   {STATS.map((s, i) => (
-    <div class="reveal bg-ink-soft p-6 text-center md:p-8" style={`--reveal-delay:${i * 80}ms`}>
-      <div class="font-display text-3xl font-extrabold text-white md:text-4xl">
-        <span class="text-gradient">{s.value}</span>
+    <div class="reveal panel p-6 text-center" data-gauge style={`--reveal-delay:${i * 80}ms`}>
+      <div class="relative mx-auto h-24 w-40">
+        <svg viewBox="0 0 200 120" class="absolute inset-0 h-full w-full" aria-hidden="true">
+          <path d="M20 110 A 84 84 0 0 1 180 110" fill="none" stroke="rgba(192,196,204,0.16)" stroke-width="2" />
+          <path d="M20 110 A 84 84 0 0 1 180 110" fill="none" stroke={`url(#g${i})`} stroke-width="3" stroke-linecap="round"
+                pathLength="100" stroke-dasharray="100" style={`stroke-dashoffset: ${100 - (s.value / s.max) * 100}`} />
+          <defs>
+            <linearGradient id={`g${i}`} x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#1f6f9e" /><stop offset="0.7" stop-color="#3b9fd4" /><stop offset="1" stop-color="#8fd0f0" />
+            </linearGradient>
+          </defs>
+          {ticks.map((deg) => (
+            <line x1="100" y1="26" x2="100" y2="34" stroke="rgba(192,196,204,0.4)" stroke-width="2"
+                  transform={`rotate(${deg} 100 110)`} />
+          ))}
+          <g class="gauge-needle" data-max={s.max} style="transform: rotate(-120deg); transform-origin: 100px 110px; transition: transform 1.4s cubic-bezier(0.16,1,0.3,1);">
+            <line x1="100" y1="110" x2="100" y2="40" stroke="#f4f6f8" stroke-width="2.5" stroke-linecap="round" />
+            <circle cx="100" cy="110" r="5" fill="#c0c4cc" />
+          </g>
+        </svg>
       </div>
-      <div class="mt-1.5 text-xs uppercase tracking-widest text-silver-muted">{s.label}</div>
+      <div class="mt-1 font-display text-3xl font-extrabold tabular-nums text-text md:text-[2rem]">
+        <span data-count={s.value} data-suffix={s.suffix}>{s.value}{s.suffix}</span>
+      </div>
+      <div class="mt-1 text-xs uppercase tracking-eyebrow text-text-mute">{s.label}</div>
     </div>
   ))}
 </div>

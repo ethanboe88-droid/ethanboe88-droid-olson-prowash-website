@@ -1,14 +1,14 @@
 // ---------------------------------------------------------------------------
-// Central business info (NAP). Edit these values before launch.
-// Used for SEO, schema.org markup, header/footer, and contact details.
+// Central business info (NAP). Edit before launch.
+// Powers SEO, schema.org, header/footer, contact details.
 // ---------------------------------------------------------------------------
 
 export const SITE = {
   name: 'Olson Pro Wash',
   legalName: 'Olson Landscaping Pro Wash LLC',
-  tagline: 'Exterior cleaning & landscaping, done to a higher standard.',
+  tagline: 'Exterior cleaning & landscaping, engineered to a higher standard.',
   description:
-    'Olson Pro Wash delivers premium pressure washing, soft washing, house washing and landscaping across Lake Stevens and Snohomish County, WA. Licensed, insured, and obsessive about results.',
+    'Olson Pro Wash delivers premium pressure washing, roof & soft washing, house washing and landscaping across Lake Stevens, Snohomish County and North King County, WA. Locally owned, licensed and insured.',
 
   // Update to the live domain (also update astro.config.mjs `site`).
   domain: 'https://olsonprowash.com',
@@ -18,7 +18,6 @@ export const SITE = {
   email: 'hello@olsonprowash.com',
   emailHref: 'mailto:hello@olsonprowash.com',
 
-  // Placeholder service-area business address (no storefront visits required).
   address: {
     street: '',
     locality: 'Lake Stevens',
@@ -28,25 +27,23 @@ export const SITE = {
     country: 'US',
   },
 
-  geo: {
-    // Approx. center of the service area (Lake Stevens, WA). Update if needed.
-    latitude: 48.0151,
-    longitude: -122.0637,
-  },
+  geo: { latitude: 48.0151, longitude: -122.0637 },
 
   areaServed: 'the Lake Stevens area',
-  areaServedLong: 'Serving Lake Stevens and surrounding Snohomish County',
+  areaServedLong: 'Serving Lake Stevens, Snohomish County & North King County',
   serviceCities: [
     'Lake Stevens',
     'Everett',
     'Marysville',
-    'Snohomish',
-    'Granite Falls',
-    'Mill Creek',
     'Arlington',
+    'Snohomish',
     'Monroe',
+    'Mill Creek',
+    'Bothell',
+    'Kirkland',
+    'Sammamish',
+    'Issaquah',
     'Mukilteo',
-    'Lynnwood',
   ],
 
   hours: [
@@ -54,7 +51,6 @@ export const SITE = {
     { days: 'Saturday', open: '8:00 AM', close: '2:00 PM' },
     { days: 'Sunday', open: 'Closed', close: '' },
   ],
-  // schema.org openingHours format
   openingHoursSpec: [
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '18:00' },
     { days: ['Saturday'], opens: '08:00', closes: '14:00' },
@@ -63,7 +59,6 @@ export const SITE = {
   founded: '2016',
   priceRange: '$$',
 
-  // External links
   googleBusinessUrl:
     'https://www.google.com/maps/search/?api=1&query=Olson+Landscaping+Pro+Wash+Lake+Stevens+WA',
   googleReviewUrl: 'https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID',
@@ -73,7 +68,6 @@ export const SITE = {
     youtube: '',
   },
 
-  // Open Graph fallback image (1200x630).
   ogImage: '/images/og-default.png',
 } as const;
 
@@ -88,14 +82,15 @@ export const NAV_LINKS = [
 
 export const TRUST_BADGES = [
   { label: 'Licensed & Insured', icon: 'shield' },
-  { label: '5-Star Rated Locally', icon: 'star' },
-  { label: 'Free, No-Pressure Quotes', icon: 'tag' },
+  { label: '5-Star Rated', icon: 'star' },
+  { label: 'Locally Owned', icon: 'pin' },
   { label: 'Satisfaction Guaranteed', icon: 'check' },
 ] as const;
 
+// value drives the count-up; suffix/prefix render as-is; max = gauge arc ceiling
 export const STATS = [
-  { value: '1,800+', label: 'Exteriors restored' },
-  { value: '9 yrs', label: 'Serving Snohomish County' },
-  { value: '4.9★', label: 'Average customer rating' },
-  { value: '100%', label: 'Satisfaction guarantee' },
+  { label: 'Exteriors restored', value: 1800, suffix: '+', max: 2400 },
+  { label: 'Years in business', value: 9, suffix: ' yrs', max: 12 },
+  { label: 'Five-star reviews', value: 240, suffix: '+', max: 320 },
+  { label: 'Satisfaction rate', value: 100, suffix: '%', max: 100 },
 ] as const;

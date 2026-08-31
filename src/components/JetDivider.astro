@@ -1,0 +1,10 @@
+---
+interface Props { class?: string; flip?: boolean; }
+const { class: className = '', flip = false } = Astro.props;
+---
+<div
+  class:list={['jet-divider', className]}
+  style={flip ? 'transform: scaleX(-1)' : undefined}
+  role="separator"
+  aria-hidden="true"
+></div>

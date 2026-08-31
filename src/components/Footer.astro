@@ -4,91 +4,77 @@ import Icon from './Icon.astro';
 import { SITE, NAV_LINKS } from '../data/site';
 import { SERVICES } from '../data/services';
 ---
-<footer class="relative mt-24 border-t border-ink-line bg-ink-soft">
+<footer class="relative mt-24 border-t border-hairline bg-ink-1">
+  <div class="jet-divider"></div>
   <div class="container-x py-16">
     <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
       <div>
         <Logo variant="footer" />
-        <p class="mt-4 max-w-xs text-sm leading-relaxed text-silver-muted">
-          {SITE.legalName}. Premium pressure washing, soft washing &amp; landscaping.
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-text-dim">
+          {SITE.legalName}. Premium pressure washing, roof &amp; soft washing, and landscaping.
           {SITE.areaServedLong}.
         </p>
         <div class="mt-5 flex gap-3">
           {SITE.social.facebook && (
             <a href={SITE.social.facebook} target="_blank" rel="noopener" aria-label="Facebook"
-               class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line text-silver transition hover:border-electric/60 hover:text-white">
+               class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
               <Icon name="facebook" class="h-5 w-5" />
             </a>
           )}
           {SITE.social.instagram && (
             <a href={SITE.social.instagram} target="_blank" rel="noopener" aria-label="Instagram"
-               class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line text-silver transition hover:border-electric/60 hover:text-white">
+               class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
               <Icon name="instagram" class="h-5 w-5" />
             </a>
           )}
           <a href={SITE.googleBusinessUrl} target="_blank" rel="noopener" aria-label="Google Business Profile"
-             class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line text-silver transition hover:border-electric/60 hover:text-white">
+             class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
             <Icon name="google" class="h-5 w-5" />
           </a>
         </div>
       </div>
 
       <div>
-        <h3 class="font-display text-sm font-semibold uppercase tracking-widest text-white">Company</h3>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text">Company</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           {NAV_LINKS.map((l) => (
-            <li><a href={l.href} class="text-silver-muted transition hover:text-white link-underline">{l.label}</a></li>
+            <li><a href={l.href} class="text-text-dim transition hover:text-text link-underline">{l.label}</a></li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h3 class="font-display text-sm font-semibold uppercase tracking-widest text-white">Services</h3>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text">Services</h2>
         <ul class="mt-4 space-y-2.5 text-sm">
           {SERVICES.slice(0, 6).map((s) => (
-            <li><a href={`/services#${s.slug}`} class="text-silver-muted transition hover:text-white link-underline">{s.title}</a></li>
+            <li><a href={`/services#${s.slug}`} class="text-text-dim transition hover:text-text link-underline">{s.title}</a></li>
           ))}
         </ul>
       </div>
 
       <div>
-        <h3 class="font-display text-sm font-semibold uppercase tracking-widest text-white">Get in touch</h3>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text">Get in touch</h2>
         <ul class="mt-4 space-y-3 text-sm">
-          <li>
-            <a href={SITE.phoneHref} class="flex items-center gap-2.5 text-silver-muted transition hover:text-white">
-              <Icon name="phone" class="h-4 w-4 text-electric-300" /> {SITE.phone}
-            </a>
-          </li>
-          <li>
-            <a href={SITE.emailHref} class="flex items-center gap-2.5 text-silver-muted transition hover:text-white">
-              <Icon name="mail" class="h-4 w-4 text-electric-300" /> {SITE.email}
-            </a>
-          </li>
-          <li class="flex items-center gap-2.5 text-silver-muted">
-            <Icon name="pin" class="h-4 w-4 text-electric-300" /> {SITE.address.locality}, {SITE.address.region} · {SITE.areaServed}
-          </li>
-          <li class="flex items-start gap-2.5 text-silver-muted">
-            <Icon name="clock" class="mt-0.5 h-4 w-4 shrink-0 text-electric-300" />
-            <span>
-              {SITE.hours.map((h) => (
-                <span class="block">{h.days}: {h.close ? `${h.open}–${h.close}` : h.open}</span>
-              ))}
-            </span>
+          <li><a href={SITE.phoneHref} class="flex items-center gap-2.5 text-text-dim transition hover:text-text"><Icon name="phone" class="h-4 w-4 text-jet-hi" /> {SITE.phone}</a></li>
+          <li><a href={SITE.emailHref} class="flex items-center gap-2.5 text-text-dim transition hover:text-text"><Icon name="mail" class="h-4 w-4 text-jet-hi" /> {SITE.email}</a></li>
+          <li class="flex items-center gap-2.5 text-text-dim"><Icon name="pin" class="h-4 w-4 text-jet-hi" /> {SITE.address.locality}, {SITE.address.region}</li>
+          <li class="flex items-start gap-2.5 text-text-dim">
+            <Icon name="clock" class="mt-0.5 h-4 w-4 shrink-0 text-jet-hi" />
+            <span>{SITE.hours.map((h) => (<span class="block">{h.days}: {h.close ? `${h.open}–${h.close}` : h.open}</span>))}</span>
           </li>
         </ul>
         <a href="/contact#quote" class="btn btn-primary mt-5 w-full text-sm">Get a Free Quote</a>
       </div>
     </div>
 
-    <div class="rule my-10"></div>
+    <div class="jet-divider my-10"></div>
 
-    <div class="flex flex-col items-center justify-between gap-4 text-xs text-silver-dim sm:flex-row">
+    <div class="flex flex-col items-center justify-between gap-4 text-xs text-text-mute sm:flex-row">
       <p>© <span data-year>2026</span> {SITE.legalName}. All rights reserved.</p>
       <p class="flex flex-wrap items-center gap-x-4 gap-y-1">
         <span>Licensed &amp; Insured in Washington</span>
-        <span class="hidden sm:inline">·</span>
-        <a href="/blog" class="hover:text-white link-underline">Journal</a>
-        <a href="/contact" class="hover:text-white link-underline">Service Area</a>
+        <a href="/blog" class="hover:text-text link-underline">Journal</a>
+        <a href="/contact" class="hover:text-text link-underline">Service Area</a>
       </p>
     </div>
   </div>

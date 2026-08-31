@@ -1,30 +1,19 @@
 ---
-// Brand logo lockup.
-//
-// Uses the raster logo at /public/images/logo.png.
-// ▸ Replace public/images/logo.png with the real logo (a transparent-background
-//   PNG works best on the dark header). Keep the filename the same and it will
-//   appear everywhere automatically. A wide/wordmark version can live at
-//   public/images/logo-wordmark.png (used in the footer).
+// Brand logo. Raster at /public/images/logo.png (transparent bg, keyed from
+// the supplied artwork). Wide crest at /public/images/logo-wordmark.png for the footer.
 import { SITE } from '../data/site';
-
-interface Props {
-  variant?: 'header' | 'footer';
-  class?: string;
-}
+interface Props { variant?: 'header' | 'footer'; class?: string; }
 const { variant = 'header', class: className = '' } = Astro.props;
-
 const src = variant === 'footer' ? '/images/logo-wordmark.png' : '/images/logo.png';
-// Heights tuned so the crest logo stays legible without dominating the bar.
-const sizeClass = variant === 'footer' ? 'h-16 w-auto sm:h-20' : 'h-12 w-auto sm:h-14';
+const size = variant === 'footer' ? 'h-16 w-auto sm:h-20' : 'h-12 w-auto sm:h-[52px]';
 ---
 <span class={`inline-flex items-center ${className}`}>
   <img
     src={src}
     alt={`${SITE.legalName} logo`}
-    class={`${sizeClass} object-contain drop-shadow-[0_2px_12px_rgba(59,159,212,0.35)]`}
-    width={variant === 'footer' ? 320 : 160}
-    height={variant === 'footer' ? 88 : 56}
+    class={`${size} object-contain [filter:drop-shadow(0_2px_14px_rgba(59,159,212,0.32))]`}
+    width={variant === 'footer' ? 320 : 168}
+    height={variant === 'footer' ? 92 : 56}
     loading="eager"
     decoding="async"
   />

@@ -3,96 +3,183 @@ import Icon from './Icon.astro';
 import Stars from './Stars.astro';
 import TrustBar from './TrustBar.astro';
 import { SITE } from '../data/site';
-
-const words = ['Driveways.', 'Siding.', 'Roofs.', 'Decks.', 'Storefronts.'];
 ---
-<section class="relative isolate overflow-hidden">
-  <!-- Animated gradient field -->
+<section class="relative isolate flex min-h-[calc(100dvh-76px)] items-center overflow-hidden">
+  <!-- ambient field -->
   <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-    <div class="absolute -left-1/4 -top-1/3 h-[80vh] w-[80vh] rounded-full bg-electric/20 blur-[120px] animate-float"></div>
-    <div class="absolute -right-1/4 top-1/4 h-[60vh] w-[60vh] rounded-full bg-electric-300/15 blur-[120px] animate-float [animation-delay:-3s]"></div>
-    <div class="absolute inset-0 bg-brand-gradient bg-[length:220%_auto] opacity-[0.10] animate-gradient-pan"></div>
-    <div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,rgba(10,10,10,0.4)_60%,#0a0a0a)]"></div>
+    <div class="absolute -left-1/4 -top-1/3 h-[80vh] w-[80vh] rounded-full bg-jet/20 blur-[120px] motion-safe:animate-drift"></div>
+    <div class="absolute -right-1/4 top-1/4 h-[60vh] w-[60vh] rounded-full bg-jet-hi/15 blur-[120px] motion-safe:animate-drift [animation-delay:-3s]"></div>
+    <div class="absolute inset-0" style="background: linear-gradient(to bottom, transparent, rgba(10,10,10,0.45) 62%, var(--ink));"></div>
   </div>
 
-  <div class="container-x grid items-center gap-12 pb-16 pt-14 sm:pt-20 lg:grid-cols-[1.1fr_0.9fr] lg:pb-24 lg:pt-24">
+  <div class="container-x grid items-center gap-12 py-14 lg:grid-cols-[1.08fr_0.92fr] lg:py-20">
     <div>
-      <p class="kicker animate-fade-up">{SITE.areaServedLong}</p>
+      <p class="eyebrow hero-in" style="--d:0ms">{SITE.areaServedLong}</p>
 
-      <h1 class="mt-5 text-[2.6rem] font-extrabold leading-[1.02] tracking-tightest sm:text-6xl lg:text-[4.25rem]">
-        <span class="block animate-fade-up [animation-delay:60ms]">We make it look</span>
-        <span class="block animate-fade-up text-gradient [animation-delay:140ms]">brand&nbsp;new again.</span>
-        <span class="mt-3 block h-[1.15em] overflow-hidden text-2xl font-bold text-silver sm:text-3xl">
-          <span id="hero-rotator" class="inline-block will-change-transform">{words[0]}</span>
+      <h1 class="mt-5 text-[clamp(2.6rem,6.6vw,4.4rem)] leading-[1.06]">
+        <span class="display block hero-in" style="--d:70ms">We make it look</span>
+        <span class="display block text-jet-grad hero-in" style="--d:150ms">factory&nbsp;new.</span>
+        <span class="mt-5 block h-[1.5em] overflow-hidden font-display text-[clamp(1.05rem,3vw,1.6rem)] font-semibold leading-[1.4] text-text-dim hero-in" style="--d:230ms">
+          <span id="hero-rotator" class="inline-block will-change-transform">Roof moss, gone.</span>
         </span>
       </h1>
 
-      <p class="mt-6 max-w-xl text-lg leading-relaxed text-silver animate-fade-up [animation-delay:220ms]">
-        Olson Pro Wash is the Lake Stevens area’s premium exterior cleaning &amp; landscaping crew.
-        Hot-water pressure washing, gentle soft washing, and a finish-work eye that treats your
-        property like our own.
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-text-dim hero-in" style="--d:310ms">
+        Olson Pro Wash is the Lake Stevens area's premium exterior crew — roof &amp; soft washing,
+        hot-water pressure washing and landscaping, run like a detail shop, not a side hustle.
       </p>
 
-      <div class="mt-8 flex flex-col gap-3 sm:flex-row animate-fade-up [animation-delay:300ms]">
-        <a href="/contact#quote" class="btn btn-primary">
-          Get a Free Quote <Icon name="arrow" class="h-4 w-4" />
-        </a>
-        <a href="#book" class="btn btn-ghost">
-          <Icon name="clock" class="h-4 w-4" /> Book Online
-        </a>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row hero-in" style="--d:380ms">
+        <a href="/contact#quote" data-magnetic class="btn btn-primary">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+        <a href="#book" class="btn btn-ghost"><Icon name="clock" class="h-4 w-4" /> Book Online</a>
       </div>
 
-      <div class="mt-8 flex items-center gap-3 animate-fade-up [animation-delay:360ms]">
+      <div class="mt-8 flex items-center gap-3 hero-in" style="--d:440ms">
         <Stars rating={5} class="h-5 w-5" />
-        <span class="text-sm text-silver">
-          <span class="font-semibold text-white">4.9/5</span> from local homeowners &amp; businesses
-        </span>
+        <span class="text-sm text-text-dim"><span class="font-semibold text-text">4.9/5</span> from local homeowners &amp; businesses</span>
       </div>
 
-      <TrustBar class="mt-8 animate-fade-up [animation-delay:420ms]" />
+      <TrustBar class="mt-8 hero-in" style="--d:500ms" />
     </div>
 
-    <!-- Visual: framed before/after tease -->
-    <div class="relative animate-fade-up [animation-delay:200ms]">
-      <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-electric/10 blur-2xl"></div>
-      <div class="overflow-hidden rounded-[1.75rem] border border-ink-line bg-ink-raised shadow-card">
+    <!-- Machined-bezel media panel -->
+    <div class="relative hero-in" style="--d:260ms">
+      <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-jet/10 blur-2xl"></div>
+      <div class="bezel relative overflow-hidden rounded-[1.6rem] bg-ink-2">
         <div class="relative aspect-[4/5] w-full">
-          <img src="/images/after-1.svg" alt="Freshly soft-washed home exterior" class="absolute inset-0 h-full w-full object-cover" loading="eager" fetchpriority="high" width="1600" height="1000" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-5">
+          <!-- Living canvas background (GPU-cheap mist/particles) -->
+          <canvas id="hero-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+
+          <!--
+            DROP A REAL LOOP HERE: place hero.webm / hero.mp4 in /public/media/
+            and un-comment the <source> lines. Poster shows until it can play.
+          -->
+          <video id="hero-video" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
+                 autoplay muted loop playsinline preload="none" poster="/images/hero-poster.png" aria-hidden="true">
+            <!-- <source src="/media/hero.webm" type="video/webm" /> -->
+            <!-- <source src="/media/hero.mp4" type="video/mp4" /> -->
+          </video>
+
+          <div class="pointer-events-none absolute inset-0" style="background: radial-gradient(120% 80% at 20% 0%, transparent 40%, rgba(10,10,10,0.55));"></div>
+
+          <!-- corner notches -->
+          <span class="pointer-events-none absolute left-3 top-3 h-4 w-4 border-l border-t border-chrome/50"></span>
+          <span class="pointer-events-none absolute right-3 top-3 h-4 w-4 border-r border-t border-chrome/50"></span>
+          <span class="pointer-events-none absolute bottom-3 left-3 h-4 w-4 border-b border-l border-chrome/50"></span>
+          <span class="pointer-events-none absolute bottom-3 right-3 h-4 w-4 border-b border-r border-chrome/50"></span>
+
+          <div class="absolute inset-x-0 bottom-0 p-5">
             <div class="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-black/45 p-3 backdrop-blur">
               <div>
-                <div class="text-[11px] uppercase tracking-widest text-silver-muted">Same-day transformation</div>
-                <div class="font-display text-sm font-semibold text-white">House wash · Snohomish, WA</div>
+                <div class="font-display text-[11px] uppercase tracking-eyebrow text-text-mute">Same-day transformation</div>
+                <div class="font-display text-sm font-semibold text-text">Roof soft wash · Lake Stevens</div>
               </div>
               <a href="/gallery" class="btn btn-primary !px-4 !py-2 text-xs">See the gallery</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="absolute -right-3 -top-3 hidden rotate-3 rounded-xl border border-ink-line bg-ink-soft px-3 py-2 text-xs font-semibold text-white shadow-glow-sm sm:block">
-        <span class="text-electric-300">◆</span> Licensed &amp; Insured
+      <div class="absolute -right-3 -top-3 hidden rotate-3 rounded-xl border border-hairline bg-ink-1 px-3 py-2 text-xs font-semibold text-text shadow-jet-sm sm:block">
+        <span class="text-jet-hi">◆</span> Licensed &amp; Insured
       </div>
     </div>
   </div>
 </section>
 
-<script define:vars={{ words }}>
-  const el = document.getElementById('hero-rotator');
-  if (el && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    let i = 0;
-    setInterval(() => {
-      i = (i + 1) % words.length;
-      el.animate(
-        [
-          { transform: 'translateY(0)', opacity: 1 },
-          { transform: 'translateY(-100%)', opacity: 0, offset: 0.5 },
-          { transform: 'translateY(60%)', opacity: 0, offset: 0.5 },
-          { transform: 'translateY(0)', opacity: 1 },
-        ],
-        { duration: 620, easing: 'cubic-bezier(0.16,1,0.3,1)' }
-      );
-      setTimeout(() => (el.textContent = words[i]), 310);
-    }, 2400);
-  }
+<script is:inline>
+  // Mark JS ready so hero entrance can arm without hiding content when JS is off.
+  document.documentElement.classList.add('js');
+</script>
+
+<script is:inline>
+  (function () {
+    function initHero() {
+      // rotating word
+      var el = document.getElementById('hero-rotator');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (el && !el.dataset.rot) {
+        el.dataset.rot = '1';
+        var words = ['Roof moss, gone.', 'Siding, restored.', 'Concrete, bright.', 'Decks, revived.', 'Storefronts, sharp.'];
+        var i = 0;
+        if (!reduce) {
+          setInterval(function () {
+            i = (i + 1) % words.length;
+            el.animate(
+              [{ transform: 'translateY(0)', opacity: 1 }, { transform: 'translateY(-100%)', opacity: 0, offset: 0.5 },
+               { transform: 'translateY(60%)', opacity: 0, offset: 0.5 }, { transform: 'translateY(0)', opacity: 1 }],
+              { duration: 600, easing: 'cubic-bezier(0.16,1,0.3,1)' }
+            );
+            setTimeout(function () { el.textContent = words[i]; }, 300);
+          }, 2600);
+        }
+      }
+
+      // canvas mist
+      var c = document.getElementById('hero-canvas');
+      if (c && !c.dataset.on) {
+        c.dataset.on = '1';
+        var ctx = c.getContext('2d');
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var parts = [];
+        var running = true;
+        function size() {
+          var r = c.getBoundingClientRect();
+          c.width = r.width * dpr; c.height = r.height * dpr;
+        }
+        size();
+        window.addEventListener('resize', size, { passive: true });
+        var N = window.innerWidth < 700 ? 26 : 44;
+        for (var k = 0; k < N; k++) {
+          parts.push({
+            x: Math.random(), y: Math.random(),
+            r: (Math.random() * 2 + 0.6) * dpr,
+            s: (Math.random() * 0.4 + 0.12) / 1000,
+            a: Math.random() * 0.35 + 0.05,
+          });
+        }
+        function frame() {
+          if (!running) return;
+          ctx.clearRect(0, 0, c.width, c.height);
+          var grd = ctx.createLinearGradient(0, 0, c.width, c.height);
+          grd.addColorStop(0, 'rgba(31,111,158,0.20)');
+          grd.addColorStop(0.6, 'rgba(20,21,24,0.0)');
+          grd.addColorStop(1, 'rgba(59,159,212,0.10)');
+          ctx.fillStyle = grd; ctx.fillRect(0, 0, c.width, c.height);
+          for (var j = 0; j < parts.length; j++) {
+            var p = parts[j];
+            p.y -= p.s; p.x += Math.sin(p.y * 8) * 0.0004;
+            if (p.y < -0.05) { p.y = 1.05; p.x = Math.random(); }
+            ctx.beginPath();
+            ctx.arc(p.x * c.width, p.y * c.height, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(143,208,240,' + p.a + ')';
+            ctx.fill();
+          }
+          requestAnimationFrame(frame);
+        }
+        if (reduce) { frame(); running = false; }
+        else {
+          requestAnimationFrame(frame);
+          if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (e) {
+              running = e[0].isIntersecting;
+              if (running) requestAnimationFrame(frame);
+            }, { threshold: 0.05 }).observe(c);
+          }
+          document.addEventListener('visibilitychange', function () {
+            running = !document.hidden;
+            if (running) requestAnimationFrame(frame);
+          });
+        }
+      }
+
+      // fade video in only if it can actually play
+      var v = document.getElementById('hero-video');
+      if (v && !v.dataset.check) {
+        v.dataset.check = '1';
+        v.addEventListener('canplay', function () { v.style.opacity = '1'; });
+      }
+    }
+    initHero();
+    document.addEventListener('astro:page-load', initHero);
+  })();
 </script>

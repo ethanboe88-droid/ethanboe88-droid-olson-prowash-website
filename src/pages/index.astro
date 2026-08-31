@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
+import JetDivider from '../components/JetDivider.astro';
 import SectionHeading from '../components/SectionHeading.astro';
-import ServiceCard from '../components/ServiceCard.astro';
+import BentoServices from '../components/BentoServices.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
 import Testimonials from '../components/Testimonials.astro';
 import StatStrip from '../components/StatStrip.astro';
@@ -10,121 +11,106 @@ import CtaBanner from '../components/CtaBanner.astro';
 import HousecallProWidget from '../components/HousecallProWidget.astro';
 import Faq from '../components/Faq.astro';
 import Icon from '../components/Icon.astro';
-import { SERVICES } from '../data/services';
 import { SITE } from '../data/site';
 import { localBusinessLd, websiteLd, faqLd } from '../data/schema';
 
 const homeFaqs = [
   {
     q: 'How much does pressure washing cost in the Lake Stevens area?',
-    a: 'Most residential projects land between $200 and $650 depending on size, surface and how much buildup there is. House washes are typically priced by square footage and stories; driveways and flatwork by area. You’ll get an itemized, no-obligation quote before we book anything.',
+    a: 'Most residential projects land between $200 and $700 depending on size, surface and buildup. House washes are priced by square footage and stories; roofs by slope area and moss coverage; flatwork by area. You get an itemized, no-obligation quote before anything is booked.',
   },
   {
-    q: 'Do you use pressure or soft washing on my house?',
-    a: 'Siding, roofs and other delicate surfaces get <strong>soft washing</strong> — low pressure plus professional detergents that kill algae at the root. Concrete, brick and pavers get true pressure washing with the right tip and temperature. We match the method to the material, every time.',
+    q: 'Will you pressure wash my roof or soft wash it?',
+    a: 'Roofs are always <strong>soft washed</strong> — low pressure plus professional biocides that kill moss and algae at the root, then a zinc/copper treatment. High pressure strips granules and voids most shingle warranties, so we never use it on a roof.',
   },
   {
     q: 'Are you licensed and insured?',
-    a: 'Yes. Olson Landscaping &amp; Pro Wash LLC carries general liability coverage and we’ll gladly provide a certificate of insurance for commercial or HOA work.',
+    a: 'Yes — Olson Landscaping Pro Wash LLC is licensed and carries general liability coverage. We provide a certificate of insurance for commercial, HOA and property-management work.',
   },
   {
     q: 'What areas do you serve?',
-    a: `We serve ${SITE.areaServed} — including ${SITE.serviceCities.slice(0, 6).join(', ')} and the surrounding communities. Not sure if you’re in range? Just ask.`,
+    a: `We serve ${SITE.areaServed} and the wider Snohomish &amp; North King County region — ${SITE.serviceCities.slice(0, 8).join(', ')} and nearby. Not sure if you're in range? Just ask.`,
   },
   {
     q: 'Will the detergents hurt my plants or pets?',
     a: 'No. We pre-wet and rinse landscaping, use biodegradable products at safe dilutions, and follow a plant-protection protocol on every soft wash. Pets are fine once surfaces have dried.',
   },
 ];
-
-const featured = SERVICES.filter((s) => s.featured);
-const rest = SERVICES.filter((s) => !s.featured);
 ---
 <BaseLayout
-  title={`${SITE.name} — Pressure Washing & Landscaping in ${SITE.address.locality}, ${SITE.address.region}`}
+  title={`${SITE.name} — Pressure Washing & Roof Cleaning in ${SITE.address.locality}, ${SITE.address.region}`}
   description={SITE.description}
   canonical="/"
   jsonLd={[localBusinessLd, websiteLd, faqLd(homeFaqs)]}
 >
   <Hero />
 
-  <!-- Services overview -->
+  <!-- Services (bento) -->
   <section id="services" class="section scroll-mt-24">
     <div class="container-x">
       <div class="flex flex-wrap items-end justify-between gap-6">
         <SectionHeading
-          kicker="What we do"
-          title="Exterior cleaning &amp; landscaping, <span class='text-gradient'>done right</span>"
-          intro="One crew for the whole picture — from the roofline to the flower beds. Every service calibrated to the surface it’s cleaning."
+          eyebrow="What we do"
+          title="Every exterior surface, <span class='text-jet-grad'>engineered clean</span>"
+          intro="One crew for the whole property — from a moss-choked roof to the flower beds. Every service calibrated to the surface it's cleaning."
         />
         <a href="/services" class="btn btn-ghost reveal">All services <Icon name="arrow" class="h-4 w-4" /></a>
       </div>
-
-      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {featured.map((s, i) => <ServiceCard service={s} index={i} />)}
-      </div>
-      <div class="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-        {rest.map((s, i) => (
-          <a href={`/services#${s.slug}`} class="card card-hover reveal group flex items-center gap-4 p-5" style={`--reveal-delay:${i * 70}ms`}>
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300 group-hover:text-white">
-              <Icon name={s.icon} class="h-5 w-5" />
-            </span>
-            <span class="font-display text-sm font-semibold text-white">{s.title}</span>
-            <Icon name="arrow" class="ml-auto h-4 w-4 text-silver-dim transition-transform group-hover:translate-x-1 group-hover:text-electric-300" />
-          </a>
-        ))}
-      </div>
+      <div class="mt-12"><BentoServices /></div>
     </div>
   </section>
+
+  <JetDivider />
 
   <!-- Before / After -->
-  <section class="section border-y border-ink-line bg-ink-soft/60">
+  <section class="section bg-ink-1/50">
     <div class="container-x">
       <SectionHeading
-        kicker="See the difference"
-        title="Drag to reveal the <span class='text-gradient'>before</span>"
-        intro="Real results from real Snohomish County properties. No filters — just the right method and a crew that doesn’t cut corners."
+        eyebrow="See the difference"
+        title="Drag to blast off the <span class='text-jet-grad'>before</span>"
+        intro="Real results from real Snohomish and King County properties. No filters — just the right method and a crew that doesn't cut corners."
       />
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Vinyl siding soft wash · Lake Stevens" beforeAlt="House siding covered in green algae before washing" afterAlt="Clean bright house siding after soft washing" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="50" label="Concrete driveway · Marysville" beforeAlt="Stained gray driveway before pressure washing" afterAlt="Bright even driveway after surface cleaning" />
+        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Roof soft wash · Lake Stevens, WA" beforeAlt="Roof covered in moss and black streaks before soft washing" afterAlt="Clean roof after soft washing, moss and streaks removed" />
+        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="50" label="House wash · Everett, WA" beforeAlt="Algae-covered vinyl siding before washing" afterAlt="Bright clean siding after a soft wash" />
       </div>
-      <div class="mt-6 grid gap-6">
-        <BeforeAfter class="reveal" before="/images/before-3.svg" after="/images/after-3.svg" start="60" label="Cedar deck restoration · Snohomish" beforeAlt="Graying weathered cedar deck before cleaning" afterAlt="Restored cedar deck after cleaning and prep" />
+      <div class="mt-6">
+        <BeforeAfter class="reveal" before="/images/before-3.svg" after="/images/after-3.svg" start="60" label="Concrete driveway · Marysville, WA" beforeAlt="Stained mossy driveway before pressure washing" afterAlt="Even bright driveway after surface cleaning" />
       </div>
     </div>
   </section>
+
+  <JetDivider flip />
 
   <!-- Stats -->
   <section class="section">
     <div class="container-x">
+      <SectionHeading eyebrow="By the numbers" title="Pressure you can <span class='text-jet-grad'>measure</span>" class="mb-10" />
       <StatStrip />
     </div>
   </section>
 
-  <!-- Why choose us -->
-  <section class="section border-y border-ink-line bg-ink-soft/60">
+  <!-- Why us -->
+  <section class="section bg-ink-1/50">
     <div class="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
       <SectionHeading
-        kicker="Why Olson"
-        title="The details are the <span class='text-gradient'>whole job</span>"
+        eyebrow="Why Olson"
+        title="The details are the <span class='text-jet-grad'>whole job</span>"
         intro="Anyone can point a wand at a wall. A premium result comes from prep, chemistry, pressure control and clean-up — done the same way every time."
       />
       <div class="grid gap-4 sm:grid-cols-2">
         {[
-          { icon: 'drop', t: 'Right method, right surface', d: 'Soft wash for siding and roofs, pressure for hardscapes. We never blast what should be bathed.' },
+          { icon: 'drop', t: 'Right method, right surface', d: 'Soft wash for roofs and siding, hot pressure for hardscapes. We never blast what should be bathed.' },
           { icon: 'shield', t: 'Licensed, insured, uniformed', d: 'A real company with a COI on file, not a truck and a trailer that disappears.' },
           { icon: 'leaf', t: 'Landscape protection protocol', d: 'Beds pre-wet, plants rinsed, biodegradable products at safe dilution.' },
           { icon: 'tag', t: 'The quote is the price', d: 'Itemized estimates. The number we say is the number you pay.' },
           { icon: 'star', t: 'Photo-documented results', d: 'Before/after photos on every commercial job and any residential job you want them on.' },
           { icon: 'check', t: 'Satisfaction guarantee', d: 'If a spot gets missed, we come back. No drama.' },
         ].map((f, i) => (
-          <div class="card reveal p-5" style={`--reveal-delay:${i * 60}ms`}>
-            <span class="grid h-10 w-10 place-items-center rounded-lg border border-ink-line bg-white/[0.03] text-electric-300">
-              <Icon name={f.icon} class="h-5 w-5" />
-            </span>
-            <h3 class="mt-4 font-display text-[15px] font-bold text-white">{f.t}</h3>
-            <p class="mt-1.5 text-sm leading-relaxed text-silver">{f.d}</p>
+          <div class="reveal panel p-5" style={`--reveal-delay:${i * 55}ms`}>
+            <span class="grid h-10 w-10 place-items-center rounded-lg border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={f.icon} class="h-5 w-5" /></span>
+            <h3 class="mt-4 font-display text-[15px] font-bold text-text">{f.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-text-dim">{f.d}</p>
           </div>
         ))}
       </div>
@@ -135,23 +121,22 @@ const rest = SERVICES.filter((s) => !s.featured);
   <section class="section">
     <div class="container-x">
       <SectionHeading
-        kicker="Reviews"
-        title="Neighbors who <span class='text-gradient'>don’t hold back</span>"
-        intro="A sample of what homeowners and business owners across Snohomish County say after we’ve packed up."
+        eyebrow="Reviews"
+        title="Neighbors who <span class='text-jet-grad'>don't hold back</span>"
+        intro="A sample of what homeowners and business owners across Snohomish and King County say after we've packed up."
       />
-      <div class="mt-10">
-        <Testimonials heading="Customer testimonials" />
-      </div>
+      <div class="mt-10"><Testimonials heading="Customer testimonials" /></div>
     </div>
   </section>
 
-  <!-- Housecall Pro booking widget -->
   <HousecallProWidget />
 
+  <JetDivider />
+
   <!-- FAQ -->
-  <section class="section border-t border-ink-line bg-ink-soft/60">
+  <section class="section bg-ink-1/50">
     <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-      <SectionHeading kicker="Good to know" title="Questions, answered" />
+      <SectionHeading eyebrow="Good to know" title="Questions, answered" />
       <Faq items={homeFaqs} />
     </div>
   </section>

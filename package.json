@@ -2,7 +2,7 @@
   "name": "olson-pro-wash",
   "type": "module",
   "version": "1.0.0",
-  "description": "Premium marketing website for Olson Pro Wash — pressure washing & landscaping in Northwest Wisconsin.",
+  "description": "Premium dark-luxury marketing site for Olson Pro Wash — pressure washing & landscaping in Lake Stevens, WA.",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

@@ -1,7 +1,6 @@
 User-agent: *
 Allow: /
-
-# Block nothing sensitive on a marketing site.
 Disallow: /404
+Disallow: /thanks
 
 Sitemap: https://olsonprowash.com/sitemap-index.xml

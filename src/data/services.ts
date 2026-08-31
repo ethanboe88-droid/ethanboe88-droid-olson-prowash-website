@@ -1,116 +1,161 @@
-// Service catalog — powers /services, the homepage overview, and internal links.
+// Service catalog — powers /services, the homepage bento grid, footer, schema.
 
 export type Service = {
   slug: string;
   title: string;
   short: string;
   description: string;
-  bullets: string[];
-  icon: 'jet' | 'foam' | 'house' | 'deck' | 'driveway' | 'commercial' | 'leaf';
-  featured?: boolean;
+  benefits: string[];
+  price: string;
+  icon: 'roof' | 'jet' | 'foam' | 'house' | 'gutter' | 'deck' | 'driveway' | 'commercial' | 'leaf';
+  /** bento footprint on the homepage grid */
+  span: 'xl' | 'wide' | 'unit';
 };
 
 export const SERVICES: Service[] = [
   {
+    slug: 'roof-cleaning',
+    title: 'Roof Cleaning',
+    short: 'Moss, lichen and black streaks removed at the root — no pressure on the shingles.',
+    description:
+      'A low-pressure roof soft wash tuned for the Pacific Northwest. We dissolve moss, lichen and Gloeocapsa (the black streaking) at the root with professional biocides, then a zinc / copper treatment to slow regrowth. Zero high pressure means zero granule loss and no voided shingle warranty.',
+    benefits: [
+      'Kills moss & lichen at the root, not just the surface',
+      'Manufacturer-safe: no pressure, no granule loss',
+      'Zinc/copper post-treatment slows regrowth for years',
+      'Gutter guards, skylights and landscaping protected',
+    ],
+    price: 'from $499',
+    icon: 'roof',
+    span: 'xl',
+  },
+  {
+    slug: 'house-washing',
+    title: 'House Washing',
+    short: 'Whole-home soft wash — siding, soffits, trim and gutter faces.',
+    description:
+      'A full exterior soft wash for siding, soffits, fascia, gutter exteriors, trim and entryways. We lift the green algae film, pollen, spider webs and wasp nests that dull curb appeal — gentle on paint, caulk lines and window seals.',
+    benefits: [
+      'Vinyl, LP SmartSide, fiber cement, brick, cedar',
+      'Gutter-face brightening included',
+      'Window rinse on completion',
+      'Results that last 4–6× longer than pressure alone',
+    ],
+    price: 'from $299',
+    icon: 'house',
+    span: 'wide',
+  },
+  {
     slug: 'pressure-washing',
     title: 'Pressure Washing',
-    short: 'High-pressure cleaning for hard surfaces that can take the force.',
+    short: 'High-pressure hot-water cleaning for concrete, brick, pavers and stone.',
     description:
-      'Commercial-grade hot-water pressure washing that strips years of dirt, algae, oil and grime from concrete, brick, pavers and stone — calibrated to the surface so it cleans deep without etching or damage.',
-    bullets: [
-      'Hot-water units for grease and gum',
+      'Commercial-grade hot-water pressure washing for surfaces that can take the force. Rotary surface cleaners deliver an even, line-free finish; hot water cuts oil, gum and grease that cold water leaves behind.',
+    benefits: [
+      'Hot-water units for grease, gum and oil',
       'Surface cleaners for streak-free concrete',
-      'Adjustable pressure per material',
+      'Pressure dialed to the material every time',
       'Full clean-up and rinse-down included',
     ],
+    price: 'from $199',
     icon: 'jet',
-    featured: true,
+    span: 'unit',
   },
   {
     slug: 'soft-washing',
     title: 'Soft Washing',
     short: 'Low-pressure, detergent-based cleaning for delicate surfaces.',
     description:
-      'A low-pressure system that uses professional biodegradable detergents to dissolve organic growth at the root. Ideal for roofs, siding, stucco and anything that would be damaged by high pressure — and it keeps surfaces cleaner, longer.',
-    bullets: [
+      'A low-pressure system using professional biodegradable detergents to dissolve organic growth at the root. Ideal for stucco, cedar, painted surfaces and anything high pressure would damage — and it keeps surfaces cleaner, longer.',
+    benefits: [
       'Kills algae, mold and lichen at the root',
-      'Safe for shingles, vinyl, stucco, cedar',
-      'Results that last 4–6× longer than pressure alone',
+      'Safe for stucco, cedar, painted wood, screens',
+      'Biodegradable products at safe dilution',
       'Plant and landscape protection protocol',
     ],
+    price: 'from $249',
     icon: 'foam',
-    featured: true,
+    span: 'unit',
   },
   {
-    slug: 'house-washing',
-    title: 'House Washing',
-    short: 'Whole-home exterior wash that makes siding look new again.',
+    slug: 'gutter-cleaning',
+    title: 'Gutter Cleaning',
+    short: 'Interior scoop-out plus exterior face brightening, downspouts flushed.',
     description:
-      'A complete exterior soft wash for your home — siding, soffits, fascia, gutters exterior, trim and entryways. We remove spider webs, wasp nests, pollen, and the green film that dulls your curb appeal.',
-    bullets: [
-      'Vinyl, LP SmartSide, fiber cement, brick, cedar',
-      'Gutter face brightening included',
-      'Window rinse on completion',
-      'Gentle on paint and caulk lines',
+      'We clear needles, leaves and grit from the gutter troughs, bag the debris, flush every downspout, and soft wash the exterior faces so the whole line looks new. Photos of the cleared gutters sent on completion.',
+    benefits: [
+      'Debris hand-cleared and hauled away',
+      'All downspouts flushed and flow-tested',
+      'Exterior faces soft washed, not just emptied',
+      'Before/after photos from the ladder',
     ],
-    icon: 'house',
-    featured: true,
+    price: 'from $149',
+    icon: 'gutter',
+    span: 'unit',
   },
   {
     slug: 'deck-patio-cleaning',
     title: 'Deck & Patio Cleaning',
     short: 'Careful restoration for wood, composite and stone living spaces.',
     description:
-      'Decks, patios, pergolas and porches cleaned at the right pressure for the material. We lift graying, mildew and mustiness from wood and composite, and prep surfaces properly if you plan to stain or seal.',
-    bullets: [
+      'Decks, patios, pergolas and porches cleaned at the right pressure for the material. We lift the slick green film, graying and mustiness from wood and composite, and prep surfaces properly if you plan to stain or seal.',
+    benefits: [
       'Wood, composite, Trex, concrete, flagstone',
       'Railings, spindles and lattice detailed',
       'Pre-stain / pre-seal prep available',
       'Furniture moved and replaced',
     ],
+    price: 'from $229',
     icon: 'deck',
+    span: 'unit',
   },
   {
-    slug: 'driveway-cleaning',
-    title: 'Driveway & Concrete Cleaning',
+    slug: 'driveway-concrete-cleaning',
+    title: 'Driveway & Concrete',
     short: 'Streak-free flatwork — driveways, walks, patios and curbs.',
     description:
-      'Rotary surface cleaners deliver an even, line-free finish across large concrete and paver areas. We treat rust, leaf tannin, oil spots and tire marks, then post-treat to slow regrowth.',
-    bullets: [
+      'Rotary surface cleaners deliver an even, line-free finish across large concrete and paver areas. We treat rust, moss, leaf tannin, oil spots and tire marks, then post-treat to slow regrowth.',
+    benefits: [
       'Even finish, no zebra striping',
-      'Oil, rust and tannin stain treatment',
+      'Oil, rust, moss and tannin treatment',
       'Paver sand replacement available',
       'Optional sealing add-on',
     ],
+    price: 'from $189',
     icon: 'driveway',
+    span: 'unit',
   },
   {
     slug: 'commercial-services',
     title: 'Commercial Services',
     short: 'Storefronts, lots, dumpster pads and fleet — on your schedule.',
     description:
-      'Recurring or one-time exterior maintenance for retail, restaurants, property managers, HOAs and municipalities. Early-morning and after-hours crews, COI on file, and consistent documented results.',
-    bullets: [
+      'Recurring or one-time exterior maintenance for retail, restaurants, property managers, HOAs and municipalities across Snohomish and King County. Early-morning and after-hours crews, COI on file, consistent documented results.',
+    benefits: [
       'Storefronts, sidewalks, entrances, drive-thrus',
       'Parking lots, garages and dumpster pads',
       'Scheduled maintenance programs',
       'Certificate of Insurance provided',
     ],
+    price: 'quoted per site',
     icon: 'commercial',
+    span: 'unit',
   },
   {
     slug: 'landscaping',
     title: 'Landscaping',
     short: 'Beds, mulch, trimming and clean-ups to finish the picture.',
     description:
-      'The other half of curb appeal. Bed reshaping and edging, fresh mulch or rock, shrub trimming, seasonal clean-ups and lawn detailing — so the whole property looks cared for, not just the siding.',
-    bullets: [
+      'The other half of curb appeal, from the LLC that does both. Bed reshaping and edging, fresh mulch or rock, shrub and hedge trimming, seasonal clean-ups and lawn detailing — so the whole property looks cared for, not just the siding.',
+    benefits: [
       'Bed design, edging and mulch / rock install',
       'Shrub and hedge trimming',
       'Spring and fall clean-ups',
       'Lawn detailing and debris haul-away',
     ],
+    price: 'from $179',
     icon: 'leaf',
+    span: 'wide',
   },
 ];
 

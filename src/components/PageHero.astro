@@ -1,35 +1,34 @@
 ---
 interface Props {
-  kicker?: string;
+  eyebrow?: string;
   title: string;
   intro?: string;
   crumbs?: { label: string; href?: string }[];
 }
-const { kicker, title, intro, crumbs = [] } = Astro.props;
+const { eyebrow, title, intro, crumbs = [] } = Astro.props;
 ---
-<section class="relative isolate overflow-hidden border-b border-ink-line">
+<section class="relative isolate overflow-hidden border-b border-hairline">
   <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
-    <div class="absolute left-1/2 top-0 h-[40vh] w-[70vw] -translate-x-1/2 rounded-full bg-electric/15 blur-[110px]"></div>
-    <div class="absolute inset-0 bg-brand-gradient bg-[length:220%_auto] opacity-[0.07] animate-gradient-pan"></div>
+    <div class="absolute left-1/2 top-0 h-[42vh] w-[75vw] -translate-x-1/2 rounded-full bg-jet/15 blur-[120px]"></div>
   </div>
   <div class="container-x py-16 sm:py-20 lg:py-24">
     {crumbs.length > 0 && (
-      <nav aria-label="Breadcrumb" class="mb-5 text-xs text-silver-dim">
+      <nav aria-label="Breadcrumb" class="mb-5 text-xs text-text-mute">
         <ol class="flex flex-wrap items-center gap-1.5">
-          <li><a href="/" class="hover:text-white">Home</a></li>
+          <li><a href="/" class="hover:text-text">Home</a></li>
           {crumbs.map((c) => (
             <li class="flex items-center gap-1.5">
               <span>/</span>
-              {c.href ? <a href={c.href} class="hover:text-white">{c.label}</a> : <span class="text-silver">{c.label}</span>}
+              {c.href ? <a href={c.href} class="hover:text-text">{c.label}</a> : <span class="text-text-dim">{c.label}</span>}
             </li>
           ))}
         </ol>
       </nav>
     )}
-    {kicker && <span class="kicker">{kicker}</span>}
-    <h1 class="mt-4 max-w-3xl text-4xl font-extrabold tracking-tightest sm:text-5xl lg:text-6xl">
+    {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+    <h1 class="display mt-4 max-w-3xl text-[clamp(2.4rem,6vw,4rem)]">
       <Fragment set:html={title} />
     </h1>
-    {intro && <p class="mt-5 max-w-2xl text-lg leading-relaxed text-silver">{intro}</p>}
+    {intro && <p class="mt-5 max-w-2xl text-lg leading-relaxed text-text-dim">{intro}</p>}
   </div>
 </section>

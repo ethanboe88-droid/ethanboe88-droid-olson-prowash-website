@@ -1,0 +1,64 @@
+---
+import Icon from './Icon.astro';
+import { SERVICES } from '../data/services';
+
+const spanClass = {
+  xl: 'sm:col-span-2 sm:row-span-2',
+  wide: 'sm:col-span-2',
+  unit: '',
+} as const;
+---
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 [grid-auto-flow:dense]">
+  {SERVICES.map((s, i) => (
+    <a
+      href={`/services#${s.slug}`}
+      id={s.slug}
+      class:list={[
+        'reveal panel lift group relative flex scroll-mt-28 flex-col overflow-hidden p-6',
+        spanClass[s.span],
+        s.span === 'xl' && 'sm:p-8',
+      ]}
+      style={`--reveal-delay:${(i % 4) * 70}ms`}
+    >
+      {s.span === 'xl' && (
+        <span class="absolute right-5 top-5 rounded-full border border-jet/40 bg-jet/10 px-2.5 py-1 font-display text-[10px] font-semibold uppercase tracking-eyebrow text-jet-hi">
+          Most requested
+        </span>
+      )}
+      <span class="relative grid h-12 w-12 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi transition-colors group-hover:border-jet/50 group-hover:text-text">
+        <span class="absolute inset-0 rounded-xl bg-jet/15 opacity-0 blur-md transition-opacity group-hover:opacity-100"></span>
+        <Icon name={s.icon} class={s.span === 'xl' ? 'relative h-7 w-7' : 'relative h-6 w-6'} />
+      </span>
+
+      <h3 class:list={['mt-5 font-display font-bold text-text', s.span === 'xl' ? 'text-2xl' : 'text-lg']}>{s.title}</h3>
+      <p class:list={['mt-2 leading-relaxed text-text-dim', s.span === 'xl' ? 'text-[15px]' : 'text-sm']}>{s.short}</p>
+
+      {s.span === 'xl' && (
+        <ul class="mt-4 grid gap-1.5 sm:grid-cols-2">
+          {s.benefits.slice(0, 4).map((b) => (
+            <li class="flex items-start gap-2 text-sm text-text-mute">
+              <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-jet-hi" /><span set:html={b} />
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <div class="mt-auto flex items-center justify-between pt-6">
+        <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+        <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">
+          Details <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </span>
+      </div>
+    </a>
+  ))}
+
+  <a href="/contact#quote" class="reveal panel lift group flex flex-col justify-between overflow-hidden p-6 sm:col-span-2">
+    <div>
+      <span class="eyebrow">Not sure which?</span>
+      <p class="mt-3 font-display text-lg font-bold text-text">Send two photos. We'll tell you the method and a price — free.</p>
+    </div>
+    <span class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">
+      Get a Free Quote <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+    </span>
+  </a>
+</div>

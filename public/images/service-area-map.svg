@@ -1,37 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000" role="img">
-  
-  <defs>
-    <linearGradient id="bg-map" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141417"/>
-      <stop offset="1" stop-color="#0a0a0a"/>
-    </linearGradient>
-    <radialGradient id="glow-map" cx="30%" cy="18%" r="75%">
-      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
-      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="spray-map" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft-map"><feGaussianBlur stdDeviation="14"/></filter>
-  </defs>
-  <rect width="1400" height="1000" fill="url(#bg-map)"/>
-  <rect width="1400" height="1000" fill="url(#glow-map)"/>
-  <rect x="10.432108887430246" y="19.878202945513696" width="813.3339932779165" height="4.349741129527759" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="5.77005790875868" y="150.66237672234226" width="546.4311087524552" height="2.9038227574747615" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="-34.06798465522198" y="300.4034728316006" width="917.8473725301653" height="2.9279230080078866" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="-24.2125664945511" y="458.4269417240761" width="1066.2470953865882" height="2.281482650749309" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="5.165451035476792" y="593.6288021854302" width="1161.5468611923964" height="3.336843113294597" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="14.603138228533744" y="744.0035938155587" width="751.2354998338039" height="2.507583240225249" fill="url(#spray-map)" transform="rotate(-18 700 500)"/><rect x="-35.87783627271669" y="864.1419393986663" width="839.9235187996651" height="4.630886754393778" fill="url(#spray-map)" transform="rotate(-18 700 500)"/>
-  <rect width="1400" height="1000" fill="url(#grain)" opacity="0.05"/>
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect x="16" y="16" width="1368" height="968" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
-  
-    <g stroke="#ffffff" stroke-opacity="0.10" fill="none">
-      <line x1="0" y1="0" x2="1400" y2="0"/><line x1="0" y1="125" x2="1400" y2="125"/><line x1="0" y1="250" x2="1400" y2="250"/><line x1="0" y1="375" x2="1400" y2="375"/><line x1="0" y1="500" x2="1400" y2="500"/><line x1="0" y1="625" x2="1400" y2="625"/><line x1="0" y1="750" x2="1400" y2="750"/><line x1="0" y1="875" x2="1400" y2="875"/><line x1="0" y1="1000" x2="1400" y2="1000"/>
-      <line x1="0" y1="0" x2="0" y2="1000"/><line x1="125" y1="0" x2="125" y2="1000"/><line x1="250" y1="0" x2="250" y2="1000"/><line x1="375" y1="0" x2="375" y2="1000"/><line x1="500" y1="0" x2="500" y2="1000"/><line x1="625" y1="0" x2="625" y2="1000"/><line x1="750" y1="0" x2="750" y2="1000"/><line x1="875" y1="0" x2="875" y2="1000"/><line x1="1000" y1="0" x2="1000" y2="1000"/><line x1="1125" y1="0" x2="1125" y2="1000"/><line x1="1250" y1="0" x2="1250" y2="1000"/><line x1="1375" y1="0" x2="1375" y2="1000"/>
-    </g>
-    <circle cx="700" cy="500" r="16" fill="#3b9fd4"/>
-    <circle cx="700" cy="500" r="70" fill="none" stroke="#3b9fd4" stroke-opacity="0.5"/>
-    <circle cx="700" cy="500" r="150" fill="none" stroke="#3b9fd4" stroke-opacity="0.28"/>
-    <circle cx="700" cy="500" r="240" fill="none" stroke="#3b9fd4" stroke-opacity="0.15"/>
-    <text x="700" y="470" text-anchor="middle" font-family="Sora, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Rice Lake, WI</text>
-    <text x="700" y="790" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" letter-spacing="4" fill="#c0c0c0">SERVING NORTHWEST WISCONSIN</text>
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" width="1400" height="1000">
+  <rect width="1400" height="1000" fill="#141518"/>
+  <g stroke="#fff" stroke-opacity="0.08" fill="none">
+    <line x1="0" y1="0" x2="1400" y2="0"/><line x1="0" y1="125" x2="1400" y2="125"/><line x1="0" y1="250" x2="1400" y2="250"/><line x1="0" y1="375" x2="1400" y2="375"/><line x1="0" y1="500" x2="1400" y2="500"/><line x1="0" y1="625" x2="1400" y2="625"/><line x1="0" y1="750" x2="1400" y2="750"/><line x1="0" y1="875" x2="1400" y2="875"/><line x1="0" y1="1000" x2="1400" y2="1000"/>
+    <line x1="0" y1="0" x2="0" y2="1000"/><line x1="125" y1="0" x2="125" y2="1000"/><line x1="250" y1="0" x2="250" y2="1000"/><line x1="375" y1="0" x2="375" y2="1000"/><line x1="500" y1="0" x2="500" y2="1000"/><line x1="625" y1="0" x2="625" y2="1000"/><line x1="750" y1="0" x2="750" y2="1000"/><line x1="875" y1="0" x2="875" y2="1000"/><line x1="1000" y1="0" x2="1000" y2="1000"/><line x1="1125" y1="0" x2="1125" y2="1000"/><line x1="1250" y1="0" x2="1250" y2="1000"/><line x1="1375" y1="0" x2="1375" y2="1000"/>
+  </g>
+  <circle cx="700" cy="500" r="14" fill="#3b9fd4"/>
+  <circle cx="700" cy="500" r="80" fill="none" stroke="#3b9fd4" stroke-opacity="0.5"/>
+  <circle cx="700" cy="500" r="170" fill="none" stroke="#3b9fd4" stroke-opacity="0.28"/>
+  <circle cx="700" cy="500" r="270" fill="none" stroke="#3b9fd4" stroke-opacity="0.15"/>
+  <text x="700" y="470" text-anchor="middle" font-family="Archivo, sans-serif" font-size="30" font-weight="800" fill="#fff">Lake Stevens, WA</text>
+  <text x="700" y="790" text-anchor="middle" font-family="Archivo, sans-serif" font-size="20" letter-spacing="4" fill="#c0c4cc">SNOHOMISH &amp; KING COUNTY</text>
 </svg>

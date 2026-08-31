@@ -2,56 +2,49 @@
 import Icon from './Icon.astro';
 import { SERVICES } from '../data/services';
 import { SITE } from '../data/site';
-
-interface Props {
-  compact?: boolean;
-}
+interface Props { compact?: boolean; }
 const { compact = false } = Astro.props;
 ---
-<form
-  id="quote"
-  name="quote"
-  method="POST"
-  data-netlify="true"
-  netlify-honeypot="bot-field"
-  action="/thanks"
-  class="card reveal scroll-mt-28 p-6 sm:p-8"
->
-  {/* Netlify Forms: this hidden input registers the form at build time. */}
+<form id="quote" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks"
+      class="panel reveal scroll-mt-28 p-6 sm:p-8" novalidate>
   <input type="hidden" name="form-name" value="quote" />
-  <p class="hidden">
-    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-  </p>
+  <p class="hidden"><label>Skip if human: <input name="bot-field" /></label></p>
 
   <div class="flex items-center gap-2">
-    <span class="grid h-9 w-9 place-items-center rounded-lg border border-ink-line bg-white/[0.03] text-electric-300">
-      <Icon name="tag" class="h-5 w-5" />
-    </span>
+    <span class="grid h-9 w-9 place-items-center rounded-lg border border-hairline bg-white/[0.03] text-jet-hi"><Icon name="tag" class="h-5 w-5" /></span>
     <div>
-      <h3 class="font-display text-lg font-bold text-white">Get a free quote</h3>
-      <p class="text-xs text-silver-muted">No obligation. Most estimates returned the same day.</p>
+      <h3 class="font-display text-lg font-bold text-text">Get a free quote</h3>
+      <p class="text-xs text-text-mute">No obligation. Most estimates returned the same day.</p>
     </div>
+  </div>
+
+  <div id="quote-error-summary" class="mt-5 hidden rounded-lg border border-danger/40 bg-danger/10 p-3 text-sm text-danger" role="alert" tabindex="-1">
+    <p class="font-semibold">Please fix the following:</p>
+    <ul class="mt-1 list-disc space-y-0.5 pl-5"></ul>
   </div>
 
   <div class:list={['mt-6 grid gap-4', compact ? '' : 'sm:grid-cols-2']}>
     <label class="block">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Name</span>
-      <input required name="name" autocomplete="name" placeholder="Jane Olson" class="field" />
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">Name <span class="text-danger">*</span></span>
+      <input required name="name" autocomplete="name" placeholder="Jane Olson" class="field" aria-describedby="err-name" />
+      <span id="err-name" class="field-error"></span>
     </label>
     <label class="block">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Phone</span>
-      <input required type="tel" name="phone" autocomplete="tel" placeholder="(425) 555-0123" class="field" />
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">Phone <span class="text-danger">*</span></span>
+      <input required type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(425) 555-0123" class="field" aria-describedby="err-phone" />
+      <span id="err-phone" class="field-error"></span>
     </label>
     <label class="block">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Email</span>
-      <input required type="email" name="email" autocomplete="email" placeholder="you@email.com" class="field" />
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">Email <span class="text-danger">*</span></span>
+      <input required type="email" name="email" autocomplete="email" inputmode="email" placeholder="you@email.com" class="field" aria-describedby="err-email" />
+      <span id="err-email" class="field-error"></span>
     </label>
     <label class="block">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">City / town</span>
-      <input name="city" placeholder="Lake Stevens" class="field" />
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">City / town</span>
+      <input name="city" autocomplete="address-level2" placeholder="Lake Stevens" class="field" />
     </label>
     <label class="block sm:col-span-2">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Service needed</span>
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">Service needed</span>
       <select name="service" class="field">
         <option value="">Select a service…</option>
         {SERVICES.map((s) => <option value={s.title}>{s.title}</option>)}
@@ -59,38 +52,112 @@ const { compact = false } = Astro.props;
       </select>
     </label>
     <label class="block sm:col-span-2">
-      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Tell us about the project</span>
-      <textarea name="message" rows="4" placeholder="e.g. Two-story vinyl home + concrete driveway, some green on the north side." class="field resize-y"></textarea>
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-text-mute">Tell us about the project</span>
+      <textarea name="message" rows="4" placeholder="e.g. Two-story home + moss on the north roof slope + concrete driveway." class="field resize-y"></textarea>
+      <span class="mt-1 block text-xs text-text-mute">Photos help us quote accurately — you can email them after.</span>
     </label>
   </div>
 
-  <button type="submit" class="btn btn-primary mt-6 w-full">
-    Request My Free Quote <Icon name="arrow" class="h-4 w-4" />
+  <button type="submit" class="btn btn-primary mt-6 w-full" data-submit>
+    <span class="submit-idle inline-flex items-center gap-2">Request My Free Quote <Icon name="arrow" class="h-4 w-4" /></span>
+    <span class="submit-busy hidden items-center gap-2">Sending…</span>
   </button>
-
-  <p class="mt-3 text-center text-xs text-silver-dim">
-    Prefer to talk? Call <a href={SITE.phoneHref} class="text-electric-300 hover:underline">{SITE.phone}</a>.
-    We never share your info.
+  <p class="mt-3 text-center text-xs text-text-mute">
+    Prefer to talk? Call <a href={SITE.phoneHref} class="text-jet-hi hover:underline">{SITE.phone}</a>. We never share your info.
   </p>
 </form>
 
 <style>
   .field {
     width: 100%;
-    border-radius: 0.75rem;
-    border: 1px solid var(--edge);
+    min-height: 44px;
+    border-radius: 0.7rem;
+    border: 1px solid var(--hairline);
     background: rgba(255, 255, 255, 0.03);
-    padding: 0.75rem 0.9rem;
+    padding: 0.7rem 0.9rem;
     font-size: 0.95rem;
-    color: #fff;
+    color: var(--text);
     transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
   }
-  .field::placeholder { color: #6b6b70; }
-  .field:focus {
-    outline: none;
-    border-color: rgba(59, 159, 212, 0.7);
-    box-shadow: 0 0 0 3px rgba(59, 159, 212, 0.18);
-    background: rgba(255, 255, 255, 0.05);
-  }
-  select.field option { background: #141417; }
+  .field::placeholder { color: var(--text-mute); }
+  .field:focus { outline: none; border-color: rgba(59, 159, 212, 0.7); box-shadow: 0 0 0 3px rgba(59, 159, 212, 0.18); background: rgba(255, 255, 255, 0.05); }
+  .field[aria-invalid='true'] { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(240, 97, 107, 0.15); }
+  select.field option { background: #141518; }
+  .field-error { display: none; margin-top: 0.35rem; font-size: 0.78rem; color: var(--danger); }
+  .field-error.show { display: block; }
 </style>
+
+<script is:inline>
+  (function () {
+    function initForm(form) {
+      if (form.dataset.formReady) return;
+      form.dataset.formReady = '1';
+      var summary = form.querySelector('#quote-error-summary');
+      var summaryList = summary ? summary.querySelector('ul') : null;
+
+      var rules = {
+        name: function (v) { return v.trim().length >= 2 ? '' : 'Enter your name.'; },
+        phone: function (v) { return /[\d][\d\s().+-]{6,}/.test(v) ? '' : 'Enter a valid phone number.'; },
+        email: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Enter a valid email address.'; },
+      };
+
+      function fieldErr(name) { return form.querySelector('#err-' + name); }
+      function validateField(input) {
+        var rule = rules[input.name];
+        if (!rule) return true;
+        var msg = rule(input.value);
+        var errEl = fieldErr(input.name);
+        if (msg) {
+          input.setAttribute('aria-invalid', 'true');
+          if (errEl) { errEl.textContent = msg; errEl.classList.add('show'); }
+          return false;
+        }
+        input.removeAttribute('aria-invalid');
+        if (errEl) { errEl.textContent = ''; errEl.classList.remove('show'); }
+        return true;
+      }
+
+      Object.keys(rules).forEach(function (n) {
+        var input = form.elements[n];
+        if (input) input.addEventListener('blur', function () { validateField(input); });
+      });
+
+      form.addEventListener('submit', function (e) {
+        var bad = [];
+        Object.keys(rules).forEach(function (n) {
+          var input = form.elements[n];
+          if (input && !validateField(input)) bad.push({ name: n, input: input });
+        });
+        if (bad.length) {
+          e.preventDefault();
+          if (summary && summaryList) {
+            summaryList.innerHTML = '';
+            bad.forEach(function (b) {
+              var li = document.createElement('li');
+              var a = document.createElement('a');
+              a.href = '#';
+              a.textContent = fieldErr(b.name).textContent || ('Fix ' + b.name);
+              a.addEventListener('click', function (ev) { ev.preventDefault(); b.input.focus(); });
+              li.appendChild(a);
+              summaryList.appendChild(li);
+            });
+            summary.classList.remove('hidden');
+            summary.focus();
+          }
+          return;
+        }
+        var btn = form.querySelector('[data-submit]');
+        if (btn) {
+          btn.setAttribute('disabled', 'true');
+          btn.querySelector('.submit-idle').classList.add('hidden');
+          btn.querySelector('.submit-busy').classList.remove('hidden');
+          btn.querySelector('.submit-busy').classList.add('inline-flex');
+        }
+      });
+    }
+    function boot() { document.querySelectorAll('form#quote').forEach(initForm); }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+    else boot();
+    document.addEventListener('astro:page-load', boot);
+  })();
+</script>

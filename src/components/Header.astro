@@ -6,74 +6,58 @@ import { NAV_LINKS, SITE } from '../data/site';
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---
-<header id="site-header" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
+<header id="site-header" class="fixed inset-x-0 top-0 z-50" transition:name="site-header">
   <div class="header-inner">
     <div class="container-x flex h-[76px] items-center justify-between gap-4">
       <a href="/" class="shrink-0" aria-label={`${SITE.name} — home`}>
         <Logo variant="header" />
       </a>
 
-      <nav class="hidden items-center gap-1 lg:flex" aria-label="Primary">
+      <nav id="primary-nav" class="relative hidden items-center gap-1 lg:flex" aria-label="Primary">
         {NAV_LINKS.map((link) => (
           <a
             href={link.href}
+            data-nav
             aria-current={isActive(link.href) ? 'page' : undefined}
             class:list={[
-              'rounded-full px-3.5 py-2 text-sm font-medium transition-colors',
-              isActive(link.href)
-                ? 'text-white bg-white/[0.06]'
-                : 'text-silver hover:text-white',
+              'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors',
+              isActive(link.href) ? 'text-text is-active' : 'text-text-dim hover:text-text',
             ]}
           >
             {link.label}
           </a>
         ))}
+        <span id="jet-underline" class="pointer-events-none absolute bottom-1 left-0 h-[2px] w-0 rounded-full opacity-0"
+              style="background: var(--jet-gradient); background-size:200% 100%; transition: transform .32s var(--ease-out), width .32s var(--ease-out), opacity .2s;"></span>
       </nav>
 
       <div class="hidden items-center gap-3 lg:flex">
-        <a href={SITE.phoneHref} class="group inline-flex items-center gap-2 text-sm font-medium text-silver hover:text-white">
-          <Icon name="phone" class="h-4 w-4 text-electric-300" />
+        <a href={SITE.phoneHref} class="inline-flex items-center gap-2 text-sm font-medium text-text-dim hover:text-text">
+          <Icon name="phone" class="h-4 w-4 text-jet-hi" />
           {SITE.phone}
         </a>
-        <a href="/contact#quote" class="btn btn-primary !px-5 !py-2.5 text-sm">Free Quote</a>
+        <a href="/contact#quote" data-magnetic class="btn btn-primary !px-5 !py-2.5 text-sm">Free Quote</a>
       </div>
 
-      <button
-        id="menu-toggle"
-        class="grid h-11 w-11 place-items-center rounded-xl border border-ink-line bg-white/[0.04] text-white lg:hidden"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-      >
+      <button id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/5 text-text lg:hidden"
+        aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
         <Icon name="menu" class="h-6 w-6 [.is-open_&]:hidden" />
         <Icon name="close" class="hidden h-6 w-6 [.is-open_&]:block" />
       </button>
     </div>
   </div>
 
-  <!-- Mobile menu -->
-  <div
-    id="mobile-menu"
-    class="mobile-menu container-x lg:hidden"
-    hidden
-  >
+  <div id="mobile-menu" class="mobile-menu container-x lg:hidden" hidden>
     <nav class="flex flex-col gap-1 pb-5 pt-2" aria-label="Mobile">
       {NAV_LINKS.map((link) => (
-        <a
-          href={link.href}
-          aria-current={isActive(link.href) ? 'page' : undefined}
+        <a href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}
           class:list={[
             'rounded-xl px-4 py-3 text-base font-medium transition-colors',
-            isActive(link.href) ? 'bg-white/[0.06] text-white' : 'text-silver hover:bg-white/[0.04] hover:text-white',
-          ]}
-        >
-          {link.label}
-        </a>
+            isActive(link.href) ? 'bg-white/5 text-text' : 'text-text-dim hover:bg-white/5 hover:text-text',
+          ]}>{link.label}</a>
       ))}
       <div class="mt-3 flex flex-col gap-2">
-        <a href={SITE.phoneHref} class="btn btn-ghost w-full">
-          <Icon name="phone" class="h-4 w-4" /> {SITE.phone}
-        </a>
+        <a href={SITE.phoneHref} class="btn btn-ghost w-full"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
         <a href="/contact#quote" class="btn btn-primary w-full">Get a Free Quote</a>
       </div>
     </nav>
@@ -90,51 +74,65 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
   #site-header.is-open .header-inner {
     background-color: rgba(10, 10, 10, 0.72);
     backdrop-filter: blur(14px) saturate(140%);
-    border-bottom-color: var(--edge);
+    border-bottom-color: var(--hairline);
   }
   .mobile-menu {
     overflow: hidden;
-    background-color: rgba(10, 10, 10, 0.96);
+    background-color: rgba(10, 10, 10, 0.97);
     backdrop-filter: blur(14px);
-    border-bottom: 1px solid var(--edge);
+    border-bottom: 1px solid var(--hairline);
   }
 </style>
 
 <script is:inline>
   (function () {
-    if (window.__olsonHeaderInit) return;
-    window.__olsonHeaderInit = true;
+    function bind() {
+      var header = document.getElementById('site-header');
+      var toggle = document.getElementById('menu-toggle');
+      var menu = document.getElementById('mobile-menu');
+      var nav = document.getElementById('primary-nav');
+      var underline = document.getElementById('jet-underline');
 
-    var header = document.getElementById('site-header');
-    var toggle = document.getElementById('menu-toggle');
-    var menu = document.getElementById('mobile-menu');
-    if (!toggle || !menu || !header) return;
+      if (toggle && menu && header && !toggle.dataset.bound) {
+        toggle.dataset.bound = '1';
+        var setOpen = function (open) {
+          header.classList.toggle('is-open', open);
+          toggle.classList.toggle('is-open', open);
+          toggle.setAttribute('aria-expanded', String(open));
+          toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+          menu.hidden = !open;
+        };
+        toggle.addEventListener('click', function () { setOpen(toggle.getAttribute('aria-expanded') !== 'true'); });
+        menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+        window.addEventListener('keydown', function (e) { if (e.key === 'Escape') setOpen(false); });
+        window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) { if (e.matches) setOpen(false); });
+      }
 
-    function setOpen(open) {
-      header.classList.toggle('is-open', open);
-      toggle.classList.toggle('is-open', open);
-      toggle.setAttribute('aria-expanded', String(open));
-      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      menu.hidden = !open;
+      // Jet-Line underline (FLIP-style slide)
+      if (nav && underline) {
+        var links = Array.prototype.slice.call(nav.querySelectorAll('[data-nav]'));
+        var moveTo = function (el) {
+          if (!el) { underline.style.opacity = '0'; return; }
+          var nr = nav.getBoundingClientRect();
+          var r = el.getBoundingClientRect();
+          underline.style.width = r.width + 'px';
+          underline.style.transform = 'translateX(' + (r.left - nr.left) + 'px)';
+          underline.style.opacity = '1';
+        };
+        var active = nav.querySelector('[data-nav].is-active');
+        requestAnimationFrame(function () { moveTo(active); });
+        links.forEach(function (l) {
+          l.addEventListener('pointerenter', function () { moveTo(l); });
+          l.addEventListener('focus', function () { moveTo(l); });
+        });
+        nav.addEventListener('pointerleave', function () { moveTo(nav.querySelector('[data-nav].is-active')); });
+        window.addEventListener('resize', function () { moveTo(nav.querySelector('[data-nav].is-active')); }, { passive: true });
+      }
     }
-
-    toggle.addEventListener('click', function () {
-      setOpen(toggle.getAttribute('aria-expanded') !== 'true');
-    });
-
-    var links = menu.querySelectorAll('a');
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', function () {
-        setOpen(false);
-      });
+    bind();
+    if (!window.__olsonHeaderPageLoad) {
+      window.__olsonHeaderPageLoad = true;
+      document.addEventListener('astro:page-load', bind);
     }
-
-    window.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') setOpen(false);
-    });
-
-    window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) {
-      if (e.matches) setOpen(false);
-    });
   })();
 </script>

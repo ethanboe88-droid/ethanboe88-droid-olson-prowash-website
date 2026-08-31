@@ -3,7 +3,6 @@ import { SERVICES } from './services';
 
 const base = SITE.domain;
 
-/** LocalBusiness / HomeAndConstructionBusiness schema for the homepage. */
 export const localBusinessLd = {
   '@context': 'https://schema.org',
   '@type': ['LocalBusiness', 'HomeAndConstructionBusiness'],
@@ -15,7 +14,7 @@ export const localBusinessLd = {
   telephone: SITE.phone,
   email: SITE.email,
   image: `${base}${SITE.ogImage}`,
-  logo: `${base}/favicon.svg`,
+  logo: `${base}/images/logo.png`,
   priceRange: SITE.priceRange,
   foundingDate: SITE.founded,
   currenciesAccepted: 'USD',
@@ -27,15 +26,8 @@ export const localBusinessLd = {
     postalCode: SITE.address.postalCode,
     addressCountry: SITE.address.country,
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: SITE.geo.latitude,
-    longitude: SITE.geo.longitude,
-  },
-  areaServed: SITE.serviceCities.map((c) => ({
-    '@type': 'City',
-    name: `${c}, ${SITE.address.region}`,
-  })),
+  geo: { '@type': 'GeoCoordinates', latitude: SITE.geo.latitude, longitude: SITE.geo.longitude },
+  areaServed: SITE.serviceCities.map((c) => ({ '@type': 'City', name: `${c}, ${SITE.address.region}` })),
   openingHoursSpecification: SITE.openingHoursSpec.map((o) => ({
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: o.days,
@@ -43,22 +35,13 @@ export const localBusinessLd = {
     closes: o.closes,
   })),
   sameAs: [SITE.social.facebook, SITE.social.instagram].filter(Boolean),
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    reviewCount: '127',
-  },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '240' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Exterior Cleaning & Landscaping Services',
     itemListElement: SERVICES.map((s) => ({
       '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: s.title,
-        description: s.short,
-        url: `${base}/services#${s.slug}`,
-      },
+      itemOffered: { '@type': 'Service', name: s.title, description: s.short, url: `${base}/services#${s.slug}` },
     })),
   },
 };
@@ -90,7 +73,7 @@ export const serviceLd = (s: (typeof SERVICES)[number]) => ({
   description: s.description,
   serviceType: s.title,
   provider: { '@id': `${base}/#business` },
-  areaServed: { '@type': 'AdministrativeArea', name: SITE.areaServed },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Snohomish & King County, WA' },
   url: `${base}/services#${s.slug}`,
 });
 

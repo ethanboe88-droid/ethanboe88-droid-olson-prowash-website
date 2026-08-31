@@ -3,116 +3,55 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
+import GalleryGrid from '../components/GalleryGrid.astro';
 import CtaBanner from '../components/CtaBanner.astro';
-import { SITE } from '../data/site';
 import { breadcrumbLd } from '../data/schema';
 
-// Masonry tiles. `cat` drives the filter buttons.
 const shots = [
-  { src: '/images/gallery-1.svg', cat: 'House Washing', alt: 'Two-story home after a full exterior soft wash' },
-  { src: '/images/gallery-2.svg', cat: 'Driveways', alt: 'Freshly surface-cleaned concrete driveway' },
-  { src: '/images/gallery-3.svg', cat: 'Decks', alt: 'Restored cedar deck and railings' },
+  { src: '/images/gallery-1.svg', cat: 'Roof Cleaning', alt: 'Roof after a full moss soft wash, streaks removed' },
+  { src: '/images/gallery-2.svg', cat: 'House Washing', alt: 'Two-story home after an exterior soft wash' },
+  { src: '/images/gallery-3.svg', cat: 'Driveways', alt: 'Concrete driveway after surface cleaning' },
   { src: '/images/gallery-4.svg', cat: 'Commercial', alt: 'Storefront sidewalk and entrance cleaned' },
-  { src: '/images/gallery-5.svg', cat: 'House Washing', alt: 'Lakeside home siding brightened' },
-  { src: '/images/gallery-6.svg', cat: 'Roofs', alt: 'Asphalt shingle roof after soft wash, streaks removed' },
+  { src: '/images/gallery-5.svg', cat: 'Roof Cleaning', alt: 'Lakeside home roof brightened after soft wash' },
+  { src: '/images/gallery-6.svg', cat: 'Decks', alt: 'Restored cedar deck and railings' },
   { src: '/images/gallery-7.svg', cat: 'Landscaping', alt: 'Mulched beds and trimmed shrubs after clean-up' },
-  { src: '/images/gallery-8.svg', cat: 'Driveways', alt: 'Paver walkway cleaned and re-sanded' },
+  { src: '/images/gallery-8.svg', cat: 'Gutters', alt: 'Gutter line cleared and faces soft washed' },
   { src: '/images/gallery-9.svg', cat: 'Commercial', alt: 'Dumpster pad and back entry pressure washed' },
 ];
-const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
 ---
 <BaseLayout
-  title="Gallery — Before & After Pressure Washing Results"
-  description={`Before-and-after photos of house washing, roof soft washing, driveway cleaning, deck restoration and landscaping projects across ${SITE.areaServed}.`}
+  title="Gallery — Before & After Roof Cleaning & Pressure Washing"
+  description="Before-and-after photos of roof soft washing, house washing, driveway cleaning, deck restoration and landscaping across Lake Stevens, Snohomish & King County, WA."
   canonical="/gallery"
   jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Gallery', path: '/gallery' }])}
 >
   <PageHero
-    kicker="Gallery"
-    title="Proof, not <span class='text-gradient'>promises</span>"
-    intro="Drag the sliders. Scan the grid. This is the standard every Olson Pro Wash job is held to."
+    eyebrow="Gallery"
+    title="Proof, not <span class='text-jet-grad'>promises</span>"
+    intro="Drag the sliders. Open the grid. This is the standard every Olson Pro Wash job is held to."
     crumbs={[{ label: 'Gallery' }]}
   />
 
-  <!-- Featured before/after -->
   <section class="section">
     <div class="container-x">
-      <SectionHeading kicker="Before / after" title="Move the handle" />
+      <SectionHeading eyebrow="Before / after" title="Move the handle" />
       <div class="mt-10 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="House wash · Lake Stevens, WA" beforeAlt="Algae-covered siding before" afterAlt="Clean siding after" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="48" label="Driveway · Marysville, WA" beforeAlt="Stained driveway before" afterAlt="Clean driveway after" />
-        <BeforeAfter class="reveal lg:col-span-2" before="/images/before-3.svg" after="/images/after-3.svg" start="58" label="Cedar deck restoration · Snohomish, WA" beforeAlt="Weathered deck before" afterAlt="Restored deck after" />
+        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Roof soft wash · Lake Stevens, WA" beforeAlt="Mossy roof before" afterAlt="Clean roof after" />
+        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="48" label="House wash · Everett, WA" beforeAlt="Algae siding before" afterAlt="Clean siding after" />
+        <BeforeAfter class="reveal lg:col-span-2" before="/images/before-3.svg" after="/images/after-3.svg" start="58" label="Driveway · Marysville, WA" beforeAlt="Stained driveway before" afterAlt="Clean driveway after" />
       </div>
     </div>
   </section>
 
-  <!-- Masonry grid -->
-  <section class="section border-t border-ink-line bg-ink-soft/60">
+  <section class="section bg-ink-1/50">
     <div class="container-x">
       <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading kicker="Project grid" title="Recent work around Snohomish County" />
-        <div id="gallery-filter" class="flex flex-wrap gap-2 reveal">
-          {cats.map((c, i) => (
-            <button
-              data-filter={c}
-              class:list={[
-                'rounded-full border px-3.5 py-1.5 text-xs font-medium transition',
-                i === 0 ? 'border-electric/60 bg-electric/10 text-white' : 'border-ink-line text-silver hover:border-electric/60 hover:text-white',
-              ]}
-              aria-pressed={i === 0 ? 'true' : 'false'}
-            >{c}</button>
-          ))}
-        </div>
+        <SectionHeading eyebrow="Project grid" title="Recent work around the region" />
       </div>
-
-      <div id="masonry" class="mt-10 gap-4 [column-fill:_balance] sm:columns-2 lg:columns-3">
-        {shots.map((s, i) => (
-          <figure
-            class="masonry-item reveal mb-4 break-inside-avoid overflow-hidden rounded-2xl border border-ink-line bg-ink-raised"
-            data-cat={s.cat}
-            style={`--reveal-delay:${(i % 3) * 80}ms`}
-          >
-            <img src={s.src} alt={s.alt} loading="lazy" decoding="async" class="w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
-            <figcaption class="flex items-center justify-between px-4 py-3 text-xs">
-              <span class="font-semibold text-white">{s.cat}</span>
-              <span class="text-silver-dim">Olson Pro Wash</span>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-      <p class="mt-6 text-sm text-silver-dim reveal">
-        Photos are branded placeholders — replace the files in <code class="rounded bg-white/5 px-1">public/images/</code> with real project shots.
-      </p>
+      <div class="mt-10"><GalleryGrid shots={shots} /></div>
+      <p class="mt-6 text-sm text-text-mute reveal">Photos are branded placeholders — replace the files in <code class="rounded bg-white/5 px-1">public/images/</code> with real project shots.</p>
     </div>
   </section>
 
   <CtaBanner heading="Want your project in this gallery?" />
 </BaseLayout>
-
-<script is:inline>
-  (function () {
-    var filterBar = document.getElementById('gallery-filter');
-    if (!filterBar) return;
-    var items = Array.prototype.slice.call(document.querySelectorAll('.masonry-item'));
-    var btns = filterBar.querySelectorAll('[data-filter]');
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener('click', function (e) {
-        var btn = e.currentTarget;
-        var val = btn.getAttribute('data-filter');
-        for (var j = 0; j < btns.length; j++) {
-          var b = btns[j];
-          var active = b === btn;
-          b.setAttribute('aria-pressed', String(active));
-          b.classList.toggle('border-electric/60', active);
-          b.classList.toggle('bg-electric/10', active);
-          b.classList.toggle('text-white', active);
-          b.classList.toggle('text-silver', !active);
-        }
-        for (var k = 0; k < items.length; k++) {
-          var show = val === 'All' || items[k].getAttribute('data-cat') === val;
-          items[k].style.display = show ? '' : 'none';
-        }
-      });
-    }
-  })();
-</script>

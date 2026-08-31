@@ -1,34 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900" role="img">
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" width="1200" height="900">
   <defs>
-    <linearGradient id="bg-g8" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141417"/>
-      <stop offset="1" stop-color="#0a0a0a"/>
+    <linearGradient id="bgg7" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141518"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <linearGradient id="jetg7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="transparent"/><stop offset="0.30" stop-color="#1f6f9e"/><stop offset="0.55" stop-color="#3b9fd4"/><stop offset="0.72" stop-color="#8fd0f0"/><stop offset="1" stop-color="transparent"/>
     </linearGradient>
-    <radialGradient id="glow-g8" cx="30%" cy="18%" r="75%">
-      <stop offset="0" stop-color="#8a8f94" stop-opacity="0.55"/>
-      <stop offset="0.45" stop-color="#8a8f94" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#8a8f94" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="spray-g8" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft-g8"><feGaussianBlur stdDeviation="14"/></filter>
+    <radialGradient id="glg7" cx="28%" cy="18%" r="80%"><stop offset="0" stop-color="#3b9fd4" stop-opacity="0.5"/><stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1200" height="900" fill="url(#bg-g8)"/>
-  <rect width="1200" height="900" fill="url(#glow-g8)"/>
-  <rect x="5.610187937164142" y="39.497280909953936" width="594.9587491598816" height="4.626071598618036" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="-22.3847971992024" y="135.57297665044024" width="864.8176461464737" height="2.865965394794684" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="5.73526508181795" y="278.8128483173649" width="897.6019358759412" height="3.0604611597148463" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="3.3573097277004678" y="409.4485217522378" width="678.0826262542378" height="2.0615580654152814" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="-29.659825673142386" y="515.8569056804095" width="421.58780065057766" height="2.0485337347608588" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="-25.522979396815423" y="663.2821199363852" width="760.324061942937" height="2.355042111228084" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/><rect x="5.64543342455665" y="789.8648427991031" width="769.591683950106" height="2.8792306588992376" fill="url(#spray-g8)" transform="rotate(-18 600 450)"/>
-  <rect width="1200" height="900" fill="url(#grain)" opacity="0.05"/>
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect x="16" y="16" width="1168" height="868" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
-  
-      <g transform="translate(990 700) scale(1.5)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.14">
+  <rect width="1200" height="900" fill="url(#bgg7)"/>
+  <rect width="1200" height="900" fill="url(#glg7)"/>
+  <g transform="rotate(-18 600 450)">
+    <rect x="-60" y="30" width="650.7220264547948" height="4.8276305824523345" fill="url(#jetg7)"/><rect x="-20" y="180" width="725.8485409651869" height="2.22480403093549" fill="url(#jetg7)"/><rect x="20" y="330" width="805.2401870358738" height="2.2702942173220646" fill="url(#jetg7)"/><rect x="60" y="480" width="895.3893416952258" height="4.341441977778379" fill="url(#jetg7)"/><rect x="100" y="630" width="845.2655322557437" height="4.657011147196075" fill="url(#jetg7)"/><rect x="140" y="780" width="937.1044822937415" height="4.767067935447436" fill="url(#jetg7)"/>
+  </g>
+  <rect x="16" y="16" width="1168" height="868" fill="none" stroke="#fff" stroke-opacity="0.06" rx="16"/>
+  <path d="M20 20 h16 M20 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1180 20 h-16 M1180 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M20 880 h16 M20 880 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1180 880 h-16 M1180 880 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <g transform="translate(980 690) scale(1.8)" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.16">
     <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
-    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <circle cx="66" cy="96" r="4" fill="#fff" stroke="none"/>
     <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
   </g>
-      <text x="600" y="450" text-anchor="middle" font-family="Sora, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">08</text>
-      <text x="600" y="494" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" letter-spacing="6" fill="#c0c0c0">OLSON PRO WASH</text>
-    
+  
+  <text x="600" y="450" text-anchor="middle" font-family="Archivo, Segoe UI, sans-serif" font-size="84" font-weight="800" fill="#fff" letter-spacing="-2">08</text>
 </svg>

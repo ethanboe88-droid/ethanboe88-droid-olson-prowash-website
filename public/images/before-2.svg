@@ -1,36 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img">
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
   <defs>
-    <linearGradient id="bg-b2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141417"/>
-      <stop offset="1" stop-color="#0a0a0a"/>
+    <linearGradient id="bgb2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141518"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <linearGradient id="jetb2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="transparent"/><stop offset="0.30" stop-color="#1f6f9e"/><stop offset="0.55" stop-color="#8a8f94"/><stop offset="0.72" stop-color="#8fd0f0"/><stop offset="1" stop-color="transparent"/>
     </linearGradient>
-    <radialGradient id="glow-b2" cx="30%" cy="18%" r="75%">
-      <stop offset="0" stop-color="#8a8f94" stop-opacity="0.55"/>
-      <stop offset="0.45" stop-color="#8a8f94" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#8a8f94" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="spray-b2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft-b2"><feGaussianBlur stdDeviation="14"/></filter>
+    <radialGradient id="glb2" cx="28%" cy="18%" r="80%"><stop offset="0" stop-color="#8a8f94" stop-opacity="0.22"/><stop offset="1" stop-color="#8a8f94" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1600" height="1000" fill="url(#bg-b2)"/>
-  <rect width="1600" height="1000" fill="url(#glow-b2)"/>
-  <rect x="-1.6503827345112185" y="33.655115770479036" width="905.8684136406303" height="3.1589748932813024" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="16.587982384323396" y="182.3181272844721" width="813.9995965274766" height="3.577520901342651" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="-11.623697752118026" y="317.03184943112507" width="687.152294957832" height="4.723714849641178" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="1.8696626082293122" y="460.5458413304834" width="868.2327151393375" height="4.152646686486712" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="-2.2765225691181357" y="576.4499105846116" width="1285.3118036467624" height="2.1420252094274224" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="-0.14190902141486816" y="726.2299170777685" width="1278.4017798116552" height="3.7072263484702397" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/><rect x="-3.925075504124358" y="877.213608970496" width="639.4751199712896" height="4.2921486838463405" fill="url(#spray-b2)" transform="rotate(-18 800 500)"/>
-  <rect width="1600" height="1000" fill="url(#grain)" opacity="0.05"/>
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect x="16" y="16" width="1568" height="968" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
-  
-      <g transform="translate(1180 720) scale(2.1)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.1">
+  <rect width="1600" height="1000" fill="url(#bgb2)"/>
+  <rect width="1600" height="1000" fill="url(#glb2)"/>
+  <g transform="rotate(-18 800 500)">
+    <rect x="-60" y="30" width="1238.6438961962817" height="4.8414180106747375" fill="url(#jetb2)"/><rect x="-20" y="196.66666666666666" width="873.7252236899965" height="2.9065410974201056" fill="url(#jetb2)"/><rect x="20" y="363.3333333333333" width="1006.9178017631099" height="3.2245040422554565" fill="url(#jetb2)"/><rect x="60" y="530" width="1137.7021591894973" height="4.121205456207606" fill="url(#jetb2)"/><rect x="100" y="696.6666666666666" width="982.2103485331724" height="4.846840879492861" fill="url(#jetb2)"/><rect x="140" y="863.3333333333333" width="903.8884411776551" height="2.063316536176115" fill="url(#jetb2)"/>
+  </g>
+  <rect x="16" y="16" width="1568" height="968" fill="none" stroke="#fff" stroke-opacity="0.06" rx="16"/>
+  <path d="M20 20 h16 M20 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1580 20 h-16 M1580 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M20 980 h16 M20 980 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1580 980 h-16 M1580 980 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <g transform="translate(1380 790) scale(1.8)" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.08">
     <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
-    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <circle cx="66" cy="96" r="4" fill="#fff" stroke="none"/>
     <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
   </g>
-      <text x="60" y="90" font-family="Sora, sans-serif" font-size="28" font-weight="700" letter-spacing="10" fill="#c0c0c0">BEFORE</text>
-      
-  <text x="800" y="494" text-anchor="middle" font-family="Sora, Segoe UI, sans-serif" font-size="78" font-weight="700" letter-spacing="-2" fill="#ffffff">Concrete driveway</text>
-  <text x="800" y="540" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="22" letter-spacing="6" fill="#c0c0c0">GRIME · ALGAE · OXIDATION</text>
-    
+  <text x="60" y="92" font-family="Archivo, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="8" fill="#c0c4cc">BEFORE</text>
+  <text x="800" y="500" text-anchor="middle" font-family="Archivo, Segoe UI, sans-serif" font-size="70" font-weight="800" fill="#fff" letter-spacing="-2">House siding</text>
 </svg>

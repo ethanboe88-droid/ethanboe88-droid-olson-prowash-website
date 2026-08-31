@@ -1,0 +1,114 @@
+---
+// Pop-up lead capture (user choice #4: "form").
+// Shows once per visit: after 22s dwell OR on exit-intent (desktop). Dismissible,
+// focus-trapped, ESC to close, remembered via localStorage. Reduced-motion aware.
+import Icon from './Icon.astro';
+import { SERVICES } from '../data/services';
+import { SITE } from '../data/site';
+---
+<div id="lead-modal" class="fixed inset-0 z-[150] hidden items-end justify-center p-4 sm:items-center" aria-hidden="true">
+  <div class="lead-scrim absolute inset-0 bg-black/70 opacity-0 backdrop-blur-sm transition-opacity duration-300"></div>
+
+  <div class="lead-card panel relative w-full max-w-md translate-y-4 p-6 opacity-0 transition-all duration-300 sm:p-8"
+       role="dialog" aria-modal="true" aria-labelledby="lead-title" aria-describedby="lead-desc">
+    <button class="lead-close absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-hairline text-text-dim hover:text-text" aria-label="Close">
+      <Icon name="close" class="h-4 w-4" />
+    </button>
+
+    <span class="eyebrow">Limited weekly slots</span>
+    <h2 id="lead-title" class="display mt-3 text-2xl">Get $25 off your first service</h2>
+    <p id="lead-desc" class="mt-2 text-sm text-text-dim">Drop your number and the service you need — we'll text a same-day estimate and apply the discount.</p>
+
+    <form name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field2" action="/thanks" class="mt-5 grid gap-3" novalidate>
+      <input type="hidden" name="form-name" value="lead" />
+      <input type="hidden" name="source" value="popup" />
+      <p class="hidden"><label>Skip if human <input name="bot-field2" /></label></p>
+      <input required name="name" autocomplete="name" placeholder="Name" class="lead-field" />
+      <input required type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Phone" class="lead-field" />
+      <select name="service" class="lead-field">
+        <option value="">Service needed…</option>
+        {SERVICES.map((s) => <option value={s.title}>{s.title}</option>)}
+        <option value="Multiple / not sure">Multiple / not sure</option>
+      </select>
+      <button type="submit" class="btn btn-primary mt-1 w-full">Text me my estimate <Icon name="arrow" class="h-4 w-4" /></button>
+      <p class="text-center text-[11px] text-text-mute">Or call <a href={SITE.phoneHref} class="text-jet-hi hover:underline">{SITE.phone}</a>. No spam, ever.</p>
+    </form>
+  </div>
+</div>
+
+<style>
+  #lead-modal.is-open { display: flex; }
+  #lead-modal.is-open .lead-scrim { opacity: 1; }
+  #lead-modal.is-open .lead-card { opacity: 1; transform: translateY(0); }
+  .lead-field {
+    width: 100%; min-height: 44px; border-radius: 0.7rem;
+    border: 1px solid var(--hairline); background: rgba(255,255,255,0.03);
+    padding: 0.7rem 0.9rem; font-size: 0.95rem; color: var(--text);
+  }
+  .lead-field::placeholder { color: var(--text-mute); }
+  .lead-field:focus { outline: none; border-color: rgba(59,159,212,0.7); box-shadow: 0 0 0 3px rgba(59,159,212,0.18); }
+  .lead-field option { background: #141518; }
+  @media (prefers-reduced-motion: reduce) {
+    #lead-modal .lead-scrim, #lead-modal .lead-card { transition: none; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    if (window.__olsonLeadBound) return;
+    window.__olsonLeadBound = true;
+
+    var KEY = 'olson_lead_seen';
+    var modal = document.getElementById('lead-modal');
+    if (!modal) return;
+    var card = modal.querySelector('.lead-card');
+    var closeBtn = modal.querySelector('.lead-close');
+    var scrim = modal.querySelector('.lead-scrim');
+    var lastFocus = null;
+    var opened = false;
+
+    function seen() { try { return localStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+    function markSeen() { try { localStorage.setItem(KEY, '1'); } catch (e) {} }
+
+    function open() {
+      if (opened || seen()) return;
+      opened = true;
+      markSeen();
+      lastFocus = document.activeElement;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      var first = card.querySelector('input, select, button');
+      if (first) setTimeout(function () { first.focus(); }, 60);
+      document.addEventListener('keydown', onKey);
+    }
+    function close() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.removeEventListener('keydown', onKey);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function onKey(e) {
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key === 'Tab') {
+        var f = card.querySelectorAll('a[href], button, input, select, textarea');
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+
+    closeBtn.addEventListener('click', close);
+    scrim.addEventListener('click', close);
+
+    if (!seen()) {
+      var t = setTimeout(open, 22000);
+      var onExit = function (e) {
+        if (e.clientY <= 0) { clearTimeout(t); open(); document.removeEventListener('mouseout', onExit); }
+      };
+      if (!window.matchMedia('(pointer: coarse)').matches) {
+        document.addEventListener('mouseout', onExit);
+      }
+    }
+  })();
+</script>

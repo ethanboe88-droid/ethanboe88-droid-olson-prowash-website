@@ -6,11 +6,10 @@ export async function GET(context) {
   const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
-
   return rss({
     title: `${SITE.name} — Journal`,
     description:
-      'Pressure washing, soft washing and exterior maintenance guides for the Lake Stevens area and Snohomish County, WA.',
+      'Roof cleaning, moss control, soft washing and exterior maintenance guides for Lake Stevens and the Puget Sound region.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

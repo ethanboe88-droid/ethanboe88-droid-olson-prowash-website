@@ -19,14 +19,14 @@ const processSteps = [
 
 const serviceFaqs = [
   { q: 'How long does a typical house wash take?', a: 'Most single-family homes take 2–4 hours start to finish, including setup and clean-up. Larger or multi-story homes may run a half day.' },
-  { q: 'Do I need to be home?', a: 'Not necessarily. As long as we have water access and a way to reach gated areas, many customers are at work while we clean. We’ll text before and after.' },
-  { q: 'Can you remove rust, oil or tannin stains from concrete?', a: 'Usually, yes. We carry dedicated rust and organic-stain treatments. Deep-set stains may lighten rather than vanish entirely — we’ll tell you honestly what to expect before we start.' },
-  { q: 'Do you offer recurring maintenance plans?', a: 'Yes — quarterly, semi-annual and annual plans for both homes and commercial properties, at a lower per-visit rate than one-off cleans.' },
+  { q: 'Do I need to be home?', a: 'Not necessarily. As long as we have water access and a way to reach gated areas, many customers are at work while we clean. We text before and after.' },
+  { q: 'Can you get moss out of the gutters and off the roof in one visit?', a: 'Yes — roof soft wash, moss treatment and a full gutter clean-out are commonly bundled into a single appointment at a lower combined rate.' },
+  { q: 'Do you offer recurring maintenance plans?', a: 'Yes — quarterly, semi-annual and annual plans for homes and commercial properties, at a lower per-visit rate than one-off cleans.' },
 ];
 ---
 <BaseLayout
-  title="Services — Pressure Washing, Soft Washing & Landscaping"
-  description={`Pressure washing, soft washing, house washing, deck & driveway cleaning, commercial exterior maintenance and landscaping across ${SITE.areaServed}. Licensed & insured.`}
+  title="Services — Pressure Washing, Roof Cleaning, Soft Washing & Landscaping"
+  description={`Roof cleaning, house washing, pressure & soft washing, gutter cleaning, deck, driveway, commercial exterior maintenance and landscaping across Snohomish & King County, WA. Licensed & insured.`}
   canonical="/services"
   jsonLd={[
     breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]),
@@ -35,19 +35,16 @@ const serviceFaqs = [
   ]}
 >
   <PageHero
-    kicker="Services"
-    title="Every exterior surface, <span class='text-gradient'>handled</span>"
-    intro="From a full-home soft wash to a season-long commercial maintenance plan. Here’s exactly what each service covers — and how we do it without causing damage."
+    eyebrow="Services"
+    title="Every exterior surface, <span class='text-jet-grad'>handled</span>"
+    intro="From a full roof soft wash to a season-long commercial maintenance plan. Here's exactly what each service covers — and how we do it without causing damage."
     crumbs={[{ label: 'Services' }]}
   />
 
-  <!-- Quick nav -->
-  <div class="sticky top-[76px] z-30 border-b border-ink-line bg-ink/80 backdrop-blur">
+  <div class="sticky top-[76px] z-30 border-b border-hairline bg-ink/80 backdrop-blur">
     <div class="container-x flex gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {SERVICES.map((s) => (
-        <a href={`#${s.slug}`} class="whitespace-nowrap rounded-full border border-ink-line px-3.5 py-1.5 text-xs font-medium text-silver transition hover:border-electric/60 hover:text-white">
-          {s.title}
-        </a>
+        <a href={`#${s.slug}`} class="whitespace-nowrap rounded-full border border-hairline px-3.5 py-1.5 text-xs font-medium text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}</a>
       ))}
     </div>
   </div>
@@ -59,24 +56,21 @@ const serviceFaqs = [
           <div class="grid items-start gap-10 lg:grid-cols-2">
             <div class:list={[i % 2 === 1 && 'lg:order-2']}>
               <span class="inline-flex items-center gap-2.5">
-                <span class="grid h-11 w-11 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300">
-                  <Icon name={s.icon} class="h-6 w-6" />
-                </span>
-                <span class="kicker">Service {String(i + 1).padStart(2, '0')}</span>
+                <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={s.icon} class="h-6 w-6" /></span>
+                <span class="eyebrow">Service {String(i + 1).padStart(2, '0')}</span>
               </span>
-              <h2 class="reveal mt-4 text-3xl font-bold sm:text-4xl">{s.title}</h2>
-              <p class="reveal mt-4 text-lg leading-relaxed text-silver">{s.description}</p>
+              <h2 class="display reveal mt-4 text-[clamp(1.8rem,4.4vw,2.6rem)]">{s.title}</h2>
+              <p class="reveal mt-4 text-lg leading-relaxed text-text-dim">{s.description}</p>
               <ul class="reveal mt-6 grid gap-2.5 sm:grid-cols-2">
-                {s.bullets.map((b) => (
-                  <li class="flex items-start gap-2.5 text-sm text-silver-muted">
-                    <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-electric-300" />
-                    <span set:html={b} />
+                {s.benefits.map((b) => (
+                  <li class="flex items-start gap-2.5 text-sm text-text-mute">
+                    <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-jet-hi" /><span set:html={b} />
                   </li>
                 ))}
               </ul>
-              <div class="reveal mt-7 flex flex-wrap gap-3">
-                <a href="/contact#quote" class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
-                <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+              <div class="reveal mt-7 flex flex-wrap items-center gap-3">
+                <a href="/contact#quote" data-magnetic class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
+                <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
               </div>
             </div>
             <div class:list={['reveal', i % 2 === 1 && 'lg:order-1']}>
@@ -95,16 +89,15 @@ const serviceFaqs = [
     </div>
   </div>
 
-  <!-- Process -->
-  <section class="section border-y border-ink-line bg-ink-soft/60">
+  <section class="section bg-ink-1/50">
     <div class="container-x">
-      <SectionHeading kicker="How it works" title="Four steps, <span class='text-gradient'>zero surprises</span>" />
+      <SectionHeading eyebrow="How it works" title="Four steps, <span class='text-jet-grad'>zero surprises</span>" />
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {processSteps.map((p, i) => (
-          <div class="card reveal p-6" style={`--reveal-delay:${i * 80}ms`}>
-            <div class="font-display text-2xl font-extrabold text-electric/40">{p.n}</div>
-            <h3 class="mt-3 font-display text-lg font-bold text-white">{p.t}</h3>
-            <p class="mt-1.5 text-sm leading-relaxed text-silver">{p.d}</p>
+          <div class="reveal panel p-6" style={`--reveal-delay:${i * 70}ms`}>
+            <div class="font-display text-2xl font-extrabold text-jet/40">{p.n}</div>
+            <h3 class="mt-3 font-display text-lg font-bold text-text">{p.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-text-dim">{p.d}</p>
           </div>
         ))}
       </div>
@@ -113,10 +106,10 @@ const serviceFaqs = [
 
   <section class="section">
     <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-      <SectionHeading kicker="Service FAQ" title="Before you book" />
+      <SectionHeading eyebrow="Service FAQ" title="Before you book" />
       <Faq items={serviceFaqs} />
     </div>
   </section>
 
-  <CtaBanner heading="Not sure which service you need?" sub="Send a couple photos — we’ll tell you the right method and a ballpark price, free." />
+  <CtaBanner heading="Not sure which service you need?" sub="Send a couple photos — we'll tell you the right method and a ballpark price, free." />
 </BaseLayout>

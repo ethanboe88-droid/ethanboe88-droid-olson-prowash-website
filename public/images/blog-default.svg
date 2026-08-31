@@ -1,37 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
-  
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
   <defs>
-    <linearGradient id="bg-blogdefaultsvg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141417"/>
-      <stop offset="1" stop-color="#0a0a0a"/>
+    <linearGradient id="bgblogdefaultsvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#141518"/><stop offset="1" stop-color="#0a0a0a"/></linearGradient>
+    <linearGradient id="jetblogdefaultsvg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="transparent"/><stop offset="0.30" stop-color="#1f6f9e"/><stop offset="0.55" stop-color="#3b9fd4"/><stop offset="0.72" stop-color="#8fd0f0"/><stop offset="1" stop-color="transparent"/>
     </linearGradient>
-    <radialGradient id="glow-blogdefaultsvg" cx="30%" cy="18%" r="75%">
-      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
-      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="spray-blogdefaultsvg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="soft-blogdefaultsvg"><feGaussianBlur stdDeviation="14"/></filter>
+    <radialGradient id="glblogdefaultsvg" cx="28%" cy="18%" r="80%"><stop offset="0" stop-color="#3b9fd4" stop-opacity="0.5"/><stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/></radialGradient>
   </defs>
-  <rect width="1600" height="900" fill="url(#bg-blogdefaultsvg)"/>
-  <rect width="1600" height="900" fill="url(#glow-blogdefaultsvg)"/>
-  <rect x="-18.06238912852913" y="4.282414053953114" width="597.4341651425384" height="4.930308582864747" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="-21.97334423008549" y="135.5410165802624" width="778.3840347294231" height="2.9361060656359994" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="-11.071482930777165" y="280.41359571289325" width="746.294257853477" height="3.0084119164256604" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="-36.32311311074415" y="398.9024069032827" width="810.0124284698776" height="2.6370094110023183" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="-15.388345824694994" y="539.3659879103458" width="908.0108236972873" height="4.736106372170916" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="-22.702446924005503" y="643.7445106911292" width="959.4024824722236" height="3.6589755056025512" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/><rect x="7.711230317151575" y="778.5825398219829" width="1055.3885312653879" height="4.577777227760176" fill="url(#spray-blogdefaultsvg)" transform="rotate(-18 800 450)"/>
-  <rect width="1600" height="900" fill="url(#grain)" opacity="0.05"/>
-  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
-  <rect x="16" y="16" width="1568" height="868" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
-  
-      <g transform="translate(1200 610) scale(2)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.14">
+  <rect width="1600" height="900" fill="url(#bgblogdefaultsvg)"/>
+  <rect width="1600" height="900" fill="url(#glblogdefaultsvg)"/>
+  <g transform="rotate(-18 800 450)">
+    <rect x="-60" y="30" width="1031.672748570689" height="2.9315024797630107" fill="url(#jetblogdefaultsvg)"/><rect x="-20" y="180" width="834.9831480276711" height="4.122156608269535" fill="url(#jetblogdefaultsvg)"/><rect x="20" y="330" width="951.8555804919257" height="3.4467636986646557" fill="url(#jetblogdefaultsvg)"/><rect x="60" y="480" width="1353.7163241855394" height="4.253191256381153" fill="url(#jetblogdefaultsvg)"/><rect x="100" y="630" width="800.0421992659149" height="2.3438945521155308" fill="url(#jetblogdefaultsvg)"/><rect x="140" y="780" width="1085.0413082075645" height="2.412016021725214" fill="url(#jetblogdefaultsvg)"/>
+  </g>
+  <rect x="16" y="16" width="1568" height="868" fill="none" stroke="#fff" stroke-opacity="0.06" rx="16"/>
+  <path d="M20 20 h16 M20 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1580 20 h-16 M1580 20 v16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M20 880 h16 M20 880 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/><path d="M1580 880 h-16 M1580 880 v-16" stroke="#c0c4cc" stroke-opacity="0.5" stroke-width="2" fill="none"/>
+  <g transform="translate(1380 690) scale(1.8)" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.16">
     <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
-    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <circle cx="66" cy="96" r="4" fill="#fff" stroke="none"/>
     <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
   </g>
-      <text x="80" y="110" font-family="Sora, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="#7cc5ee">OLSON PRO WASH · JOURNAL</text>
-      <text x="80" y="480" font-family="Sora, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">
-        <tspan x="80" dy="0">Olson Pro Wash</tspan>
-        <tspan x="80" dy="80">Journal</tspan>
-      </text>
-    
+  <text x="60" y="92" font-family="Archivo, Segoe UI, sans-serif" font-size="26" font-weight="700" letter-spacing="8" fill="#8fd0f0">OLSON PRO WASH · JOURNAL</text>
+  <text x="800" y="450" text-anchor="middle" font-family="Archivo, Segoe UI, sans-serif" font-size="64" font-weight="800" fill="#fff" letter-spacing="-2">JOURNAL</text>
 </svg>

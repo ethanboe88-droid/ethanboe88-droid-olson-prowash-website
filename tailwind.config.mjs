@@ -2,87 +2,64 @@ import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx,vue}'],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        // Brand palette
         ink: {
           DEFAULT: '#0a0a0a',
-          soft: '#101012',
-          raised: '#141417',
-          line: 'rgba(255,255,255,0.08)',
+          1: '#0e0f11',
+          2: '#141518',
+          3: '#1c1e22',
         },
-        electric: {
+        jet: {
           DEFAULT: '#3b9fd4',
-          50: '#eef8fd',
-          100: '#d7eefb',
-          200: '#b0ddf6',
-          300: '#7cc5ee',
-          400: '#3b9fd4',
-          500: '#2b86bb',
-          600: '#236b98',
-          700: '#20567b',
-          800: '#204966',
-          900: '#1f3e57',
+          hi: '#8fd0f0',
+          deep: '#1f6f9e',
         },
-        silver: {
-          DEFAULT: '#c0c0c0',
-          muted: '#9a9a9e',
-          dim: '#6b6b70',
+        chrome: '#c0c4cc',
+        hairline: 'rgba(192,196,204,0.14)',
+        text: {
+          DEFAULT: '#f4f6f8',
+          dim: '#aab1bb',
+          mute: '#767d87',
         },
+        ok: '#4bd0a0',
+        warn: '#f0b354',
+        danger: '#f0616b',
       },
       fontFamily: {
-        display: ['"Sora"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
-        sans: ['"Inter"', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Archivo', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
-      letterSpacing: {
-        tightest: '-0.04em',
-      },
-      maxWidth: {
-        content: '1200px',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-      },
+      maxWidth: { content: '1200px' },
+      letterSpacing: { eyebrow: '0.22em' },
+      borderRadius: { '4xl': '1.75rem' },
       boxShadow: {
-        glow: '0 0 0 1px rgba(59,159,212,0.35), 0 18px 50px -12px rgba(59,159,212,0.55)',
-        'glow-sm': '0 0 0 1px rgba(59,159,212,0.3), 0 8px 24px -8px rgba(59,159,212,0.45)',
-        card: '0 1px 0 0 rgba(255,255,255,0.04) inset, 0 30px 60px -30px rgba(0,0,0,0.9)',
+        jet: '0 0 0 1px rgba(59,159,212,0.4), 0 20px 50px -16px rgba(59,159,212,0.5)',
+        'jet-sm': '0 0 0 1px rgba(59,159,212,0.35), 0 10px 26px -10px rgba(59,159,212,0.45)',
+        bezel:
+          '0 1px 0 0 rgba(255,255,255,0.05) inset, 0 0 0 1px rgba(192,196,204,0.16), 0 40px 80px -40px rgba(0,0,0,0.95)',
       },
-      backgroundImage: {
-        'brand-gradient':
-          'linear-gradient(120deg, #3b9fd4 0%, #7cc5ee 35%, #ffffff 55%, #7cc5ee 72%, #3b9fd4 100%)',
-        'radial-fade':
-          'radial-gradient(60% 60% at 50% 0%, rgba(59,159,212,0.22) 0%, rgba(10,10,10,0) 70%)',
+      transitionTimingFunction: {
+        out: 'cubic-bezier(0.16,1,0.3,1)',
+        in: 'cubic-bezier(0.7,0,0.84,0)',
       },
       keyframes: {
-        'gradient-pan': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
+        'jet-pan': {
+          '0%,100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
         },
-        'fade-up': {
-          '0%': { opacity: '0', transform: 'translateY(18px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        drift: {
+          '0%,100%': { transform: 'translate3d(0,0,0)' },
+          '50%': { transform: 'translate3d(0,-14px,0)' },
         },
-        float: {
-          '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
-        },
-        shimmer: {
-          '100%': { transform: 'translateX(100%)' },
-        },
-        'pulse-ring': {
-          '0%': { transform: 'scale(0.8)', opacity: '0.6' },
-          '100%': { transform: 'scale(2.4)', opacity: '0' },
-        },
+        sheen: { '100%': { transform: 'translateX(120%)' } },
       },
       animation: {
-        'gradient-pan': 'gradient-pan 8s ease infinite',
-        'fade-up': 'fade-up 0.7s cubic-bezier(0.16,1,0.3,1) both',
-        float: 'float 6s ease-in-out infinite',
-        shimmer: 'shimmer 2.5s infinite',
-        'pulse-ring': 'pulse-ring 2.4s cubic-bezier(0.16,1,0.3,1) infinite',
+        'jet-pan': 'jet-pan 9s ease-in-out infinite',
+        drift: 'drift 7s ease-in-out infinite',
+        sheen: 'sheen 2.4s ease-out',
       },
     },
   },
