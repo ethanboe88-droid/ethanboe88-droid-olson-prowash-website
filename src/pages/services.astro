@@ -58,7 +58,7 @@ const serviceFaqs = [
   <div class="sticky top-[76px] z-30 border-b border-hairline bg-ink/80 backdrop-blur">
     <div class="container-x flex gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
       {SERVICES.map((s) => (
-        <a href={s.detailPage ?? `#${s.slug}`} class="inline-flex items-center gap-1 whitespace-nowrap rounded-full border border-hairline px-3.5 py-2 text-xs font-medium text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}{s.detailPage && <Icon name="arrow" class="h-3 w-3" />}</a>
+        <a href={`#${s.slug}`} class="inline-flex items-center gap-1 whitespace-nowrap rounded-full border border-hairline px-3.5 py-2 text-xs font-medium text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}</a>
       ))}
     </div>
   </div>
@@ -83,11 +83,8 @@ const serviceFaqs = [
                 ))}
               </ul>
               <div class="reveal mt-7 flex flex-wrap items-center gap-3">
-                {s.detailPage ? (
-                  <a href={s.detailPage} data-magnetic class="btn btn-primary">Explore {s.title} <Icon name="arrow" class="h-4 w-4" /></a>
-                ) : (
-                  <a href="/contact#quote" data-magnetic class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
-                )}
+                <a href={s.detailPage} data-magnetic class="btn btn-primary">Explore {s.title} <Icon name="arrow" class="h-4 w-4" /></a>
+                <a href="/contact#quote" class="btn btn-ghost">Free quote</a>
                 <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
               </div>
             </div>

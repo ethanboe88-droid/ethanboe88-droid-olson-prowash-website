@@ -186,6 +186,7 @@ export const serviceLd = (s: (typeof SERVICES)[number]) => {
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Snohomish County, WA' },
       { '@type': 'AdministrativeArea', name: 'King County, WA' },
+      ...SITE.serviceCities.map((c) => ({ '@type': 'City', name: `${c}, ${REGION}` })),
     ],
     url: `${base}${s.detailPage ?? `/services#${s.slug}`}`,
     offers: {

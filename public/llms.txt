@@ -17,16 +17,18 @@ Key facts:
 
 ## Services
 
-- [Roof Cleaning](https://olsonprowash.com/services#roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, plus a zinc/copper treatment to slow regrowth. No high pressure, no granule loss, no voided warranty. From $499.
-- [House Washing](https://olsonprowash.com/services#house-washing): Whole-home exterior soft wash of siding, soffits, trim and gutter faces. From $299.
-- [Pressure Washing](https://olsonprowash.com/services#pressure-washing): Hot-water pressure washing for concrete, brick, pavers and stone. From $199.
-- [Soft Washing](https://olsonprowash.com/services#soft-washing): Low-pressure detergent cleaning for stucco, cedar, painted surfaces and fences. From $249.
-- [Gutter Cleaning](https://olsonprowash.com/services#gutter-cleaning): Hand clear-out, downspout flush and exterior face wash. From $149.
+Every service has its own page with a Pacific-Northwest rationale, a 4-step method, an FAQ, and links to that service in all 18 cities served.
+
+- [Roof Cleaning](https://olsonprowash.com/services/roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, plus a zinc/copper treatment to slow regrowth. No high pressure, no granule loss, no voided warranty. From $499.
+- [House Washing](https://olsonprowash.com/services/house-washing): Whole-home exterior soft wash of siding, soffits, trim and gutter faces. From $299.
+- [Pressure Washing](https://olsonprowash.com/services/pressure-washing): Hot-water pressure washing for concrete, brick, pavers and stone. From $199.
+- [Soft Washing](https://olsonprowash.com/services/soft-washing): Low-pressure detergent cleaning for stucco, cedar, painted surfaces and fences. From $249.
+- [Gutter Cleaning](https://olsonprowash.com/services/gutter-cleaning): Hand clear-out, downspout flush and exterior face wash. From $149.
 - [Gutter Guard Installation](https://olsonprowash.com/services/gutter-guard-installation): Stainless micro-mesh gutter guards fitted to the roofline. From $8/linear ft.
-- [Deck & Patio Cleaning](https://olsonprowash.com/services#deck-patio-cleaning): Wood, composite and stone, cleaned at the right pressure for the material. From $229.
-- [Driveway & Concrete Cleaning](https://olsonprowash.com/services#driveway-concrete-cleaning): Streak-free rotary surface cleaning with stain treatment. From $189.
-- [Commercial Services](https://olsonprowash.com/services#commercial-services): Recurring or one-time exterior maintenance for retail, restaurants, HOAs and property managers. Quoted per site.
-- [Landscaping](https://olsonprowash.com/services#landscaping): Bed design, mulch, edging, shrub trimming and seasonal clean-ups. From $179.
+- [Deck & Patio Cleaning](https://olsonprowash.com/services/deck-patio-cleaning): Wood, composite and stone, cleaned at the right pressure for the material. From $229.
+- [Driveway & Concrete Cleaning](https://olsonprowash.com/services/driveway-concrete-cleaning): Streak-free rotary surface cleaning with stain treatment. From $189.
+- [Commercial Services](https://olsonprowash.com/services/commercial-services): Recurring or one-time exterior maintenance for retail, restaurants, HOAs and property managers. Quoted per site.
+- [Landscaping](https://olsonprowash.com/services/landscaping): Bed design, mulch, edging, shrub trimming and seasonal clean-ups. From $179.
 
 ## Pages
 
