@@ -9,7 +9,7 @@ const LASTMOD = '2026-08-31T12:00:00.000Z';
 
 export default defineConfig({
   site: 'https://olsonprowash.com',
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
   integrations: [
     tailwind({ applyBaseStyles: false }),
@@ -18,12 +18,15 @@ export default defineConfig({
       changefreq: 'weekly',
       lastmod: new Date(LASTMOD),
       serialize(item) {
+        // Canonical URL form site-wide: no trailing slash (matches <link rel=canonical>).
+        item.url = item.url.replace(/([^/])\/$/, '$1');
         const u = item.url;
         item.lastmod = LASTMOD;
         if (/olsonprowash\.com\/?$/.test(u)) item.priority = 1.0;
         else if (/\/(services|contact)\/?$/.test(u)) item.priority = 0.9;
         else if (/\/services\//.test(u)) item.priority = 0.8;
         else if (/\/(gallery|about|service-area|faq)\/?$/.test(u)) item.priority = 0.7;
+        else if (/\/service-area\/[^/]+\/?$/.test(u)) item.priority = 0.6;
         else if (/\/blog\/[^/]+\/?$/.test(u)) { item.priority = 0.6; item.changefreq = 'monthly'; }
         else if (/\/blog\/?$/.test(u)) item.priority = 0.6;
         else item.priority = 0.5;

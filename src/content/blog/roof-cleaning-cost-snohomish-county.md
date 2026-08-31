@@ -1,6 +1,6 @@
 ---
 title: "How Much Does Roof Cleaning Cost in Snohomish County? (2026 Prices)"
-description: "Real 2026 price ranges for roof soft washing in Lake Stevens, Everett, Marysville and the rest of Snohomish County — what drives the number up, what a fair quote looks like, and how to avoid paying for roof damage."
+description: "Real 2026 price ranges for roof soft washing in Snohomish County, WA — what drives the number, what a fair quote includes, and how to avoid paying for roof damage."
 pubDate: 2026-08-28
 heroImage: "/images/p-roof.jpg"
 heroAlt: "Olson Pro Wash technician soft-washing a moss-covered roof in Snohomish County"

@@ -1,6 +1,6 @@
 ---
 title: "The Best Time of Year to Pressure Wash Your House in Western Washington"
-description: "Spring through early fall is the sweet spot for exterior cleaning in the Puget Sound region — here is why, which jobs can be done year-round, and how to time roof, house and gutter cleaning so it actually lasts."
+description: "Late spring through early fall is the sweet spot for exterior cleaning in Western Washington — plus which jobs can be done year-round and how to time each one."
 pubDate: 2026-08-30
 heroImage: "/images/p-house.jpg"
 heroAlt: "Two-story Western Washington home being soft washed on a clear day"

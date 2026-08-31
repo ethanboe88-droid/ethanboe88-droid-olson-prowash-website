@@ -38,11 +38,18 @@ const {
   keywords,
 } = Astro.props;
 
+// Keep meta/OG descriptions within the ~160-char range search engines display.
+// Templates should already be concise; this is a safety clamp at a word boundary.
+const metaDescription =
+  description.length <= 160
+    ? description
+    : description.slice(0, 157).replace(/\s+\S*$/, '') + '…';
+
 const siteUrl = Astro.site ?? new URL(SITE.domain);
-// One canonical URL form everywhere: absolute + trailing slash (matches the
-// sitemap and the built /path/index.html output). Kills duplicate-URL signals.
+// One canonical URL form everywhere: absolute, no trailing slash (root stays "/").
+// Matches the sitemap and every internal link, so there are no duplicate-URL signals.
 const canonicalPath = new URL(canonical, siteUrl);
-if (!canonicalPath.pathname.endsWith('/')) canonicalPath.pathname += '/';
+canonicalPath.pathname = canonicalPath.pathname.replace(/(.+)\/$/, '$1');
 const canonicalUrl = canonicalPath.href;
 const ogImage = new URL(image, siteUrl).href;
 const ogImageAlt =
@@ -58,7 +65,7 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta name="generator" content={Astro.generator} />
 
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="en-us" href={canonicalUrl} />
     <link rel="alternate" hreflang="x-default" href={canonicalUrl} />
@@ -90,7 +97,7 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta property="og:site_name" content={SITE.name} />
     <meta property="og:type" content={type} />
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:alt" content={ogImageAlt} />
@@ -102,7 +109,7 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={ogImageAlt} />
 

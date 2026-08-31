@@ -26,7 +26,7 @@ const home: Entry = {
 };
 
 const gallery: Entry = {
-  loc: `${base}/gallery/`,
+  loc: `${base}/gallery`,
   images: [
     { url: `${base}/images/ba-roof-1.jpg`, caption: 'Before and after roof soft washing in Snohomish County — leaf-covered mossy roof cleared to clean shingles' },
     { url: `${base}/images/ba-roof-gutter-1.jpg`, caption: 'Before and after combined roof and gutter cleaning on a forested Washington home' },
@@ -49,14 +49,14 @@ const gallery: Entry = {
 };
 
 const services: Entry[] = SERVICES.filter((s) => s.photo).map((s) => ({
-  loc: `${base}${s.detailPage}/`,
+  loc: `${base}${s.detailPage}`,
   images: [
     { url: `${base}${s.photo}`, caption: s.photoAlt ?? `${s.title} by Olson Pro Wash`, title: `${s.title} — Olson Pro Wash` },
   ],
 }));
 
 const roofService: Entry = {
-  loc: `${base}/services/roof-cleaning/`,
+  loc: `${base}/services/roof-cleaning`,
   images: [
     { url: `${base}/images/roof-before.jpg`, caption: 'Roof before soft washing in Snohomish County' },
     { url: `${base}/images/roof-after.jpg`, caption: 'Roof after an Olson Pro Wash soft wash' },
@@ -64,12 +64,12 @@ const roofService: Entry = {
 };
 
 const cities: Entry[] = CITIES.map((c) => ({
-  loc: `${base}/service-area/${c.slug}/`,
+  loc: `${base}/service-area/${c.slug}`,
   images: [{ url: `${base}${c.photo}`, caption: c.photoAlt, title: `Exterior cleaning in ${c.name}, ${SITE.address.region}` }],
 }));
 
 const about: Entry = {
-  loc: `${base}/about/`,
+  loc: `${base}/about`,
   images: [{ url: `${base}/images/founder.jpg`, caption: `${SITE.founder}, founder of ${SITE.legalName}`, title: SITE.founder }],
 };
 
