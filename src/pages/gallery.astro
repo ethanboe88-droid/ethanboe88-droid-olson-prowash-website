@@ -8,15 +8,16 @@ import CtaBanner from '../components/CtaBanner.astro';
 import { breadcrumbLd } from '../data/schema';
 
 const shots = [
-  { src: '/images/gallery-1.svg', cat: 'Roof Cleaning', alt: 'Roof after a full moss soft wash, streaks removed' },
-  { src: '/images/gallery-2.svg', cat: 'House Washing', alt: 'Two-story home after an exterior soft wash' },
-  { src: '/images/gallery-3.svg', cat: 'Driveways', alt: 'Concrete driveway after surface cleaning' },
-  { src: '/images/gallery-4.svg', cat: 'Commercial', alt: 'Storefront sidewalk and entrance cleaned' },
-  { src: '/images/gallery-5.svg', cat: 'Roof Cleaning', alt: 'Lakeside home roof brightened after soft wash' },
-  { src: '/images/gallery-6.svg', cat: 'Decks', alt: 'Restored cedar deck and railings' },
-  { src: '/images/gallery-7.svg', cat: 'Landscaping', alt: 'Mulched beds and trimmed shrubs after clean-up' },
-  { src: '/images/gallery-8.svg', cat: 'Gutters', alt: 'Gutter line cleared and faces soft washed' },
-  { src: '/images/gallery-9.svg', cat: 'Commercial', alt: 'Dumpster pad and back entry pressure washed' },
+  { src: '/images/p-roof.jpg', cat: 'Roof Cleaning', alt: 'Olson Pro Wash technician soft-washing a roof from the ridge' },
+  { src: '/images/p-house-truck.jpg', cat: 'House Washing', alt: 'Soft-washing a large two-story home with the Olson Pro Wash rig alongside' },
+  { src: '/images/p-driveway.jpg', cat: 'Pressure Washing', alt: 'Running a rotary surface cleaner on a residential driveway' },
+  { src: '/images/p-gutterguard.jpg', cat: 'Gutter Guards', alt: 'Fitting a stainless micro-mesh gutter guard on a shingle roof' },
+  { src: '/images/p-roof2.jpg', cat: 'Roof Cleaning', alt: 'Ethan Olson soft-washing a mossy roof from a ladder' },
+  { src: '/images/p-deck.jpg', cat: 'Decks', alt: 'Soft-washing a composite deck, foam on the boards' },
+  { src: '/images/p-fence.jpg', cat: 'Soft Washing', alt: 'Soft-washing a wood privacy fence' },
+  { src: '/images/p-gutter.jpg', cat: 'Gutters', alt: 'Clearing debris from a home gutter by hand' },
+  { src: '/images/p-window.jpg', cat: 'Window Cleaning', alt: 'Squeegeeing an exterior window from a ladder' },
+  { src: '/images/p-house.jpg', cat: 'House Washing', alt: 'Technician soft-washing a two-story home, suds running down the siding' },
 ];
 ---
 <BaseLayout
@@ -35,10 +36,9 @@ const shots = [
   <section class="section">
     <div class="container-x">
       <SectionHeading eyebrow="Before / after" title="Move the handle" />
-      <div class="mt-10 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Roof soft wash · Lake Stevens, WA" beforeAlt="Mossy roof before" afterAlt="Clean roof after" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="48" label="House wash · Everett, WA" beforeAlt="Algae siding before" afterAlt="Clean siding after" />
-        <BeforeAfter class="reveal lg:col-span-2" before="/images/before-3.svg" after="/images/after-3.svg" start="58" label="Driveway · Marysville, WA" beforeAlt="Stained driveway before" afterAlt="Clean driveway after" />
+      <div class="mt-10">
+        <BeforeAfter class="reveal" before="/images/roof-before.jpg" after="/images/roof-after.jpg" start="54"
+          label="Roof soft wash · Snohomish County, WA" beforeAlt="Mossy, streaked roof before soft washing" afterAlt="The same roof after soft washing" />
       </div>
     </div>
   </section>

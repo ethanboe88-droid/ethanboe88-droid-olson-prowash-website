@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
-import BeforeAfter from '../../components/BeforeAfter.astro';
 import Faq from '../../components/Faq.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import JetDivider from '../../components/JetDivider.astro';
@@ -102,9 +101,11 @@ const priceRanges = [
           <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{svc.price}</span>
         </div>
       </div>
-      <BeforeAfter class="reveal" before="/images/gg-before.svg" after="/images/gg-after.svg" start="52"
-        label="Open gutter vs. micro-mesh guard" beforeAlt="Open gutter clogged with fir needles and moss debris"
-        afterAlt="Gutter fitted with stainless micro-mesh guard" />
+      <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2">
+        <img src="/images/p-gutterguard.jpg" alt="Ethan Olson fitting a stainless micro-mesh gutter guard on a shingle roof"
+             loading="lazy" decoding="async" width="1500" height="1000" class="aspect-[3/2] w-full object-cover" />
+        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Micro-mesh guard, fitted to the roofline · Snohomish County</figcaption>
+      </figure>
     </div>
   </section>
 

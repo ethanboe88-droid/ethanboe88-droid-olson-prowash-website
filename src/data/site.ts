@@ -69,7 +69,7 @@ export const SITE = {
     youtube: '',
   },
 
-  ogImage: '/images/og-default.png',
+  ogImage: '/images/og-photo.jpg',
 } as const;
 
 export const NAV_LINKS = [

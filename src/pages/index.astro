@@ -70,12 +70,22 @@ const homeFaqs = [
         title="Drag to blast off the <span class='text-jet-grad'>before</span>"
         intro="Real results from real Snohomish and King County properties. No filters — just the right method and a crew that doesn't cut corners."
       />
-      <div class="mt-12 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Roof soft wash · Lake Stevens, WA" beforeAlt="Roof covered in moss and black streaks before soft washing" afterAlt="Clean roof after soft washing, moss and streaks removed" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="50" label="House wash · Everett, WA" beforeAlt="Algae-covered vinyl siding before washing" afterAlt="Bright clean siding after a soft wash" />
+      <div class="mt-12">
+        <BeforeAfter class="reveal" before="/images/roof-before.jpg" after="/images/roof-after.jpg" start="54"
+          label="Roof soft wash · Snohomish County, WA" beforeAlt="Roof covered in moss and black streaks before soft washing"
+          afterAlt="Same roof after soft washing — moss and streaks gone" />
       </div>
-      <div class="mt-6">
-        <BeforeAfter class="reveal" before="/images/before-3.svg" after="/images/after-3.svg" start="60" label="Concrete driveway · Marysville, WA" beforeAlt="Stained mossy driveway before pressure washing" afterAlt="Even bright driveway after surface cleaning" />
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {[
+          { src: '/images/p-house.jpg', cap: 'House wash · Lake Stevens', alt: 'Technician soft-washing a two-story home' },
+          { src: '/images/p-driveway.jpg', cap: 'Driveway · Marysville', alt: 'Rotary surface cleaner on a concrete driveway' },
+          { src: '/images/p-deck.jpg', cap: 'Composite deck · Snohomish', alt: 'Soft-washing a composite deck' },
+        ].map((p, i) => (
+          <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2" style={`--reveal-delay:${i * 70}ms`}>
+            <img src={p.src} alt={p.alt} loading="lazy" decoding="async" width="1500" height="1000" class="aspect-[3/2] w-full object-cover" />
+            <figcaption class="border-t border-hairline px-4 py-2.5 text-xs text-text-mute">{p.cap}, WA</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>

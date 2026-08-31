@@ -47,15 +47,19 @@ import { SITE } from '../data/site';
       <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-jet/10 blur-2xl"></div>
       <div class="bezel relative overflow-hidden rounded-[1.6rem] bg-ink-2">
         <div class="relative aspect-[4/5] w-full">
-          <!-- Living canvas background (GPU-cheap mist/particles) -->
-          <canvas id="hero-canvas" class="absolute inset-0 h-full w-full" aria-hidden="true"></canvas>
+          <!-- Real job photo (base layer) -->
+          <img src="/images/hero.jpg" alt="Ethan Olson on a ladder inspecting a roofline, Snohomish County, WA"
+               class="absolute inset-0 h-full w-full object-cover" width="1400" height="1750" fetchpriority="high" decoding="async" />
+
+          <!-- Living canvas mist (subtle overlay) -->
+          <canvas id="hero-canvas" class="absolute inset-0 h-full w-full opacity-60 mix-blend-screen" aria-hidden="true"></canvas>
 
           <!--
             DROP A REAL LOOP HERE: place hero.webm / hero.mp4 in /public/media/
             and un-comment the <source> lines. Poster shows until it can play.
           -->
           <video id="hero-video" class="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-700"
-                 autoplay muted loop playsinline preload="none" poster="/images/hero-poster.png" aria-hidden="true">
+                 autoplay muted loop playsinline preload="none" poster="/images/hero.jpg" aria-hidden="true">
             <!-- <source src="/media/hero.webm" type="video/webm" /> -->
             <!-- <source src="/media/hero.mp4" type="video/mp4" /> -->
           </video>
@@ -71,8 +75,8 @@ import { SITE } from '../data/site';
           <div class="absolute inset-x-0 bottom-0 p-5">
             <div class="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-black/45 p-3 backdrop-blur">
               <div>
-                <div class="font-display text-[11px] uppercase tracking-eyebrow text-text-mute">Same-day transformation</div>
-                <div class="font-display text-sm font-semibold text-text">Roof soft wash · Lake Stevens</div>
+                <div class="font-display text-[11px] uppercase tracking-eyebrow text-text-mute">Owner on the job</div>
+                <div class="font-display text-sm font-semibold text-text">Ethan Olson · Snohomish County</div>
               </div>
               <a href="/gallery" class="btn btn-primary !px-4 !py-2 text-xs">See the gallery</a>
             </div>

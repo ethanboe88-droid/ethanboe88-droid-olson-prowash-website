@@ -2,8 +2,8 @@
 title: "Soft Wash vs Pressure Wash: What's Right for Your Washington Home?"
 description: "The difference between soft washing and pressure washing, which surfaces need which method, and why the wrong one can cost you thousands in siding and roof damage in the wet PNW."
 pubDate: 2026-07-22
-heroImage: "/images/blog-soft-vs-pressure.svg"
-heroAlt: "Side by side comparison of soft washing siding and pressure washing concrete"
+heroImage: "/images/p-roof2.jpg"
+heroAlt: "Olson Pro Wash soft-washing a mossy roof from a ladder"
 category: "Explainer"
 author: "Olson Pro Wash"
 readingTime: "6 min read"

@@ -27,7 +27,7 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
         data-cat={s.cat} data-index={i} style={`--reveal-delay:${(i % 3) * 70}ms`}
         aria-label={`Open image: ${s.alt}`}
       >
-        <img src={s.src} alt={s.alt} loading="lazy" decoding="async" width="1200" height="900"
+        <img src={s.src} alt={s.alt} loading="lazy" decoding="async" width="1500" height="1050"
              class="w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
         <span class="flex items-center justify-between px-4 py-3 text-xs">
           <span class="font-display font-semibold uppercase tracking-eyebrow text-text">{s.cat}</span>

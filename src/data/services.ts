@@ -14,6 +14,9 @@ export type Service = {
   span: 'xl' | 'wide' | 'unit';
   /** when set, links point to a dedicated page instead of /services#slug */
   detailPage?: string;
+  /** real job photo for the /services section (falls back to a before/after slider) */
+  photo?: string;
+  photoAlt?: string;
 };
 
 export const SERVICES: Service[] = [
@@ -48,6 +51,8 @@ export const SERVICES: Service[] = [
     price: 'from $299',
     icon: 'house',
     span: 'wide',
+    photo: '/images/p-house.jpg',
+    photoAlt: 'Olson Pro Wash technician soft-washing a two-story home, suds running down the siding',
   },
   {
     slug: 'pressure-washing',
@@ -64,6 +69,8 @@ export const SERVICES: Service[] = [
     price: 'from $199',
     icon: 'jet',
     span: 'unit',
+    photo: '/images/p-driveway.jpg',
+    photoAlt: 'Olson Pro Wash running a rotary surface cleaner on a residential driveway',
   },
   {
     slug: 'soft-washing',
@@ -80,6 +87,8 @@ export const SERVICES: Service[] = [
     price: 'from $249',
     icon: 'foam',
     span: 'unit',
+    photo: '/images/p-fence.jpg',
+    photoAlt: 'Olson Pro Wash soft-washing a wood privacy fence',
   },
   {
     slug: 'gutter-cleaning',
@@ -96,6 +105,8 @@ export const SERVICES: Service[] = [
     price: 'from $149',
     icon: 'gutter',
     span: 'unit',
+    photo: '/images/p-gutter.jpg',
+    photoAlt: 'Olson Pro Wash clearing debris from a home gutter by hand',
   },
   {
     slug: 'gutter-guard-installation',
@@ -114,6 +125,8 @@ export const SERVICES: Service[] = [
     icon: 'gutterGuard',
     span: 'wide',
     detailPage: '/services/gutter-guard-installation',
+    photo: '/images/p-gutterguard.jpg',
+    photoAlt: 'Ethan Olson fitting a stainless micro-mesh gutter guard on a shingle roof',
   },
   {
     slug: 'deck-patio-cleaning',
@@ -130,6 +143,8 @@ export const SERVICES: Service[] = [
     price: 'from $229',
     icon: 'deck',
     span: 'unit',
+    photo: '/images/p-deck.jpg',
+    photoAlt: 'Olson Pro Wash soft-washing a composite deck, foam on the boards',
   },
   {
     slug: 'driveway-concrete-cleaning',
@@ -146,6 +161,8 @@ export const SERVICES: Service[] = [
     price: 'from $189',
     icon: 'driveway',
     span: 'unit',
+    photo: '/images/p-driveway.jpg',
+    photoAlt: 'Freshly surface-cleaned concrete driveway with the Olson Pro Wash truck alongside',
   },
   {
     slug: 'commercial-services',

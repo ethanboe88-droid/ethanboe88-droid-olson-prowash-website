@@ -2,8 +2,8 @@
 title: "How Often Should You Pressure Wash Your Home in the Pacific Northwest?"
 description: "A realistic cleaning schedule for houses, roofs, decks and driveways in the wet Puget Sound climate — plus the warning signs that mean you're already overdue."
 pubDate: 2026-06-19
-heroImage: "/images/blog-how-often.svg"
-heroAlt: "Homeowner inspecting clean siding after a scheduled house wash"
+heroImage: "/images/hero.jpg"
+heroAlt: "Ethan Olson on a ladder checking a roofline for moss"
 category: "Maintenance"
 author: "Olson Pro Wash"
 readingTime: "5 min read"

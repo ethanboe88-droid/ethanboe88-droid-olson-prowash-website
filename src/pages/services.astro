@@ -78,14 +78,24 @@ const serviceFaqs = [
               </div>
             </div>
             <div class:list={['reveal', i % 2 === 1 && 'lg:order-1']}>
-              <BeforeAfter
-                before={s.slug === 'gutter-guard-installation' ? '/images/gg-before.svg' : `/images/before-${(i % 3) + 1}.svg`}
-                after={s.slug === 'gutter-guard-installation' ? '/images/gg-after.svg' : `/images/after-${(i % 3) + 1}.svg`}
-                start={52 + (i % 3) * 6}
-                label={`${s.title} — before / after`}
-                beforeAlt={`${s.title} before`}
-                afterAlt={`${s.title} after`}
-              />
+              {s.slug === 'roof-cleaning' ? (
+                <BeforeAfter before="/images/roof-before.jpg" after="/images/roof-after.jpg" start={54}
+                  label="Roof soft wash — before / after" beforeAlt="Mossy roof before soft washing" afterAlt="Clean roof after soft washing" />
+              ) : s.photo ? (
+                <figure class="bezel overflow-hidden rounded-2xl bg-ink-2">
+                  <img src={s.photo} alt={s.photoAlt ?? `${s.title} by Olson Pro Wash`} loading="lazy" decoding="async" width="1500" height="1000" class="aspect-[3/2] w-full object-cover" />
+                  <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">{s.title} · Snohomish County, WA</figcaption>
+                </figure>
+              ) : (
+                <div class="bezel relative grid aspect-[3/2] place-items-center overflow-hidden rounded-2xl bg-ink-2 text-center">
+                  <div aria-hidden="true" class="pointer-events-none absolute inset-0 opacity-[0.12]" style="background: var(--jet-gradient); background-size: 220% 100%;"></div>
+                  <div class="relative">
+                    <span class="mx-auto grid h-14 w-14 place-items-center rounded-2xl border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={s.icon} class="h-7 w-7" /></span>
+                    <p class="mt-4 font-display text-sm font-semibold uppercase tracking-eyebrow text-text-mute">{s.title}</p>
+                    <p class="mt-1 text-xs text-text-mute">Project photos coming soon</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </article>
