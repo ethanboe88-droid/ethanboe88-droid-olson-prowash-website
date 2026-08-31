@@ -35,7 +35,13 @@ export const localBusinessLd = {
     opens: o.opens,
     closes: o.closes,
   })),
-  sameAs: [SITE.social.facebook, SITE.social.instagram].filter(Boolean),
+  sameAs: [
+    SITE.social.facebook,
+    SITE.social.instagram,
+    SITE.social.yelp,
+    SITE.social.nextdoor,
+    SITE.social.yahoo,
+  ].filter(Boolean),
   aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '54' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',

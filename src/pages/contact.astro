@@ -45,6 +45,22 @@ import { breadcrumbLd } from '../data/schema';
           </ul>
           <a href={SITE.googleBusinessUrl} target="_blank" rel="noopener" class="btn btn-ghost mt-5 w-full text-sm"><Icon name="google" class="h-4 w-4" /> View us on Google</a>
           <a href={SITE.googleReviewUrl} target="_blank" rel="noopener" class="btn btn-ghost mt-2 w-full text-sm"><Icon name="star" class="h-4 w-4" /> Leave a Google review</a>
+
+          <p class="mt-5 text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Find us on</p>
+          <div class="mt-3 flex flex-wrap gap-2.5">
+            {[
+              { href: SITE.social.facebook, icon: 'facebook', label: 'Facebook' },
+              { href: SITE.social.instagram, icon: 'instagram', label: 'Instagram' },
+              { href: SITE.social.yelp, icon: 'yelp', label: 'Yelp' },
+              { href: SITE.social.nextdoor, icon: 'nextdoor', label: 'Nextdoor' },
+              { href: SITE.social.yahoo, icon: 'yahoo', label: 'Yahoo Local' },
+            ].filter((s) => s.href).map((s) => (
+              <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}
+                 class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
+                <Icon name={s.icon} class="h-5 w-5" />
+              </a>
+            ))}
+          </div>
         </div>
 
         <div class="panel p-6">

@@ -14,23 +14,20 @@ import { SERVICES } from '../data/services';
           {SITE.legalName}. Premium pressure washing, roof &amp; soft washing, and landscaping.
           {SITE.areaServedLong}.
         </p>
-        <div class="mt-5 flex gap-3">
-          {SITE.social.facebook && (
-            <a href={SITE.social.facebook} target="_blank" rel="noopener" aria-label="Facebook"
+        <div class="mt-5 flex flex-wrap gap-2.5">
+          {[
+            { href: SITE.social.facebook, icon: 'facebook', label: 'Facebook' },
+            { href: SITE.social.instagram, icon: 'instagram', label: 'Instagram' },
+            { href: SITE.social.yelp, icon: 'yelp', label: 'Yelp' },
+            { href: SITE.social.nextdoor, icon: 'nextdoor', label: 'Nextdoor' },
+            { href: SITE.social.yahoo, icon: 'yahoo', label: 'Yahoo Local' },
+            { href: SITE.googleBusinessUrl, icon: 'google', label: 'Google Business Profile' },
+          ].filter((s) => s.href).map((s) => (
+            <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}
                class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
-              <Icon name="facebook" class="h-5 w-5" />
+              <Icon name={s.icon} class="h-5 w-5" />
             </a>
-          )}
-          {SITE.social.instagram && (
-            <a href={SITE.social.instagram} target="_blank" rel="noopener" aria-label="Instagram"
-               class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
-              <Icon name="instagram" class="h-5 w-5" />
-            </a>
-          )}
-          <a href={SITE.googleBusinessUrl} target="_blank" rel="noopener" aria-label="Google Business Profile"
-             class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
-            <Icon name="google" class="h-5 w-5" />
-          </a>
+          ))}
         </div>
       </div>
 

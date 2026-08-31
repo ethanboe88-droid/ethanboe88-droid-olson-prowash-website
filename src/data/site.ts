@@ -64,8 +64,11 @@ export const SITE = {
     'https://www.google.com/maps/search/?api=1&query=Olson+Landscaping+Pro+Wash+Lake+Stevens+WA',
   googleReviewUrl: 'https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID',
   social: {
-    facebook: 'https://www.facebook.com/olsonprowash',
-    instagram: 'https://www.instagram.com/olsonprowash',
+    facebook: 'https://www.facebook.com/p/Olson-Landscaping-Pro-Wash-LLC-61569118052923/',
+    instagram: 'https://www.instagram.com/olson_landscaping_pro_wash_llc/',
+    yelp: 'https://www.yelp.com/biz/olson-landscaping-marysville-2',
+    nextdoor: 'https://nextdoor.com/pages/olson-landscaping-llc-marysville-wa/',
+    yahoo: 'https://local.yahoo.com/info-234261407-olson-landscaping-marysville/',
     youtube: '',
   },
 
