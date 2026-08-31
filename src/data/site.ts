@@ -15,12 +15,12 @@ export const SITE = {
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).
-  lastContentUpdate: '2026-08-31T12:00:00.000Z',
+  lastContentUpdate: '2026-08-31T18:00:00.000Z',
 
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
-  email: 'hello@olsonprowash.com',
-  emailHref: 'mailto:hello@olsonprowash.com',
+  email: 'olsonlandscapingcustomercare@gmail.com',
+  emailHref: 'mailto:olsonlandscapingcustomercare@gmail.com',
 
   address: {
     street: '',
@@ -57,13 +57,14 @@ export const SITE = {
   ],
 
   hours: [
-    { days: 'Monday – Friday', open: '7:00 AM', close: '6:00 PM' },
-    { days: 'Saturday', open: '8:00 AM', close: '2:00 PM' },
-    { days: 'Sunday', open: 'Closed', close: '' },
+    { days: 'Monday – Thursday', open: '9:00 AM', close: '12:00 AM' },
+    { days: 'Friday – Sunday', open: '10:00 AM', close: '12:00 AM' },
   ],
+  // Open until midnight — represented as 23:59 so schema parsers read it as
+  // same-day close rather than a zero-length window.
   openingHoursSpec: [
-    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '07:00', closes: '18:00' },
-    { days: ['Saturday'], opens: '08:00', closes: '14:00' },
+    { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], opens: '09:00', closes: '23:59' },
+    { days: ['Friday', 'Saturday', 'Sunday'], opens: '10:00', closes: '23:59' },
   ],
 
   founded: '2016',
