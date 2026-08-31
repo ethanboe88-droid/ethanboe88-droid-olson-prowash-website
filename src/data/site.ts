@@ -92,6 +92,6 @@ export const TRUST_BADGES = [
 export const STATS = [
   { label: 'Exteriors restored', value: 1800, suffix: '+', max: 2400 },
   { label: 'Years in business', value: 9, suffix: ' yrs', max: 12 },
-  { label: 'Five-star reviews', value: 240, suffix: '+', max: 320 },
+  { label: 'Google rating', value: 4.9, suffix: '★', max: 5 },
   { label: 'Satisfaction rate', value: 100, suffix: '%', max: 100 },
 ] as const;

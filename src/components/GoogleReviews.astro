@@ -1,0 +1,52 @@
+---
+// Featurable Google Reviews widget.
+// Widget managed at https://featurable.com — swap `widgetId` if it changes.
+import Icon from './Icon.astro';
+import { SITE } from '../data/site';
+interface Props { widgetId?: string; class?: string; }
+const { widgetId = 'fca01de7-f89b-47ce-93c9-3c36f4d36de1', class: className = '' } = Astro.props;
+---
+<div class:list={['reveal', className]}>
+  <div id={`featurable-${widgetId}`} data-featurable-async></div>
+
+  <noscript>
+    <p class="text-sm text-text-dim">
+      Enable JavaScript to see our live Google reviews, or
+      <a href={SITE.googleBusinessUrl} class="text-jet-hi hover:underline">read them on Google</a>.
+    </p>
+  </noscript>
+
+  <div class="mt-6 flex flex-wrap items-center gap-3">
+    <a href={SITE.googleBusinessUrl} target="_blank" rel="noopener" class="btn btn-ghost text-sm">
+      <Icon name="google" class="h-4 w-4" /> Read all reviews on Google
+    </a>
+    <a href={SITE.googleReviewUrl} target="_blank" rel="noopener" class="btn btn-ghost text-sm">
+      <Icon name="star" class="h-4 w-4" /> Leave a review
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    function loadFeaturable() {
+      // Re-inserting the script makes the Featurable bundle re-scan the DOM —
+      // needed because Astro view transitions swap page content without a reload.
+      var prev = document.getElementById('featurable-bundle');
+      if (prev) prev.remove();
+      var s = document.createElement('script');
+      s.id = 'featurable-bundle';
+      s.src = 'https://featurable.com/assets/bundle.js';
+      s.defer = true;
+      s.setAttribute('charset', 'UTF-8');
+      document.body.appendChild(s);
+    }
+
+    loadFeaturable();
+    if (!window.__featurableBound) {
+      window.__featurableBound = true;
+      document.addEventListener('astro:page-load', function () {
+        if (document.querySelector('[data-featurable-async]')) loadFeaturable();
+      });
+    }
+  })();
+</script>

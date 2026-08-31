@@ -4,6 +4,7 @@ import PageHero from '../components/PageHero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import QuoteForm from '../components/QuoteForm.astro';
 import HousecallProWidget from '../components/HousecallProWidget.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
 import { breadcrumbLd } from '../data/schema';
@@ -61,6 +62,13 @@ import { breadcrumbLd } from '../data/schema';
   </section>
 
   <HousecallProWidget heading="Rather just book a time?" sub="Skip the form — pick a service and slot in the Housecall Pro scheduler below." />
+
+  <section class="section border-t border-hairline">
+    <div class="container-x">
+      <SectionHeading eyebrow="Reviews" title="What the neighbors say" intro="Live from our Google Business Profile." />
+      <div class="mt-10"><GoogleReviews /></div>
+    </div>
+  </section>
 
   <section class="section bg-ink-1/50">
     <div class="container-x grid items-center gap-12 lg:grid-cols-2">

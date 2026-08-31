@@ -36,7 +36,7 @@ export const localBusinessLd = {
     closes: o.closes,
   })),
   sameAs: [SITE.social.facebook, SITE.social.instagram].filter(Boolean),
-  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '240' },
+  aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '54' },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Exterior Cleaning & Landscaping Services',
