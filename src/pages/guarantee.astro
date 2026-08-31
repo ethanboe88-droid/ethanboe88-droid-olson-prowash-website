@@ -1,0 +1,129 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import JetDivider from '../components/JetDivider.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Faq from '../components/Faq.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../data/site';
+import { breadcrumbLd, webPageLd, faqLd } from '../data/schema';
+
+// TODO: drop in the real WA contractor registration / license number and bond amount.
+const LICENSE = 'WA Contractor Reg. #(on file — ask for it)';
+
+const promises = [
+  {
+    icon: 'check',
+    t: 'We walk every job with you',
+    d: 'Before the crew leaves, we walk the property with you and look at the work together. If something was missed or is not right, we fix it on the spot.',
+  },
+  {
+    icon: 'shield',
+    t: 'Workmanship guaranteed',
+    d: 'If a result does not hold the way it should — a section we washed that did not come clean, a guard we installed that lets water past — call us and we come back. No argument, no invoice.',
+  },
+  {
+    icon: 'drop',
+    t: 'Damage-free methods',
+    d: 'The right method for every surface: low-pressure soft washing for roofs, siding and wood; controlled pressure for concrete and masonry. Plants are pre-wet, covered and rinsed. We never put high pressure on a shingle.',
+  },
+  {
+    icon: 'tag',
+    t: 'Honest, firm quotes',
+    d: 'The number we quote is the number you pay. No "starting at" that balloons on the day, no surprise add-ons. If we find something mid-job — a rotten fascia board, a failing downspout — we stop and show you photos before doing anything extra.',
+  },
+];
+
+const credentials = [
+  { k: 'Licensed', v: `${SITE.legalName} is a registered Washington contractor. ${LICENSE}.` },
+  { k: 'Bonded', v: 'A contractor bond is carried and maintained as required by Washington State.' },
+  { k: 'Insured', v: 'General liability coverage is in force. A certificate of insurance (COI) is available on request for HOA, commercial and property-management jobs — we can name your entity as certificate holder before the first visit.' },
+  { k: 'Local & accountable', v: `Owner-operated by ${SITE.founder} out of ${SITE.address.locality}, ${SITE.address.region}. You deal with the person whose name is on the truck.` },
+];
+
+const faqs = [
+  {
+    q: 'What if I am not happy with the result?',
+    a: `Call or text within a few days of the service and we will come back and make it right — that is what the workmanship guarantee means. Reach us at <a href="${SITE.phoneHref}">${SITE.phone}</a>.`,
+  },
+  {
+    q: 'Do you guarantee how long a clean will last?',
+    a: 'We guarantee the work, not the weather. In our climate, organic growth always comes back eventually — how fast depends on shade, trees and exposure. What we guarantee is that the surface leaves clean, by the correct method, with no damage. A <a href="/services/maintenance-plans">maintenance plan</a> is how you keep it that way.',
+  },
+  {
+    q: 'Can you provide proof of insurance for my HOA or property manager?',
+    a: 'Yes. We carry general liability coverage and will send a certificate of insurance naming your HOA or management company as certificate holder before we start. Ask for it with your quote.',
+  },
+  {
+    q: 'What happens if something gets damaged during a job?',
+    a: 'It is rare, because we match the method to the surface and protect what is around it — but if it happens, that is exactly what the liability coverage is for. We document, we report it to you immediately, and we make it right.',
+  },
+];
+---
+<BaseLayout
+  title="Our Guarantee — Licensed, Insured & Workmanship-Backed | Olson Pro Wash"
+  description={`The Olson Pro Wash guarantee: licensed and insured in Washington, damage-free methods, firm quotes, and workmanship backed — if it is not right, we come back. Lake Stevens, WA.`}
+  canonical="/guarantee"
+  keywords="licensed insured pressure washing Lake Stevens WA, pressure washing guarantee, roof cleaning workmanship warranty, certificate of insurance HOA pressure washing Snohomish County"
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Guarantee', path: '/guarantee' }]),
+    webPageLd({
+      name: 'Our Guarantee — Olson Pro Wash',
+      description: 'Licensing, insurance, damage-free methods, honest quotes and a workmanship guarantee across Snohomish & King County, WA.',
+      path: '/guarantee',
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow="The Olson standard"
+    title="If it's not right, <span class='text-jet-grad'>we come back</span>"
+    intro="Licensed and insured, damage-free by method, and priced straight. Here is exactly what you are covered by when you hire us."
+    crumbs={[{ label: 'Guarantee' }]}
+  />
+
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Four promises" title="What every Olson Pro Wash job comes with" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2">
+        {promises.map((p, i) => (
+          <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 65}ms`}>
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={p.icon} class="h-5 w-5" /></span>
+            <h3 class="mt-4 font-display text-lg font-bold text-text">{p.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-dim">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <section class="section bg-ink-1/50">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      <SectionHeading eyebrow="Credentials" title="Licensed, bonded & insured in Washington" class="!max-w-none" />
+      <dl class="reveal divide-y divide-hairline overflow-hidden rounded-2xl border border-hairline">
+        {credentials.map((c) => (
+          <div class="grid gap-1 bg-ink-1 p-5 sm:grid-cols-[140px_1fr] sm:gap-5 sm:p-6">
+            <dt class="font-display text-sm font-semibold uppercase tracking-eyebrow text-jet-hi">{c.k}</dt>
+            <dd class="text-sm leading-relaxed text-text-dim">{c.v}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow="Guarantee FAQ" title="The fine print, in plain words" />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <CtaBanner
+    heading="Hire a crew that stands behind the work"
+    sub={`Free, itemized quotes across Snohomish & King County. Most estimates back the same day. Call ${SITE.phone}.`}
+  />
+</BaseLayout>

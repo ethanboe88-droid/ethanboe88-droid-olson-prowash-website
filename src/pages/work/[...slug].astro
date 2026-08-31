@@ -1,0 +1,149 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
+import { SITE } from '../../data/site';
+import { breadcrumbLd, webPageLd } from '../../data/schema';
+
+export async function getStaticPaths() {
+  const studies = await getCollection('work', ({ data }) => !data.draft);
+  return studies.map((study) => ({ params: { slug: study.slug }, props: { study, studies } }));
+}
+
+type Props = { study: CollectionEntry<'work'>; studies: CollectionEntry<'work'>[] };
+const { study, studies } = Astro.props;
+const { Content } = await study.render();
+const d = study.data;
+const base = SITE.domain;
+
+const details = [
+  { k: 'Location', v: `${d.city}, ${SITE.address.region}` },
+  { k: 'Service', v: d.service },
+  { k: 'Property', v: d.propertyType },
+  { k: 'Surface', v: d.surface },
+  { k: 'Time on site', v: d.duration },
+];
+
+const related = studies
+  .filter((s) => s.slug !== study.slug)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 2);
+
+const description = `${d.summary} An Olson Pro Wash ${d.service.toLowerCase()} project in ${d.city}, ${SITE.address.region}.`;
+---
+<BaseLayout
+  title={`${d.title} | Olson Pro Wash`}
+  description={description}
+  canonical={`/work/${study.slug}`}
+  image={d.image}
+  imageAlt={d.imageAlt}
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Our Work', path: '/work' },
+      { name: d.title, path: `/work/${study.slug}` },
+    ]),
+    webPageLd({
+      name: d.title,
+      description,
+      path: `/work/${study.slug}`,
+      image: d.image,
+      datePublished: d.date.toISOString(),
+      dateModified: d.date.toISOString(),
+      speakableSelectors: ['h1', '.prose > p:first-of-type'],
+    }),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `${base}/work/${study.slug}#article`,
+      headline: d.title,
+      description: d.summary,
+      image: `${base}${d.image}`,
+      datePublished: d.date.toISOString(),
+      author: { '@id': `${base}/#business` },
+      publisher: { '@id': `${base}/#business` },
+      about: { '@type': 'Service', name: d.service, provider: { '@id': `${base}/#business` } },
+      contentLocation: { '@type': 'Place', name: `${d.city}, ${SITE.address.region}` },
+      mainEntityOfPage: `${base}/work/${study.slug}`,
+      inLanguage: 'en-US',
+    },
+  ]}
+>
+  <article>
+    <header class="relative isolate overflow-hidden border-b border-hairline">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute left-1/2 top-0 h-[38vh] w-[70vw] -translate-x-1/2 rounded-full bg-jet/15 blur-[110px]"></div>
+      </div>
+      <div class="container-x py-14 sm:py-16 lg:py-20">
+        <nav aria-label="Breadcrumb" class="mb-5 text-xs text-text-mute">
+          <a href="/" class="hover:text-text">Home</a> / <a href="/work" class="hover:text-text">Our Work</a> / <span class="text-text-dim">{d.city}</span>
+        </nav>
+        <div class="flex flex-wrap items-center gap-3 text-xs text-text-mute">
+          <span class="rounded-full border border-jet/40 bg-jet/10 px-2.5 py-1 font-display font-semibold uppercase tracking-eyebrow text-jet-hi">{d.service}</span>
+          <span class="inline-flex items-center gap-1"><Icon name="pin" class="h-3.5 w-3.5 text-jet-hi" /> {d.city}, {SITE.address.region}</span>
+          <span>·</span><span>{d.duration}</span>
+        </div>
+        <h1 class="display mt-4 max-w-3xl text-[clamp(1.9rem,4.6vw,3rem)]">{d.title}</h1>
+        <p class="mt-4 max-w-2xl text-lg text-text-dim">{d.summary}</p>
+      </div>
+    </header>
+
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-[minmax(0,1fr)_280px] lg:py-20">
+      <div>
+        <figure class="bezel mb-10 overflow-hidden rounded-2xl bg-ink-2">
+          <Photo src={d.image} alt={d.imageAlt} width={1400} height={1400} loading="eager"
+                 sizes="(min-width: 1024px) 760px, 100vw" class="w-full object-cover" />
+          <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Before / after · {d.city}, {SITE.address.region}</figcaption>
+        </figure>
+
+        <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-a:text-jet-hi prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-li:marker:text-jet">
+          <Content />
+        </div>
+      </div>
+
+      <aside class="lg:sticky lg:top-28 lg:h-max">
+        <div class="panel p-6">
+          <div class="font-display text-sm font-bold text-text">Project details</div>
+          <dl class="mt-4 divide-y divide-hairline text-sm">
+            {details.map((row) => (
+              <div class="flex items-baseline justify-between gap-3 py-2.5">
+                <dt class="text-text-mute">{row.k}</dt>
+                <dd class="text-right font-medium text-text">{row.v}</dd>
+              </div>
+            ))}
+          </dl>
+          {d.serviceSlug && (
+            <a href={`/services/${d.serviceSlug}`} class="link-underline mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">
+              About this service <Icon name="arrow" class="h-4 w-4" />
+            </a>
+          )}
+          <a href="/contact#quote" class="btn btn-primary mt-5 w-full text-sm">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href={SITE.phoneHref} class="btn btn-ghost mt-2 w-full text-sm"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+        </div>
+      </aside>
+    </div>
+
+    {related.length > 0 && (
+      <section class="border-t border-hairline bg-ink-1/50 py-16">
+        <div class="container-x">
+          <h2 class="font-display text-xl font-bold text-text">More work</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            {related.map((s) => (
+              <a href={`/work/${s.slug}`} class="panel lift group flex gap-4 overflow-hidden p-4">
+                <Photo src={s.data.image} alt={s.data.imageAlt} width={1400} height={1400} sizes="128px" class="h-24 w-32 shrink-0 rounded-lg object-cover" />
+                <div>
+                  <div class="text-xs text-text-mute">{s.data.service} · {s.data.city}</div>
+                  <div class="mt-1 font-display text-sm font-semibold text-text group-hover:text-jet-hi">{s.data.title}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+
+  <CtaBanner />
+</BaseLayout>

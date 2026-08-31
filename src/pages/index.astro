@@ -120,11 +120,16 @@ const homeFaqs = [
   <!-- Why us -->
   <section class="section bg-ink-1/50">
     <div class="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-      <SectionHeading
-        eyebrow="Why Olson"
-        title="The details are the <span class='text-jet-grad'>whole job</span>"
-        intro="Anyone can point a wand at a wall. A premium result comes from prep, chemistry, pressure control and clean-up — done the same way every time."
-      />
+      <div>
+        <SectionHeading
+          eyebrow="Why Olson"
+          title="The details are the <span class='text-jet-grad'>whole job</span>"
+          intro="Anyone can point a wand at a wall. A premium result comes from prep, chemistry, pressure control and clean-up — done the same way every time."
+        />
+        <a href="/guarantee" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi link-underline">
+          See the full guarantee <Icon name="arrow" class="h-4 w-4" />
+        </a>
+      </div>
       <div class="grid gap-4 sm:grid-cols-2">
         {[
           { icon: 'drop', t: 'Right method, right surface', d: 'Soft wash for roofs and siding, hot pressure for hardscapes. We never blast what should be bathed.' },
@@ -152,6 +157,9 @@ const homeFaqs = [
         title="Neighbors who <span class='text-jet-grad'>don't hold back</span>"
         intro="Live from our Google Business Profile — real reviews from homeowners and businesses across Snohomish and King County."
       />
+      <a href="/reviews" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi link-underline">
+        All reviews &amp; where to find us <Icon name="arrow" class="h-4 w-4" />
+      </a>
       <div class="mt-10"><GoogleReviews /></div>
     </div>
   </section>

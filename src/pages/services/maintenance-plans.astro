@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import JetDivider from '../../components/JetDivider.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Faq from '../../components/Faq.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE } from '../../data/site';
+import { breadcrumbLd, webPageLd, faqLd } from '../../data/schema';
+
+const base = SITE.domain;
+
+const plans = [
+  {
+    name: 'Seasonal',
+    cadence: '2 visits a year',
+    best: 'Homes with gutters and a few trees nearby',
+    includes: [
+      'Full gutter clean-out and downspout flush — late spring and late fall',
+      'Exterior faces of the gutters soft washed',
+      'Roof and siding moss check with photos',
+      'Priority scheduling on the shoulder of the wet season',
+    ],
+  },
+  {
+    name: 'Signature',
+    cadence: 'Quarterly',
+    best: 'Homes under heavy canopy, or that just want to always look sharp',
+    includes: [
+      'Everything in Seasonal',
+      'Rotating house soft wash across the year',
+      'Roof moss check and spot treatment as needed',
+      'Entry, walkway and hardscape refresh',
+      'One flat per-visit rate, locked for the year',
+    ],
+    featured: true,
+  },
+  {
+    name: 'Property & Commercial',
+    cadence: 'Custom schedule',
+    best: 'HOAs, property managers, retail and offices',
+    includes: [
+      'Whole-property program built to your scope',
+      'Storefronts, entrances, common areas, dumpster pads',
+      'Before / after photo report every visit',
+      'Certificate of insurance on file, your entity named',
+      'Single point of contact and a set calendar',
+    ],
+  },
+];
+
+const steps = [
+  { t: 'Walk-through', d: 'We look at the whole property, note the trees, exposure and problem spots, and agree on what each visit should cover.' },
+  { t: 'Plan built to your property', d: 'You get a written schedule and a flat per-visit rate — no mystery, no per-visit renegotiation.' },
+  { t: 'Set dates, same crew', d: 'Visits are booked in advance and worked by the same people, so nothing gets re-explained every time.' },
+  { t: 'Photo report + adjust anytime', d: 'Photos after each visit. Add a service, skip a season, or cancel — just tell us, there is no lock-in.' },
+];
+
+const faqs = [
+  {
+    q: 'Is there a contract or a lock-in?',
+    a: 'No long-term contract. Plans run visit to visit at a flat rate you know in advance. Pause it, change the scope, or cancel with a call — we would rather keep you because the work is good.',
+  },
+  {
+    q: 'Why is a plan cheaper than booking one-off cleans?',
+    a: 'Two reasons: we schedule efficiently around your area instead of a one-time trip, and there is far less growth to remove each visit because it never gets away from you. Plan visits are billed below our one-off rates.',
+  },
+  {
+    q: 'Do plan customers get priority?',
+    a: 'Yes. Plan visits are booked ahead on a set calendar, and if something comes up between visits — a windstorm fills a gutter, a tenant turns over — plan customers get moved to the front of the schedule.',
+  },
+  {
+    q: 'What if I only want gutters, or only the roof watched?',
+    a: 'That is fine. The Seasonal plan is essentially a gutter-and-check program. We build the plan around what your property actually needs, not a fixed package.',
+  },
+  {
+    q: 'Can a plan include gutter guards or a one-time deep clean to start?',
+    a: 'Yes. Many customers start with a <a href="/services/gutter-guard-installation">Raptor gutter guard</a> install or a full first clean, then drop onto a lighter plan to keep it that way.',
+  },
+];
+---
+<BaseLayout
+  title="Exterior Maintenance Plans — Keep It Clean Year-Round | Olson Pro Wash"
+  description={`Scheduled exterior maintenance plans for homes, HOAs and commercial property across Snohomish & King County, WA — gutters, roof watch, house washing. Lower per-visit rates, no lock-in.`}
+  canonical="/services/maintenance-plans"
+  keywords="exterior maintenance plan Snohomish County, gutter cleaning subscription Lake Stevens WA, annual house wash plan, HOA exterior maintenance contract, recurring pressure washing"
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services' },
+      { name: 'Maintenance Plans', path: '/services/maintenance-plans' },
+    ]),
+    webPageLd({
+      name: 'Exterior Maintenance Plans — Olson Pro Wash',
+      description: 'Scheduled, flat-rate exterior maintenance for homes, HOAs and commercial property in Snohomish & King County, WA.',
+      path: '/services/maintenance-plans',
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Service',
+      '@id': `${base}/services/maintenance-plans#service`,
+      name: 'Exterior Maintenance Plan',
+      serviceType: 'Recurring exterior cleaning and property maintenance',
+      description:
+        'Scheduled, flat-rate exterior maintenance — gutters, roof watch, house washing and hardscape — for homes, HOAs and commercial property across Snohomish and King County, WA.',
+      provider: { '@id': `${base}/#business` },
+      areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Snohomish County, WA' },
+        { '@type': 'AdministrativeArea', name: 'King County, WA' },
+      ],
+      url: `${base}/services/maintenance-plans`,
+    },
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow="Service · Maintenance"
+    title="Keep it clean, <span class='text-jet-grad'>year-round</span>"
+    intro="In this climate, exteriors don't stay clean on their own. A plan is the low-effort, lower-cost way to never think about it again — scheduled, flat-rate, no lock-in."
+    crumbs={[{ label: 'Services', href: '/services' }, { label: 'Maintenance Plans' }]}
+  />
+
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Three ways to run it" title="Pick the cadence your property needs" intro="Every plan is priced per property after a walk-through, at a flat per-visit rate below our one-off pricing." />
+      <div class="mt-12 grid gap-5 lg:grid-cols-3">
+        {plans.map((p, i) => (
+          <div class:list={['reveal panel flex flex-col p-6 sm:p-7', p.featured && 'border-jet/40 ring-1 ring-jet/20']} style={`--reveal-delay:${i * 70}ms`}>
+            <div class="flex items-baseline justify-between gap-3">
+              <h3 class="font-display text-xl font-bold text-text">{p.name}</h3>
+              {p.featured && <span class="rounded-full border border-jet/40 bg-jet/10 px-2.5 py-1 font-display text-[10px] font-semibold uppercase tracking-eyebrow text-jet-hi">Most popular</span>}
+            </div>
+            <p class="mt-1 font-display text-sm font-semibold uppercase tracking-eyebrow text-jet-hi">{p.cadence}</p>
+            <p class="mt-3 text-xs text-text-mute">Best for: {p.best}</p>
+            <ul class="mt-5 grid flex-1 gap-2.5">
+              {p.includes.map((it) => (
+                <li class="flex items-start gap-2.5 text-sm text-text-dim">
+                  <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-jet-hi" /><span>{it}</span>
+                </li>
+              ))}
+            </ul>
+            <a href="/contact#quote" class="btn btn-primary mt-6 w-full text-sm">Price this plan <Icon name="arrow" class="h-4 w-4" /></a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="How it works" title="Set it once, forget the ladder" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {steps.map((s, i) => (
+          <div class="reveal panel p-6" style={`--reveal-delay:${i * 70}ms`}>
+            <div class="font-display text-2xl font-extrabold text-jet/40">{String(i + 1).padStart(2, '0')}</div>
+            <h3 class="mt-3 font-display text-lg font-bold text-text">{s.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-text-dim">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow="Plan FAQ" title="Before you sign up" />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <CtaBanner
+    heading="Stop scheduling exterior work one crisis at a time"
+    sub={`Free walk-through and a flat per-visit rate. Call ${SITE.phone} or send photos of the property.`}
+  />
+</BaseLayout>

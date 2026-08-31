@@ -37,6 +37,9 @@ import { SERVICES } from '../data/services';
           {NAV_LINKS.map((l) => (
             <li><a href={l.href} class="inline-block py-1 text-text-dim transition hover:text-text link-underline">{l.label}</a></li>
           ))}
+          <li><a href="/work" class="inline-block py-1 text-text-dim transition hover:text-text link-underline">Our Work</a></li>
+          <li><a href="/reviews" class="inline-block py-1 text-text-dim transition hover:text-text link-underline">Reviews</a></li>
+          <li><a href="/guarantee" class="inline-block py-1 text-text-dim transition hover:text-text link-underline">Guarantee</a></li>
           <li><a href="/faq" class="inline-block py-1 text-text-dim transition hover:text-text link-underline">FAQ</a></li>
         </ul>
       </div>
@@ -47,6 +50,8 @@ import { SERVICES } from '../data/services';
           {SERVICES.slice(0, 6).map((s) => (
             <li><a href={s.detailPage ?? `/services#${s.slug}`} class="inline-block py-1 text-text-dim transition hover:text-text link-underline">{s.title}</a></li>
           ))}
+          <li><a href="/services/maintenance-plans" class="inline-block py-1 text-text-dim transition hover:text-text link-underline">Maintenance Plans</a></li>
+          <li><a href="/services" class="inline-block py-1 font-medium text-jet-hi transition hover:text-text link-underline">All services →</a></li>
         </ul>
       </div>
 

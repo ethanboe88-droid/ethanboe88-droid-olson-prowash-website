@@ -30,6 +30,7 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 - [Commercial Services](https://olsonprowash.com/services/commercial-services): Recurring or one-time exterior maintenance for retail, restaurants, HOAs and property managers. Quoted per site.
 - [Landscaping](https://olsonprowash.com/services/landscaping): Bed design, mulch, edging, shrub trimming and seasonal clean-ups. From $179.
 - [Christmas Light Installation](https://olsonprowash.com/services/christmas-light-installation): Custom-cut commercial-grade holiday lights — every strand cut to the exact roofline. Install, in-season bulb service, January takedown and labeled storage. From $399 first season (re-hang seasons cost less).
+- [Maintenance Plans](https://olsonprowash.com/services/maintenance-plans): Scheduled, flat-rate exterior maintenance for homes, HOAs and commercial property — gutters, roof watch, house washing. Lower per-visit rates than one-off work, no lock-in.
 
 ## Pages
 
@@ -37,6 +38,9 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 - [Services](https://olsonprowash.com/services): All services with descriptions, benefits, price ranges and process.
 - [Gutter Guard Installation](https://olsonprowash.com/services/gutter-guard-installation): Dedicated guide to the Raptor stainless micro-mesh system — full spec, Raptor vs. screen/foam/reverse-curve, install method, pricing.
 - [Gutter Guard FAQ](https://olsonprowash.com/faq/gutter-guards): ~20 answers on Raptor micro-mesh — the spec, heavy-rain performance, fitting existing gutters, cost and the 25-year warranty.
+- [Our Work](https://olsonprowash.com/work): Project case studies — the problem on each house, the method used, and the before/after (roof soft washing, gutter clean-outs).
+- [Reviews](https://olsonprowash.com/reviews): 4.9-star rating; live Google reviews plus Yelp, Facebook and Nextdoor.
+- [Guarantee](https://olsonprowash.com/guarantee): Licensing, insurance (COI available), damage-free methods, firm quotes, and the workmanship guarantee — if it's not right, we come back.
 - [Gallery](https://olsonprowash.com/gallery): Before/after and job photos.
 - [About](https://olsonprowash.com/about): Ethan Olson's story, values, mission ("Do honest work, and take care of everybody in our community").
 - [Contact](https://olsonprowash.com/contact): Quote form, phone, hours, full service area.
