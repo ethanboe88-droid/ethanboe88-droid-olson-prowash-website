@@ -6,19 +6,21 @@ import JetDivider from '../components/JetDivider.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
-import { AREAS } from '../data/serviceAreas';
+import { CITIES } from '../data/cities';
 import { SERVICES } from '../data/services';
 import { breadcrumbLd, webPageLd, faqLd } from '../data/schema';
 
 const byCounty = {
-  'Snohomish County': AREAS.filter((a) => a.county === 'Snohomish County'),
-  'King County': AREAS.filter((a) => a.county === 'King County'),
+  'Snohomish County': CITIES.filter((c) => c.county === 'Snohomish County'),
+  'King County': CITIES.filter((c) => c.county === 'King County'),
 };
+const featuredNames = CITIES.map((c) => c.name);
+const alsoServing = SITE.serviceCities.filter((c) => !featuredNames.includes(c));
 
 const areaFaqs = [
   {
     q: 'Do you charge a travel fee?',
-    a: `No travel fee inside our core service area — Lake Stevens, Everett, Marysville, Arlington, Snohomish, Monroe, Mill Creek, Mukilteo, Bothell, Kirkland, Sammamish and Issaquah. Outside that radius, just ask; we travel for the right project and will quote it plainly.`,
+    a: `No travel fee inside our core service area — ${featuredNames.join(', ')}. Outside that radius, just ask; we travel for the right project and quote it plainly.`,
   },
   {
     q: 'How far will you travel for a job?',
@@ -26,15 +28,15 @@ const areaFaqs = [
   },
   {
     q: "My town isn't listed — can you still help?",
-    a: 'Probably. The list is where we work most, not a hard boundary. Call (425) 446-0547 or send photos and we will tell you straight away.',
+    a: `Probably. The list is where we work most, not a hard boundary. Call ${SITE.phone} or send photos and we will tell you straight away.`,
   },
 ];
 ---
 <BaseLayout
   title="Service Area — Pressure Washing & Roof Cleaning Across Snohomish & King County"
-  description="Olson Pro Wash serves Lake Stevens, Everett, Marysville, Arlington, Snohomish, Monroe, Mill Creek, Mukilteo, Bothell, Kirkland, Sammamish and Issaquah, WA — roof cleaning, house washing, pressure washing, gutters and landscaping."
+  description={`Olson Pro Wash serves ${featuredNames.join(', ')}, WA — roof cleaning, house washing, pressure washing, gutters and landscaping. Local, licensed & insured.`}
   canonical="/service-area"
-  keywords="pressure washing near me, roof cleaning Snohomish County, house washing King County, Lake Stevens Everett Marysville Arlington Snohomish Monroe Mill Creek Mukilteo Bothell Kirkland Sammamish Issaquah"
+  keywords="pressure washing near me, roof cleaning Snohomish County, house washing King County, Lake Stevens Everett Marysville Arlington Bothell Kirkland Sammamish Issaquah Bellevue Seattle Granite Falls"
   jsonLd={[
     breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Service Area', path: '/service-area' }]),
     webPageLd({
@@ -50,7 +52,7 @@ const areaFaqs = [
   <PageHero
     eyebrow="Service area"
     title="Where we <span class='text-jet-grad'>work</span>"
-    intro={`Based in ${SITE.address.locality}, Olson Pro Wash covers ${AREAS.length} cities across Snohomish County and North King County — every service, same standard, no travel fee inside the area.`}
+    intro={`Based in ${SITE.address.locality}, Olson Pro Wash covers ${CITIES.length} core cities across Snohomish County and North King County — every service, same standard, no travel fee inside the area.`}
     crumbs={[{ label: 'Service Area' }]}
   />
 
@@ -60,14 +62,13 @@ const areaFaqs = [
         <p>
           Olson Pro Wash is a locally owned exterior cleaning and landscaping company in Lake
           Stevens, Washington. We serve homeowners, HOAs, property managers and commercial
-          properties across the corridor from Arlington down to Issaquah — roughly a 25-mile radius
-          around Lake Stevens.
+          properties from Arlington and Granite Falls down through the Eastside to Issaquah — roughly
+          a 25-mile radius around Lake Stevens.
         </p>
         <p>
           The Puget Sound climate is the reason this business exists: rain, marine humidity and a
           dense evergreen canopy grow moss, algae and lichen on roofs, siding and concrete faster
-          than almost anywhere in the country. Every city below has the same problem — and the same
-          fix.
+          than almost anywhere in the country. Pick your city below for the local details.
         </p>
         <p class="text-text">Free, itemized quotes. Most estimates back the same day.</p>
       </div>
@@ -84,22 +85,35 @@ const areaFaqs = [
       <div class="container-x">
         <SectionHeading eyebrow={county} title={`Serving ${county.replace(' County', '')} County`} />
         <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {cities.map((a, i) => (
-            <div class="reveal panel p-6" style={`--reveal-delay:${(i % 3) * 60}ms`}>
+          {cities.map((c, i) => (
+            <a href={`/service-area/${c.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${(i % 3) * 60}ms`}>
               <div class="flex items-center gap-2">
                 <span class="grid h-9 w-9 place-items-center rounded-lg border border-hairline bg-white/[0.03] text-jet-hi"><Icon name="pin" class="h-5 w-5" /></span>
-                <h3 class="font-display text-lg font-bold text-text">{a.city}, WA</h3>
+                <h3 class="font-display text-lg font-bold text-text">{c.name}, WA</h3>
               </div>
-              <p class="mt-3 text-sm leading-relaxed text-text-dim">{a.note}</p>
-              <a href="/contact#quote" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">
-                Free quote in {a.city} <Icon name="arrow" class="h-4 w-4" />
-              </a>
-            </div>
+              <p class="mt-3 text-sm leading-relaxed text-text-dim">{c.intro}</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">
+                {c.name} services <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </span>
+            </a>
           ))}
         </div>
       </div>
     </section>
   ))}
+
+  {alsoServing.length > 0 && (
+    <section class="section pt-0">
+      <div class="container-x">
+        <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">We also regularly serve</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {alsoServing.map((c) => (
+            <li class="rounded-full border border-hairline bg-white/[0.03] px-3.5 py-1.5 text-sm text-text-dim">{c}, {SITE.address.region}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
 
   <JetDivider flip />
 

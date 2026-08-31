@@ -1,0 +1,187 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import JetDivider from '../../components/JetDivider.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import StatStrip from '../../components/StatStrip.astro';
+import BeforeAfter from '../../components/BeforeAfter.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE } from '../../data/site';
+import { CITIES, type City } from '../../data/cities';
+import { SERVICES, getService } from '../../data/services';
+import { breadcrumbLd, webPageLd, cityServiceLd, faqLd } from '../../data/schema';
+
+export function getStaticPaths() {
+  return CITIES.map((city) => ({ params: { city: city.slug }, props: { city } }));
+}
+
+type Props = { city: City };
+const { city } = Astro.props;
+
+const nearby = CITIES.filter((c) => c.slug !== city.slug).slice(0, 6);
+const top = city.topServices.map((s) => getService(s)).filter(Boolean);
+
+const sharedFaqs = [
+  {
+    q: `Do you charge extra to come to ${city.name}?`,
+    a:
+      city.driveTime === 'our home base'
+        ? `No. ${city.name} is where we are based — no travel fee, and it gets priority scheduling.`
+        : `No travel fee for ${city.name} — it is inside our core service area (${city.driveTime}). Free, itemized quotes, most back the same day.`,
+  },
+  {
+    q: `Are you licensed and insured for work in ${city.name}?`,
+    a: `Yes. Olson Landscaping Pro Wash LLC is licensed and carries general liability coverage, with a certificate of insurance available for HOA, commercial and property-management jobs in ${city.name}.`,
+  },
+];
+const faqs = [...city.faqs, ...sharedFaqs];
+
+const title = `Pressure Washing & Roof Cleaning in ${city.name}, ${SITE.address.region}`;
+const description = `Olson Pro Wash: roof cleaning, house washing, pressure & soft washing, gutter cleaning, gutter guards, deck, driveway and landscaping in ${city.name}, WA. Local, licensed & insured. Free quotes — call ${SITE.phone}.`;
+---
+<BaseLayout
+  title={`${title} | ${SITE.name}`}
+  description={description}
+  canonical={`/service-area/${city.slug}`}
+  image={city.photo}
+  keywords={`pressure washing ${city.name} WA, roof cleaning ${city.name}, house washing ${city.name}, gutter cleaning ${city.name}, soft washing, moss removal, ${city.county}, Olson Pro Wash`}
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Service Area', path: '/service-area' },
+      { name: `${city.name}, ${SITE.address.region}`, path: `/service-area/${city.slug}` },
+    ]),
+    webPageLd({
+      name: title,
+      description,
+      path: `/service-area/${city.slug}`,
+      image: city.photo,
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    cityServiceLd(city),
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow={`Service area · ${city.county}`}
+    title={`${city.name} pressure washing &amp; <span class='text-jet-grad'>roof cleaning</span>`}
+    intro={city.intro}
+    crumbs={[{ label: 'Service Area', href: '/service-area' }, { label: `${city.name}, ${SITE.address.region}` }]}
+  />
+
+  <!-- Local context -->
+  <section class="section">
+    <div class="container-x grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <div class="reveal">
+        <SectionHeading eyebrow={`Why ${city.name} homes need it`} title={`Exterior cleaning in ${city.name}, WA`} class="!max-w-none" />
+        <p class="mt-6 text-lg leading-relaxed text-text-dim">{city.conditions}</p>
+        <p class="mt-4 text-sm text-text-mute">{city.housing}. {city.driveTime === 'our home base' ? 'This is our home base.' : `${city.driveTime.charAt(0).toUpperCase() + city.driveTime.slice(1)}.`}</p>
+
+        <div class="mt-7">
+          <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Neighborhoods we cover</p>
+          <ul class="mt-3 flex flex-wrap gap-2">
+            {city.neighborhoods.map((n) => (
+              <li class="rounded-full border border-hairline bg-white/[0.03] px-3 py-1.5 text-sm text-text-dim">{n}</li>
+            ))}
+          </ul>
+        </div>
+        <p class="mt-4 text-sm text-text-mute">Near {city.landmarks.join(' · ')}</p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="/contact#quote" data-magnetic class="btn btn-primary">Free quote in {city.name} <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+        </div>
+      </div>
+
+      <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2">
+        <img src={city.photo} alt={city.photoAlt} loading="lazy" decoding="async" width="1500" height="1000" class="aspect-[3/2] w-full object-cover" />
+        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Olson Pro Wash · {city.name}, {SITE.address.region}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <!-- Most requested here -->
+  {top.length > 0 && (
+    <section class="section">
+      <div class="container-x">
+        <SectionHeading eyebrow={`Most requested in ${city.name}`} title="What we do most here" />
+        <div class="mt-10 grid gap-5 sm:grid-cols-3">
+          {top.map((s, i) => (
+            <a href={s!.detailPage ?? `/services#${s!.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${i * 70}ms`}>
+              <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s!.icon} class="h-5 w-5" /></span>
+              <h3 class="mt-4 font-display text-lg font-bold text-text">{s!.title}</h3>
+              <p class="mt-2 text-sm leading-relaxed text-text-dim">{s!.short}</p>
+              <span class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi">{s!.price} <Icon name="arrow" class="h-4 w-4 transition-transform group-hover:translate-x-1" /></span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Every service -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="Full service list" title={`Every service we offer in ${city.name}`} intro="One local crew for the whole property — every service below is available in your area." />
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {SERVICES.map((s, i) => (
+          <a href={s.detailPage ?? `/services#${s.slug}`} class="reveal panel lift group flex items-start gap-4 p-5" style={`--reveal-delay:${(i % 3) * 55}ms`}>
+            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
+            <span class="min-w-0">
+              <span class="block font-display text-sm font-bold text-text">{s.title}</span>
+              <span class="mt-0.5 block text-xs leading-relaxed text-text-dim">{s.short}</span>
+              <span class="mt-1.5 block font-display text-[11px] font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="The standard" title={`The finish every ${city.name} job is held to`} class="mb-8" />
+      <BeforeAfter class="reveal" before="/images/roof-before.jpg" after="/images/roof-after.jpg" start={54}
+        label={`Roof soft wash — before / after · near ${city.name}, WA`}
+        beforeAlt="Mossy, streaked roof before soft washing" afterAlt="The same roof after soft washing" />
+      <div class="mt-10"><StatStrip /></div>
+    </div>
+  </section>
+
+  <!-- City FAQ -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow={`${city.name} FAQ`} title="Local questions, answered" />
+      <div class="divide-y divide-hairline overflow-hidden rounded-2xl border border-hairline">
+        {faqs.map((item) => (
+          <details class="group reveal bg-ink-1" name="cityfaq">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-display text-[15px] font-semibold text-text sm:p-6 [&::-webkit-details-marker]:hidden">
+              {item.q}
+              <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-hairline text-jet-hi transition-transform duration-300 group-open:rotate-45"><Icon name="plus" class="h-4 w-4" /></span>
+            </summary>
+            <div class="px-5 pb-6 text-sm leading-relaxed text-text-dim sm:px-6"><p set:html={item.a} /></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Nearby" title="Other areas we serve" />
+      <ul class="mt-8 flex flex-wrap gap-2.5">
+        {nearby.map((c) => (
+          <li><a href={`/service-area/${c.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-1.5 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
+        ))}
+        <li><a href="/service-area" class="inline-flex rounded-full border border-jet/40 bg-jet/10 px-3.5 py-1.5 text-sm text-jet-hi transition hover:border-jet/60">All service areas →</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBanner heading={`Ready for the cleanest your ${city.name} property has looked?`} sub={`Free, itemized quotes for ${city.name} and the surrounding area. Most estimates back the same day.`} />
+</BaseLayout>

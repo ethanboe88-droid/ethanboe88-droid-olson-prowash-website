@@ -215,6 +215,41 @@ export const faqLd = (items: { q: string; a: string }[]) => ({
   })),
 });
 
+// A single Service node scoped to one city, with the full offer catalog.
+export const cityServiceLd = (city: {
+  name: string;
+  slug: string;
+  geo: { lat: number; lng: number };
+}) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${base}/service-area/${city.slug}#service`,
+  name: `Pressure Washing, Roof Cleaning & Exterior Services in ${city.name}, ${REGION}`,
+  serviceType: 'Exterior cleaning and pressure washing',
+  description: `Olson Pro Wash provides roof cleaning, house washing, pressure & soft washing, gutter cleaning, gutter guards, deck, driveway, commercial exterior maintenance and landscaping in ${city.name}, Washington.`,
+  provider: { '@id': `${base}/#business` },
+  url: `${base}/service-area/${city.slug}`,
+  areaServed: {
+    '@type': 'City',
+    name: `${city.name}, ${REGION}`,
+    geo: { '@type': 'GeoCoordinates', latitude: city.geo.lat, longitude: city.geo.lng },
+  },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `Exterior cleaning services in ${city.name}`,
+    itemListElement: SERVICES.map((s) => ({
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      description: s.price,
+      itemOffered: {
+        '@type': 'Service',
+        name: `${s.title} in ${city.name}, ${REGION}`,
+        url: `${base}${s.detailPage ?? `/services#${s.slug}`}`,
+      },
+    })),
+  },
+});
+
 export const howToLd = (opts: {
   name: string;
   description: string;
