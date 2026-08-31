@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import Photo from './Photo.astro';
 
 export type Shot = { src: string; cat: string; alt: string };
 interface Props { shots: Shot[]; }
@@ -27,8 +28,9 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
         data-cat={s.cat} data-index={i} style={`--reveal-delay:${(i % 3) * 70}ms`}
         aria-label={`Open image: ${s.alt}`}
       >
-        <img src={s.src} alt={s.alt} loading="lazy" decoding="async" width="1500" height="1050"
-             class="w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
+        <Photo src={s.src} alt={s.alt} width={1500} height={1050}
+               sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw"
+               class="w-full object-cover transition-transform duration-500 hover:scale-[1.03]" />
         <span class="flex items-center justify-between px-4 py-3 text-xs">
           <span class="font-display font-semibold uppercase tracking-eyebrow text-text">{s.cat}</span>
           <span class="text-text-mute">Olson Pro Wash</span>

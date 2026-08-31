@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://olsonprowash.com',
   trailingSlash: 'ignore',
-  prefetch: { prefetchAll: true, defaultStrategy: 'viewport' },
+  prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap({

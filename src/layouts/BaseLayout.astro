@@ -96,14 +96,19 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
 
-    {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
+    {preloadImage && (
+      <link
+        rel="preload"
+        as="image"
+        type="image/avif"
+        imagesrcset={`${preloadImage.replace(/\.jpg$/i, '-800.avif')} 800w, ${preloadImage.replace(/\.jpg$/i, '.avif')} 1400w`}
+        imagesizes="(min-width: 1024px) 44vw, (min-width: 640px) 90vw, 100vw"
+        fetchpriority="high"
+      />
+    )}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Inter:wght@400;500;600;700&display=swap"
-    />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
 
     {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 

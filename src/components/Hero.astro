@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import Photo from './Photo.astro';
 import Stars from './Stars.astro';
 import TrustBar from './TrustBar.astro';
 import { SITE } from '../data/site';
@@ -47,9 +48,12 @@ import { SITE } from '../data/site';
       <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-jet/10 blur-2xl"></div>
       <div class="bezel relative overflow-hidden rounded-[1.6rem] bg-ink-2">
         <div class="relative aspect-[4/5] w-full">
-          <!-- Real job photo (base layer) -->
-          <img src="/images/hero.jpg" alt="Ethan Olson on a ladder inspecting a roofline, Snohomish County, WA"
-               class="absolute inset-0 h-full w-full object-cover" width="1400" height="1750" fetchpriority="high" decoding="async" />
+          <!-- Real job photo (LCP — eager, high priority) -->
+          <Photo src="/images/hero.jpg" alt="Ethan Olson on a ladder inspecting a roofline, Snohomish County, WA"
+                 width={1400} height={1750} fullWidth={1400}
+                 class="absolute inset-0 h-full w-full object-cover"
+                 loading="eager" fetchpriority="high"
+                 sizes="(min-width: 1024px) 44vw, (min-width: 640px) 90vw, 100vw" />
 
           <!-- Living canvas mist (subtle overlay) -->
           <canvas id="hero-canvas" class="absolute inset-0 h-full w-full opacity-60 mix-blend-screen" aria-hidden="true"></canvas>
@@ -84,7 +88,7 @@ import { SITE } from '../data/site';
         </div>
       </div>
       <div class="absolute -right-3 -top-3 hidden rotate-3 rounded-xl border border-hairline bg-ink-1 px-3 py-2 text-xs font-semibold text-text shadow-jet-sm sm:block">
-        <span class="text-jet-hi">◆</span> Licensed &amp; Insured
+        <span class="inline-block h-1.5 w-1.5 rotate-45 bg-jet-hi align-middle"></span> Licensed &amp; Insured
       </div>
     </div>
   </div>
@@ -183,7 +187,14 @@ import { SITE } from '../data/site';
         v.addEventListener('canplay', function () { v.style.opacity = '1'; });
       }
     }
-    initHero();
+    // Defer non-critical hero JS (canvas mist, rotator) so it never competes
+    // with the LCP image / first paint.
+    var start = function () {
+      if ('requestIdleCallback' in window) requestIdleCallback(initHero, { timeout: 1500 });
+      else setTimeout(initHero, 200);
+    };
+    if (document.readyState === 'complete') start();
+    else window.addEventListener('load', start, { once: true });
     document.addEventListener('astro:page-load', initHero);
   })();
 </script>

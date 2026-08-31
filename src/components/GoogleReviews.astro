@@ -41,12 +41,22 @@ const { widgetId = 'fca01de7-f89b-47ce-93c9-3c36f4d36de1', class: className = ''
       document.body.appendChild(s);
     }
 
-    loadFeaturable();
+    // Lazy: only pull the third-party bundle when the widget nears the viewport,
+    // so it never competes with the critical render.
+    function arm() {
+      var el = document.querySelector('[data-featurable-async]');
+      if (!el) return;
+      if (!('IntersectionObserver' in window)) { loadFeaturable(); return; }
+      var io = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { io.disconnect(); loadFeaturable(); }
+      }, { rootMargin: '600px 0px' });
+      io.observe(el);
+    }
+
+    arm();
     if (!window.__featurableBound) {
       window.__featurableBound = true;
-      document.addEventListener('astro:page-load', function () {
-        if (document.querySelector('[data-featurable-async]')) loadFeaturable();
-      });
+      document.addEventListener('astro:page-load', arm);
     }
   })();
 </script>

@@ -1,0 +1,51 @@
+---
+/**
+ * Responsive <picture> for the /public/images/*.jpg photos.
+ * AVIF + WebP + JPG, each at 800w and full width. The <img> src stays the
+ * plain .jpg so schema.org / OG references remain valid and stable.
+ *
+ * Build variants with the project's variant script (avif/webp/-800 siblings
+ * must exist next to the .jpg).
+ */
+interface Props {
+  src: string; // e.g. "/images/p-roof.jpg"
+  alt: string;
+  width: number;
+  height: number;
+  class?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  fullWidth?: number; // intrinsic width of the full-size file (default 1500)
+}
+const {
+  src,
+  alt,
+  width,
+  height,
+  class: className = '',
+  sizes = '(min-width: 1024px) 640px, (min-width: 640px) 50vw, 100vw',
+  loading = 'lazy',
+  fetchpriority,
+  fullWidth = 1500,
+} = Astro.props;
+
+const base = src.replace(/\.jpg$/i, '');
+const set = (ext: string) => `${base}-800.${ext} 800w, ${base}.${ext} ${fullWidth}w`;
+---
+<picture>
+  <source type="image/avif" srcset={set('avif')} sizes={sizes} />
+  <source type="image/webp" srcset={set('webp')} sizes={sizes} />
+  <img
+    src={src}
+    srcset={set('jpg')}
+    sizes={sizes}
+    alt={alt}
+    width={width}
+    height={height}
+    class={className}
+    loading={loading}
+    decoding="async"
+    fetchpriority={fetchpriority}
+  />
+</picture>

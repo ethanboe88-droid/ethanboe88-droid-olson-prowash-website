@@ -4,6 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHero from '../../components/PageHero.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
 import { breadcrumbLd, webPageLd } from '../../data/schema';
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
@@ -38,7 +39,8 @@ const [featured, ...others] = posts;
       {featured && (
         <a href={`/blog/${featured.slug}`} class="reveal panel lift group grid overflow-hidden lg:grid-cols-2">
           <div class="relative aspect-[16/10] lg:aspect-auto">
-            <img src={featured.data.heroImage} alt={featured.data.heroAlt} class="absolute inset-0 h-full w-full object-cover" loading="eager" width="1600" height="900" />
+            <Photo src={featured.data.heroImage} alt={featured.data.heroAlt} width={1600} height={900}
+                   loading="eager" sizes="(min-width: 1024px) 600px, 100vw" class="absolute inset-0 h-full w-full object-cover" />
           </div>
           <div class="p-7 sm:p-10">
             <div class="flex items-center gap-3 text-xs text-text-mute">
@@ -56,7 +58,7 @@ const [featured, ...others] = posts;
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {others.map((post, i) => (
           <a href={`/blog/${post.slug}`} class="reveal panel lift group flex flex-col overflow-hidden" style={`--reveal-delay:${(i % 3) * 70}ms`}>
-            <div class="relative aspect-[16/10]"><img src={post.data.heroImage} alt={post.data.heroAlt} class="absolute inset-0 h-full w-full object-cover" loading="lazy" width="1600" height="900" /></div>
+            <div class="relative aspect-[16/10]"><Photo src={post.data.heroImage} alt={post.data.heroAlt} width={1600} height={900} sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" class="absolute inset-0 h-full w-full object-cover" /></div>
             <div class="flex flex-1 flex-col p-6">
               <div class="flex items-center gap-2 text-xs text-text-mute">
                 <span>{post.data.category}</span><span>·</span>

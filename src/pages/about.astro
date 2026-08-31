@@ -6,6 +6,7 @@ import StatStrip from '../components/StatStrip.astro';
 import CtaBanner from '../components/CtaBanner.astro';
 import JetDivider from '../components/JetDivider.astro';
 import Icon from '../components/Icon.astro';
+import Photo from '../components/Photo.astro';
 import { SITE } from '../data/site';
 import { breadcrumbLd, personLd, webPageLd } from '../data/schema';
 
@@ -90,8 +91,9 @@ const values = [
 
       <div class="reveal">
         <figure class="bezel overflow-hidden rounded-2xl bg-ink-2">
-          <img src="/images/founder.jpg" alt="Ethan Olson, founder of Olson Pro Wash, Lake Stevens WA"
-               class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1500" />
+          <Photo src="/images/founder.jpg" alt="Ethan Olson, founder of Olson Pro Wash, Lake Stevens WA"
+                 width={1200} height={1500} fullWidth={1200}
+                 sizes="(min-width: 1024px) 460px, 100vw" class="aspect-[4/5] w-full object-cover" />
           <figcaption class="flex items-center justify-between border-t border-hairline px-4 py-3 text-xs">
             <span class="font-display font-semibold uppercase tracking-eyebrow text-text">Ethan Olson</span>
             <span class="text-text-mute">Founder · Lake Stevens, WA</span>

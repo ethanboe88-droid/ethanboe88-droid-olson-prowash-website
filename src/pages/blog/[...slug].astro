@@ -3,6 +3,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CtaBanner from '../../components/CtaBanner.astro';
 import Icon from '../../components/Icon.astro';
+import Photo from '../../components/Photo.astro';
 import { SITE } from '../../data/site';
 import { blogPostingLd, breadcrumbLd } from '../../data/schema';
 
@@ -70,7 +71,8 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
 
     <div class="container-x grid gap-12 py-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:py-20">
       <div>
-        <img src={data.heroImage} alt={data.heroAlt} class="bezel mb-10 w-full rounded-2xl object-cover" width="1600" height="900" loading="eager" />
+        <Photo src={data.heroImage} alt={data.heroAlt} width={1600} height={900} loading="eager"
+               sizes="(min-width: 1024px) 700px, 100vw" class="bezel mb-10 w-full rounded-2xl object-cover" />
         <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-h3:text-xl prose-a:text-jet-hi prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-li:marker:text-jet prose-blockquote:border-jet prose-blockquote:text-text-dim prose-img:rounded-xl prose-table:text-sm">
           <Content />
         </div>
@@ -99,7 +101,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
           <div class="mt-6 grid gap-6 sm:grid-cols-2">
             {related.map((p) => (
               <a href={`/blog/${p.slug}`} class="panel lift group flex gap-4 overflow-hidden p-4">
-                <img src={p.data.heroImage} alt={p.data.heroAlt} class="h-24 w-32 shrink-0 rounded-lg object-cover" loading="lazy" width="1600" height="900" />
+                <Photo src={p.data.heroImage} alt={p.data.heroAlt} width={1600} height={900} sizes="128px" class="h-24 w-32 shrink-0 rounded-lg object-cover" />
                 <div>
                   <div class="text-xs text-text-mute">{p.data.category}</div>
                   <div class="mt-1 font-display text-sm font-semibold text-text group-hover:text-jet-hi">{p.data.title}</div>
