@@ -6,11 +6,11 @@ const { class: className = '' } = Astro.props;
 // 240° arc (from -120deg to +120deg). Build tick marks.
 const ticks = Array.from({ length: 9 }, (_, i) => -120 + (240 / 8) * i);
 ---
-<div class:list={['grid grid-cols-2 gap-4 md:grid-cols-4', className]}>
+<div class:list={['grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4', className]}>
   {STATS.map((s, i) => (
-    <div class="reveal panel p-6 text-center" data-gauge style={`--reveal-delay:${i * 80}ms`}>
-      <div class="relative mx-auto h-24 w-40">
-        <svg viewBox="0 0 200 120" class="absolute inset-0 h-full w-full" aria-hidden="true">
+    <div class="reveal panel p-4 text-center sm:p-6" data-gauge style={`--reveal-delay:${i * 80}ms`}>
+      <div class="relative mx-auto aspect-[5/3] w-full max-w-[10rem]">
+        <svg viewBox="0 0 200 120" preserveAspectRatio="xMidYMid meet" class="absolute inset-0 h-full w-full" aria-hidden="true">
           <path d="M20 110 A 84 84 0 0 1 180 110" fill="none" stroke="rgba(192,196,204,0.16)" stroke-width="2" />
           <path d="M20 110 A 84 84 0 0 1 180 110" fill="none" stroke={`url(#g${i})`} stroke-width="3" stroke-linecap="round"
                 pathLength="100" stroke-dasharray="100" style={`stroke-dashoffset: ${100 - (s.value / s.max) * 100}`} />
@@ -29,7 +29,7 @@ const ticks = Array.from({ length: 9 }, (_, i) => -120 + (240 / 8) * i);
           </g>
         </svg>
       </div>
-      <div class="mt-1 font-display text-3xl font-extrabold tabular-nums text-text md:text-[2rem]">
+      <div class="mt-1 font-display text-2xl font-extrabold tabular-nums text-text sm:text-3xl md:text-[2rem]">
         <span data-count={s.value} data-suffix={s.suffix}>{s.value}{s.suffix}</span>
       </div>
       <div class="mt-1 text-xs uppercase tracking-eyebrow text-text-mute">{s.label}</div>

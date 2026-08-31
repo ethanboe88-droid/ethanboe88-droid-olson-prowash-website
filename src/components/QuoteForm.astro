@@ -75,7 +75,7 @@ const { compact = false } = Astro.props;
     border: 1px solid var(--hairline);
     background: rgba(255, 255, 255, 0.03);
     padding: 0.7rem 0.9rem;
-    font-size: 0.95rem;
+    font-size: 16px; /* >=16px: no iOS focus zoom */
     color: var(--text);
     transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
   }

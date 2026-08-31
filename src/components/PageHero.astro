@@ -14,12 +14,12 @@ const { eyebrow, title, intro, crumbs = [] } = Astro.props;
   <div class="container-x py-16 sm:py-20 lg:py-24">
     {crumbs.length > 0 && (
       <nav aria-label="Breadcrumb" class="mb-5 text-xs text-text-mute">
-        <ol class="flex flex-wrap items-center gap-1.5">
-          <li><a href="/" class="hover:text-text">Home</a></li>
+        <ol class="flex flex-wrap items-center gap-x-1.5">
+          <li><a href="/" class="inline-block py-1 hover:text-text">Home</a></li>
           {crumbs.map((c) => (
             <li class="flex items-center gap-1.5">
               <span>/</span>
-              {c.href ? <a href={c.href} class="hover:text-text">{c.label}</a> : <span class="text-text-dim">{c.label}</span>}
+              {c.href ? <a href={c.href} class="inline-block py-1 hover:text-text">{c.label}</a> : <span class="py-1 text-text-dim">{c.label}</span>}
             </li>
           ))}
         </ol>

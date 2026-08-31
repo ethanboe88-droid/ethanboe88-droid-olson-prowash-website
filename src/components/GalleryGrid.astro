@@ -13,7 +13,7 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
       <button
         data-filter={c}
         class:list={[
-          'rounded-full border px-3.5 py-1.5 text-xs font-medium transition',
+          'rounded-full border px-3.5 py-2 text-xs font-medium transition',
           i === 0 ? 'border-jet/60 bg-jet/10 text-text' : 'border-hairline text-text-dim hover:border-jet/60 hover:text-text',
         ]}
         aria-pressed={i === 0 ? 'true' : 'false'}
@@ -43,7 +43,7 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
 <!-- Lightbox -->
 <div id="lightbox" class="fixed inset-0 z-[160] hidden items-center justify-center bg-black/85 p-4 backdrop-blur-sm" aria-hidden="true">
   <div class="relative max-h-[88vh] w-full max-w-4xl" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <img id="lightbox-img" src="" alt="" class="mx-auto max-h-[82vh] w-auto rounded-xl border border-hairline" width="1600" height="1200" />
+    <img id="lightbox-img" src="" alt="" class="mx-auto max-h-[82vh] w-auto max-w-full rounded-xl border border-hairline" width="1600" height="1200" />
     <p id="lightbox-cap" class="mt-3 text-center text-sm text-text-dim"></p>
     <button id="lightbox-close" class="absolute -top-2 right-0 grid h-10 w-10 place-items-center rounded-full border border-hairline bg-ink-1 text-text hover:border-jet/60" aria-label="Close"><Icon name="close" class="h-5 w-5" /></button>
     <button id="lightbox-prev" class="absolute left-2 top-1/2 grid h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-hairline bg-ink-1/80 text-text hover:border-jet/60 sm:-left-14" aria-label="Previous image"><Icon name="chevronLeft" class="h-6 w-6" /></button>
@@ -91,7 +91,11 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
       function show(idx) {
         current = (idx + shots.length) % shots.length;
         var s = shots[current];
-        img.src = s.src; img.alt = s.alt;
+        var base = s.src.replace(/\.jpg$/i, '');
+        img.src = s.src;
+        img.srcset = base + '-800.webp 800w, ' + base + '.webp 1500w';
+        img.sizes = '(min-width: 1024px) 900px, 100vw';
+        img.alt = s.alt;
         cap.textContent = s.cat + ' — ' + s.alt;
       }
       function step(dir) {

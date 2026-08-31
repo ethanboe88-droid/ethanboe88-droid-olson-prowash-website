@@ -43,7 +43,7 @@ import { SITE } from '../data/site';
   .lead-field {
     width: 100%; min-height: 44px; border-radius: 0.7rem;
     border: 1px solid var(--hairline); background: rgba(255,255,255,0.03);
-    padding: 0.7rem 0.9rem; font-size: 0.95rem; color: var(--text);
+    padding: 0.7rem 0.9rem; font-size: 16px; /* >=16px: no iOS focus zoom */ color: var(--text);
   }
   .lead-field::placeholder { color: var(--text-mute); }
   .lead-field:focus { outline: none; border-color: rgba(59,159,212,0.7); box-shadow: 0 0 0 3px rgba(59,159,212,0.18); }

@@ -178,9 +178,9 @@ const description = `Olson Pro Wash: roof cleaning, house washing, pressure & so
       <SectionHeading eyebrow="Nearby" title="Other areas we serve" />
       <ul class="mt-8 flex flex-wrap gap-2.5">
         {nearby.map((c) => (
-          <li><a href={`/service-area/${c.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-1.5 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
+          <li><a href={`/service-area/${c.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
         ))}
-        <li><a href="/service-area" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-1.5 text-sm text-jet-hi transition hover:border-jet/60">All service areas <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
+        <li><a href="/service-area" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">All service areas <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
       </ul>
     </div>
   </section>
