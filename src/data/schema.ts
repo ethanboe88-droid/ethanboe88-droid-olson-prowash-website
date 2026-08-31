@@ -17,6 +17,7 @@ export const localBusinessLd = {
   logo: `${base}/images/logo.png`,
   priceRange: SITE.priceRange,
   foundingDate: SITE.founded,
+  founder: { '@type': 'Person', name: SITE.founder },
   currenciesAccepted: 'USD',
   paymentAccepted: 'Cash, Check, Credit Card',
   address: {

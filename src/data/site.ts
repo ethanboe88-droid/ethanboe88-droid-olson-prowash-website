@@ -57,6 +57,7 @@ export const SITE = {
   ],
 
   founded: '2016',
+  founder: 'Ethan Olson',
   priceRange: '$$',
 
   googleBusinessUrl:

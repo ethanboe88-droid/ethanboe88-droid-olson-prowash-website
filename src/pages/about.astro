@@ -4,65 +4,147 @@ import PageHero from '../components/PageHero.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import StatStrip from '../components/StatStrip.astro';
 import CtaBanner from '../components/CtaBanner.astro';
+import JetDivider from '../components/JetDivider.astro';
 import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
 import { breadcrumbLd } from '../data/schema';
 
-const values = [
-  { icon: 'drop', t: 'Method over muscle', d: 'The right detergent and dwell time beat brute pressure every time. We clean deeper and cause zero damage.' },
-  { icon: 'shield', t: 'Show up like professionals', d: 'On time, in uniform, in a clean truck, with the paperwork you asked for. Every visit.' },
-  { icon: 'check', t: 'Say what we’ll do, do what we said', d: 'Honest scope, honest pricing, honest timelines. If something changes, you hear it from us first.' },
-  { icon: 'leaf', t: 'Leave it better than we found it', d: 'Landscaping protected, walkways rinsed, nothing left behind but a cleaner property.' },
+const milestones = [
+  {
+    year: 'Age 13',
+    t: 'A bike and a homemade trailer',
+    d: 'Built a trailer, bolted it to the back of my electric bike, and started mowing lawns around the neighborhood. A real business — just a small one.',
+  },
+  {
+    year: 'Age 16',
+    t: 'Made it official',
+    d: 'Licensed, bonded and insured, done the right way. Around the same time we shifted the focus to exterior cleaning.',
+  },
+  {
+    year: 'Today',
+    t: 'Olson Pro Wash',
+    d: 'Roof & soft washing, hot-water pressure washing and landscaping across Snohomish & King County. Same owner on the job site.',
+  },
 ];
 
-const team = [
-  { img: '/images/team-1.svg', name: 'Owner / Field Lead', role: 'Estimates & pressure work', bio: 'Runs every walk-through and dials in pressure, tips and temperature for each surface on site.' },
-  { img: '/images/team-2.svg', name: 'Soft Wash Tech', role: 'Roof & house washing', bio: 'Mixes and applies the low-pressure detergent systems and owns the landscape-protection checklist.' },
-  { img: '/images/team-3.svg', name: 'Landscape Crew', role: 'Beds, mulch & clean-ups', bio: 'Handles the finish work — edging, mulch, trimming and haul-away — so the whole property lands.' },
+const values = [
+  { icon: 'check', t: 'Honest work', d: 'Straight scope, straight pricing, straight timelines. The number I quote is the number you pay.' },
+  { icon: 'drop', t: 'Method over muscle', d: 'The right detergent and dwell time beat brute pressure every time — deeper clean, zero damage.' },
+  { icon: 'shield', t: 'Show up like a pro', d: 'On time, in uniform, in a clean truck, with the paperwork you asked for. Every visit.' },
+  { icon: 'leaf', t: 'Leave it better', d: 'Landscaping protected, walkways rinsed, nothing left behind but a cleaner property.' },
 ];
 ---
 <BaseLayout
-  title={`About ${SITE.name} — Locally Owned Exterior Cleaning`}
-  description={`Olson Pro Wash is a locally owned, licensed and insured pressure washing and landscaping company based in ${SITE.address.locality}, ${SITE.address.region}, serving Snohomish & King County since ${SITE.founded}.`}
+  title={`About ${SITE.name} — Meet Ethan Olson`}
+  description={`Olson Pro Wash is owner-operated by Ethan Olson, born and raised in Marysville and Lake Stevens, WA. Licensed and insured, serving Snohomish & King County since ${SITE.founded}.`}
   canonical="/about"
   jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])}
 >
   <PageHero
-    eyebrow="About"
-    title="Owner-operated. <span class='text-jet-grad'>Obsessive about the finish.</span>"
-    intro={`Founded in ${SITE.founded} and based in ${SITE.address.locality}, Olson Pro Wash grew from a single trailer into a go-to exterior crew for Lake Stevens, Snohomish County and North King County.`}
+    eyebrow="About · Meet the owner"
+    title="Started at 13 with a bike and a <span class='text-jet-grad'>homemade trailer</span>."
+    intro="Olson Pro Wash is owner-operated by Ethan Olson — born and raised between Marysville and Lake Stevens, and never far from home since."
     crumbs={[{ label: 'About' }]}
   />
 
+  <!-- Founder + photo -->
   <section class="section">
-    <div class="container-x grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+    <div class="container-x grid items-start gap-12 lg:grid-cols-[1.05fr_0.95fr]">
       <div class="reveal space-y-4 text-lg leading-relaxed text-text-dim">
-        <SectionHeading eyebrow="Our story" title="From one trailer to the whole exterior" class="!max-w-none" />
-        <p class="mt-6">Olson Pro Wash started the way a lot of Snohomish County businesses do: one person, one trailer, and a belief that most homes and storefronts around here were being cleaned too aggressively — or not at all.</p>
-        <p>Early on we watched other outfits scar siding, blow out window seals and strip roof granules with too much pressure. So we went the other direction: we learned soft washing properly, invested in hot-water equipment, and built a prep-and-protect routine we run on every job.</p>
-        <p>Homeowners started asking if we could handle the beds and mulch too, since we were already out there making everything else look sharp. That's how the landscaping side was born — and why today one Olson crew can take a property from tired to turnkey in a single visit.</p>
-        <p class="text-text">Same owner on the job site. Same phone number. {SITE.areaServedLong}.</p>
+        <SectionHeading eyebrow="Our story" title="Born here. Built here. Still here." class="!max-w-none" />
+        <p class="mt-6">
+          My name is Ethan Olson, and I've never really lived anywhere else. I grew up between
+          Marysville and Lake Stevens and graduated from Lake Stevens High School — the same streets
+          I now run a work truck down every week.
+        </p>
+        <p>
+          I started young. At 13 I built a little trailer, bolted it to the back of my electric bike,
+          and started mowing lawns around the neighborhood. It was a real business, just a small one —
+          and it taught me the thing this whole company still runs on: people will hand you their home
+          if you show up, do what you said, and treat it like it's your own.
+        </p>
+        <p>
+          At 16 I made it official — licensed, bonded and insured, done the right way. Around the same
+          time we shifted the focus to exterior cleaning: pressure washing, roof and soft washing. Olson
+          Pro Wash has been that ever since. Same owner. Same standard. A lot more equipment.
+        </p>
+        <p class="text-text">
+          I love Snohomish County, and I love Washington — the evergreens, the lakes, the fact that
+          everything grows moss if you leave it alone long enough. You'll catch me at just about every
+          community event, at the Planet Fitness in Lake Stevens, training MMA, or on a ladder somewhere
+          between here and King County. This is home, and these are my neighbors. That's not a marketing
+          line — it's just the job.
+        </p>
       </div>
+
       <div class="reveal">
-        <div class="bezel overflow-hidden rounded-2xl">
-          <img src="/images/gallery-3.svg" alt="Olson Pro Wash crew working on a Lake Stevens area property" class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1500" />
-        </div>
+        {/* Swap /images/founder.svg for a real photo of Ethan (see the prompt pack). */}
+        <figure class="bezel overflow-hidden rounded-2xl bg-ink-2">
+          <img src="/images/founder.svg" alt="Ethan Olson, founder of Olson Pro Wash, Lake Stevens WA"
+               class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1500" />
+          <figcaption class="flex items-center justify-between border-t border-hairline px-4 py-3 text-xs">
+            <span class="font-display font-semibold uppercase tracking-eyebrow text-text">Ethan Olson</span>
+            <span class="text-text-mute">Founder · Lake Stevens, WA</span>
+          </figcaption>
+        </figure>
         <div class="panel mt-4 p-5">
-          <div class="flex items-center gap-2 text-sm font-semibold text-text"><Icon name="pin" class="h-4 w-4 text-jet-hi" /> Based in {SITE.address.locality}, {SITE.address.region}</div>
-          <p class="mt-2 text-sm text-text-dim">Serving {SITE.serviceCities.slice(0, 8).join(' · ')} and nearby.</p>
+          <div class="flex items-center gap-2 text-sm font-semibold text-text">
+            <Icon name="pin" class="h-4 w-4 text-jet-hi" /> Owner-operated, {SITE.address.locality}, {SITE.address.region}
+          </div>
+          <p class="mt-2 text-sm text-text-dim">Licensed, bonded &amp; insured. Serving {SITE.serviceCities.slice(0, 8).join(' · ')} and nearby.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section pt-0"><div class="container-x"><StatStrip /></div></section>
+  <!-- Mission -->
+  <section class="section pt-0">
+    <div class="container-x">
+      <div class="reveal bezel relative overflow-hidden rounded-4xl p-8 text-center sm:p-14">
+        <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+          <div class="absolute inset-0 opacity-[0.12]" style="background: var(--jet-gradient); background-size:220% 100%;"></div>
+        </div>
+        <span class="eyebrow justify-center">Our mission</span>
+        <p class="display mx-auto mt-4 max-w-3xl text-[clamp(1.6rem,4vw,2.5rem)]">
+          Do honest work, and take care of <span class="text-jet-grad">everybody in our community</span>.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Milestones -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="The road here" title="From a lawn route to a <span class='text-jet-grad'>pro wash crew</span>" />
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        {milestones.map((m, i) => (
+          <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 70}ms`}>
+            <div class="font-display text-sm font-semibold uppercase tracking-eyebrow text-jet-hi">{m.year}</div>
+            <h3 class="mt-2 font-display text-lg font-bold text-text">{m.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-text-dim">{m.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <!-- Stats -->
   <section class="section bg-ink-1/50">
     <div class="container-x">
+      <SectionHeading eyebrow="By the numbers" title="Nine years, one standard" class="mb-10" />
+      <StatStrip />
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="container-x">
       <SectionHeading eyebrow="What we stand for" title="Four rules we <span class='text-jet-grad'>don't bend</span>" />
-      <div class="mt-12 grid gap-5 sm:grid-cols-2">
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {values.map((v, i) => (
-          <div class="reveal panel p-6 sm:p-7" style={`--reveal-delay:${i * 65}ms`}>
+          <div class="reveal panel p-6" style={`--reveal-delay:${i * 60}ms`}>
             <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi"><Icon name={v.icon} class="h-5 w-5" /></span>
             <h3 class="mt-4 font-display text-lg font-bold text-text">{v.t}</h3>
             <p class="mt-2 text-sm leading-relaxed text-text-dim">{v.d}</p>
@@ -72,38 +154,20 @@ const team = [
     </div>
   </section>
 
-  <section class="section">
-    <div class="container-x">
-      <SectionHeading eyebrow="The crew" title="Small team. <span class='text-jet-grad'>High standards.</span>" intro="You'll see the same faces from quote to clean-up — not a rotating cast of subcontractors." />
-      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {team.map((m, i) => (
-          <figure class="reveal panel lift overflow-hidden" style={`--reveal-delay:${i * 75}ms`}>
-            <img src={m.img} alt={`${m.name} — ${SITE.name}`} class="aspect-square w-full object-cover" loading="lazy" width="900" height="900" />
-            <figcaption class="p-5">
-              <div class="font-display text-lg font-bold text-text">{m.name}</div>
-              <div class="text-xs uppercase tracking-eyebrow text-jet-hi">{m.role}</div>
-              <p class="mt-2 text-sm leading-relaxed text-text-dim">{m.bio}</p>
-            </figcaption>
-          </figure>
-        ))}
-      </div>
-      <p class="reveal mt-6 text-sm text-text-mute">Team titles and photos are placeholders — swap in real names and headshots in <code class="rounded bg-white/5 px-1">src/pages/about.astro</code>.</p>
-    </div>
-  </section>
-
+  <!-- Around town -->
   <section class="section bg-ink-1/50">
     <div class="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
-      <SectionHeading eyebrow="Why choose us" title="What you get with Olson that you don't get with a guy and a wand" />
+      <SectionHeading eyebrow="Around town" title="Local isn't a tagline here" intro="I live in this community, not just work in it." />
       <ul class="grid gap-3 sm:grid-cols-2">
         {[
-          'Written, itemized quotes',
-          'Certificate of Insurance on request',
-          'Roof soft-wash certified',
-          'Hot-water pressure equipment',
-          'Landscape protection on every job',
-          'Before/after photo documentation',
-          'One crew for cleaning + landscaping',
-          'Local, reachable, and accountable',
+          'Born and raised — Marysville & Lake Stevens',
+          'Lake Stevens High School',
+          'At just about every local community event',
+          'Planet Fitness Lake Stevens regular',
+          'Trains MMA locally',
+          'Trucks working across Snohomish & King County',
+          'Owner on the job site, not just on the invoice',
+          'Deep roots in Washington and the Northwest',
         ].map((li, i) => (
           <li class="reveal panel flex items-center gap-3 p-4 text-sm text-text" style={`--reveal-delay:${i * 45}ms`}>
             <Icon name="check" class="h-4 w-4 shrink-0 text-jet-hi" /> {li}
@@ -113,5 +177,5 @@ const team = [
     </div>
   </section>
 
-  <CtaBanner heading="Let's make your place the sharpest on the block" />
+  <CtaBanner heading="Hire the owner, not a call center" sub="Ethan quotes it, and an Olson crew does the work. Free estimates, same-day." />
 </BaseLayout>
