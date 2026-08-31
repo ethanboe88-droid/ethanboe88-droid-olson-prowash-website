@@ -76,10 +76,10 @@ import { breadcrumbLd } from '../data/schema';
   <section class="section border-y border-ink-line bg-ink-soft/60">
     <div class="container-x grid items-center gap-12 lg:grid-cols-2">
       <div>
-        <SectionHeading kicker="Service area" title="Serving <span class='text-gradient'>Northwest Wisconsin</span>" intro="Based in Rice Lake and covering the surrounding communities. If your town isn’t listed, ask anyway — we travel for the right project." />
+        <SectionHeading kicker="Service area" title="Serving <span class='text-gradient'>Lake Stevens &amp; Snohomish County</span>" intro="Based in Lake Stevens and covering the surrounding communities. If your town isn’t listed, ask anyway — we travel for the right project." />
         <ul class="mt-8 flex flex-wrap gap-2">
           {SITE.serviceCities.map((c) => (
-            <li class="rounded-full border border-ink-line bg-white/[0.03] px-3.5 py-1.5 text-sm text-silver">{c}, WI</li>
+            <li class="rounded-full border border-ink-line bg-white/[0.03] px-3.5 py-1.5 text-sm text-silver">{c}, {SITE.address.region}</li>
           ))}
         </ul>
         <a href="#quote" class="btn btn-primary mt-8">Check my address <Icon name="arrow" class="h-4 w-4" /></a>

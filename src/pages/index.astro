@@ -16,7 +16,7 @@ import { localBusinessLd, websiteLd, faqLd } from '../data/schema';
 
 const homeFaqs = [
   {
-    q: 'How much does pressure washing cost in Northwest Wisconsin?',
+    q: 'How much does pressure washing cost in the Lake Stevens area?',
     a: 'Most residential projects land between $200 and $650 depending on size, surface and how much buildup there is. House washes are typically priced by square footage and stories; driveways and flatwork by area. You’ll get an itemized, no-obligation quote before we book anything.',
   },
   {
@@ -41,7 +41,7 @@ const featured = SERVICES.filter((s) => s.featured);
 const rest = SERVICES.filter((s) => !s.featured);
 ---
 <BaseLayout
-  title={`${SITE.name} — Pressure Washing & Landscaping in ${SITE.address.locality}, WI`}
+  title={`${SITE.name} — Pressure Washing & Landscaping in ${SITE.address.locality}, ${SITE.address.region}`}
   description={SITE.description}
   canonical="/"
   jsonLd={[localBusinessLd, websiteLd, faqLd(homeFaqs)]}
@@ -83,14 +83,14 @@ const rest = SERVICES.filter((s) => !s.featured);
       <SectionHeading
         kicker="See the difference"
         title="Drag to reveal the <span class='text-gradient'>before</span>"
-        intro="Real results from real Northwoods properties. No filters — just the right method and a crew that doesn’t cut corners."
+        intro="Real results from real Snohomish County properties. No filters — just the right method and a crew that doesn’t cut corners."
       />
       <div class="mt-12 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Vinyl siding soft wash · Rice Lake" beforeAlt="House siding covered in green algae before washing" afterAlt="Clean bright house siding after soft washing" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="50" label="Concrete driveway · Cumberland" beforeAlt="Stained gray driveway before pressure washing" afterAlt="Bright even driveway after surface cleaning" />
+        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="Vinyl siding soft wash · Lake Stevens" beforeAlt="House siding covered in green algae before washing" afterAlt="Clean bright house siding after soft washing" />
+        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="50" label="Concrete driveway · Marysville" beforeAlt="Stained gray driveway before pressure washing" afterAlt="Bright even driveway after surface cleaning" />
       </div>
       <div class="mt-6 grid gap-6">
-        <BeforeAfter class="reveal" before="/images/before-3.svg" after="/images/after-3.svg" start="60" label="Cedar deck restoration · Spooner" beforeAlt="Graying weathered cedar deck before cleaning" afterAlt="Restored cedar deck after cleaning and prep" />
+        <BeforeAfter class="reveal" before="/images/before-3.svg" after="/images/after-3.svg" start="60" label="Cedar deck restoration · Snohomish" beforeAlt="Graying weathered cedar deck before cleaning" afterAlt="Restored cedar deck after cleaning and prep" />
       </div>
     </div>
   </section>
@@ -137,7 +137,7 @@ const rest = SERVICES.filter((s) => !s.featured);
       <SectionHeading
         kicker="Reviews"
         title="Neighbors who <span class='text-gradient'>don’t hold back</span>"
-        intro="A sample of what homeowners and business owners across Northwest Wisconsin say after we’ve packed up."
+        intro="A sample of what homeowners and business owners across Snohomish County say after we’ve packed up."
       />
       <div class="mt-10">
         <Testimonials heading="Customer testimonials" />

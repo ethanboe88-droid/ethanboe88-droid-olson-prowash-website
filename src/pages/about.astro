@@ -23,13 +23,13 @@ const team = [
 ---
 <BaseLayout
   title={`About ${SITE.name} — Local Exterior Cleaning Pros`}
-  description={`Olson Pro Wash is a licensed, insured pressure washing and landscaping company based in ${SITE.address.locality}, WI, serving ${SITE.areaServed} since ${SITE.founded}.`}
+  description={`Olson Pro Wash is a licensed, insured pressure washing and landscaping company based in ${SITE.address.locality}, ${SITE.address.region}, serving ${SITE.areaServed} since ${SITE.founded}.`}
   canonical="/about"
   jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])}
 >
   <PageHero
     kicker="About"
-    title="A Northwoods company that <span class='text-gradient'>sweats the finish</span>"
+    title="A local company that <span class='text-gradient'>sweats the finish</span>"
     intro={`Founded in ${SITE.founded} and based in ${SITE.address.locality}, Olson Pro Wash grew from a single trailer into ${SITE.areaServed}’s go-to crew for premium exterior cleaning and landscaping.`}
     crumbs={[{ label: 'About' }]}
   />
@@ -40,9 +40,9 @@ const team = [
       <div class="reveal space-y-4 text-lg leading-relaxed text-silver">
         <SectionHeading kicker="Our story" title="From one trailer to the whole exterior" class="!max-w-none" />
         <p class="mt-6">
-          Olson Pro Wash started the way a lot of Northwoods businesses do: one person, one trailer,
-          and a belief that most homes and storefronts around here were being cleaned too aggressively
-          — or not at all.
+          Olson Pro Wash started the way a lot of Snohomish County businesses do: one person, one
+          trailer, and a belief that most homes and storefronts around here were being cleaned too
+          aggressively — or not at all.
         </p>
         <p>
           Early on we watched other outfits scar siding, streak concrete and blow out window seals
@@ -60,11 +60,11 @@ const team = [
       </div>
       <div class="reveal">
         <div class="overflow-hidden rounded-2xl border border-ink-line">
-          <img src="/images/gallery-3.svg" alt="Olson Pro Wash crew at work on a Northwest Wisconsin property" class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1400" />
+          <img src="/images/gallery-3.svg" alt="Olson Pro Wash crew at work on a Lake Stevens area property" class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1400" />
         </div>
         <div class="mt-4 card p-5">
           <div class="flex items-center gap-2 text-sm font-semibold text-white">
-            <Icon name="pin" class="h-4 w-4 text-electric-300" /> Based in {SITE.address.locality}, WI
+            <Icon name="pin" class="h-4 w-4 text-electric-300" /> Based in {SITE.address.locality}, {SITE.address.region}
           </div>
           <p class="mt-2 text-sm text-silver">
             Serving {SITE.serviceCities.slice(0, 8).join(' · ')} and nearby.

@@ -1,7 +1,7 @@
 # Olson Pro Wash — Website
 
-Premium marketing site for **Olson Pro Wash** (Olson Landscaping &amp; Pro Wash LLC),
-a pressure washing &amp; landscaping company serving Northwest Wisconsin.
+Premium marketing site for **Olson Pro Wash** (Olson Landscaping Pro Wash LLC),
+a pressure washing &amp; landscaping company serving Lake Stevens, WA and surrounding Snohomish County.
 
 Built with **Astro 4** + **Tailwind CSS**. Vanilla JS for all interactions — no React/Vue.
 
@@ -47,7 +47,7 @@ public/
 | Real photos (hero, gallery, before/after, team, blog heroes) | `public/images/` |
 | Open Graph share image | `public/images/og-default.svg` → replace with a 1200×630 PNG/JPG |
 
-The phone number `(715) 555-0100` and domain `olsonprowash.com` are placeholders.
+The phone number `(425) 555-0100` and domain `olsonprowash.com` are placeholders.
 
 ## Deployment (Netlify)
 

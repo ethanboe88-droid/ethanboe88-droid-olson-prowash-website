@@ -10,7 +10,7 @@ export async function GET(context) {
   return rss({
     title: `${SITE.name} — Journal`,
     description:
-      'Pressure washing, soft washing and exterior maintenance guides for Northwest Wisconsin.',
+      'Pressure washing, soft washing and exterior maintenance guides for the Lake Stevens area and Snohomish County, WA.',
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

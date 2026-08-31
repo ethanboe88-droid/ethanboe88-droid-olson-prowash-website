@@ -34,7 +34,7 @@ export const localBusinessLd = {
   },
   areaServed: SITE.serviceCities.map((c) => ({
     '@type': 'City',
-    name: `${c}, WI`,
+    name: `${c}, ${SITE.address.region}`,
   })),
   openingHoursSpecification: SITE.openingHoursSpec.map((o) => ({
     '@type': 'OpeningHoursSpecification',

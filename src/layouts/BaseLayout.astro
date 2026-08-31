@@ -53,8 +53,10 @@ const ldArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="color-scheme" content="dark" />
     <meta name="author" content={SITE.legalName} />
-    <meta name="geo.region" content="US-WI" />
+    <meta name="geo.region" content={`US-${SITE.address.region}`} />
     <meta name="geo.placename" content={SITE.address.locality} />
+    <meta name="geo.position" content={`${SITE.geo.latitude};${SITE.geo.longitude}`} />
+    <meta name="ICBM" content={`${SITE.geo.latitude}, ${SITE.geo.longitude}`} />
 
     <!-- Icons / manifest -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

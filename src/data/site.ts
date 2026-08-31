@@ -5,48 +5,48 @@
 
 export const SITE = {
   name: 'Olson Pro Wash',
-  legalName: 'Olson Landscaping & Pro Wash LLC',
+  legalName: 'Olson Landscaping Pro Wash LLC',
   tagline: 'Exterior cleaning & landscaping, done to a higher standard.',
   description:
-    'Olson Pro Wash delivers premium pressure washing, soft washing, house washing and landscaping across Northwest Wisconsin. Licensed, insured, and obsessive about results.',
+    'Olson Pro Wash delivers premium pressure washing, soft washing, house washing and landscaping across Lake Stevens and Snohomish County, WA. Licensed, insured, and obsessive about results.',
 
   // Update to the live domain (also update astro.config.mjs `site`).
   domain: 'https://olsonprowash.com',
 
-  phone: '(715) 555-0100',
-  phoneHref: 'tel:+17155550100',
+  phone: '(425) 555-0100',
+  phoneHref: 'tel:+14255550100',
   email: 'hello@olsonprowash.com',
   emailHref: 'mailto:hello@olsonprowash.com',
 
   // Placeholder service-area business address (no storefront visits required).
   address: {
     street: '',
-    locality: 'Rice Lake',
-    region: 'WI',
-    regionName: 'Wisconsin',
-    postalCode: '54868',
+    locality: 'Lake Stevens',
+    region: 'WA',
+    regionName: 'Washington',
+    postalCode: '98258',
     country: 'US',
   },
 
   geo: {
-    // Approx. center of the service area (Rice Lake, WI). Update if needed.
-    latitude: 45.5061,
-    longitude: -91.7382,
+    // Approx. center of the service area (Lake Stevens, WA). Update if needed.
+    latitude: 48.0151,
+    longitude: -122.0637,
   },
 
-  areaServed: 'Northwest Wisconsin',
-  areaServedLong: 'Serving Northwest Wisconsin and surrounding areas',
+  areaServed: 'the Lake Stevens area',
+  areaServedLong: 'Serving Lake Stevens and surrounding Snohomish County',
   serviceCities: [
-    'Rice Lake',
-    'Cumberland',
-    'Barron',
-    'Chetek',
-    'Spooner',
-    'Hayward',
-    'Cameron',
-    'Turtle Lake',
-    'Shell Lake',
-    'Birchwood',
+    'Lake Stevens',
+    'Everett',
+    'Marysville',
+    'Snohomish',
+    'Granite Falls',
+    'Mill Creek',
+    'Arlington',
+    'Monroe',
+    'Mukilteo',
+    'Lynnwood',
   ],
 
   hours: [
@@ -64,7 +64,8 @@ export const SITE = {
   priceRange: '$$',
 
   // External links
-  googleBusinessUrl: 'https://www.google.com/maps/search/?api=1&query=Olson+Pro+Wash+Rice+Lake+WI',
+  googleBusinessUrl:
+    'https://www.google.com/maps/search/?api=1&query=Olson+Landscaping+Pro+Wash+Lake+Stevens+WA',
   googleReviewUrl: 'https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID',
   social: {
     facebook: 'https://www.facebook.com/olsonprowash',
@@ -94,7 +95,7 @@ export const TRUST_BADGES = [
 
 export const STATS = [
   { value: '1,800+', label: 'Exteriors restored' },
-  { value: '9 yrs', label: 'Serving the Northwoods' },
+  { value: '9 yrs', label: 'Serving Snohomish County' },
   { value: '4.9★', label: 'Average customer rating' },
   { value: '100%', label: 'Satisfaction guarantee' },
 ] as const;

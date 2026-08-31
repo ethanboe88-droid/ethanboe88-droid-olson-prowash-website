@@ -39,9 +39,9 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
     <div class="container-x">
       <SectionHeading kicker="Before / after" title="Move the handle" />
       <div class="mt-10 grid gap-6 lg:grid-cols-2">
-        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="House wash · Rice Lake, WI" beforeAlt="Algae-covered siding before" afterAlt="Clean siding after" />
-        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="48" label="Driveway · Cumberland, WI" beforeAlt="Stained driveway before" afterAlt="Clean driveway after" />
-        <BeforeAfter class="reveal lg:col-span-2" before="/images/before-3.svg" after="/images/after-3.svg" start="58" label="Cedar deck restoration · Spooner, WI" beforeAlt="Weathered deck before" afterAlt="Restored deck after" />
+        <BeforeAfter class="reveal" before="/images/before-1.svg" after="/images/after-1.svg" label="House wash · Lake Stevens, WA" beforeAlt="Algae-covered siding before" afterAlt="Clean siding after" />
+        <BeforeAfter class="reveal" before="/images/before-2.svg" after="/images/after-2.svg" start="48" label="Driveway · Marysville, WA" beforeAlt="Stained driveway before" afterAlt="Clean driveway after" />
+        <BeforeAfter class="reveal lg:col-span-2" before="/images/before-3.svg" after="/images/after-3.svg" start="58" label="Cedar deck restoration · Snohomish, WA" beforeAlt="Weathered deck before" afterAlt="Restored deck after" />
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@ const cats = ['All', ...Array.from(new Set(shots.map((s) => s.cat)))];
   <section class="section border-t border-ink-line bg-ink-soft/60">
     <div class="container-x">
       <div class="flex flex-wrap items-end justify-between gap-6">
-        <SectionHeading kicker="Project grid" title="Recent work around the Northwoods" />
+        <SectionHeading kicker="Project grid" title="Recent work around Snohomish County" />
         <div id="gallery-filter" class="flex flex-wrap gap-2 reveal">
           {cats.map((c, i) => (
             <button

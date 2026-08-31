@@ -7,13 +7,14 @@ heroAlt: "Side by side comparison of soft washing siding and pressure washing co
 category: "Explainer"
 author: "Olson Pro Wash"
 readingTime: "6 min read"
-tags: ["soft washing", "pressure washing", "roof cleaning", "siding"]
+tags: ["soft washing", "pressure washing", "roof cleaning", "siding", "snohomish county"]
 keywords: "soft wash vs pressure wash, difference between soft washing and pressure washing, is pressure washing bad for siding"
 ---
 
 "Pressure washing" gets used as a catch-all, but professionals actually use **two different
-methods** — and choosing the wrong one is the single most common way exteriors get damaged. Here's
-how to tell them apart and know which your home needs.
+methods** — and choosing the wrong one is the single most common way exteriors get damaged. In the
+Pacific Northwest, where moss and algae are relentless, picking the right one matters even more.
+Here's how to tell them apart and know which your home needs.
 
 ## What is pressure washing?
 
@@ -79,10 +80,11 @@ contractor is dragging a high-pressure wand across your siding, stop them.
 
 ## Why roofs are non-negotiable
 
-Those black streaks on your shingles are living organisms. Pressure washing a roof strips the
-protective granules, dramatically shortens shingle life, and voids most manufacturer warranties.
-The ARMA (Asphalt Roofing Manufacturers Association) and shingle makers specifically call for
-**low-pressure chemical cleaning** — exactly what [soft washing](/services#soft-washing) is.
+Those black streaks and green moss clumps on your shingles are living organisms — and around Lake
+Stevens, moss is the bigger threat. Pressure washing a roof strips the protective granules,
+dramatically shortens shingle life, and voids most manufacturer warranties. The ARMA (Asphalt
+Roofing Manufacturers Association) and shingle makers specifically call for **low-pressure chemical
+cleaning** — exactly what [soft washing](/services#soft-washing) is.
 
 ## How Olson Pro Wash decides
 
