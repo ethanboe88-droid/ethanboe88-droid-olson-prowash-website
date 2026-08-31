@@ -295,6 +295,167 @@ export const CITIES: City[] = [
       },
     ],
   },
+  {
+    name: 'Snohomish',
+    slug: 'snohomish-wa',
+    county: 'Snohomish County',
+    geo: { lat: 47.9129, lng: -122.0982 },
+    driveTime: 'about 10 minutes from our Lake Stevens shop',
+    intro:
+      "Historic downtown Snohomish is full of century-old homes that can't take high pressure — and the surrounding valley is damp, shaded and moss-prone. We're just up the road.",
+    conditions:
+      "Along First Street and the historic district, Victorian and Craftsman homes have original wood siding, painted trim and delicate detail that a high-pressure wand would destroy — every one of these is a careful low-pressure soft wash. Out in the Pilchuck and Snohomish river valley and up around Three Lakes and Cathcart, river fog and heavy tree cover keep roofs, decks and north walls green most of the year.",
+    neighborhoods: ['Historic Downtown / First Street', 'Blackmans Lake', 'Pilchuck', 'Cathcart', 'Three Lakes', 'Clearview', 'Machias'],
+    landmarks: ['First Street Historic District', 'Snohomish River', 'Blackmans Lake', 'Harvey Field', 'Centennial Trail'],
+    housing: 'Century-old downtown homes plus river-valley acreage and hilltop neighborhoods',
+    topServices: ['roof-cleaning', 'soft-washing', 'deck-patio-cleaning'],
+    photo: '/images/p-fence.jpg',
+    photoAlt: 'Olson Pro Wash soft washing near historic downtown Snohomish, WA',
+    faqs: [
+      {
+        q: 'My house is over 100 years old — is a pressure wash safe?',
+        a: 'Not a pressure wash — a soft wash. Low pressure plus the right detergent cleans old wood siding, lead-era paint and fragile trim without forcing water behind the boards or stripping the finish. It is the only method we use on historic Snohomish homes.',
+      },
+    ],
+  },
+  {
+    name: 'Monroe',
+    slug: 'monroe-wa',
+    county: 'Snohomish County',
+    geo: { lat: 47.8557, lng: -121.9715 },
+    driveTime: 'about 20 minutes from our Lake Stevens shop',
+    intro:
+      "Sitting in the Skykomish valley at the foot of the Cascades, Monroe gets the humidity, the fog and the tree debris — north-facing walls and roofs go green fast here.",
+    conditions:
+      "The newer subdivisions in the Fryelands and around Chain Lake are prime annual house-wash and driveway-cleaning territory, while the rural properties out toward Ben Howard, Woods Creek and High Rock have big rooflines under heavy timber. Valley moisture means moss and algae come back quickly, so a lot of Monroe homeowners move to a scheduled plan.",
+    neighborhoods: ['Downtown Monroe', 'Fryelands', 'Chain Lake', 'Wagner', 'Woods Creek', 'Tjerne Place', 'Ben Howard'],
+    landmarks: ['Evergreen State Fairgrounds', 'Lake Tye', 'Skykomish River', 'Al Borlin Park', 'US-2 / Stevens Pass gateway'],
+    housing: 'Fryelands and Chain Lake subdivisions plus rural acreage toward Woods Creek',
+    topServices: ['house-washing', 'roof-cleaning', 'driveway-concrete-cleaning'],
+    photo: '/images/p-driveway.jpg',
+    photoAlt: 'Olson Pro Wash cleaning a driveway in Monroe, WA',
+    faqs: [
+      {
+        q: 'The moss keeps coming back on my Monroe roof — is that normal?',
+        a: "In this valley, yes — the humidity feeds it. After the soft wash we apply a zinc or copper treatment to slow regrowth, and many customers here schedule a light touch-up every year or two so it never gets bad again.",
+      },
+    ],
+  },
+  {
+    name: 'Mill Creek',
+    slug: 'mill-creek-wa',
+    county: 'Snohomish County',
+    geo: { lat: 47.8601, lng: -122.2043 },
+    driveTime: 'about 20 minutes from our Lake Stevens shop',
+    intro:
+      "Mill Creek is master-planned and appearance-conscious — most neighborhoods have covenants that require a maintained exterior, and homeowners here expect the work to look it.",
+    conditions:
+      "From the original Mill Creek golf community to Silver Firs, Mill Creek East and the Highlands, these are HOA neighborhoods where a green-streaked roof or dingy siding gets a letter. We run scheduled house-wash, roof soft-wash and gutter-cleaning programs for Mill Creek homeowners and the property managers who cover the area, with before/after photos and dated invoices for HOA files.",
+    neighborhoods: ['Mill Creek Town Center', 'The Highlands', 'Silver Firs', 'Mill Creek East', 'North Creek', 'Amber Hill', 'McCollum Park area'],
+    landmarks: ['Mill Creek Town Center', 'McCollum Park', 'North Creek', 'Mill Creek Country Club', 'Penny Creek'],
+    housing: 'Master-planned HOA neighborhoods with covenant-maintained exteriors',
+    topServices: ['house-washing', 'gutter-cleaning', 'roof-cleaning'],
+    photo: '/images/p-house-truck.jpg',
+    photoAlt: 'Olson Pro Wash house washing in Mill Creek, WA',
+    faqs: [
+      {
+        q: 'Our HOA sent a notice about the roof and siding — can you handle both and give us documentation?',
+        a: 'Yes. Roof soft wash and house wash in one visit, plus before/after photos and an itemized invoice describing the work — exactly what Mill Creek HOAs and property managers ask for.',
+      },
+    ],
+  },
+  {
+    name: 'Mukilteo',
+    slug: 'mukilteo-wa',
+    county: 'Snohomish County',
+    geo: { lat: 47.9445, lng: -122.3046 },
+    driveTime: 'about 20 minutes from our Lake Stevens shop',
+    intro:
+      "Bluff-top and waterfront exposure means Mukilteo homes get salt haze, wind-driven grime and algae — and the views mean owners want them spotless.",
+    conditions:
+      "Old Town and the waterfront take the full brunt of salt air off Possession Sound, so siding films over and windows and trim need frequent attention. Up in Harbour Pointe, the master-planned golf community holds a tidy standard across hundreds of homes. Regular house washing, roof soft washing and careful soft washing around big view windows keep Mukilteo homes bright.",
+    neighborhoods: ['Old Town / Waterfront', 'Harbour Pointe', 'Picnic Point', 'Chennault Beach', 'Goat Trail Ridge', 'Japanese Gulch area'],
+    landmarks: ['Mukilteo Lighthouse', 'Mukilteo Ferry Terminal', 'Harbour Pointe Golf Club', 'Paine Field', 'Possession Sound'],
+    housing: 'Waterfront and bluff-view homes plus the Harbour Pointe master-planned community',
+    topServices: ['house-washing', 'roof-cleaning', 'soft-washing'],
+    photo: '/images/p-roof.jpg',
+    photoAlt: 'Olson Pro Wash soft washing a bluff-top home in Mukilteo, WA',
+    faqs: [
+      {
+        q: 'Does salt air near the water make the siding harder to clean?',
+        a: 'It builds a film faster, so waterfront and bluff homes benefit from a wash every 8–12 months rather than annually. The method is the same gentle soft wash — the salt just means it needs doing more often.',
+      },
+    ],
+  },
+  {
+    name: 'Woodinville',
+    slug: 'woodinville-wa',
+    county: 'King County',
+    geo: { lat: 47.7543, lng: -122.1635 },
+    driveTime: 'about 30 minutes from our Lake Stevens shop',
+    intro:
+      "Woodinville pairs large wooded estates on Hollywood Hill and English Hill with a busy warehouse-district wine and event scene — we do both.",
+    conditions:
+      "The hillside homes above town sit on acreage under dense Douglas fir, so roofs, gutters and long driveways collect needle debris and grow moss year-round. Down in the valley, the tasting rooms, event venues and warehouse-district businesses need clean entries, patios and sidewalks for guests. Roof soft washing and whole-home washes on the hills; recurring commercial cleaning in the district.",
+    neighborhoods: ['Downtown / Warehouse District', 'Hollywood Hill', 'English Hill', 'Cottage Lake', 'Bear Creek', 'Wellington', 'Leota'],
+    landmarks: ['Chateau Ste. Michelle', 'Woodinville wine district', 'Sammamish River Trail', 'Cottage Lake', 'Hollywood Hill'],
+    housing: 'Wooded acreage estates on Hollywood Hill and English Hill, plus valley commercial and event venues',
+    topServices: ['roof-cleaning', 'house-washing', 'commercial-services'],
+    photo: '/images/p-roof2.jpg',
+    photoAlt: 'Olson Pro Wash soft washing a wooded home in Woodinville, WA',
+    faqs: [
+      {
+        q: 'Do you clean tasting rooms and event venues in the Woodinville wine district?',
+        a: 'Yes — patios, entries, sidewalks, wall washing and awning cleaning, scheduled around your events and open hours. Certificate of insurance provided.',
+      },
+    ],
+  },
+  {
+    name: 'Redmond',
+    slug: 'redmond-wa',
+    county: 'King County',
+    geo: { lat: 47.674, lng: -122.1215 },
+    driveTime: 'about 35 minutes from our Lake Stevens shop',
+    intro:
+      "From Education Hill and Grass Lawn to the larger homes out toward Union Hill and Novelty Hill, Redmond's mix of tree cover and tech-corridor turnover keeps exteriors in constant need of a refresh.",
+    conditions:
+      "The established neighborhoods on Education Hill and Grass Lawn have mature trees shading north-facing roofs, while the newer, bigger homes toward Union Hill, Novelty Hill and Bear Creek sit in heavier timber with more moss and needle load. Around Overlake and Redmond Town Center there's steady commercial and multifamily work. House washing, roof soft washing and turnover cleans are the usual Redmond scope.",
+    neighborhoods: ['Downtown Redmond', 'Education Hill', 'Grass Lawn', 'Overlake', 'Idylwood', 'Union Hill', 'Novelty Hill', 'Bear Creek'],
+    landmarks: ['Marymoor Park', 'Redmond Town Center', 'Microsoft campus', 'Sammamish River', 'Lake Sammamish'],
+    housing: 'Established Education Hill and Grass Lawn homes plus larger newer builds toward Union Hill and Novelty Hill',
+    topServices: ['house-washing', 'roof-cleaning', 'commercial-services'],
+    photo: '/images/p-house.jpg',
+    photoAlt: 'Olson Pro Wash house washing in Redmond, WA',
+    faqs: [
+      {
+        q: 'Can you do a fast exterior turnover clean before a Redmond home goes on the market or gets a new tenant?',
+        a: 'Yes. A house wash, driveway clean and gutter clear-out together make the biggest visible difference before listing or move-in, and we can usually schedule turnover jobs quickly.',
+      },
+    ],
+  },
+  {
+    name: 'Lynnwood',
+    slug: 'lynnwood-wa',
+    county: 'Snohomish County',
+    geo: { lat: 47.8279, lng: -122.3051 },
+    driveTime: 'about 20 minutes from our Lake Stevens shop',
+    intro:
+      "Lynnwood's dense mix of 1960s–80s ramblers and split-levels means a lot of aging composition roofs — and almost all of them are carrying moss.",
+    conditions:
+      "The neighborhoods around Alderwood, Meadowdale, Scriber Lake and Lake Serene are full of older homes with north-slope roof moss, mossy walkways and tired siding. The Highway 99 and 196th commercial corridor and the redeveloping City Center add storefront and multifamily work. Roof soft washing, gutter cleaning and annual house washes are the core Lynnwood jobs.",
+    neighborhoods: ['Alderwood', 'City Center', 'Meadowdale', 'Scriber Lake', 'Lake Serene', '36th Ave corridor', 'Highway 99 corridor'],
+    landmarks: ['Alderwood Mall', 'Lynnwood City Center / Link light rail', 'Scriber Lake Park', "Lund's Gulch / Meadowdale Beach", 'Edmonds College'],
+    housing: '1960s–80s ramblers and split-levels with aging composition roofs, plus a growing commercial core',
+    topServices: ['roof-cleaning', 'gutter-cleaning', 'house-washing'],
+    photo: '/images/p-gutter.jpg',
+    photoAlt: 'Olson Pro Wash clearing gutters on a Lynnwood, WA home',
+    faqs: [
+      {
+        q: 'My 1970s Lynnwood roof is covered in moss — does it need replacing or can it be cleaned?',
+        a: 'Usually it can be cleaned. If the shingles are intact under the moss, a low-pressure soft wash kills it at the root and buys years of life. We will tell you honestly if a section is too far gone to save.',
+      },
+    ],
+  },
 ];
 
 export const getCity = (slug: string) => CITIES.find((c) => c.slug === slug);
