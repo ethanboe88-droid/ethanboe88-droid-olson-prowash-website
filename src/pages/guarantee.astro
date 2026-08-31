@@ -9,8 +9,7 @@ import Icon from '../components/Icon.astro';
 import { SITE } from '../data/site';
 import { breadcrumbLd, webPageLd, faqLd } from '../data/schema';
 
-// TODO: drop in the real WA contractor registration / license number and bond amount.
-const LICENSE = 'WA Contractor Reg. #(on file — ask for it)';
+const LICENSE = `WA Contractor Registration #${SITE.license}`;
 
 const promises = [
   {

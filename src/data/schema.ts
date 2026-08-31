@@ -47,6 +47,11 @@ export const localBusinessLd = {
   knowsAbout: KNOWS_ABOUT,
   currenciesAccepted: 'USD',
   paymentAccepted: 'Cash, Check, Credit Card',
+  identifier: {
+    '@type': 'PropertyValue',
+    name: 'Washington State Contractor Registration',
+    value: SITE.license,
+  },
   address: {
     '@type': 'PostalAddress',
     addressLocality: SITE.address.locality,

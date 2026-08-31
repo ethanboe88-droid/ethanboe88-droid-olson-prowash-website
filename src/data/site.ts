@@ -15,7 +15,7 @@ export const SITE = {
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).
-  lastContentUpdate: '2026-08-31T22:00:00.000Z',
+  lastContentUpdate: '2026-08-31T23:00:00.000Z',
 
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
@@ -70,10 +70,14 @@ export const SITE = {
   founded: '2016',
   founder: 'Ethan Olson',
   priceRange: '$$',
+  // Washington State contractor registration number.
+  license: 'OLSONLP747MF',
 
+  googlePlaceId: 'ChIJSb7HmsxamiDjdWoiyM5Htw',
   googleBusinessUrl:
-    'https://www.google.com/maps/search/?api=1&query=Olson+Landscaping+Pro+Wash+Lake+Stevens+WA',
-  googleReviewUrl: 'https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID',
+    'https://www.google.com/maps/place/Olson+Landscaping+%26+Pro+Wash+LLC/@47.8453325,-122.1268744,15z',
+  googleReviewUrl:
+    'https://search.google.com/local/writereview?placeid=ChIJSb7HmsxamiDjdWoiyM5Htw',
   social: {
     facebook: 'https://www.facebook.com/p/Olson-Landscaping-Pro-Wash-LLC-61569118052923/',
     instagram: 'https://www.instagram.com/olson_landscaping_pro_wash_llc/',
