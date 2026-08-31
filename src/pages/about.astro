@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import StatStrip from '../components/StatStrip.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../data/site';
+import { breadcrumbLd } from '../data/schema';
+
+const values = [
+  { icon: 'drop', t: 'Method over muscle', d: 'The pros know that the right detergent and dwell time beat brute pressure every time. We clean deeper and cause zero damage.' },
+  { icon: 'shield', t: 'Show up like professionals', d: 'On time, in uniform, in a clean truck, with the paperwork you asked for. Every visit.' },
+  { icon: 'check', t: 'Say what we’ll do, do what we said', d: 'Honest scope, honest pricing, honest timelines. If something changes, you hear it from us first.' },
+  { icon: 'leaf', t: 'Leave it better than we found it', d: 'Landscaping protected, walkways rinsed, nothing left behind but a cleaner property.' },
+];
+
+const team = [
+  { img: '/images/team-1.svg', name: 'The Field Lead', role: 'Estimates & pressure work', bio: 'Runs every walk-through and dials in pressure, tips and temperature for each surface on site.' },
+  { img: '/images/team-2.svg', name: 'Soft Wash Tech', role: 'House & roof washing', bio: 'Mixes and applies low-pressure detergent systems, and owns the landscape-protection checklist.' },
+  { img: '/images/team-3.svg', name: 'Landscape Crew', role: 'Beds, mulch & clean-ups', bio: 'Handles the finish work — edging, mulch, trimming and haul-away — so the whole property lands.' },
+];
+---
+<BaseLayout
+  title={`About ${SITE.name} — Local Exterior Cleaning Pros`}
+  description={`Olson Pro Wash is a licensed, insured pressure washing and landscaping company based in ${SITE.address.locality}, WI, serving ${SITE.areaServed} since ${SITE.founded}.`}
+  canonical="/about"
+  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }])}
+>
+  <PageHero
+    kicker="About"
+    title="A Northwoods company that <span class='text-gradient'>sweats the finish</span>"
+    intro={`Founded in ${SITE.founded} and based in ${SITE.address.locality}, Olson Pro Wash grew from a single trailer into ${SITE.areaServed}’s go-to crew for premium exterior cleaning and landscaping.`}
+    crumbs={[{ label: 'About' }]}
+  />
+
+  <!-- Story -->
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+      <div class="reveal space-y-4 text-lg leading-relaxed text-silver">
+        <SectionHeading kicker="Our story" title="From one trailer to the whole exterior" class="!max-w-none" />
+        <p class="mt-6">
+          Olson Pro Wash started the way a lot of Northwoods businesses do: one person, one trailer,
+          and a belief that most homes and storefronts around here were being cleaned too aggressively
+          — or not at all.
+        </p>
+        <p>
+          Early on we watched other outfits scar siding, streak concrete and blow out window seals
+          with too much pressure. So we went the other direction: we learned soft washing properly,
+          invested in hot-water equipment, and built a prep-and-protect routine we run on every job.
+        </p>
+        <p>
+          Homeowners started asking if we could handle the beds and mulch too, since we were already
+          out there making everything else look sharp. That’s how the landscaping side was born — and
+          why today one Olson crew can take a property from tired to turnkey in a single visit.
+        </p>
+        <p class="text-white">
+          Same phone number. Same owner on the job site. {SITE.areaServedLong}.
+        </p>
+      </div>
+      <div class="reveal">
+        <div class="overflow-hidden rounded-2xl border border-ink-line">
+          <img src="/images/gallery-3.svg" alt="Olson Pro Wash crew at work on a Northwest Wisconsin property" class="aspect-[4/5] w-full object-cover" loading="lazy" width="1200" height="1400" />
+        </div>
+        <div class="mt-4 card p-5">
+          <div class="flex items-center gap-2 text-sm font-semibold text-white">
+            <Icon name="pin" class="h-4 w-4 text-electric-300" /> Based in {SITE.address.locality}, WI
+          </div>
+          <p class="mt-2 text-sm text-silver">
+            Serving {SITE.serviceCities.slice(0, 8).join(' · ')} and nearby.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pt-0">
+    <div class="container-x"><StatStrip /></div>
+  </section>
+
+  <!-- Values -->
+  <section class="section border-y border-ink-line bg-ink-soft/60">
+    <div class="container-x">
+      <SectionHeading kicker="What we stand for" title="Four rules we <span class='text-gradient'>don’t bend</span>" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2">
+        {values.map((v, i) => (
+          <div class="card reveal p-6 sm:p-7" style={`--reveal-delay:${i * 70}ms`}>
+            <span class="grid h-11 w-11 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300">
+              <Icon name={v.icon} class="h-5 w-5" />
+            </span>
+            <h3 class="mt-4 font-display text-lg font-bold text-white">{v.t}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-silver">{v.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading kicker="The crew" title="Small team. <span class='text-gradient'>High standards.</span>" intro="You’ll see the same faces from quote to clean-up — not a rotating cast of subcontractors." />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {team.map((m, i) => (
+          <figure class="card card-hover reveal overflow-hidden" style={`--reveal-delay:${i * 80}ms`}>
+            <img src={m.img} alt={`${m.name} — ${SITE.name}`} class="aspect-square w-full object-cover" loading="lazy" width="900" height="900" />
+            <figcaption class="p-5">
+              <div class="font-display text-lg font-bold text-white">{m.name}</div>
+              <div class="text-xs uppercase tracking-widest text-electric-300">{m.role}</div>
+              <p class="mt-2 text-sm leading-relaxed text-silver">{m.bio}</p>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <p class="reveal mt-6 text-sm text-silver-dim">
+        Team titles and photos are placeholders — swap in real names and headshots in
+        <code class="rounded bg-white/5 px-1">src/pages/about.astro</code>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="section border-t border-ink-line bg-ink-soft/60">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+      <SectionHeading kicker="Why choose us" title="What you get with Olson that you don’t get with a guy and a wand" />
+      <ul class="grid gap-3 sm:grid-cols-2">
+        {[
+          'Written, itemized quotes',
+          'Certificate of Insurance on request',
+          'Soft-wash certified for roofs & siding',
+          'Hot-water pressure equipment',
+          'Landscape protection on every job',
+          'Before/after photo documentation',
+          'One crew for cleaning + landscaping',
+          'Local, reachable, and accountable',
+        ].map((li, i) => (
+          <li class="card reveal flex items-center gap-3 p-4 text-sm text-white" style={`--reveal-delay:${i * 50}ms`}>
+            <Icon name="check" class="h-4 w-4 shrink-0 text-electric-300" /> {li}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <CtaBanner heading="Let’s make your place the sharpest on the block" />
+</BaseLayout>

@@ -1,0 +1,131 @@
+---
+import Icon from './Icon.astro';
+import Stars from './Stars.astro';
+import { TESTIMONIALS } from '../data/testimonials';
+interface Props {
+  heading?: string;
+}
+const { heading } = Astro.props;
+const items = TESTIMONIALS;
+---
+<div class="reveal" data-carousel>
+  {heading && <h3 class="sr-only">{heading}</h3>}
+
+  <div class="relative">
+    <div class="carousel-track flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {items.map((t) => (
+        <figure class="card w-[85%] shrink-0 snap-center p-7 sm:w-[420px] sm:p-8">
+          <Icon name="quote" class="h-8 w-8 text-electric/40" />
+          <blockquote class="mt-4 text-[15px] leading-relaxed text-white/90">
+            <p set:html={t.quote} />
+          </blockquote>
+          <figcaption class="mt-6 flex items-center justify-between border-t border-ink-line pt-5">
+            <div>
+              <div class="font-display text-sm font-semibold text-white" set:html={t.name} />
+              <div class="text-xs text-silver-muted">{t.location} · {t.service}</div>
+            </div>
+            <Stars rating={t.rating} />
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="mt-6 flex items-center justify-between">
+      <div class="carousel-dots flex gap-2" role="tablist" aria-label="Testimonials">
+        {items.map((_, i) => (
+          <button
+            class="h-2 w-2 rounded-full bg-white/20 transition-all data-[active]:w-6 data-[active]:bg-electric-300"
+            data-dot={i}
+            aria-label={`Go to testimonial ${i + 1}`}
+          ></button>
+        ))}
+      </div>
+      <div class="flex gap-2">
+        <button class="carousel-prev grid h-10 w-10 place-items-center rounded-full border border-ink-line text-white transition hover:border-electric/60 hover:bg-white/5" aria-label="Previous testimonial">
+          <Icon name="chevronLeft" class="h-5 w-5" />
+        </button>
+        <button class="carousel-next grid h-10 w-10 place-items-center rounded-full border border-ink-line text-white transition hover:border-electric/60 hover:bg-white/5" aria-label="Next testimonial">
+          <Icon name="chevronRight" class="h-5 w-5" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    if (window.__olsonCarouselInit) return;
+    window.__olsonCarouselInit = true;
+
+    function initCarousel(root) {
+      var track = root.querySelector('.carousel-track');
+      var dots = Array.prototype.slice.call(root.querySelectorAll('[data-dot]'));
+      var prev = root.querySelector('.carousel-prev');
+      var next = root.querySelector('.carousel-next');
+      if (!track) return;
+
+      var slides = Array.prototype.slice.call(track.children);
+      var index = 0;
+      var timer = null;
+      var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function setDots() {
+        for (var i = 0; i < dots.length; i++) dots[i].toggleAttribute('data-active', i === index);
+      }
+      function go(i) {
+        index = (i + slides.length) % slides.length;
+        var target = slides[index];
+        track.scrollTo({
+          left: target.offsetLeft - (track.clientWidth - target.clientWidth) / 2,
+          behavior: 'smooth',
+        });
+        setDots();
+      }
+      function sync() {
+        var center = track.scrollLeft + track.clientWidth / 2;
+        var best = 0;
+        var bestDist = Infinity;
+        for (var i = 0; i < slides.length; i++) {
+          var sc = slides[i].offsetLeft + slides[i].clientWidth / 2;
+          var dist = Math.abs(sc - center);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = i;
+          }
+        }
+        index = best;
+        setDots();
+      }
+      function stop() {
+        if (timer) window.clearInterval(timer);
+        timer = null;
+      }
+      function start() {
+        if (reduced) return;
+        stop();
+        timer = window.setInterval(function () {
+          go(index + 1);
+        }, 6000);
+      }
+
+      if (prev) prev.addEventListener('click', function () { go(index - 1); start(); });
+      if (next) next.addEventListener('click', function () { go(index + 1); start(); });
+      dots.forEach(function (d, di) {
+        d.addEventListener('click', function () { go(di); start(); });
+      });
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(sync); }, { passive: true });
+      root.addEventListener('mouseenter', stop);
+      root.addEventListener('mouseleave', start);
+
+      setDots();
+      start();
+    }
+
+    function boot() {
+      var roots = document.querySelectorAll('[data-carousel]');
+      for (var i = 0; i < roots.length; i++) initCarousel(roots[i]);
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
+    else boot();
+  })();
+</script>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1300" width="1200" height="1300" role="img">
+  
+  <defs>
+    <linearGradient id="bg-g7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141417"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow-g7" cx="30%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spray-g7" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-g7"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="1300" fill="url(#bg-g7)"/>
+  <rect width="1200" height="1300" fill="url(#glow-g7)"/>
+  <rect x="13.86941888814836" y="21.517226613518112" width="905.842892090037" height="4.420564135641088" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="-3.8535926881850315" y="204.91804547664637" width="959.7158375516791" height="4.131859345713347" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="-24.003756467132405" y="380.85049257036405" width="741.0626367542236" height="3.2561094717363988" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="-21.638020781380895" y="580.3327963121342" width="479.7114729114927" height="3.5641701775953667" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="5.575586584501252" y="763.0506972084622" width="769.2590594811164" height="2.0946889064170984" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="-22.27024357301366" y="936.6857186888129" width="955.2639107804648" height="4.624501265857026" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/><rect x="18.63051708323595" y="1139.7070295475269" width="536.4633250702989" height="2.5242892156562347" fill="url(#spray-g7)" transform="rotate(-18 600 650)"/>
+  <rect width="1200" height="1300" fill="url(#grain)" opacity="0.05"/>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect x="16" y="16" width="1168" height="1268" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
+  
+      <g transform="translate(990 1100) scale(1.5)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.14">
+    <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
+    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
+  </g>
+      <text x="600" y="650" text-anchor="middle" font-family="Sora, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">07</text>
+      <text x="600" y="694" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" letter-spacing="6" fill="#c0c0c0">OLSON PRO WASH</text>
+    
+</svg>

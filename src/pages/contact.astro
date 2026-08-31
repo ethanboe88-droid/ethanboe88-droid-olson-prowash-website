@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import QuoteForm from '../components/QuoteForm.astro';
+import HousecallProWidget from '../components/HousecallProWidget.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../data/site';
+import { breadcrumbLd } from '../data/schema';
+---
+<BaseLayout
+  title="Contact & Free Quote"
+  description={`Request a free pressure washing or landscaping quote from Olson Pro Wash. Call ${SITE.phone} or send a message. Serving ${SITE.areaServed}.`}
+  canonical="/contact"
+  jsonLd={breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }])}
+>
+  <PageHero
+    kicker="Contact"
+    title="Get a free quote"
+    intro="Tell us about your property and what’s bugging you about it. Most estimates come back the same day — no sales pressure, ever."
+    crumbs={[{ label: 'Contact' }]}
+  />
+
+  <section class="section">
+    <div class="container-x grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
+      <QuoteForm />
+
+      <div class="space-y-5">
+        <div class="card p-6">
+          <h2 class="font-display text-lg font-bold text-white">Talk to a human</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li>
+              <a href={SITE.phoneHref} class="flex items-center gap-3 text-white hover:text-electric-300">
+                <span class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300"><Icon name="phone" class="h-5 w-5" /></span>
+                <span><span class="block font-semibold">{SITE.phone}</span><span class="text-xs text-silver-muted">Mon–Fri 7a–6p · Sat 8a–2p</span></span>
+              </a>
+            </li>
+            <li>
+              <a href={SITE.emailHref} class="flex items-center gap-3 text-white hover:text-electric-300">
+                <span class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300"><Icon name="mail" class="h-5 w-5" /></span>
+                <span><span class="block font-semibold">{SITE.email}</span><span class="text-xs text-silver-muted">We reply within one business day</span></span>
+              </a>
+            </li>
+            <li class="flex items-center gap-3 text-white">
+              <span class="grid h-10 w-10 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300"><Icon name="pin" class="h-5 w-5" /></span>
+              <span><span class="block font-semibold">{SITE.address.locality}, {SITE.address.region}</span><span class="text-xs text-silver-muted">{SITE.areaServedLong}</span></span>
+            </li>
+          </ul>
+          <a href={SITE.googleBusinessUrl} target="_blank" rel="noopener" class="btn btn-ghost mt-5 w-full text-sm">
+            <Icon name="google" class="h-4 w-4" /> View us on Google
+          </a>
+          <a href={SITE.googleReviewUrl} target="_blank" rel="noopener" class="btn btn-ghost mt-2 w-full text-sm">
+            <Icon name="star" class="h-4 w-4" /> Leave a Google review
+          </a>
+        </div>
+
+        <div class="card p-6">
+          <h2 class="font-display text-lg font-bold text-white">Business hours</h2>
+          <ul class="mt-4 space-y-2 text-sm">
+            {SITE.hours.map((h) => (
+              <li class="flex items-center justify-between border-b border-ink-line pb-2 text-silver">
+                <span>{h.days}</span>
+                <span class="font-medium text-white">{h.close ? `${h.open} – ${h.close}` : h.open}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Housecall Pro online booking -->
+  <HousecallProWidget heading="Rather just book a time?" sub="Skip the form — pick a service and slot in the Housecall Pro scheduler below." />
+
+  <!-- Service area -->
+  <section class="section border-y border-ink-line bg-ink-soft/60">
+    <div class="container-x grid items-center gap-12 lg:grid-cols-2">
+      <div>
+        <SectionHeading kicker="Service area" title="Serving <span class='text-gradient'>Northwest Wisconsin</span>" intro="Based in Rice Lake and covering the surrounding communities. If your town isn’t listed, ask anyway — we travel for the right project." />
+        <ul class="mt-8 flex flex-wrap gap-2">
+          {SITE.serviceCities.map((c) => (
+            <li class="rounded-full border border-ink-line bg-white/[0.03] px-3.5 py-1.5 text-sm text-silver">{c}, WI</li>
+          ))}
+        </ul>
+        <a href="#quote" class="btn btn-primary mt-8">Check my address <Icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl border border-ink-line">
+        <img src="/images/service-area-map.svg" alt={`Map of the ${SITE.areaServed} service area centered on ${SITE.address.locality}`} class="aspect-[7/5] w-full object-cover" loading="lazy" width="1400" height="1000" />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

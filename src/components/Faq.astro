@@ -1,0 +1,23 @@
+---
+import Icon from './Icon.astro';
+interface Props {
+  items: { q: string; a: string }[];
+  class?: string;
+}
+const { items, class: className = '' } = Astro.props;
+---
+<div class:list={['divide-y divide-ink-line overflow-hidden rounded-2xl border border-ink-line', className]}>
+  {items.map((item, i) => (
+    <details class="faq group reveal bg-ink-soft" style={`--reveal-delay:${i * 60}ms`} name="faq">
+      <summary class="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-display text-[15px] font-semibold text-white sm:p-6 [&::-webkit-details-marker]:hidden">
+        {item.q}
+        <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-ink-line text-electric-300 transition-transform duration-300 group-open:rotate-45">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        </span>
+      </summary>
+      <div class="px-5 pb-6 text-sm leading-relaxed text-silver sm:px-6">
+        <p set:html={item.a} />
+      </div>
+    </details>
+  ))}
+</div>

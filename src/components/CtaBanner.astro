@@ -1,0 +1,32 @@
+---
+import Icon from './Icon.astro';
+import { SITE } from '../data/site';
+interface Props {
+  heading?: string;
+  sub?: string;
+}
+const {
+  heading = 'Ready for the cleanest your property has ever looked?',
+  sub = 'Free, no-pressure quotes. Most estimates back the same day.',
+} = Astro.props;
+---
+<section class="section">
+  <div class="container-x">
+    <div class="reveal relative overflow-hidden rounded-4xl border border-electric/25 p-8 text-center sm:p-14">
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-brand-gradient bg-[length:220%_auto] opacity-[0.14] animate-gradient-pan"></div>
+      <div class="pointer-events-none absolute inset-0 -z-10 bg-radial-fade"></div>
+
+      <h2 class="mx-auto max-w-2xl text-3xl font-bold sm:text-4xl">{heading}</h2>
+      <p class="mx-auto mt-4 max-w-xl text-lg text-silver">{sub}</p>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href="/contact#quote" class="btn btn-primary w-full sm:w-auto">
+          Get a Free Quote <Icon name="arrow" class="h-4 w-4" />
+        </a>
+        <a href={SITE.phoneHref} class="btn btn-ghost w-full sm:w-auto">
+          <Icon name="phone" class="h-4 w-4" /> Call {SITE.phone}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

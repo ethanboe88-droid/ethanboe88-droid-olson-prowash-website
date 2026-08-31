@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000" role="img">
+  
+  <defs>
+    <linearGradient id="bg-a3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141417"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow-a3" cx="30%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spray-a3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-a3"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg-a3)"/>
+  <rect width="1600" height="1000" fill="url(#glow-a3)"/>
+  <rect x="-19.828138560960063" y="9.233760419030892" width="1204.177818794318" height="2.882535395429164" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="-6.54729504506146" y="164.41269334052203" width="674.2795466504834" height="2.468436200862619" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="14.607273837825474" y="296.1182379374096" width="1028.969054329793" height="4.250638274775405" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="-17.70664370831443" y="467.6534923583732" width="1137.0665654980517" height="4.860279110693401" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="-38.78208276606679" y="575.3711788129726" width="734.0736822077132" height="2.266636660707496" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="-11.473085056738643" y="727.4128423195245" width="1277.4031880949028" height="2.787854863959611" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/><rect x="10.793545012834812" y="869.2710217448096" width="1240.826648873959" height="2.2853699083168273" fill="url(#spray-a3)" transform="rotate(-18 800 500)"/>
+  <rect width="1600" height="1000" fill="url(#grain)" opacity="0.05"/>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect x="16" y="16" width="1568" height="968" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
+  
+      <g transform="translate(1180 720) scale(2.1)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.16">
+    <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
+    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
+  </g>
+      <text x="60" y="90" font-family="Sora, sans-serif" font-size="28" font-weight="700" letter-spacing="10" fill="#7cc5ee">AFTER</text>
+      
+  <text x="800" y="494" text-anchor="middle" font-family="Sora, Segoe UI, sans-serif" font-size="78" font-weight="700" letter-spacing="-2" fill="#ffffff">Cedar deck</text>
+  <text x="800" y="540" text-anchor="middle" font-family="Inter, Segoe UI, sans-serif" font-size="22" letter-spacing="6" fill="#c0c0c0">RESTORED & PREPPED</text>
+    
+</svg>

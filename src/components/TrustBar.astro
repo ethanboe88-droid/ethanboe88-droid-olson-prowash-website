@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import { TRUST_BADGES } from '../data/site';
+interface Props { class?: string; }
+const { class: className = '' } = Astro.props;
+---
+<ul class:list={['flex flex-wrap items-center gap-x-6 gap-y-3', className]}>
+  {TRUST_BADGES.map((b) => (
+    <li class="inline-flex items-center gap-2 text-sm font-medium text-silver">
+      <span class="grid h-7 w-7 place-items-center rounded-lg border border-ink-line bg-white/[0.03] text-electric-300">
+        <Icon name={b.icon} class="h-4 w-4" />
+      </span>
+      {b.label}
+    </li>
+  ))}
+</ul>

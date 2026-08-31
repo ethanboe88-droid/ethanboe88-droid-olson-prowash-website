@@ -1,0 +1,96 @@
+---
+import Icon from './Icon.astro';
+import { SERVICES } from '../data/services';
+import { SITE } from '../data/site';
+
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+---
+<form
+  id="quote"
+  name="quote"
+  method="POST"
+  data-netlify="true"
+  netlify-honeypot="bot-field"
+  action="/thanks"
+  class="card reveal scroll-mt-28 p-6 sm:p-8"
+>
+  {/* Netlify Forms: this hidden input registers the form at build time. */}
+  <input type="hidden" name="form-name" value="quote" />
+  <p class="hidden">
+    <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+  </p>
+
+  <div class="flex items-center gap-2">
+    <span class="grid h-9 w-9 place-items-center rounded-lg border border-ink-line bg-white/[0.03] text-electric-300">
+      <Icon name="tag" class="h-5 w-5" />
+    </span>
+    <div>
+      <h3 class="font-display text-lg font-bold text-white">Get a free quote</h3>
+      <p class="text-xs text-silver-muted">No obligation. Most estimates returned the same day.</p>
+    </div>
+  </div>
+
+  <div class:list={['mt-6 grid gap-4', compact ? '' : 'sm:grid-cols-2']}>
+    <label class="block">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Name</span>
+      <input required name="name" autocomplete="name" placeholder="Jane Olson" class="field" />
+    </label>
+    <label class="block">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Phone</span>
+      <input required type="tel" name="phone" autocomplete="tel" placeholder="(715) 555-0123" class="field" />
+    </label>
+    <label class="block">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Email</span>
+      <input required type="email" name="email" autocomplete="email" placeholder="you@email.com" class="field" />
+    </label>
+    <label class="block">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">City / town</span>
+      <input name="city" placeholder="Rice Lake" class="field" />
+    </label>
+    <label class="block sm:col-span-2">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Service needed</span>
+      <select name="service" class="field">
+        <option value="">Select a service…</option>
+        {SERVICES.map((s) => <option value={s.title}>{s.title}</option>)}
+        <option value="Multiple / not sure">Multiple / not sure</option>
+      </select>
+    </label>
+    <label class="block sm:col-span-2">
+      <span class="mb-1.5 block text-xs font-medium uppercase tracking-wider text-silver-muted">Tell us about the project</span>
+      <textarea name="message" rows="4" placeholder="e.g. Two-story vinyl home + concrete driveway, some green on the north side." class="field resize-y"></textarea>
+    </label>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-6 w-full">
+    Request My Free Quote <Icon name="arrow" class="h-4 w-4" />
+  </button>
+
+  <p class="mt-3 text-center text-xs text-silver-dim">
+    Prefer to talk? Call <a href={SITE.phoneHref} class="text-electric-300 hover:underline">{SITE.phone}</a>.
+    We never share your info.
+  </p>
+</form>
+
+<style>
+  .field {
+    width: 100%;
+    border-radius: 0.75rem;
+    border: 1px solid var(--edge);
+    background: rgba(255, 255, 255, 0.03);
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
+    color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+  }
+  .field::placeholder { color: #6b6b70; }
+  .field:focus {
+    outline: none;
+    border-color: rgba(59, 159, 212, 0.7);
+    box-shadow: 0 0 0 3px rgba(59, 159, 212, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  select.field option { background: #141417; }
+</style>

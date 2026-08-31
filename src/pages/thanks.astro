@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../data/site';
+---
+<BaseLayout
+  title="Thanks — we got your request"
+  description="Your quote request was received. Olson Pro Wash will be in touch shortly."
+  canonical="/thanks"
+  noindex
+>
+  <section class="section">
+    <div class="container-x flex min-h-[50vh] flex-col items-center justify-center text-center">
+      <span class="grid h-16 w-16 place-items-center rounded-2xl border border-electric/40 bg-electric/10 text-electric-300 shadow-glow-sm">
+        <Icon name="check" class="h-8 w-8" />
+      </span>
+      <h1 class="mt-6 text-3xl font-bold sm:text-4xl">Request received — thank you!</h1>
+      <p class="mt-4 max-w-md text-silver">
+        We’ll review the details and get back to you with an estimate, usually the same day.
+        Need something sooner? Call us at
+        <a href={SITE.phoneHref} class="text-electric-300 hover:underline">{SITE.phone}</a>.
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="/" class="btn btn-primary">Back to home</a>
+        <a href="/gallery" class="btn btn-ghost">See recent work</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

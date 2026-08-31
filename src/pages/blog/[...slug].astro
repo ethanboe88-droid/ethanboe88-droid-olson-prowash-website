@@ -1,0 +1,129 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaBanner from '../../components/CtaBanner.astro';
+import Icon from '../../components/Icon.astro';
+import { SITE } from '../../data/site';
+import { blogPostingLd, breadcrumbLd } from '../../data/schema';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post, posts },
+  }));
+}
+
+type Props = { post: CollectionEntry<'blog'>; posts: CollectionEntry<'blog'>[] };
+const { post, posts } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await post.render();
+const { data } = post;
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const related = posts
+  .filter((p) => p.slug !== post.slug)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 2);
+
+const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? '4 min read';
+---
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  canonical={`/blog/${post.slug}`}
+  image={data.heroImage}
+  type="article"
+  publishedTime={data.pubDate.toISOString()}
+  modifiedTime={(data.updatedDate ?? data.pubDate).toISOString()}
+  jsonLd={[
+    blogPostingLd({
+      title: data.title,
+      description: data.description,
+      slug: post.slug,
+      pubDate: data.pubDate,
+      updatedDate: data.updatedDate,
+      image: data.heroImage,
+      author: data.author,
+    }),
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Journal', path: '/blog' },
+      { name: data.title, path: `/blog/${post.slug}` },
+    ]),
+  ]}
+>
+  <article>
+    <header class="relative isolate overflow-hidden border-b border-ink-line">
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 -z-10">
+        <div class="absolute left-1/2 top-0 h-[38vh] w-[70vw] -translate-x-1/2 rounded-full bg-electric/15 blur-[110px]"></div>
+      </div>
+      <div class="container-x py-14 sm:py-16 lg:py-20">
+        <nav aria-label="Breadcrumb" class="mb-5 text-xs text-silver-dim">
+          <a href="/" class="hover:text-white">Home</a> / <a href="/blog" class="hover:text-white">Journal</a> /
+          <span class="text-silver">{data.category}</span>
+        </nav>
+        <div class="flex flex-wrap items-center gap-3 text-xs text-silver-muted">
+          <span class="rounded-full border border-electric/40 bg-electric/10 px-2.5 py-1 font-semibold text-electric-300">{data.category}</span>
+          <time datetime={data.pubDate.toISOString()}>{fmt(data.pubDate)}</time>
+          <span>·</span>
+          <span>{readingTime}</span>
+        </div>
+        <h1 class="mt-4 max-w-3xl text-3xl font-extrabold tracking-tightest sm:text-4xl lg:text-5xl">{data.title}</h1>
+        <p class="mt-4 max-w-2xl text-lg text-silver">{data.description}</p>
+        <div class="mt-6 flex items-center gap-3 text-sm text-silver-muted">
+          <span class="grid h-9 w-9 place-items-center rounded-full border border-ink-line bg-white/[0.03] font-display text-xs font-bold text-electric-300">OP</span>
+          By {data.author}
+        </div>
+      </div>
+    </header>
+
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-[minmax(0,1fr)_260px] lg:py-20">
+      <div>
+        <img src={data.heroImage} alt={data.heroAlt} class="mb-10 w-full rounded-2xl border border-ink-line object-cover" width="1600" height="900" loading="eager" />
+        <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-h3:text-xl prose-a:text-electric-300 prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-li:marker:text-electric prose-blockquote:border-electric prose-blockquote:text-silver prose-img:rounded-xl">
+          <Content />
+        </div>
+
+        {data.tags.length > 0 && (
+          <div class="mt-10 flex flex-wrap gap-2 border-t border-ink-line pt-6">
+            {data.tags.map((t) => (
+              <span class="rounded-full border border-ink-line px-3 py-1 text-xs text-silver-muted">#{t}</span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <aside class="lg:sticky lg:top-28 lg:h-max">
+        <div class="card p-6">
+          <div class="font-display text-sm font-bold text-white">Free quote in your inbox today</div>
+          <p class="mt-2 text-sm text-silver">Send a couple photos of the problem area. We’ll reply with a method and a price.</p>
+          <a href="/contact#quote" class="btn btn-primary mt-4 w-full text-sm">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href={SITE.phoneHref} class="btn btn-ghost mt-2 w-full text-sm"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+        </div>
+      </aside>
+    </div>
+
+    {related.length > 0 && (
+      <section class="border-t border-ink-line bg-ink-soft/60 py-16">
+        <div class="container-x">
+          <h2 class="font-display text-xl font-bold text-white">Keep reading</h2>
+          <div class="mt-6 grid gap-6 sm:grid-cols-2">
+            {related.map((p) => (
+              <a href={`/blog/${p.slug}`} class="card card-hover group flex gap-4 overflow-hidden p-4">
+                <img src={p.data.heroImage} alt={p.data.heroAlt} class="h-24 w-32 shrink-0 rounded-lg object-cover" loading="lazy" width="1600" height="900" />
+                <div>
+                  <div class="text-xs text-silver-muted">{p.data.category}</div>
+                  <div class="mt-1 font-display text-sm font-semibold text-white group-hover:text-electric-300">{p.data.title}</div>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+  </article>
+
+  <CtaBanner />
+</BaseLayout>

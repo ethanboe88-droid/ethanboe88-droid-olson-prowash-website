@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+  
+  <defs>
+    <linearGradient id="bg-blogbestpressurewashingsvg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141417"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow-blogbestpressurewashingsvg" cx="30%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spray-blogbestpressurewashingsvg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-blogbestpressurewashingsvg"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg-blogbestpressurewashingsvg)"/>
+  <rect width="1600" height="900" fill="url(#glow-blogbestpressurewashingsvg)"/>
+  <rect x="2.099511866669424" y="13.314325825643989" width="1137.000158514784" height="2.271530071402056" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="-7.797490554867139" y="134.023219975489" width="985.4370443236133" height="2.5264139813540942" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="8.758003866281761" y="294.83086802974935" width="674.7033904386794" height="2.4273745353806864" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="-18.18745336759355" y="396.02632656409634" width="614.6440560303321" height="2.613688160014706" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="-22.721145947676103" y="514.6826260068502" width="1087.2962206631998" height="4.600653495050141" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="-36.42042509546189" y="678.5349832690882" width="719.9588433593362" height="2.9495060780409394" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/><rect x="-18.268071578149335" y="777.2492247742435" width="1130.572353462532" height="3.5406234544099773" fill="url(#spray-blogbestpressurewashingsvg)" transform="rotate(-18 800 450)"/>
+  <rect width="1600" height="900" fill="url(#grain)" opacity="0.05"/>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect x="16" y="16" width="1568" height="868" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
+  
+      <g transform="translate(1200 610) scale(2)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.14">
+    <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
+    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
+  </g>
+      <text x="80" y="110" font-family="Sora, sans-serif" font-size="24" font-weight="700" letter-spacing="8" fill="#7cc5ee">OLSON PRO WASH · JOURNAL</text>
+      <text x="80" y="480" font-family="Sora, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">
+        <tspan x="80" dy="0">Pressure Washing in</tspan>
+        <tspan x="80" dy="80">NW Wisconsin</tspan>
+      </text>
+    
+</svg>

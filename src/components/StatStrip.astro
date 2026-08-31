@@ -1,0 +1,15 @@
+---
+import { STATS } from '../data/site';
+interface Props { class?: string; }
+const { class: className = '' } = Astro.props;
+---
+<div class:list={['grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-ink-line bg-ink-line md:grid-cols-4', className]}>
+  {STATS.map((s, i) => (
+    <div class="reveal bg-ink-soft p-6 text-center md:p-8" style={`--reveal-delay:${i * 80}ms`}>
+      <div class="font-display text-3xl font-extrabold text-white md:text-4xl">
+        <span class="text-gradient">{s.value}</span>
+      </div>
+      <div class="mt-1.5 text-xs uppercase tracking-widest text-silver-muted">{s.label}</div>
+    </div>
+  ))}
+</div>

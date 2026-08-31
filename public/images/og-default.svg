@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img">
+  
+  <defs>
+    <linearGradient id="bg-og" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#141417"/>
+      <stop offset="1" stop-color="#0a0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow-og" cx="30%" cy="18%" r="75%">
+      <stop offset="0" stop-color="#3b9fd4" stop-opacity="0.55"/>
+      <stop offset="0.45" stop-color="#3b9fd4" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="spray-og" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7cc5ee" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#3b9fd4" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="soft-og"><feGaussianBlur stdDeviation="14"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-og)"/>
+  <rect width="1200" height="630" fill="url(#glow-og)"/>
+  <rect x="4.963817173581326" y="12.977181989935968" width="820.55426566203" height="3.8564954558343234" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="-35.09363263438792" y="124.89146707561434" width="521.990705718887" height="2.4839284729129902" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="-21.026170775298613" y="195.22714310912409" width="810.232510376188" height="3.7568978267798783" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="-35.25973511959218" y="285.0951940848546" width="654.4102312217502" height="3.9670762455271396" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="-32.468975125288345" y="397.70053510860487" width="586.2412451094744" height="2.784741809912763" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="-33.43328410358772" y="487.85395891556993" width="725.9342047869936" height="2.083661532520966" fill="url(#spray-og)" transform="rotate(-18 600 315)"/><rect x="11.5441497195336" y="557.3075125718362" width="881.2621075922152" height="4.750888929156345" fill="url(#spray-og)" transform="rotate(-18 600 315)"/>
+  <rect width="1200" height="630" fill="url(#grain)" opacity="0.05"/>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  <rect x="16" y="16" width="1168" height="598" fill="none" stroke="#ffffff" stroke-opacity="0.08" rx="18"/>
+  
+    <g transform="translate(70 210) scale(2)" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <path d="M40 120 q-6 -46 16 -70 q10 -10 8 -34 q14 4 20 30 q10 -2 20 0 q6 -26 20 -30 q-2 24 8 34 q22 24 16 70 z"/>
+    <circle cx="66" cy="96" r="4" fill="#ffffff" stroke="none"/>
+    <path d="M96 116 l60 -34 M150 78 l22 -6 -6 22"/>
+  </g>
+    <text x="360" y="300" font-family="Sora, sans-serif" font-size="72" font-weight="700" fill="#ffffff" letter-spacing="-2">Olson Pro Wash</text>
+    <text x="362" y="358" font-family="Inter, sans-serif" font-size="26" fill="#c0c0c0">Pressure washing &amp; landscaping · Northwest Wisconsin</text>
+    <text x="362" y="430" font-family="Sora, sans-serif" font-size="24" font-weight="600" fill="#7cc5ee">Licensed &amp; insured · Free quotes · (715) 555-0100</text>
+  
+</svg>

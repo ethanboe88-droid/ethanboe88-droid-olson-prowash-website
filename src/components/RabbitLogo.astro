@@ -1,0 +1,34 @@
+---
+// Brand lockup: white rabbit + pressure-washer wand mark, with wordmark.
+interface Props {
+  class?: string;
+  showWordmark?: boolean;
+  compact?: boolean;
+}
+const { class: className = '', showWordmark = true, compact = false } = Astro.props;
+---
+<span class={`inline-flex items-center gap-2.5 ${className}`}>
+  <span class="relative grid place-items-center">
+    <span class="absolute inset-0 rounded-xl bg-electric/25 blur-md"></span>
+    <svg
+      class={compact ? 'relative h-8 w-8' : 'relative h-9 w-9'}
+      viewBox="0 0 64 64"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect width="64" height="64" rx="15" fill="#0a0a0a" />
+      <rect width="64" height="64" rx="15" fill="#3b9fd4" fill-opacity="0.22" />
+      <g stroke="#ffffff" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 46q-3-20 8-30q4-5 3-14q7 2 10 13q4-1 8 0q3-11 10-13q-1 9 3 14q11 10 8 30z" fill="#ffffff" fill-opacity="0.06" />
+        <circle cx="30" cy="34" r="1.9" fill="#ffffff" stroke="none" />
+        <path d="M44 44l12-7M53 35l6-2-2 6" stroke="#7cc5ee" />
+      </g>
+    </svg>
+  </span>
+  {showWordmark && (
+    <span class="font-display font-extrabold leading-none tracking-tightest">
+      <span class="text-white">Olson</span>
+      <span class="text-electric-300"> Pro Wash</span>
+    </span>
+  )}
+</span>

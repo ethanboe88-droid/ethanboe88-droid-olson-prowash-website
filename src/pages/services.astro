@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import Icon from '../components/Icon.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import Faq from '../components/Faq.astro';
+import { SERVICES } from '../data/services';
+import { SITE } from '../data/site';
+import { breadcrumbLd, serviceLd, faqLd } from '../data/schema';
+
+const processSteps = [
+  { n: '01', t: 'Quote', d: 'Send photos or book a walk-through. Same-day estimate, itemized, no pressure.' },
+  { n: '02', t: 'Schedule', d: 'Pick a date online or by phone. We confirm crew and arrival window.' },
+  { n: '03', t: 'Prep & protect', d: 'Cover outlets and fixtures, pre-wet landscaping, move furniture.' },
+  { n: '04', t: 'Clean & rinse', d: 'Correct method per surface, full rinse-down, walk the job with you.' },
+];
+
+const serviceFaqs = [
+  { q: 'How long does a typical house wash take?', a: 'Most single-family homes take 2–4 hours start to finish, including setup and clean-up. Larger or multi-story homes may run a half day.' },
+  { q: 'Do I need to be home?', a: 'Not necessarily. As long as we have water access and a way to reach gated areas, many customers are at work while we clean. We’ll text before and after.' },
+  { q: 'Can you remove rust, oil or tannin stains from concrete?', a: 'Usually, yes. We carry dedicated rust and organic-stain treatments. Deep-set stains may lighten rather than vanish entirely — we’ll tell you honestly what to expect before we start.' },
+  { q: 'Do you offer recurring maintenance plans?', a: 'Yes — quarterly, semi-annual and annual plans for both homes and commercial properties, at a lower per-visit rate than one-off cleans.' },
+];
+---
+<BaseLayout
+  title="Services — Pressure Washing, Soft Washing & Landscaping"
+  description={`Pressure washing, soft washing, house washing, deck & driveway cleaning, commercial exterior maintenance and landscaping across ${SITE.areaServed}. Licensed & insured.`}
+  canonical="/services"
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]),
+    ...SERVICES.map(serviceLd),
+    faqLd(serviceFaqs),
+  ]}
+>
+  <PageHero
+    kicker="Services"
+    title="Every exterior surface, <span class='text-gradient'>handled</span>"
+    intro="From a full-home soft wash to a season-long commercial maintenance plan. Here’s exactly what each service covers — and how we do it without causing damage."
+    crumbs={[{ label: 'Services' }]}
+  />
+
+  <!-- Quick nav -->
+  <div class="sticky top-[68px] z-30 border-b border-ink-line bg-ink/80 backdrop-blur">
+    <div class="container-x flex gap-2 overflow-x-auto py-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+      {SERVICES.map((s) => (
+        <a href={`#${s.slug}`} class="whitespace-nowrap rounded-full border border-ink-line px-3.5 py-1.5 text-xs font-medium text-silver transition hover:border-electric/60 hover:text-white">
+          {s.title}
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="container-x space-y-20 lg:space-y-28">
+      {SERVICES.map((s, i) => (
+        <article id={s.slug} class="scroll-mt-32">
+          <div class="grid items-start gap-10 lg:grid-cols-2">
+            <div class:list={[i % 2 === 1 && 'lg:order-2']}>
+              <span class="inline-flex items-center gap-2.5">
+                <span class="grid h-11 w-11 place-items-center rounded-xl border border-ink-line bg-white/[0.03] text-electric-300">
+                  <Icon name={s.icon} class="h-6 w-6" />
+                </span>
+                <span class="kicker">Service {String(i + 1).padStart(2, '0')}</span>
+              </span>
+              <h2 class="reveal mt-4 text-3xl font-bold sm:text-4xl">{s.title}</h2>
+              <p class="reveal mt-4 text-lg leading-relaxed text-silver">{s.description}</p>
+              <ul class="reveal mt-6 grid gap-2.5 sm:grid-cols-2">
+                {s.bullets.map((b) => (
+                  <li class="flex items-start gap-2.5 text-sm text-silver-muted">
+                    <Icon name="check" class="mt-0.5 h-4 w-4 shrink-0 text-electric-300" />
+                    <span set:html={b} />
+                  </li>
+                ))}
+              </ul>
+              <div class="reveal mt-7 flex flex-wrap gap-3">
+                <a href="/contact#quote" class="btn btn-primary">Quote this service <Icon name="arrow" class="h-4 w-4" /></a>
+                <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+              </div>
+            </div>
+            <div class:list={['reveal', i % 2 === 1 && 'lg:order-1']}>
+              <BeforeAfter
+                before={`/images/before-${(i % 3) + 1}.svg`}
+                after={`/images/after-${(i % 3) + 1}.svg`}
+                start={52 + (i % 3) * 6}
+                label={`${s.title} — before / after`}
+                beforeAlt={`${s.title} before`}
+                afterAlt={`${s.title} after`}
+              />
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- Process -->
+  <section class="section border-y border-ink-line bg-ink-soft/60">
+    <div class="container-x">
+      <SectionHeading kicker="How it works" title="Four steps, <span class='text-gradient'>zero surprises</span>" />
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {processSteps.map((p, i) => (
+          <div class="card reveal p-6" style={`--reveal-delay:${i * 80}ms`}>
+            <div class="font-display text-2xl font-extrabold text-electric/40">{p.n}</div>
+            <h3 class="mt-3 font-display text-lg font-bold text-white">{p.t}</h3>
+            <p class="mt-1.5 text-sm leading-relaxed text-silver">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading kicker="Service FAQ" title="Before you book" />
+      <Faq items={serviceFaqs} />
+    </div>
+  </section>
+
+  <CtaBanner heading="Not sure which service you need?" sub="Send a couple photos — we’ll tell you the right method and a ballpark price, free." />
+</BaseLayout>

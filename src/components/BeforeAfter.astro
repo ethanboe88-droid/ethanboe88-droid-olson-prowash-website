@@ -1,0 +1,95 @@
+---
+// Draggable before/after image comparison slider. Vanilla JS, keyboard accessible.
+interface Props {
+  before: string;
+  after: string;
+  beforeAlt?: string;
+  afterAlt?: string;
+  label?: string;
+  start?: number; // 0-100 initial handle position
+  class?: string;
+}
+const {
+  before,
+  after,
+  beforeAlt = 'Before cleaning',
+  afterAlt = 'After cleaning',
+  label,
+  start = 55,
+  class: className = '',
+} = Astro.props;
+---
+<figure class:list={['ba group relative overflow-hidden rounded-2xl border border-ink-line bg-ink-raised select-none', className]}>
+  <div class="ba-viewport relative aspect-[16/10] w-full">
+    <!-- AFTER (base layer) -->
+    <img
+      src={after}
+      alt={afterAlt}
+      loading="lazy"
+      decoding="async"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+    <!-- BEFORE (clipped overlay) -->
+    <div class="ba-clip absolute inset-0 overflow-hidden" style={`width:${start}%`}>
+      <img
+        src={before}
+        alt={beforeAlt}
+        loading="lazy"
+        decoding="async"
+        class="ba-before absolute inset-0 h-full max-w-none object-cover"
+      />
+    </div>
+
+    <span class="pointer-events-none absolute left-3 top-3 rounded-md bg-black/55 px-2 py-1 text-[11px] font-semibold uppercase tracking-widest text-white backdrop-blur">Before</span>
+    <span class="pointer-events-none absolute right-3 top-3 rounded-md bg-electric/80 px-2 py-1 text-[11px] font-semibold uppercase tracking-widest text-white backdrop-blur">After</span>
+
+    <!-- Handle -->
+    <input
+      type="range"
+      class="ba-range absolute inset-0 z-20 h-full w-full cursor-ew-resize appearance-none bg-transparent opacity-0"
+      min="0" max="100" value={start}
+      aria-label={label ? `${label}: reveal before or after` : 'Reveal before or after'}
+    />
+    <div class="ba-divider pointer-events-none absolute inset-y-0 z-10 -ml-px w-0.5 bg-white/90 shadow-[0_0_18px_rgba(59,159,212,0.7)]" style={`left:${start}%`}>
+      <span class="absolute top-1/2 left-1/2 grid h-11 w-11 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/70 bg-black/60 backdrop-blur">
+        <svg viewBox="0 0 24 24" class="h-5 w-5 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-4 6 4 6M15 6l4 6-4 6"/></svg>
+      </span>
+    </div>
+  </div>
+  {label && <figcaption class="border-t border-ink-line px-4 py-3 text-sm text-silver-muted">{label}</figcaption>}
+</figure>
+
+<script is:inline>
+  (function () {
+    // Initialise every before/after slider on the page (runs once).
+    if (window.__olsonBaInit) return;
+    window.__olsonBaInit = true;
+
+    function init() {
+      var els = document.querySelectorAll('.ba');
+      for (var i = 0; i < els.length; i++) {
+        (function (el) {
+          if (el.dataset.baReady) return;
+          var range = el.querySelector('.ba-range');
+          var clip = el.querySelector('.ba-clip');
+          var divider = el.querySelector('.ba-divider');
+          if (!range || !clip || !divider) return;
+          el.dataset.baReady = '1';
+          function apply() {
+            var v = Number(range.value);
+            clip.style.width = v + '%';
+            divider.style.left = v + '%';
+          }
+          range.addEventListener('input', apply);
+          apply();
+        })(els[i]);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
