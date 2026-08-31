@@ -74,5 +74,27 @@ const [featured, ...others] = posts;
     </div>
   </section>
 
+  <section class="section pt-0">
+    <div class="container-x">
+      <div class="reveal rounded-2xl border border-hairline bg-ink-1/60 p-6 sm:p-8">
+        <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Start here</p>
+        <div class="mt-4 flex flex-wrap gap-2.5">
+          {[
+            { href: '/services/roof-cleaning', label: 'Roof Cleaning' },
+            { href: '/services/house-washing', label: 'House Washing' },
+            { href: '/services/soft-washing', label: 'Soft Washing' },
+            { href: '/services/gutter-cleaning', label: 'Gutter Cleaning' },
+            { href: '/services/gutter-guard-installation', label: 'Gutter Guards' },
+            { href: '/services', label: 'All services' },
+            { href: '/service-area', label: 'Where we work' },
+            { href: '/faq', label: 'FAQ' },
+          ].map((l) => (
+            <a href={l.href} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{l.label}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
   <CtaBanner heading="Reading up because your roof needs it?" sub="Skip the research — send photos and we'll tell you exactly what it needs." />
 </BaseLayout>

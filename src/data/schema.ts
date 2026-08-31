@@ -142,6 +142,7 @@ export const webPageLd = (opts: {
   description: string;
   path: string;
   image?: string;
+  datePublished?: string;
   dateModified?: string;
   speakableSelectors?: string[];
 }) => ({
@@ -154,8 +155,18 @@ export const webPageLd = (opts: {
   isPartOf: { '@id': `${base}/#website` },
   about: { '@id': `${base}/#business` },
   inLanguage: 'en-US',
-  ...(opts.image ? { primaryImageOfPage: `${base}${opts.image}` } : {}),
-  dateModified: opts.dateModified ?? new Date().toISOString(),
+  ...(opts.image
+    ? {
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: `${base}${opts.image}`,
+          contentUrl: `${base}${opts.image}`,
+          caption: opts.name,
+        },
+      }
+    : {}),
+  datePublished: opts.datePublished ?? SITE.lastContentUpdate,
+  dateModified: opts.dateModified ?? SITE.lastContentUpdate,
   ...(opts.speakableSelectors
     ? { speakable: { '@type': 'SpeakableSpecification', cssSelector: opts.speakableSelectors } }
     : {}),
@@ -182,6 +193,7 @@ export const serviceLd = (s: (typeof SERVICES)[number]) => {
     description: s.description,
     serviceType: s.title,
     category: 'Exterior cleaning',
+    image: [`${base}${'photo' in s && s.photo ? s.photo : SITE.ogImage}`, `${base}/images/roof-after.jpg`],
     provider: { '@id': `${base}/#business` },
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Snohomish County, WA' },

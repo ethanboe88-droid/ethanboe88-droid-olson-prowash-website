@@ -13,6 +13,10 @@ export const SITE = {
   // Update to the live domain (also update astro.config.mjs `site`).
   domain: 'https://olsonprowash.com',
 
+  // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
+  // and schema dateModified so crawlers get an honest signal (not "now" every build).
+  lastContentUpdate: '2026-08-31T12:00:00.000Z',
+
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
   email: 'hello@olsonprowash.com',

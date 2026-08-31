@@ -51,3 +51,4 @@ User-agent: CCBot
 Allow: /
 
 Sitemap: https://olsonprowash.com/sitemap-index.xml
+Sitemap: https://olsonprowash.com/image-sitemap.xml

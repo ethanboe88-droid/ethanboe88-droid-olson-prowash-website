@@ -71,7 +71,7 @@ longer** than pressure alone — which matters a lot in a climate that regrows m
 It can be. On vinyl and aluminum, high pressure can crack aging panels, drive water **behind** the
 siding into the wall cavity where it causes mold and rot, blow out caulk lines and window seals,
 and leave permanent lap-mark streaks. This is why a professional
-[house wash](/services#house-washing) is always a soft wash. If a contractor is dragging a
+[house wash](/services/#house-washing) is always a soft wash. If a contractor is dragging a
 high-pressure wand across your siding, stop them.
 
 ## Why roofs are non-negotiable
@@ -80,7 +80,7 @@ The moss clumps and black streaks on your shingles are living organisms — and 
 the bigger threat. Pressure washing a roof strips the protective granules, dramatically shortens
 shingle life, and voids most manufacturer warranties. The Asphalt Roofing Manufacturers
 Association and shingle makers specifically call for **low-pressure chemical cleaning** — exactly
-what [roof cleaning](/services#roof-cleaning) is.
+what [roof cleaning](/services/#roof-cleaning) is.
 
 ## How Olson Pro Wash decides
 

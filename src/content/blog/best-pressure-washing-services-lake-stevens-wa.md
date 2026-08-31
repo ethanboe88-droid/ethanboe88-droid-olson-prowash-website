@@ -36,7 +36,7 @@ black streaking is already overdue.
 ### 1. They soft wash what should be soft washed
 
 High pressure belongs on concrete and brick — never on shingles, siding, LP SmartSide, cedar or
-stucco. A quality company uses [soft washing](/services#soft-washing): low pressure plus
+stucco. A quality company uses [soft washing](/services/#soft-washing): low pressure plus
 professional biocides that kill moss and algae at the root. If a "pressure washer" wants to put
 3,000 PSI on your roof, keep looking.
 
@@ -97,7 +97,7 @@ services in one visit almost always lowers the per-service cost.
 
 We built [Olson Pro Wash](/about) around exactly that checklist: roof soft-wash certified,
 licensed and insured in Washington, itemized quotes, landscape protection on every job, and one
-crew that can also handle your [beds, mulch and trimming](/services#landscaping) so the whole
+crew that can also handle your [beds, mulch and trimming](/services/#landscaping) so the whole
 property lands at once.
 
 Serving Lake Stevens, Everett, Marysville, Arlington, Snohomish, Monroe, Bothell, Kirkland and

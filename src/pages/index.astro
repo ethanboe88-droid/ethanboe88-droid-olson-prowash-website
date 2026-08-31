@@ -163,7 +163,12 @@ const homeFaqs = [
   <!-- FAQ -->
   <section class="section bg-ink-1/50">
     <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
-      <SectionHeading eyebrow="Good to know" title="Questions, answered" />
+      <div>
+        <SectionHeading eyebrow="Good to know" title="Questions, answered" />
+        <a href="/faq" class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-jet-hi link-underline">
+          See all FAQs <Icon name="arrow" class="h-4 w-4" />
+        </a>
+      </div>
       <Faq items={homeFaqs} />
     </div>
   </section>

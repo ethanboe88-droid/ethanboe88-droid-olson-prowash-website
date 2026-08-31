@@ -38,6 +38,7 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 - [Gallery](https://olsonprowash.com/gallery): Before/after and job photos.
 - [About](https://olsonprowash.com/about): Ethan Olson's story, values, mission ("Do honest work, and take care of everybody in our community").
 - [Contact](https://olsonprowash.com/contact): Quote form, phone, hours, full service area.
+- [FAQ](https://olsonprowash.com/faq): Pricing, methods vs. safety, scheduling, service area and the workmanship guarantee.
 
 ## Service area (city pages)
 

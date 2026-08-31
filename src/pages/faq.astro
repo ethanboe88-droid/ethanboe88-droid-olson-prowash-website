@@ -1,0 +1,172 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import JetDivider from '../components/JetDivider.astro';
+import CtaBanner from '../components/CtaBanner.astro';
+import Faq from '../components/Faq.astro';
+import Icon from '../components/Icon.astro';
+import { SITE } from '../data/site';
+import { CITIES } from '../data/cities';
+import { breadcrumbLd, webPageLd, faqLd } from '../data/schema';
+
+const groups: { heading: string; items: { q: string; a: string }[] }[] = [
+  {
+    heading: 'Quotes & pricing',
+    items: [
+      {
+        q: 'How do I get a quote, and does it cost anything?',
+        a: `Quotes are free. Text or email a few photos of the problem area, or book a walk-through — most estimates come back the same day, itemized, with no pressure to book. Call <a href="${SITE.phoneHref}">${SITE.phone}</a> or use the <a href="/contact#quote">quote form</a>.`,
+      },
+      {
+        q: 'What does a typical job cost?',
+        a: 'Rough starting points: house washing from $299, roof soft washing from $499, gutter cleaning from $149, driveway cleaning from $189, gutter guards from $8 per linear foot. Final price depends on size, access and condition — every quote is firm before we start.',
+      },
+      {
+        q: 'Do you offer bundle or maintenance discounts?',
+        a: 'Yes. Combining a roof wash, house wash and gutter clean-out in one visit is cheaper than booking them separately, and we run quarterly, semi-annual and annual maintenance plans for homes and commercial properties at a lower per-visit rate.',
+      },
+      {
+        q: 'How do I pay?',
+        a: 'Cash, check or credit card, due on completion once you have walked the finished job with the crew.',
+      },
+    ],
+  },
+  {
+    heading: 'Methods & safety',
+    items: [
+      {
+        q: 'What is the difference between pressure washing and soft washing?',
+        a: 'Pressure washing uses mechanical force for hard surfaces that can take it — concrete, brick, pavers, stone. <a href="/services/soft-washing">Soft washing</a> uses low pressure and professional detergents for anything force would damage: roof shingles, siding, stucco, cedar and painted wood. Using the wrong one is the most common way exteriors get damaged.',
+      },
+      {
+        q: 'Will you pressure wash my roof?',
+        a: 'Never on asphalt shingles. High pressure strips the protective granules and voids the manufacturer warranty. We use a low-pressure <a href="/services/roof-cleaning">roof soft wash</a> with biocides that kill moss, lichen and black algae at the root, then a zinc/copper treatment to slow regrowth.',
+      },
+      {
+        q: 'Is the process safe for my plants, pets and kids?',
+        a: 'Yes. We pre-wet and rinse all landscaping around the work area and use biodegradable products at a controlled dilution. Keep pets and children off the work area during application; once a surface has been rinsed and dried it is safe.',
+      },
+      {
+        q: 'Are you licensed and insured?',
+        a: `${SITE.legalName} is licensed and bonded in Washington and carries general liability coverage. A certificate of insurance is available for HOA, commercial and property-management jobs.`,
+      },
+    ],
+  },
+  {
+    heading: 'Scheduling & the visit',
+    items: [
+      {
+        q: 'Do I need to be home?',
+        a: 'Not usually. As long as we have water access and a way to reach gated areas, many customers are at work while we clean. We text before we arrive and after we finish, with photos.',
+      },
+      {
+        q: 'How long does a job take?',
+        a: 'Most single-family house washes run 2–4 hours including setup and clean-up. A roof soft wash is similar. Larger or multi-story homes, or combined roof + house + gutter visits, can run a half to full day.',
+      },
+      {
+        q: 'What about the weather?',
+        a: 'Light rain is fine for soft washing — the products still work. We reschedule for high wind, freezing temperatures or heavy storms, and will always give you as much notice as we can.',
+      },
+      {
+        q: 'How often should this be done in the Pacific Northwest?',
+        a: 'House washing once a year, roof soft washing every 2–4 years (sooner under heavy fir shade), and gutter cleaning twice a year where there are conifers nearby. A zinc treatment and <a href="/services/gutter-guard-installation">gutter guards</a> stretch those intervals out.',
+      },
+    ],
+  },
+  {
+    heading: 'Service area',
+    items: [
+      {
+        q: 'Which cities do you serve?',
+        a: `We cover ${CITIES.length} core cities across Snohomish County and North King County — ${CITIES.map((c) => c.name).join(', ')} — roughly a 25-mile radius around ${SITE.address.locality}. See the <a href="/service-area">service area</a> page for local details on each.`,
+      },
+      {
+        q: 'Do you charge a travel fee?',
+        a: 'No travel fee inside the core service area. For jobs outside that radius, just ask — we travel for the right project and quote it plainly.',
+      },
+      {
+        q: 'My town is not on the list — can you still help?',
+        a: `Probably. The list is where we work most, not a hard boundary. Call <a href="${SITE.phoneHref}">${SITE.phone}</a> or send photos and we will tell you straight away.`,
+      },
+    ],
+  },
+  {
+    heading: 'Results & guarantee',
+    items: [
+      {
+        q: 'How long until moss and algae actually disappear?',
+        a: 'Loose growth rinses off during the visit. The rest browns and drops over the following weeks as rain and wind clear it. Heavy lichen on a roof can take a full season to fully release — that is normal and expected.',
+      },
+      {
+        q: 'What if I am not happy with the result?',
+        a: 'We walk every finished job with you before we leave. If something was missed, we come back and make it right — that is the workmanship guarantee, and on installed products like gutter guards it is backed by the manufacturer warranty too.',
+      },
+      {
+        q: 'Do you leave a mess?',
+        a: 'No. Debris is bagged and hauled away, hard surfaces and adjacent siding are rinsed down, and furniture is moved back where it was. You should not be able to tell where we set up.',
+      },
+    ],
+  },
+];
+
+const allItems = groups.flatMap((g) => g.items);
+---
+<BaseLayout
+  title="Frequently Asked Questions — Pressure Washing, Roof Cleaning & Gutters"
+  description={`Answers on pricing, methods, safety, scheduling and service area for Olson Pro Wash — exterior cleaning across Lake Stevens, Snohomish & King County, WA. Free quotes: ${SITE.phone}.`}
+  canonical="/faq"
+  keywords="pressure washing FAQ, roof cleaning questions, soft washing vs pressure washing, how much does house washing cost, is roof cleaning safe, Lake Stevens WA"
+  jsonLd={[
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }]),
+    webPageLd({
+      name: 'Frequently Asked Questions — Olson Pro Wash',
+      description: 'Common questions about pressure washing, roof cleaning, soft washing, gutters, pricing and service area in Snohomish & King County, WA.',
+      path: '/faq',
+      speakableSelectors: ['h1', 'summary'],
+    }),
+    faqLd(allItems),
+  ]}
+>
+  <PageHero
+    eyebrow="Answers"
+    title="Frequently asked <span class='text-jet-grad'>questions</span>"
+    intro="Pricing, methods, safety, scheduling and where we work. If your question is not here, call or send photos — we answer fast."
+    crumbs={[{ label: 'FAQ' }]}
+  />
+
+  <section class="section">
+    <div class="container-x space-y-14">
+      {groups.map((g, i) => (
+        <div>
+          <SectionHeading eyebrow={`0${i + 1}`} title={g.heading} class="mb-6" />
+          <Faq items={g.items} />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Keep looking" title="Where to go next" />
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          { href: '/services', t: 'All services', d: 'Ten exterior services, each with its own page and pricing.' },
+          { href: '/service-area', t: 'Service area', d: `Local detail for all ${CITIES.length} cities we cover.` },
+          { href: '/gallery', t: 'Before & after', d: 'Real job photos from around Snohomish County.' },
+          { href: '/blog', t: 'The Journal', d: 'Guides on moss, methods and maintenance timing.' },
+        ].map((c) => (
+          <a href={c.href} class="reveal panel lift group p-5">
+            <span class="font-display text-sm font-bold text-text">{c.t}</span>
+            <span class="mt-1.5 block text-xs leading-relaxed text-text-dim">{c.d}</span>
+            <span class="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-jet-hi">Open <Icon name="arrow" class="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" /></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner heading="Still have a question?" sub={`Call ${SITE.phone} or send a couple of photos — you will hear back the same day.`} />
+</BaseLayout>

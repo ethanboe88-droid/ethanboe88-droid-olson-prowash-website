@@ -73,7 +73,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
       <div>
         <Photo src={data.heroImage} alt={data.heroAlt} width={1600} height={900} loading="eager"
                sizes="(min-width: 1024px) 700px, 100vw" class="bezel mb-10 w-full rounded-2xl object-cover" />
-        <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-h3:text-xl prose-a:text-jet-hi prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-li:marker:text-jet prose-blockquote:border-jet prose-blockquote:text-text-dim prose-img:rounded-xl prose-table:text-sm">
+        <div class="prose prose-invert max-w-none prose-headings:font-display prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-h3:text-xl prose-a:text-jet-hi prose-a:no-underline hover:prose-a:underline prose-strong:text-text prose-li:marker:text-jet prose-blockquote:border-jet prose-blockquote:text-text-dim prose-img:rounded-xl prose-table:block prose-table:overflow-x-auto prose-table:text-sm">
           <Content />
         </div>
 
@@ -82,6 +82,22 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
             {data.tags.map((t) => <span class="rounded-full border border-hairline px-3 py-1 text-xs text-text-mute">#{t}</span>)}
           </div>
         )}
+
+        <div class="mt-10 rounded-2xl border border-hairline bg-ink-1/60 p-6">
+          <div class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text-mute">Explore Olson Pro Wash</div>
+          <div class="mt-4 flex flex-wrap gap-2.5">
+            {[
+              { href: '/services/roof-cleaning', label: 'Roof Cleaning' },
+              { href: '/services/house-washing', label: 'House Washing' },
+              { href: '/services/gutter-cleaning', label: 'Gutter Cleaning' },
+              { href: '/services', label: 'All services' },
+              { href: '/service-area', label: 'Service area' },
+              { href: '/faq', label: 'FAQ' },
+            ].map((l) => (
+              <a href={l.href} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{l.label}</a>
+            ))}
+          </div>
+        </div>
       </div>
 
       <aside class="lg:sticky lg:top-28 lg:h-max">
