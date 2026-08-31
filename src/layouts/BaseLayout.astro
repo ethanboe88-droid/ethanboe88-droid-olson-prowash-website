@@ -4,6 +4,7 @@ import { ViewTransitions } from 'astro:transitions';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import LeadModal from '../components/LeadModal.astro';
+import IconSprite from '../components/IconSprite.astro';
 import { SITE } from '../data/site';
 
 interface Props {
@@ -119,13 +120,15 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
         as="image"
         type="image/avif"
         imagesrcset={`${preloadImage.replace(/\.jpg$/i, '-800.avif')} 800w, ${preloadImage.replace(/\.jpg$/i, '.avif')} 1400w`}
-        imagesizes="(min-width: 1024px) 44vw, (min-width: 640px) 90vw, 100vw"
+        imagesizes="100vw"
         fetchpriority="high"
       />
     )}
 
+    {/* Only the display face is preloaded — it renders the huge hero headline, where
+       a font swap is most visible. Inter (body) loads via CSS with font-display: swap,
+       so it doesn't compete with the LCP image for bandwidth. */}
     <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin />
-    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin />
 
     {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 
@@ -133,6 +136,7 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
   </head>
 
   <body class="min-h-dvh">
+    <IconSprite />
     <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[200] focus:rounded-lg focus:bg-jet focus:px-4 focus:py-2 focus:font-display focus:text-sm focus:text-white">
       Skip to content
     </a>

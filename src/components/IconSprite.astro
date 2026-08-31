@@ -1,0 +1,22 @@
+---
+// One-time inline <symbol> sprite. Rendered once per page in BaseLayout so every
+// <Icon> is a tiny <use> reference instead of a repeated full <svg> path.
+import { ICON_PATHS, BRAND_ICONS } from '../data/icons';
+---
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden" data-icon-sprite>
+  {Object.entries(ICON_PATHS).map(([name, d]) => {
+    const brand = BRAND_ICONS.includes(name);
+    return (
+      <symbol
+        id={`i-${name}`}
+        viewBox="0 0 24 24"
+        fill={brand ? 'currentColor' : 'none'}
+        stroke={brand ? 'none' : 'currentColor'}
+        stroke-width={brand ? undefined : '1.6'}
+        stroke-linecap={brand ? undefined : 'round'}
+        stroke-linejoin={brand ? undefined : 'round'}
+        set:html={d}
+      />
+    );
+  })}
+</svg>

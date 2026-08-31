@@ -1,0 +1,47 @@
+// Inline SVG icon set. One family, 1.6 stroke, 24-grid. No emoji, no icon font.
+// Rendered once as a <symbol> sprite (see IconSprite.astro) and referenced with
+// <use> by <Icon>. `BRAND` icons are filled; the rest are stroked.
+
+export const ICON_PATHS: Record<string, string> = {
+  // service icons
+  roof: '<path d="M3 11 12 4l9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-9"/><path d="M9.2 15c1.4 1.3 4.2 1.3 5.6 0"/>',
+  jet: '<path d="M3 12h5l2-2 4 4 2-2"/><path d="M14 6l3-3m0 0 3 3m-3-3v7"/><path d="M18 14l-2 2m2-2 2 2m-2-2v6"/><path d="M3 12v3"/>',
+  foam: '<circle cx="8" cy="9" r="3"/><circle cx="15" cy="7" r="2.2"/><circle cx="16" cy="13" r="3.4"/><path d="M5 20h14a2 2 0 0 0 2-2v-1H3v1a2 2 0 0 0 2 2Z"/>',
+  house: '<path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/><path d="M10 20v-5h4v5"/>',
+  gutter: '<path d="M3 8h18l-1 4H4L3 8Z"/><path d="M4 12v3a2 2 0 0 0 2 2h1"/><path d="M12 12v8"/><path d="M12 20l-1.5-2M12 20l1.5-2"/>',
+  gutterGuard: '<path d="M3 10h18l-1.4 6a2 2 0 0 1-2 1.6H6.4a2 2 0 0 1-2-1.6L3 10Z"/><path d="M2.5 10 6 6h12l3.5 4"/><path d="M6 8.2h12M7 6.6l-1.6 3.4M11 6l-1.4 4M15 6l-1.4 4M18.6 6.6 17 10"/>',
+  deck: '<path d="M3 8h18M3 12h18M3 16h18"/><path d="M6 8v12M12 8v12M18 8v12"/><path d="M3 8l3-4h12l3 4"/>',
+  driveway: '<path d="M8 3 4 21M16 3l4 18M9 8h6M8.4 13h7.2M7.5 18h9"/>',
+  commercial: '<path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21v-5h6v5M9 10h.01M12 10h.01M15 10h.01M9 13h.01M12 13h.01M15 13h.01"/>',
+  leaf: '<path d="M5 21c0-9 5-15 15-16 1 10-4 16-15 16Z"/><path d="M5 21C8 14 12 10 18 7"/>',
+  lights: '<path d="M2 6c3.3 4 6.7 4 10 4s6.7 0 10-4"/><path d="M6 8.4v1.4M12 10.1v1.4M18 8.4v1.4"/><circle cx="6" cy="11.4" r="1.6"/><circle cx="12" cy="13.1" r="1.6"/><circle cx="18" cy="11.4" r="1.6"/>',
+  // ui
+  shield: '<path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"/><path d="m9 12 2 2 4-4"/>',
+  star: '<path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.2l5.9-.9L12 3Z"/>',
+  pin: '<path d="M12 21s7-6.3 7-12a7 7 0 1 0-14 0c0 5.7 7 12 7 12Z"/><circle cx="12" cy="9" r="2.6"/>',
+  check: '<circle cx="12" cy="12" r="9"/><path d="m8.5 12 2.5 2.5 5-5.5"/>',
+  tag: '<path d="M3 12V5a2 2 0 0 1 2-2h7l9 9-9 9-9-9Z"/><circle cx="8" cy="8" r="1.6"/>',
+  phone: '<path d="M4 5c0 9 6 15 15 15l1-4-5-2-2 2c-2-1-4-3-5-5l2-2-2-5-4 1Z"/>',
+  mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+  arrowUpRight: '<path d="M7 17 17 7M9 7h8v8"/>',
+  chevronLeft: '<path d="m15 6-6 6 6 6"/>',
+  chevronRight: '<path d="m9 6 6 6-6 6"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  close: '<path d="M6 6 18 18M18 6 6 18"/>',
+  quote: '<path d="M7 7h5v6c0 2.8-1.6 4.6-4 5v-2c1.2-.5 2-1.5 2-3H7V7Zm8 0h5v6c0 2.8-1.6 4.6-4 5v-2c1.2-.5 2-1.5 2-3h-3V7Z"/>',
+  drop: '<path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11Z"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  grip: '<path d="m9 6-4 6 4 6M15 6l4 6-4 6"/>',
+  // brand (filled)
+  facebook: '<path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8a1 1 0 0 1 1-1Z"/>',
+  instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1.2" fill="currentColor" stroke="none"/>',
+  google: '<path d="M21 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.1a4.4 4.4 0 0 1-1.9 2.9v2.4h3.1c1.8-1.7 2.7-4.2 2.7-7.1Z"/><path d="M12 21c2.6 0 4.7-.9 6.3-2.3l-3.1-2.4c-.9.6-2 .9-3.2.9-2.5 0-4.6-1.7-5.3-3.9H3.5v2.5A9 9 0 0 0 12 21Z"/><path d="M6.7 13.3a5.4 5.4 0 0 1 0-3.4V7.4H3.5a9 9 0 0 0 0 8.1l3.2-2.2Z"/><path d="M12 6.6c1.4 0 2.7.5 3.7 1.5l2.7-2.7A9 9 0 0 0 3.5 7.4l3.2 2.5C7.4 8.3 9.5 6.6 12 6.6Z"/>',
+  yelp: '<path d="M11.3 3.3c.7-.2 1.4.3 1.4 1v6.2c0 1.1-1.3 1.6-2 .7L7.6 7.6c-.4-.5-.3-1.3.3-1.6l3.4-2.7Z"/><path d="M10.6 12.7c.5-.7 1.6-.5 1.8.3l1 3.9c.2.7-.5 1.4-1.2 1.1l-3.7-1.4c-.7-.3-.8-1.2-.2-1.6l2.5-2.3Z"/><path d="M13.8 12.9c.2-.8 1.2-1 1.7-.4l2.6 3c.5.5.2 1.4-.5 1.5l-3.9.6c-.7.1-1.3-.6-1-1.3l1.1-3.4Z"/><path d="M14.4 9.6c-.6-.5-.4-1.5.4-1.7l3.6-1c.7-.2 1.3.5 1.1 1.2l-1.2 3.5c-.2.7-1.1.9-1.6.4l-1.9-2.4Z"/>',
+  nextdoor: '<path d="M4 20V10.5a1 1 0 0 1 .4-.8l7-5.2a1 1 0 0 1 1.2 0l7 5.2a1 1 0 0 1 .4.8V20a1 1 0 0 1-1 1h-4v-6h-6v6H5a1 1 0 0 1-1-1Z"/>',
+  yahoo: '<path d="M3 6h4.4l2.9 4.8L13.3 6H17l-5 8.2V19H8.4v-4.8L3 6Z"/><circle cx="18.3" cy="17.4" r="1.7"/><path d="M17 7.5h2.8l-1 5.2H18l-1-5.2Z"/>',
+};
+
+export const BRAND_ICONS = ['facebook', 'instagram', 'google', 'yelp', 'nextdoor', 'yahoo'];
+export const ICON_NAMES = Object.keys(ICON_PATHS);

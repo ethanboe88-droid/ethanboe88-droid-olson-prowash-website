@@ -15,7 +15,7 @@ export const SITE = {
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).
-  lastContentUpdate: '2026-08-31T23:00:00.000Z',
+  lastContentUpdate: '2026-09-01T00:00:00.000Z',
 
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
