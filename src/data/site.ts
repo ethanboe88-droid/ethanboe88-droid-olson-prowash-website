@@ -13,8 +13,8 @@ export const SITE = {
   // Update to the live domain (also update astro.config.mjs `site`).
   domain: 'https://olsonprowash.com',
 
-  phone: '(425) 555-0100',
-  phoneHref: 'tel:+14255550100',
+  phone: '(425) 446-0547',
+  phoneHref: 'tel:+14254460547',
   email: 'hello@olsonprowash.com',
   emailHref: 'mailto:hello@olsonprowash.com',
 
