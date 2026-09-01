@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 // Update `site` to the production domain before deploying.
 // Stable content revision date — matches SITE.lastContentUpdate. Bump on real
 // content changes so <lastmod> stays honest instead of changing every build.
-const LASTMOD = '2026-09-01T12:00:00.000Z';
+const LASTMOD = '2026-09-01T14:00:00.000Z';
 
 export default defineConfig({
   site: 'https://olsonprowash.com',

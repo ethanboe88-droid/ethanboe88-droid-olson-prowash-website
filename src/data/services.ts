@@ -44,11 +44,11 @@ export const SERVICES: Service[] = [
     title: 'Roof Cleaning',
     short: 'Moss, lichen and black streaks lifted at the root — done to ARMA and shingle-maker guidelines.',
     description:
-      'A roof soft wash tuned for the Pacific Northwest and done to ARMA (Asphalt Roofing Manufacturers Association) and shingle-manufacturer cleaning guidelines. We apply our in-house roof treatment to dissolve moss, lichen and Gloeocapsa (the black streaking) at the root, let it dwell, then rinse the whole roof clean. You have two options: our recommended premium soft wash — low pressure, granule-safe — and a lower-cost budget power-wash version. On the premium wash, zero high pressure means zero granule loss and no voided shingle warranty.',
+      'A roof soft wash tuned for the Pacific Northwest and done to ARMA (Asphalt Roofing Manufacturers Association) and shingle-manufacturer cleaning guidelines. We apply our in-house roof treatment to dissolve moss, lichen and Gloeocapsa (the black streaking) at the root, let it dwell, then rinse the whole roof clean. You have two options: our recommended premium soft wash — low pressure, granule-safe — and a lower-cost budget powder treatment. On the premium wash, zero high pressure means zero granule loss and no voided shingle warranty.',
     benefits: [
       'Kills moss, lichen and black streaking at the root',
       'Done to ARMA and shingle-manufacturer cleaning guidelines',
-      'Premium soft wash (recommended) or a budget power-wash version',
+      'Premium soft wash (recommended) or a budget powder treatment',
       'Roof rinsed clean after our in-house treatment dwells',
       'Gutter guards, skylights and landscaping protected',
     ],
@@ -69,12 +69,12 @@ export const SERVICES: Service[] = [
       { t: 'Rinse & clear', d: 'The whole roof is rinsed clean without disturbing the granules, and debris is flushed out of the gutters. Loosened growth keeps dropping over the following weeks.' },
     ],
     faqs: [
-      { q: 'Soft wash or power wash — which do you recommend?', a: 'The premium low-pressure soft wash, every time. It is the method ARMA and the shingle manufacturers call for, and it protects the granules and your warranty. We also offer a lower-cost budget power-wash version — we walk you through the trade-offs before you choose.' },
+      { q: 'Soft wash or powder treatment — which do you recommend?', a: 'The premium low-pressure soft wash, every time. It is the method ARMA and the shingle manufacturers call for, and it protects the granules and your warranty. We also offer a lower-cost budget powder treatment — we walk you through the trade-offs before you choose.' },
       { q: 'How long until the moss actually disappears?', a: 'Loose moss rinses off during the visit; the rest browns and drops over the following weeks as rain and wind clear it. Heavy lichen can take a full season to fully release.' },
       { q: 'How often does a Snohomish County roof need this?', a: 'Most homes here go 2–4 years between washes. Roofs under heavy fir shade or on the north side of a hill are closer to every 2 years. Keeping the gutters clear helps.' },
     ],
     priceNote:
-      'The premium soft wash is our recommended option; the budget power-wash version is quoted lower. Priced by roof size, pitch, access and how much growth is present — most single-family roofs land between $299 and $1,200, quoted firm after we see photos or the roof itself.',
+      'The premium soft wash is our recommended option; the budget powder treatment is quoted lower. Priced by roof size, pitch, access and how much growth is present — most single-family roofs land between $299 and $1,200, quoted firm after we see photos or the roof itself.',
   },
   {
     slug: 'house-washing',
