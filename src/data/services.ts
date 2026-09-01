@@ -78,12 +78,12 @@ export const SERVICES: Service[] = [
   {
     slug: 'house-washing',
     title: 'House Washing',
-    short: 'Whole-home soft wash — siding, soffits, trim and gutter faces.',
+    short: 'Whole-home soft wash — siding, soffits, fascia and trim.',
     description:
-      'A full exterior soft wash for siding, soffits, fascia, gutter exteriors, trim and entryways. We lift the green algae film, pollen, spider webs and wasp nests that dull curb appeal — gentle on paint, caulk lines and window seals.',
+      'A full exterior soft wash for siding, soffits, fascia, trim and entryways. We lift the green algae film, pollen, spider webs and wasp nests that dull curb appeal — gentle on paint, caulk lines and window seals.',
     benefits: [
       'Vinyl, LP SmartSide, fiber cement, brick, cedar',
-      'Gutter-face brightening included',
+      'Gutter-face brightening available as an optional add-on',
       'Window rinse on completion',
       'Results that last 4–6× longer than pressure alone',
     ],
@@ -99,14 +99,14 @@ export const SERVICES: Service[] = [
     ],
     process: [
       { t: 'Pre-wet & protect', d: 'Plants, light fixtures and outlets are covered and soaked; we close windows and note any open weep holes.' },
-      { t: 'Low-pressure apply', d: 'A soft-wash detergent is applied bottom to top, lifting algae, pollen, cobwebs and wasp nests off siding, soffits and gutter faces.' },
+      { t: 'Low-pressure apply', d: 'A soft-wash detergent is applied bottom to top, lifting algae, pollen, cobwebs and wasp nests off siding, soffits and trim.' },
       { t: 'Agitate & dwell', d: 'Trim, corners and stubborn staining are hand-detailed while the solution does the work.' },
       { t: 'Rinse & window pass', d: 'Everything is rinsed top-down and the windows get a final rinse so you are not left with spots.' },
     ],
     faqs: [
       { q: 'Is soft washing safe for my plants?', a: 'Yes. We pre-wet and rinse all landscaping around the work area and use detergents at a controlled dilution. Plant protection is a standard part of every wash.' },
       { q: 'Will it get the green off the north side?', a: 'That is exactly what it is for. The green is algae, and the detergent kills it at the root rather than smearing it around the way pressure does.' },
-      { q: 'Can you do just the gutter faces?', a: 'Gutter-face brightening is included in a full house wash, or we can do it as an add-on to a <a href="/services/roof-cleaning">roof</a> or <a href="/services/gutter-cleaning">gutter cleaning</a>.' },
+      { q: 'Can you do just the gutter faces?', a: 'Gutter-face brightening is an optional add-on to a house wash — or we can do it alongside a <a href="/services/roof-cleaning">roof</a> or <a href="/services/gutter-cleaning">gutter cleaning</a>.' },
     ],
     priceNote:
       'Most single-story homes run $199–$400 and two-story homes $400–$700, based on square footage, stories and siding condition. Bundled with a roof wash for a lower combined rate.',
