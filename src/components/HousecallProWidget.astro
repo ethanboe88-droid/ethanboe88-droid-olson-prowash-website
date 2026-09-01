@@ -38,14 +38,49 @@ const {
               <p class="mt-4 font-display text-base font-semibold text-text">Reserve your spot online</p>
               <p class="mx-auto mt-1.5 max-w-xs text-xs text-text-mute">Live crew availability, instant confirmation — about a minute start to finish.</p>
               <div class="mt-5 flex flex-col justify-center gap-2 sm:flex-row">
-                <button type="button" class="btn btn-primary text-sm" onclick="window.HCPWidget ? HCPWidget.openModal() : (location.href='/contact#quote')">Book online</button>
+                <button type="button" class="btn btn-primary text-sm" onclick="window.__hcpBook ? __hcpBook() : (location.href='/contact#quote')">Book online</button>
                 <a href={SITE.phoneHref} class="btn btn-ghost text-sm"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
               </div>
               <a href="/contact#quote" class="mt-3 inline-block text-xs text-text-mute underline-offset-4 transition hover:text-text hover:underline">Prefer to send photos? Request a quote &rarr;</a>
             </div>
           </div>
-          {/* Housecall Pro online booking — loads async, only on pages using this component */}
-          <script is:inline async src="https://online-booking.housecallpro.com/script.js?token=ddfa1a957ec742288edd7ce506607436&orgName=Olson-Landscaping--Pro-Wash-LLC"></script>
+          {/* Housecall Pro online booking — the third-party script is deferred
+              (loads when the booking section nears the viewport, or on the
+              first Book Online tap) so it never runs during the hero entrance
+              animation, which iOS Safari freezes if a script mutates the DOM
+              mid-animation. */}
+          <script is:inline>
+            (function () {
+              var SRC = 'https://online-booking.housecallpro.com/script.js?token=ddfa1a957ec742288edd7ce506607436&orgName=Olson-Landscaping--Pro-Wash-LLC';
+              var started = false;
+              function loadHCP() {
+                if (started) return;
+                started = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = SRC;
+                document.head.appendChild(s);
+              }
+              var sec = document.getElementById('book');
+              if (sec && 'IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (e) {
+                  if (e[0].isIntersecting) { io.disconnect(); loadHCP(); }
+                }, { rootMargin: '800px 0px' });
+                io.observe(sec);
+              } else {
+                addEventListener('load', function () { setTimeout(loadHCP, 2000); });
+              }
+              window.__hcpBook = function () {
+                if (window.HCPWidget) { HCPWidget.openModal(); return; }
+                loadHCP();
+                var tries = 0;
+                var iv = setInterval(function () {
+                  if (window.HCPWidget) { clearInterval(iv); HCPWidget.openModal(); }
+                  else if (++tries > 40) { clearInterval(iv); location.href = '/contact#quote'; }
+                }, 100);
+              };
+            })();
+          </script>
         </div>
       </div>
     </div>
