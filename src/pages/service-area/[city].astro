@@ -127,16 +127,16 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
   <!-- Every service -->
   <section class="section bg-ink-1/50">
     <div class="container-x">
-      <SectionHeading eyebrow="Full service list" title={`Every service we offer in ${city.name}`} intro="One local crew for the whole property — every service below is available in your area." />
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <SectionHeading eyebrow="Full service list" title={`Every service we offer in ${city.name}`} intro={`One local crew for the whole property. Tap any service for full details and ${city.county} pricing.`} />
+      <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => (
-          <a href={s.detailPage ?? `/services#${s.slug}`} class="reveal panel lift group flex items-start gap-4 p-5" style={`--reveal-delay:${(i % 3) * 55}ms`}>
-            <span class="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
-            <span class="min-w-0">
+          <a href={s.detailPage ?? `/services#${s.slug}`} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
+            <span class="min-w-0 flex-1">
               <span class="block font-display text-sm font-bold text-text">{s.title}</span>
-              <span class="mt-0.5 block text-xs leading-relaxed text-text-dim">{s.short}</span>
-              <span class="mt-1.5 block font-display text-[11px] font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+              <span class="mt-0.5 block font-display text-[11px] font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
             </span>
+            <Icon name="arrow" class="h-4 w-4 shrink-0 text-text-mute transition-transform group-hover:translate-x-1 group-hover:text-jet-hi" />
           </a>
         ))}
       </div>
