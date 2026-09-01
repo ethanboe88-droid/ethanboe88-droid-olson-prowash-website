@@ -32,7 +32,7 @@ import { SITE } from '../data/site';
 
       <div class="mt-8 flex flex-col gap-3 sm:flex-row hero-in" style="--d:380ms">
         <a href="/contact#quote" data-magnetic class="btn btn-primary">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
-        <a href="#book" class="btn btn-ghost"><Icon name="clock" class="h-4 w-4" /> Book Online</a>
+        <a href="#book" class="btn btn-ghost" onclick="if(window.HCPWidget){event.preventDefault();HCPWidget.openModal()}"><Icon name="clock" class="h-4 w-4" /> Book Online</a>
       </div>
 
       <div class="mt-8 flex items-center gap-3 hero-in" style="--d:440ms">
