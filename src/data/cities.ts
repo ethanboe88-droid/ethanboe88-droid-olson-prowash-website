@@ -177,7 +177,7 @@ export const CITIES: City[] = [
     intro:
       "The Sammamish Plateau is prime moss country — large newer homes under dense Douglas fir, with steep roofs and long driveways that green up in the shade.",
     conditions:
-      "Neighborhoods like Klahanie, Trossachs, Pine Lake and Sahalee sit in heavy evergreen canopy at elevation, so roofs collect needle debris and grow moss and lichen aggressively. The homes are big, the roofs are steep, and the driveways are long and often shaded. Roof soft washing with a zinc treatment, gutter guard installation and driveway de-mossing are the core Sammamish scope.",
+      "Neighborhoods like Klahanie, Trossachs, Pine Lake and Sahalee sit in heavy evergreen canopy at elevation, so roofs collect needle debris and grow moss and lichen aggressively. The homes are big, the roofs are steep, and the driveways are long and often shaded. Roof soft washing, gutter guard installation and driveway de-mossing are the core Sammamish scope.",
     neighborhoods: ['Sammamish Plateau', 'Klahanie', 'Pine Lake', 'Beaver Lake', 'Trossachs', 'Inglewood', 'Sahalee'],
     landmarks: ['Pine Lake', 'Beaver Lake Park', 'Sahalee Country Club', 'Soaring Eagle Regional Park', 'Lake Sammamish'],
     housing: 'Large newer plateau homes under heavy fir canopy with steep roofs',
@@ -187,7 +187,7 @@ export const CITIES: City[] = [
     faqs: [
       {
         q: 'My roof grows moss back every year — can you slow it down?',
-        a: 'Yes. After the soft wash we apply a zinc or copper treatment, and for the worst exposures we can install zinc strips at the ridge. Pairing it with gutter guards keeps needle debris (which feeds the moss) out of the system.',
+        a: 'Yes. After the soft wash we rinse the roof clean, and for the worst exposures we pair it with gutter guards so needle debris — which feeds the moss — stays out of the system. A light touch-up every year or two keeps it from getting bad again.',
       },
     ],
   },
@@ -337,7 +337,7 @@ export const CITIES: City[] = [
     faqs: [
       {
         q: 'The moss keeps coming back on my Monroe roof — is that normal?',
-        a: "In this valley, yes — the humidity feeds it. After the soft wash we apply a zinc or copper treatment to slow regrowth, and many customers here schedule a light touch-up every year or two so it never gets bad again.",
+        a: "In this valley, yes — the humidity feeds it. After the soft wash we rinse the roof clean, and many customers here schedule a light touch-up every year or two so it never gets bad again.",
       },
     ],
   },

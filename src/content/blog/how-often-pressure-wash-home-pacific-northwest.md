@@ -29,9 +29,9 @@ or near the water often benefit from a lighter touch-up wash mid-year.
 ### Roof — every 1 to 2 years (soft wash only)
 
 In the PNW, roofs grow **moss and lichen**, not just black streaks — and moss is the bigger threat.
-A professional [roof soft wash](/services/roof-cleaning) kills it at the root, and a zinc or copper
-treatment slows regrowth. Never pressure wash a roof: it strips granules and voids most shingle
-warranties. Left alone, moss lifts shingle edges and traps water until the deck rots.
+A professional [roof soft wash](/services/roof-cleaning) kills it at the root, then a full rinse
+clears the loosened growth. High pressure strips granules and voids most shingle
+warranties, so a soft wash is the method ARMA and the shingle makers call for. Left alone, moss lifts shingle edges and traps water until the deck rots.
 
 ### Deck and patio — every 12 months
 

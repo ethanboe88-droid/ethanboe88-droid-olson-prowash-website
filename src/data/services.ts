@@ -42,13 +42,14 @@ export const SERVICES: Service[] = [
   {
     slug: 'roof-cleaning',
     title: 'Roof Cleaning',
-    short: 'Moss, lichen and black streaks removed at the root — no pressure on the shingles.',
+    short: 'Moss, lichen and black streaks lifted at the root — done to ARMA and shingle-maker guidelines.',
     description:
-      'A low-pressure roof soft wash tuned for the Pacific Northwest. We dissolve moss, lichen and Gloeocapsa (the black streaking) at the root with professional biocides, then a zinc / copper treatment to slow regrowth. Zero high pressure means zero granule loss and no voided shingle warranty.',
+      'A roof soft wash tuned for the Pacific Northwest and done to ARMA (Asphalt Roofing Manufacturers Association) and shingle-manufacturer cleaning guidelines. We apply our in-house roof treatment to dissolve moss, lichen and Gloeocapsa (the black streaking) at the root, let it dwell, then rinse the whole roof clean. You have two options: our recommended premium soft wash — low pressure, granule-safe — and a lower-cost budget power-wash version. On the premium wash, zero high pressure means zero granule loss and no voided shingle warranty.',
     benefits: [
-      'Kills moss & lichen at the root, not just the surface',
-      'Manufacturer-safe: no pressure, no granule loss',
-      'Zinc/copper post-treatment slows regrowth for years',
+      'Kills moss, lichen and black streaking at the root',
+      'Done to ARMA and shingle-manufacturer cleaning guidelines',
+      'Premium soft wash (recommended) or a budget power-wash version',
+      'Roof rinsed clean after our in-house treatment dwells',
       'Gutter guards, skylights and landscaping protected',
     ],
     price: 'from $299',
@@ -59,21 +60,21 @@ export const SERVICES: Service[] = [
     whyLocal: [
       { icon: 'drop', t: 'Marine humidity', d: 'Persistent damp off Puget Sound keeps north-facing slopes wet for weeks at a time, so moss spores never really stop working.' },
       { icon: 'leaf', t: 'Evergreen canopy', d: 'Fir, cedar and big-leaf maple drop needles and shade onto the roof — the exact conditions moss and lichen need to take hold.' },
-      { icon: 'shield', t: 'Warranty-safe method', d: 'Asphalt-shingle makers void warranties over pressure washing. A low-pressure soft wash keeps the coverage — and the granules — intact.' },
+      { icon: 'shield', t: 'By the guidelines', d: 'ARMA and the shingle manufacturers call for low-pressure chemical cleaning, not pressure washing. Our recommended soft wash follows that, so the granules and the warranty stay intact.' },
     ],
     process: [
       { t: 'Inspect & protect', d: 'We look over the roof, note the problem slopes and flashing, then pre-wet and tarp landscaping, gutter guards and downspout outlets.' },
-      { t: 'Apply the treatment', d: 'A professional biocide is fan-sprayed at low pressure across the whole roof, killing moss, lichen and black algae at the root.' },
-      { t: 'Dwell & gentle rinse', d: 'The solution dwells, then a soft rinse clears the loosened growth without ever disturbing the granules.' },
-      { t: 'Zinc/copper post-treat', d: 'A metal-salt treatment is applied along the ridge and slopes to slow regrowth for years, and we flush any debris out of the gutters.' },
+      { t: 'Apply our roof treatment', d: 'Our in-house roof treatment is applied at low pressure across the whole roof, dissolving moss, lichen and black algae at the root.' },
+      { t: 'Let it dwell', d: 'The treatment is left to work down into the growth; heavy lichen gets a second pass.' },
+      { t: 'Rinse & clear', d: 'The whole roof is rinsed clean without disturbing the granules, and debris is flushed out of the gutters. Loosened growth keeps dropping over the following weeks.' },
     ],
     faqs: [
-      { q: 'Will you pressure wash my roof?', a: 'Never on asphalt shingles. High pressure strips the protective granules and voids the manufacturer warranty. We use a low-pressure soft wash with professional biocides that kills the growth at the root.' },
+      { q: 'Soft wash or power wash — which do you recommend?', a: 'The premium low-pressure soft wash, every time. It is the method ARMA and the shingle manufacturers call for, and it protects the granules and your warranty. We also offer a lower-cost budget power-wash version — we walk you through the trade-offs before you choose.' },
       { q: 'How long until the moss actually disappears?', a: 'Loose moss rinses off during the visit; the rest browns and drops over the following weeks as rain and wind clear it. Heavy lichen can take a full season to fully release.' },
-      { q: 'How often does a Snohomish County roof need this?', a: 'Most homes here go 2–4 years between soft washes. Roofs under heavy fir shade or on the north side of a hill are closer to every 2 years — a zinc treatment stretches that out.' },
+      { q: 'How often does a Snohomish County roof need this?', a: 'Most homes here go 2–4 years between washes. Roofs under heavy fir shade or on the north side of a hill are closer to every 2 years. Keeping the gutters clear helps.' },
     ],
     priceNote:
-      'Priced by roof size, pitch, access and how much growth is present. Most single-family roofs land between $299 and $1,200, quoted firm after we see photos or the roof itself.',
+      'The premium soft wash is our recommended option; the budget power-wash version is quoted lower. Priced by roof size, pitch, access and how much growth is present — most single-family roofs land between $299 and $1,200, quoted firm after we see photos or the roof itself.',
   },
   {
     slug: 'house-washing',

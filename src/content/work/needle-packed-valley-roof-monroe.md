@@ -25,8 +25,8 @@ planes.
   water went on it.
 - **Low-pressure soft wash** across the shaded slopes with a professional biocide to kill the
   moss and algae at the root — no pressure on the shingles.
-- **Dwell, rinse, and a zinc treatment** along the ridge to slow how fast it comes back at this
-  elevation.
+- **Dwell and rinse** — the treatment is left to work, then the whole roof is rinsed clean
+  without disturbing the granules.
 - **Gutters flushed** of everything that came down during the wash.
 
 ## The result

@@ -33,14 +33,14 @@ warranty.
   anywhere near the shingles.
 - **Dwell and gentle rinse.** The solution was left to work, then a soft rinse cleared the
   loosened growth.
-- **Zinc treatment and gutter flush.** A metal-salt treatment was applied along the ridge and
-  slopes to slow regrowth, and the gutters were flushed clear of everything that came down.
+- **Rinse and gutter flush.** The whole roof was rinsed clean without disturbing the granules,
+  and the gutters were flushed clear of everything that came down.
 
 ## The result
 
 Clean shingles, an even tone across the whole plane, and no granule loss. The heaviest lichen
-spots kept browning and dropping over the following few weeks, which is normal. With the zinc
-treatment on, this roof should go two to four years before it needs another wash.
+spots kept browning and dropping over the following few weeks, which is normal. This roof should
+go two to four years before it needs another wash.
 
 *Want this for your roof? [Send us a photo](/contact#quote) — most roof-wash quotes come back the
 same day.*

@@ -19,7 +19,7 @@ Key facts:
 
 Every service has its own page with a Pacific-Northwest rationale, a 4-step method, an FAQ, and links to that service in all 18 cities served.
 
-- [Roof Cleaning](https://olsonprowash.com/services/roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, plus a zinc/copper treatment to slow regrowth. No high pressure, no granule loss, no voided warranty. From $299.
+- [Roof Cleaning](https://olsonprowash.com/services/roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, then a full rinse. Done to ARMA and shingle-manufacturer guidelines — premium soft wash (recommended) or a budget power-wash version. From $299.
 - [House Washing](https://olsonprowash.com/services/house-washing): Whole-home exterior soft wash of siding, soffits, fascia and trim (gutter-face brightening optional). From $199.
 - [Pressure Washing](https://olsonprowash.com/services/pressure-washing): Hot-water pressure washing for concrete, brick, pavers and stone. From $99.
 - [Soft Washing](https://olsonprowash.com/services/soft-washing): Low-pressure detergent cleaning for stucco, cedar, painted surfaces and fences. From $199.
@@ -55,7 +55,7 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 - [Arlington, WA](https://olsonprowash.com/service-area/arlington-wa): Rural acreage, long gutter runs; roof moss treatment and gutter guard installation.
 - [Bothell, WA](https://olsonprowash.com/service-area/bothell-wa): 1980s–90s subdivisions with heavy landscaping; plant-protection-focused house washing.
 - [Kirkland, WA](https://olsonprowash.com/service-area/kirkland-wa): Lake Washington waterfront homes and walkable retail cores; premium soft washing.
-- [Sammamish, WA](https://olsonprowash.com/service-area/sammamish-wa): Plateau homes under dense fir; roof soft washing with zinc treatment, gutter guards.
+- [Sammamish, WA](https://olsonprowash.com/service-area/sammamish-wa): Plateau homes under dense fir; roof soft washing, gutter guards.
 - [Issaquah, WA](https://olsonprowash.com/service-area/issaquah-wa): Foothill homes, steep roofs, shaded damp hardscapes; roof cleaning and deck restoration.
 - [Bellevue, WA](https://olsonprowash.com/service-area/bellevue-wa): HOA and view-lot standards; cedar shake / stucco soft washing, immaculate hardscapes.
 - [Seattle, WA](https://olsonprowash.com/service-area/seattle-wa): North-end neighborhoods (Ballard, Wallingford, Green Lake, Wedgwood) and larger/commercial work; roof moss and Craftsman-home washing.
@@ -77,7 +77,7 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 
 ## Common questions
 
-- Roofs are always soft washed (low pressure), never pressure washed — high pressure strips granules and voids most shingle warranties.
+- Roof cleaning follows ARMA and shingle-manufacturer guidelines. Recommended method is a low-pressure soft wash (biocide treatment, then a full rinse); a lower-cost budget power-wash version is also offered.
 - Typical roof soft wash in the Lake Stevens area runs $299–$1,000 depending on slope area and moss coverage.
 - Most Pacific Northwest homes should be washed once a year; roofs every 1–2 years.
 - Detergents are biodegradable, applied at safe dilution, with landscaping pre-wet and rinsed.

@@ -28,7 +28,7 @@ with light algae staining sits near the bottom.
 | Two-story, standard pitch (1,800 – 2,800 sq ft) | $650 – $1,050 | Most common Snohomish County job |
 | Large or multi-gable (2,800+ sq ft) | $1,050 – $1,600 | More area, more edge work, more setup |
 | Heavy lichen / neglected 10+ years | Add $150 – $400 | Extra product and dwell time, follow-up visit |
-| Add zinc / copper treatment | Included in our quotes | Slows regrowth for years |
+| Full rinse-down after treatment | Included in our quotes | Clears the loosened growth |
 
 These are soft-wash prices. If a company quotes you a "roof cleaning" for $149, ask exactly what
 they are doing — at that price it is almost always high-pressure washing, which is a different
@@ -83,7 +83,7 @@ If a quote does not say "soft wash" or "no pressure," ask before you book.
 
 - A clear method: low-pressure soft wash, not pressure washing
 - Moss, lichen and black-streak treatment at the root
-- A **zinc or copper post-treatment** to slow regrowth (this should not be an upsell)
+- A **full rinse of the roof** once the treatment has dwelled
 - Protection for gutters, gutter guards, skylights and landscaping
 - Gutter debris from the fallen moss flushed out on completion
 - A firm price, not a "starting at" that balloons on the day
@@ -91,9 +91,9 @@ If a quote does not say "soft wash" or "no pressure," ask before you book.
 ## How often you will need it
 
 In our climate, most Snohomish County roofs need a soft wash **every 2 to 4 years**. Roofs under
-heavy fir shade or on the north side of a hill are closer to every two years. A zinc treatment and
-keeping the [gutters clear](/services/gutter-cleaning) stretch that interval out and keep each
-visit cheaper because there is less growth to remove.
+heavy fir shade or on the north side of a hill are closer to every two years. Keeping the
+[gutters clear](/services/gutter-cleaning) and the roof clear of debris stretches that interval
+out, and keeps each visit cheaper because there is less growth to remove.
 
 ## Getting a number for your roof
 
