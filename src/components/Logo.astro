@@ -4,17 +4,21 @@
 import { SITE } from '../data/site';
 interface Props { variant?: 'header' | 'footer'; class?: string; }
 const { variant = 'header', class: className = '' } = Astro.props;
-const src = variant === 'footer' ? '/images/logo-wordmark.png' : '/images/logo.png';
-const size = variant === 'footer' ? 'h-16 w-auto sm:h-20' : 'h-12 w-auto sm:h-[52px]';
+const isFooter = variant === 'footer';
+const src = isFooter ? '/images/logo-wordmark.png' : '/images/logo.png';
+const size = isFooter ? 'h-16 w-auto sm:h-20' : 'h-12 w-auto sm:h-[52px]';
+// Intrinsic dimensions of the optimised source files, so the reserved box
+// matches the real aspect ratio and the logo never shifts the layout on load.
+const dims = isFooter ? { width: 480, height: 395 } : { width: 240, height: 198 };
 ---
 <span class={`inline-flex items-center ${className}`}>
   <img
     src={src}
     alt={`${SITE.legalName} logo`}
     class={`${size} object-contain [filter:drop-shadow(0_2px_14px_rgba(59,159,212,0.32))]`}
-    width={variant === 'footer' ? 320 : 168}
-    height={variant === 'footer' ? 92 : 56}
-    loading="eager"
+    width={dims.width}
+    height={dims.height}
+    loading={isFooter ? 'lazy' : 'eager'}
     decoding="async"
   />
 </span>

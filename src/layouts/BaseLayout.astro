@@ -125,10 +125,11 @@ const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
       />
     )}
 
-    {/* Only the display face is preloaded — it renders the huge hero headline, where
-       a font swap is most visible. Inter (body) loads via CSS with font-display: swap,
-       so it doesn't compete with the LCP image for bandwidth. */}
+    {/* Display face (hero headline) preloaded at normal priority — a swap here is the
+       most visible. Body face preloaded at low priority: it starts early on the many
+       text-hero pages without out-competing the LCP image on pages that have one. */}
     <link rel="preload" as="font" type="font/woff2" href="/fonts/archivo-latin.woff2" crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin.woff2" crossorigin fetchpriority="low" />
 
     {ld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 
