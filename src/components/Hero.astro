@@ -97,6 +97,18 @@ import { SITE } from '../data/site';
 <script is:inline>
   // Mark JS ready so hero entrance can arm without hiding content when JS is off.
   document.documentElement.classList.add('js');
+  // Fail-safe: iOS Safari can leave the entrance animation assigned but stuck
+  // (holding its 0% frame) on an element that was mid-layout when .js landed,
+  // so it stays invisible until a scroll forces a repaint. After the animation
+  // window, clear the animation on every .hero-in so it resolves to visible.
+  // A stuck animation overrides inline styles, so the animation itself must go.
+  setTimeout(function () {
+    document.querySelectorAll('.hero-in').forEach(function (el) {
+      el.style.animation = 'none';
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }, 1800);
 </script>
 
 <script is:inline>

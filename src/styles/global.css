@@ -269,10 +269,20 @@
     clip-path: polygon(0 0, 120% 0, 120% 100%, 0 100%);
   }
 
-  /* Hero entrance — armed only once <html> has .js (set before paint) */
+  /* Hero entrance — armed only once <html> has .js (set before paint).
+     Resting state is visible: if iOS Safari drops the animation for an
+     element that was mid-layout, it still shows instead of getting stuck. */
   .hero-in { opacity: 0; transform: translate3d(0, 16px, 0); }
-  .js .hero-in { animation: hero-rise 0.7s var(--ease-out) both; animation-delay: var(--d, 0ms); }
-  @keyframes hero-rise { to { opacity: 1; transform: none; } }
+  .js .hero-in {
+    opacity: 1;
+    transform: none;
+    animation: hero-rise 0.7s var(--ease-out) both;
+    animation-delay: var(--d, 0ms);
+  }
+  @keyframes hero-rise {
+    from { opacity: 0; transform: translate3d(0, 16px, 0); }
+    to { opacity: 1; transform: none; }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
