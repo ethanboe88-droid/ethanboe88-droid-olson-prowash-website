@@ -265,6 +265,8 @@ export const SERVICES: Service[] = [
     ],
     priceNote:
       'From $79 added to a gutter cleaning or house wash; a bit more as a stand-alone visit. Priced by linear footage and how set-in the staining is — most single-family homes run $79–$225.',
+    photo: '/images/p-gutterbright.jpg',
+    photoAlt: 'Olson Pro Wash technician on a ladder soft-washing a tiger-striped exterior gutter face with a handheld detergent sprayer, service truck behind',
   },
   {
     slug: 'gutter-guard-installation',
@@ -491,6 +493,8 @@ export const SERVICES: Service[] = [
     ],
     priceNote:
       'The first season covers the measure, custom-cut commercial-grade lights and installation — most homes run $399–$1,200 depending on roofline length and design. Re-hang seasons (service, takedown and storage included) are a lower flat rate.',
+    photo: '/images/p-lights.jpg',
+    photoAlt: 'Olson Pro Wash technician on a ladder hanging warm-white C9 Christmas lights along a roofline as snow falls at dusk',
   },
 ];
 

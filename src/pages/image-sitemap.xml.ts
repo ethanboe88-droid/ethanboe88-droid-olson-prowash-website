@@ -43,7 +43,9 @@ const gallery: Entry = {
     { url: `${base}/images/p-driveway.jpg`, caption: 'Driveway surface cleaning, before and after line visible' },
     { url: `${base}/images/p-fence.jpg`, caption: 'Wood privacy fence being soft washed' },
     { url: `${base}/images/p-gutter.jpg`, caption: 'Hand-clearing debris from a home gutter' },
+    { url: `${base}/images/p-gutterbright.jpg`, caption: 'Soft-washing tiger-stripe staining off an exterior gutter face' },
     { url: `${base}/images/p-gutterguard.jpg`, caption: 'Stainless micro-mesh gutter guard being fitted to a shingle roof' },
+    { url: `${base}/images/p-lights.jpg`, caption: 'Hanging warm-white roofline Christmas lights in falling snow' },
     { url: `${base}/images/p-deck.jpg`, caption: 'Composite deck cleaning with foam on the boards' },
   ],
 };
