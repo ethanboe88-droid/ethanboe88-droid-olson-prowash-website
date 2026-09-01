@@ -11,7 +11,7 @@ export const SITE = {
     'Olson Pro Wash delivers premium pressure washing, roof & soft washing, house washing and landscaping across Lake Stevens, Snohomish County and North King County, WA. Locally owned, licensed and insured.',
 
   // Update to the live domain (also update astro.config.mjs `site`).
-  domain: 'https://olsonprowash.com',
+  domain: 'https://olsonlandscapingprowash.com',
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).

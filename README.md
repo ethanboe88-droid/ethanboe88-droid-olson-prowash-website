@@ -43,7 +43,7 @@ public/images/      branded SVG placeholders + processed logo (logo.png, logo-wo
 | OG share image | `public/images/og-default.png` (1200×630, generated from the logo) |
 | Pop-up offer copy | `src/components/LeadModal.astro` |
 
-Placeholder domain: `olsonprowash.com`.
+Placeholder domain: `olsonlandscapingprowash.com`.
 
 ## Deploy (Netlify)
 

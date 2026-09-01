@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 const LASTMOD = '2026-09-02T02:00:00.000Z';
 
 export default defineConfig({
-  site: 'https://olsonprowash.com',
+  site: 'https://olsonlandscapingprowash.com',
   trailingSlash: 'ignore',
   prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
   integrations: [

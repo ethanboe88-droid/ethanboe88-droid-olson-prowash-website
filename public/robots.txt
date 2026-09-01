@@ -1,4 +1,4 @@
-# Olson Pro Wash — https://olsonprowash.com
+# Olson Pro Wash — https://olsonlandscapingprowash.com
 # All crawlers, including AI answer engines, are welcome.
 
 User-agent: *
@@ -60,5 +60,5 @@ Allow: /
 User-agent: AI2Bot
 Allow: /
 
-Sitemap: https://olsonprowash.com/sitemap-index.xml
-Sitemap: https://olsonprowash.com/image-sitemap.xml
+Sitemap: https://olsonlandscapingprowash.com/sitemap-index.xml
+Sitemap: https://olsonlandscapingprowash.com/image-sitemap.xml
