@@ -127,6 +127,9 @@
      (progressive enhancement) — no visual change, just a paint/layout speed-up. */
   @supports (content-visibility: auto) {
     .section { content-visibility: auto; contain-intrinsic-size: auto 720px; }
+    /* The booking section must render immediately when scrolled to — gating it
+       behind content-visibility delays the widget appearing on mobile. */
+    #book { content-visibility: visible; contain-intrinsic-size: none; }
   }
 
   /* --- Eyebrow / instrument label --- */
