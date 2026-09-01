@@ -49,6 +49,16 @@ User-agent: YouBot
 Allow: /
 User-agent: CCBot
 Allow: /
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: Google-CloudVertexBot
+Allow: /
+User-agent: AI2Bot
+Allow: /
 
 Sitemap: https://olsonprowash.com/sitemap-index.xml
 Sitemap: https://olsonprowash.com/image-sitemap.xml
