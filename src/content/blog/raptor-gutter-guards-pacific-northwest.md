@@ -44,7 +44,6 @@ Raptor is a **contractor-grade micro-mesh** guard. The filtering surface is a
 | Frame | Aluminum with patented V-bend | Stiffens the mesh so it carries snow load without sagging |
 | Front edge | Patented trough / lip | Pulls water off the mesh and *into* the gutter in heavy rain |
 | Fasteners | Stainless self-tapping screws | Screwed to the gutter, not stapled or glued |
-| Fire | Slows flame spread 30+ minutes | Useful on the wooded edges of Granite Falls, Arlington and Monroe |
 | Warranty | 25-year manufacturer warranty | Backed for the long haul; we add our workmanship guarantee |
 
 The V-bend does two jobs. It adds rigidity so the panel doesn't oil-can or sag between hangers,

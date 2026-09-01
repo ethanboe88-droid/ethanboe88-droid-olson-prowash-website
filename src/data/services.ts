@@ -277,7 +277,6 @@ export const SERVICES: Service[] = [
       'Patented V-bend adds rigidity and sheds debris; rustproof stainless will not corrode',
       'Trough / front-lip design pulls water in during Pacific Northwest downpours',
       'Fits your existing gutters — cleaned, sealed and re-pitched before the guard goes on',
-      'Fire-resistant: slows flame spread by at least 30 minutes',
       '25-year Raptor manufacturer warranty + our workmanship guarantee',
     ],
     price: 'from $8 / linear ft',
