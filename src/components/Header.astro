@@ -31,12 +31,17 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
               style="background: var(--jet-gradient); background-size:200% 100%; transition: transform .32s var(--ease-out), width .32s var(--ease-out), opacity .2s;"></span>
       </nav>
 
-      <div class="hidden items-center gap-3 lg:flex">
-        <a href={SITE.phoneHref} class="inline-flex items-center gap-2 text-sm font-medium text-text-dim hover:text-text">
+      <div class="hidden items-center gap-2.5 lg:flex">
+        <a href={SITE.portalUrl} target="_blank" rel="noopener" class="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap text-sm font-medium text-text-dim hover:text-text">
+          Customer Portal
+          <Icon name="arrowUpRight" class="h-3.5 w-3.5 text-jet-hi" />
+        </a>
+        <span class="h-4 w-px shrink-0 bg-hairline" aria-hidden="true"></span>
+        <a href={SITE.phoneHref} class="inline-flex shrink-0 items-center gap-2 whitespace-nowrap text-sm font-medium text-text-dim hover:text-text">
           <Icon name="phone" class="h-4 w-4 text-jet-hi" />
           {SITE.phone}
         </a>
-        <a href="/contact#quote" data-magnetic class="btn btn-primary !px-5 !py-2.5 text-sm">Free Quote</a>
+        <a href="/contact#quote" data-magnetic class="btn btn-primary !px-5 !py-2.5 text-sm shrink-0">Free Quote</a>
       </div>
 
       <button id="menu-toggle" class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/5 text-text lg:hidden"
@@ -57,6 +62,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
           ]}>{link.label}</a>
       ))}
       <div class="mt-3 flex flex-col gap-2">
+        <a href={SITE.portalUrl} target="_blank" rel="noopener" class="btn btn-ghost w-full">Customer Portal <Icon name="arrowUpRight" class="h-4 w-4" /></a>
         <a href={SITE.phoneHref} class="btn btn-ghost w-full"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
         <a href="/contact#quote" class="btn btn-primary w-full">Get a Free Quote</a>
       </div>

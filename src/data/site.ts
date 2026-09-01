@@ -22,6 +22,10 @@ export const SITE = {
   email: 'olsonlandscapingcustomercare@gmail.com',
   emailHref: 'mailto:olsonlandscapingcustomercare@gmail.com',
 
+  // Housecall Pro customer portal — existing customers sign in to their account.
+  portalUrl:
+    'https://client.housecallpro.com/customer_portal/request-link?token=5bad8ff6f4be4d4ca84d696618d88e9b',
+
   address: {
     street: '',
     locality: 'Lake Stevens',
