@@ -15,7 +15,7 @@ export const SITE = {
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).
-  lastContentUpdate: '2026-09-01T04:00:00.000Z',
+  lastContentUpdate: '2026-09-01T06:00:00.000Z',
 
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
@@ -67,7 +67,7 @@ export const SITE = {
     { days: ['Friday', 'Saturday', 'Sunday'], opens: '10:00', closes: '23:59' },
   ],
 
-  founded: '2016',
+  founded: '2021',
   founder: 'Ethan Olson',
   priceRange: '$$',
   // Washington State contractor registration number.
