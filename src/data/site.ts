@@ -15,7 +15,7 @@ export const SITE = {
 
   // Bump when site content is meaningfully revised. Feeds sitemap <lastmod>
   // and schema dateModified so crawlers get an honest signal (not "now" every build).
-  lastContentUpdate: '2026-09-01T02:00:00.000Z',
+  lastContentUpdate: '2026-09-01T04:00:00.000Z',
 
   phone: '(425) 446-0547',
   phoneHref: 'tel:+14254460547',
@@ -109,7 +109,7 @@ export const TRUST_BADGES = [
 // value drives the count-up; suffix/prefix render as-is; max = gauge arc ceiling
 export const STATS = [
   { label: 'Exteriors restored', value: 1800, suffix: '+', max: 2400 },
-  { label: 'Years in business', value: 9, suffix: ' yrs', max: 12 },
+  { label: 'Years in business', value: 5, suffix: ' yrs', max: 12 },
   { label: 'Google rating', value: 4.9, suffix: '★', max: 5 },
   { label: 'Satisfaction rate', value: 100, suffix: '%', max: 100 },
 ] as const;
