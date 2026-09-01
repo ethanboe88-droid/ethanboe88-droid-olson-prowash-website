@@ -29,8 +29,8 @@ shaded slopes.
   courses got a low-pressure soft wash with a biocide to kill the moss and algae at the root.
 - **Gutters hand-cleared.** Every run was cleared by hand and bagged — nothing blown onto the
   roof or the beds — and each downspout was flushed and flow-tested.
-- **Faces washed.** The exterior gutter faces were soft washed so the whole line looked new, not
-  just empty.
+- **Faces brightened.** The customer added [gutter brightening](/services/gutter-brightening) — a
+  soft wash of the exterior faces — so the whole line looked new, not just empty.
 - **Walked it together.** We confirmed full flow through every downspout before packing up.
 
 ## The result

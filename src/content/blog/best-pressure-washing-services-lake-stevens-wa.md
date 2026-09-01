@@ -79,7 +79,8 @@ A real satisfaction guarantee: if a spot gets missed, they come back without an 
 | Roof soft wash + moss treatment | $299 – $1,000 |
 | Driveway / flatwork | $99 – $400 |
 | Deck or patio cleaning | $99 – $500 |
-| Gutter clean-out + face wash | $99 – $300 |
+| Gutter clean-out | $99 – $250 |
+| Gutter brightening (exterior faces) | $79 – $225 |
 | Commercial (storefront + walk) | Quoted per site |
 
 Price depends on square footage, height, how much moss and buildup there is, and access. Bundling

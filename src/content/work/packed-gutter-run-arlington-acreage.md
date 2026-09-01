@@ -29,8 +29,8 @@ and the crawlspace vents.
   until it ran clean.
 - **Flow-tested every run.** Water was run across all the gutters on that elevation to confirm
   full flow to the ground.
-- **Faces soft washed.** The "tiger stripe" staining on the exterior faces was washed off so the
-  line looked new.
+- **Faces brightened.** The customer added our [gutter brightening](/services/gutter-brightening)
+  add-on, so the "tiger stripe" staining on the exterior faces came off and the line looked new.
 
 ## The result
 

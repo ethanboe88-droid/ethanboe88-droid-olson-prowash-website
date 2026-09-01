@@ -13,6 +13,7 @@ export const KNOWS_ABOUT = [
   'House washing',
   'Soft washing',
   'Gutter cleaning',
+  'Gutter brightening',
   'Gutter guard installation',
   'Driveway and concrete cleaning',
   'Deck and patio cleaning',

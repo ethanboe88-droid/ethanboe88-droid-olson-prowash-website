@@ -194,13 +194,13 @@ export const SERVICES: Service[] = [
   {
     slug: 'gutter-cleaning',
     title: 'Gutter Cleaning',
-    short: 'Interior scoop-out plus exterior face brightening, downspouts flushed.',
+    short: 'Interior scoop-out, every downspout flushed and flow-tested.',
     description:
-      'We clear needles, leaves and grit from the gutter troughs, bag the debris, flush every downspout, and soft wash the exterior faces so the whole line looks new. Photos of the cleared gutters sent on completion.',
+      'We clear needles, leaves and grit from the gutter troughs, bag the debris, flush every downspout and flow-test each run. Photos of the cleared gutters are sent on completion. Exterior gutter-face brightening — removing the black "tiger stripe" staining — is available as an add-on through our separate Gutter Brightening service.',
     benefits: [
-      'Debris hand-cleared and hauled away',
+      'Debris hand-cleared and hauled away, not blown around',
       'All downspouts flushed and flow-tested',
-      'Exterior faces soft washed, not just emptied',
+      '<a href="/services/gutter-brightening">Gutter-face brightening</a> available as an add-on',
       'Before/after photos from the ladder',
     ],
     price: 'from $99',
@@ -216,18 +216,55 @@ export const SERVICES: Service[] = [
     process: [
       { t: 'Hand-clear the troughs', d: 'Every run is cleared by hand and the debris is bagged and taken with us — nothing blown onto the roof or the beds.' },
       { t: 'Flush the downspouts', d: 'Each downspout is run with water and flow-tested; minor clogs are cleared on the spot.' },
-      { t: 'Wash the faces', d: 'The exterior gutter faces are soft washed so the whole line looks new, not just empty.' },
+      { t: 'Check pitch & hangers', d: 'We eyeball the slope to the downspouts and note any loose hangers or seam leaks so you know what to keep an eye on.' },
       { t: 'Photo report', d: 'We send photos from the ladder showing the cleared troughs and the confirmed flow.' },
     ],
     faqs: [
-      { q: 'Do you clean the outside of the gutters too?', a: 'Yes. Exterior face soft washing is included, so you get the "tiger stripe" staining removed, not just the debris scooped out.' },
+      { q: 'Do you clean the outside of the gutters too?', a: 'That is our <a href="/services/gutter-brightening">Gutter Brightening</a> add-on — a soft wash of the exterior faces that removes the black "tiger stripe" staining, not just the debris inside. It is quoted on top of the cleaning, or bundled at a lower combined rate.' },
       { q: 'How often should gutters be cleaned around here?', a: 'Twice a year for most homes with any conifers nearby — late spring after the seed drop and late fall after the leaves. Open lots with no trees can often go once a year.' },
       { q: 'Can you install guards so I stop doing this?', a: 'Yes — see our <a href="/services/gutter-guard-installation">gutter guard installation</a> page. We clean and re-pitch the gutters first, then fit micro-mesh guards.' },
     ],
     priceNote:
-      'Single-story homes generally run $99–$200 and two-story homes $200–$350, based on linear footage and how packed the gutters are. Bundled rates when added to a roof or house wash.',
+      'Single-story homes generally run $99–$200 and two-story homes $200–$350, based on linear footage and how packed the gutters are. Bundled rates when added to a roof wash, house wash or gutter brightening.',
     photo: '/images/p-gutter.jpg',
     photoAlt: 'Olson Pro Wash clearing debris from a home gutter by hand',
+  },
+  {
+    slug: 'gutter-brightening',
+    title: 'Gutter Brightening',
+    short: 'The black "tiger stripe" staining soft-washed off the exterior gutter faces.',
+    description:
+      'Every rain runs a thin film of asphalt residue, pollen and pollutant fallout down the outside of your gutters, and over years it oxidizes into the black vertical streaks people call "tiger stripes." A hose will not touch it and neither will a plain gutter cleaning. We apply a gutter-brightening detergent, let it dwell on the stain and oxidation, agitate the heavy sections by hand, and rinse the whole line back toward new — low pressure only, so the factory finish stays intact.',
+    benefits: [
+      'Removes the black "tiger stripe" staining a rinse can’t touch',
+      'Low-pressure detergent process — safe for painted aluminum',
+      'Whole gutter line matched, faces and end returns',
+      'Best value added to a <a href="/services/gutter-cleaning">gutter cleaning</a> or <a href="/services/house-washing">house wash</a>',
+    ],
+    price: 'from $79',
+    icon: 'foam',
+    span: 'unit',
+    detailPage: '/services/gutter-brightening',
+    edge: 'tiger stripes, gone',
+    whyLocal: [
+      { icon: 'drop', t: 'Rain writes the stripes', d: 'Puget Sound rain runs a film of roof and road residue down the gutter face on every storm. Over a few Northwest winters it bonds into the black streaks a hose cannot move.' },
+      { icon: 'house', t: 'It finishes a house wash', d: 'Freshly washed siding above dirty gutters still reads "not done." Brightening the faces is the last step that makes the whole elevation look clean.' },
+      { icon: 'foam', t: 'Detergent, not pressure', d: 'The stain is chemical, so it lifts with the right detergent and dwell time — not by blasting painted aluminum with a pressure washer.' },
+    ],
+    process: [
+      { t: 'Protect below', d: 'Plants, siding and walkways under the run are pre-wet so nothing is affected by the detergent.' },
+      { t: 'Apply the cleaner', d: 'A gutter-brightening detergent is applied to the faces and end caps and left to dwell on the oxidation and stain.' },
+      { t: 'Agitate the stripes', d: 'Heavy tiger-stripe sections are hand-agitated so the stain lifts evenly along the whole line.' },
+      { t: 'Rinse & check', d: 'The faces are rinsed clean, the run is checked front and back, and everything below is rinsed down.' },
+    ],
+    faqs: [
+      { q: 'What are the black streaks on my gutters?', a: 'They are "tiger stripes" — a bonded film of asphalt residue, pollen and pollutant fallout that rain washes down the gutter face and slowly oxidizes onto the paint. A regular rinse, or even a full gutter cleaning, will not remove them; it takes a detergent made for the job.' },
+      { q: 'Can you do just the gutters, or does it have to be with other work?', a: 'Either. It is most cost-effective added to a <a href="/services/gutter-cleaning">gutter cleaning</a> or <a href="/services/house-washing">house wash</a> since we are already set up, but we do stand-alone gutter brightening too.' },
+      { q: 'Will it hurt the paint or finish on my gutters?', a: 'No — it is a low-pressure detergent process, not pressure washing. It lifts the stain and oxidation while leaving the factory finish intact. Very old, chalky gutters may not come fully back to white; we will tell you honestly after a look.' },
+      { q: 'How long does it stay looking clean?', a: 'A few years, depending on how much roof and traffic pollution runs down the face. Homes on busy roads or under older roofs stripe faster — a light re-do every couple of years keeps them sharp.' },
+    ],
+    priceNote:
+      'From $79 added to a gutter cleaning or house wash; a bit more as a stand-alone visit. Priced by linear footage and how set-in the staining is — most single-family homes run $79–$225.',
   },
   {
     slug: 'gutter-guard-installation',
@@ -433,7 +470,7 @@ export const SERVICES: Service[] = [
     ],
     price: 'from $399 first season',
     icon: 'lights',
-    span: 'wide',
+    span: 'unit',
     detailPage: '/services/christmas-light-installation',
     edge: 'cut to your rooflines',
     whyLocal: [

@@ -46,7 +46,7 @@ year keeps it bright; wait longer and the staining sets in.
 ### Gutters — twice a year
 
 With this much conifer debris, spring and fall clean-outs are the realistic minimum. Bundle the
-exterior [gutter face wash](/services/gutter-cleaning) with your annual house wash.
+a [gutter-brightening](/services/gutter-brightening) add-on with your annual house wash.
 
 ### Fences — every 1 to 2 years
 
@@ -68,7 +68,7 @@ cleaning is far easier on your exterior than letting moss dig in and then blasti
 
 ## A low-effort maintenance plan
 
-1. **Once a year:** house wash + gutter faces + driveway and walks, in one visit.
+1. **Once a year:** house wash + gutter clean + driveway and walks, in one visit.
 2. **Every 1–2 years:** add the roof soft wash and moss treatment to that visit.
 3. **Twice a year:** gutter clean-outs (spring and fall).
 4. **As needed:** deck cleaning before you re-stain.
