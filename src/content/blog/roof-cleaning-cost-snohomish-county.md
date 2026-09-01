@@ -18,19 +18,19 @@ the first question is almost always the same: **what is this going to cost me?**
 ## The short answer
 
 For a typical single-family home in Snohomish County, a professional [roof soft
-wash](/services/roof-cleaning) runs **$499 to $1,200**. Most jobs land in the middle of that band.
+wash](/services/roof-cleaning) runs **$299 to $1,200**. Most jobs land in the middle of that band.
 Larger homes, steep or complex rooflines, and heavy lichen push toward the top; a small rambler
 with light algae staining sits near the bottom.
 
 | Roof size / type | Typical 2026 price | Notes |
 | --- | --- | --- |
-| Rambler / single-story (up to ~1,800 sq ft) | $499 – $750 | Light-to-moderate moss, easy access |
-| Two-story, standard pitch (1,800 – 2,800 sq ft) | $750 – $1,050 | Most common Snohomish County job |
+| Rambler / single-story (up to ~1,800 sq ft) | $299 – $650 | Light-to-moderate moss, easy access |
+| Two-story, standard pitch (1,800 – 2,800 sq ft) | $650 – $1,050 | Most common Snohomish County job |
 | Large or multi-gable (2,800+ sq ft) | $1,050 – $1,600 | More area, more edge work, more setup |
 | Heavy lichen / neglected 10+ years | Add $150 – $400 | Extra product and dwell time, follow-up visit |
 | Add zinc / copper treatment | Included in our quotes | Slows regrowth for years |
 
-These are soft-wash prices. If a company quotes you a "roof cleaning" for $250, ask exactly what
+These are soft-wash prices. If a company quotes you a "roof cleaning" for $149, ask exactly what
 they are doing — at that price it is almost always high-pressure washing, which is a different
 service and a genuinely bad idea on asphalt shingles (more on that below).
 
@@ -69,7 +69,7 @@ This is the part that costs homeowners the most money, and it does not show up o
 Asphalt shingles are protected by a layer of mineral granules. **High pressure blasts those
 granules off**, taking years off the roof's life and voiding the manufacturer's warranty. A
 pressure-washed roof can look clean for a season and then fail early — a $9,000 problem to fix a
-$250 "deal."
+$149 "deal."
 
 A [soft wash](/services/soft-washing) uses low pressure — barely more than a garden hose — and
 professional biocides that kill moss, lichen and Gloeocapsa algae (the black streaking) at the

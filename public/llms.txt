@@ -19,14 +19,14 @@ Key facts:
 
 Every service has its own page with a Pacific-Northwest rationale, a 4-step method, an FAQ, and links to that service in all 18 cities served.
 
-- [Roof Cleaning](https://olsonprowash.com/services/roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, plus a zinc/copper treatment to slow regrowth. No high pressure, no granule loss, no voided warranty. From $499.
-- [House Washing](https://olsonprowash.com/services/house-washing): Whole-home exterior soft wash of siding, soffits, trim and gutter faces. From $299.
-- [Pressure Washing](https://olsonprowash.com/services/pressure-washing): Hot-water pressure washing for concrete, brick, pavers and stone. From $199.
-- [Soft Washing](https://olsonprowash.com/services/soft-washing): Low-pressure detergent cleaning for stucco, cedar, painted surfaces and fences. From $249.
-- [Gutter Cleaning](https://olsonprowash.com/services/gutter-cleaning): Hand clear-out, downspout flush and exterior face wash. From $149.
+- [Roof Cleaning](https://olsonprowash.com/services/roof-cleaning): Low-pressure roof soft wash that removes moss, lichen and black streaks at the root, plus a zinc/copper treatment to slow regrowth. No high pressure, no granule loss, no voided warranty. From $299.
+- [House Washing](https://olsonprowash.com/services/house-washing): Whole-home exterior soft wash of siding, soffits, trim and gutter faces. From $199.
+- [Pressure Washing](https://olsonprowash.com/services/pressure-washing): Hot-water pressure washing for concrete, brick, pavers and stone. From $99.
+- [Soft Washing](https://olsonprowash.com/services/soft-washing): Low-pressure detergent cleaning for stucco, cedar, painted surfaces and fences. From $199.
+- [Gutter Cleaning](https://olsonprowash.com/services/gutter-cleaning): Hand clear-out, downspout flush and exterior face wash. From $99.
 - [Gutter Guard Installation](https://olsonprowash.com/services/gutter-guard-installation): Raptor Type 304 stainless steel micro-mesh gutter guards (~900 openings per sq in, aluminum V-bend frame, 25-year warranty), professionally installed over cleaned and re-pitched gutters. From $8/linear ft.
-- [Deck & Patio Cleaning](https://olsonprowash.com/services/deck-patio-cleaning): Wood, composite and stone, cleaned at the right pressure for the material. From $229.
-- [Driveway & Concrete Cleaning](https://olsonprowash.com/services/driveway-concrete-cleaning): Streak-free rotary surface cleaning with stain treatment. From $189.
+- [Deck & Patio Cleaning](https://olsonprowash.com/services/deck-patio-cleaning): Wood, composite and stone, cleaned at the right pressure for the material. From $99.
+- [Driveway & Concrete Cleaning](https://olsonprowash.com/services/driveway-concrete-cleaning): Streak-free rotary surface cleaning with stain treatment. From $99.
 - [Commercial Services](https://olsonprowash.com/services/commercial-services): Recurring or one-time exterior maintenance for retail, restaurants, HOAs and property managers. Quoted per site.
 - [Landscaping](https://olsonprowash.com/services/landscaping): Bed design, mulch, edging, shrub trimming and seasonal clean-ups. From $179.
 - [Christmas Light Installation](https://olsonprowash.com/services/christmas-light-installation): Custom-cut commercial-grade holiday lights — every strand cut to the exact roofline. Install, in-season bulb service, January takedown and labeled storage. From $399 first season (re-hang seasons cost less).
@@ -78,7 +78,7 @@ Every service has its own page with a Pacific-Northwest rationale, a 4-step meth
 ## Common questions
 
 - Roofs are always soft washed (low pressure), never pressure washed — high pressure strips granules and voids most shingle warranties.
-- Typical roof soft wash in the Lake Stevens area runs $499–$1,000 depending on slope area and moss coverage.
+- Typical roof soft wash in the Lake Stevens area runs $299–$1,000 depending on slope area and moss coverage.
 - Most Pacific Northwest homes should be washed once a year; roofs every 1–2 years.
 - Detergents are biodegradable, applied at safe dilution, with landscaping pre-wet and rinsed.
 - Olson Pro Wash is licensed, bonded and insured in Washington (Contractor Registration #OLSONLP747MF) and provides a certificate of insurance on request.

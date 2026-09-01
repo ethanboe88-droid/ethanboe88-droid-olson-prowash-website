@@ -95,7 +95,7 @@ export const CITIES: City[] = [
     faqs: [
       {
         q: 'My Smokey Point driveway is streaked and green — can you fix it?',
-        a: 'Yes. A rotary surface cleaner gives an even, line-free finish and we post-treat for moss and tannin so it stays cleaner longer. Most single-bay-plus driveways run $189–$400.',
+        a: 'Yes. A rotary surface cleaner gives an even, line-free finish and we post-treat for moss and tannin so it stays cleaner longer. Most single-bay-plus driveways run $99–$400.',
       },
     ],
   },

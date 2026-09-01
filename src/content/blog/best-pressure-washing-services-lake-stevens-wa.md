@@ -74,12 +74,12 @@ A real satisfaction guarantee: if a spot gets missed, they come back without an 
 
 | Service | Typical range |
 | --- | --- |
-| House wash (single story) | $275 – $475 |
-| House wash (two story) | $425 – $700 |
-| Roof soft wash + moss treatment | $499 – $1,000 |
-| Driveway / flatwork | $189 – $425 |
-| Deck or patio cleaning | $229 – $525 |
-| Gutter clean-out + face wash | $149 – $325 |
+| House wash (single story) | $199 – $400 |
+| House wash (two story) | $400 – $700 |
+| Roof soft wash + moss treatment | $299 – $1,000 |
+| Driveway / flatwork | $99 – $400 |
+| Deck or patio cleaning | $99 – $500 |
+| Gutter clean-out + face wash | $99 – $300 |
 | Commercial (storefront + walk) | Quoted per site |
 
 Price depends on square footage, height, how much moss and buildup there is, and access. Bundling
