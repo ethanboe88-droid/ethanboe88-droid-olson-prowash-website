@@ -1,0 +1,33 @@
+<!--
+  Netlify form registration stub.
+  Not linked anywhere and never shown to users — it exists only so Netlify's
+  build-time form parser always registers both forms with their full field
+  lists, even though the real, styled forms already ship in every page's HTML
+  (QuoteForm.astro on /contact, LeadModal.astro site-wide).
+  Keep the field `name`s here in sync with those components.
+-->
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta name="robots" content="noindex" /><title>Netlify forms</title></head>
+<body hidden>
+  <form name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks" hidden>
+    <input type="hidden" name="form-name" value="quote" />
+    <input name="bot-field" />
+    <input name="name" />
+    <input type="tel" name="phone" />
+    <input type="email" name="email" />
+    <input name="city" />
+    <select name="service"><option value=""></option></select>
+    <textarea name="message"></textarea>
+  </form>
+
+  <form name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field2" action="/thanks" hidden>
+    <input type="hidden" name="form-name" value="lead" />
+    <input type="hidden" name="source" value="popup" />
+    <input name="bot-field2" />
+    <input name="name" />
+    <input type="tel" name="phone" />
+    <select name="service"><option value=""></option></select>
+  </form>
+</body>
+</html>
