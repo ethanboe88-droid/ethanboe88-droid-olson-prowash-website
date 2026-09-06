@@ -47,10 +47,11 @@ const metaDescription =
     : description.slice(0, 157).replace(/\s+\S*$/, '') + '…';
 
 const siteUrl = Astro.site ?? new URL(SITE.domain);
-// One canonical URL form everywhere: absolute, no trailing slash (root stays "/").
-// Matches the sitemap and every internal link, so there are no duplicate-URL signals.
+// One canonical URL form everywhere: absolute, trailing slash (matches
+// trailingSlash: 'always', the sitemap, and what the host serves) so there
+// are no duplicate-URL signals.
 const canonicalPath = new URL(canonical, siteUrl);
-canonicalPath.pathname = canonicalPath.pathname.replace(/(.+)\/$/, '$1');
+if (!canonicalPath.pathname.endsWith('/')) canonicalPath.pathname += '/';
 const canonicalUrl = canonicalPath.href;
 const ogImage = new URL(image, siteUrl).href;
 const ogImageAlt =

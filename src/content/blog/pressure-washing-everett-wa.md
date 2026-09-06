@@ -19,10 +19,10 @@ months a year make for grimy concrete and green siding. Here's what we do about 
 **Driveways, walkways and patios.** Controlled high pressure through a surface cleaner for an even,
 streak-free finish, followed by a post-treatment that kills the organic growth in the pores,
 brightens the concrete back toward like-new, and helps it stay clean longer. See our
-[driveway & concrete cleaning](/services/driveway-concrete-cleaning) page.
+[driveway & concrete cleaning](/services/driveway-concrete-cleaning/) page.
 
 **House washing (soft wash).** Siding, soffits, fascia and trim get a low-pressure
-[soft wash](/services/house-washing) with detergent — never high pressure on siding or paint. This
+[soft wash](/services/house-washing/) with detergent — never high pressure on siding or paint. This
 is how you clear the green algae film without forcing water behind the cladding.
 
 **Decks and patios.** Wood and composite both grow a slick film here. We clean at low pressure to
@@ -32,7 +32,7 @@ brighten without furring the wood — good prep if you're about to stain or seal
 
 The right method depends on the surface — concrete gets pressure, anything coated or up high gets a
 soft wash. Our
-[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home) lays it out.
+[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home/) lays it out.
 
 ## 2026 pricing
 
@@ -46,7 +46,7 @@ soft wash. Our
 | Fence | $99 – $300 |
 
 Bundle two or more and it's cheaper per service. Full breakdown in our
-[Snohomish County pressure washing cost guide](/blog/pressure-washing-cost-snohomish-county).
+[Snohomish County pressure washing cost guide](/blog/pressure-washing-cost-snohomish-county/).
 
 ## Runoff done right
 
@@ -67,16 +67,16 @@ available on the truck for grease and oil. We'll tell you what to expect before 
 
 **Is a house wash pressure washing?**
 No — it's a low-pressure soft wash. Safe for siding, paint and trim. See
-[what is soft washing](/blog/what-is-soft-washing).
+[what is soft washing](/blog/what-is-soft-washing/).
 
 **Do you serve all of Everett?**
 Yes, plus Lake Stevens, Marysville, Arlington, Snohomish, Bothell and Kenmore. See our
-[service area](/service-area).
+[service area](/service-area/).
 
 **Do I need to be home?**
 No, as long as we have water access and know where the pets and gate codes are.
 
 ## Book pressure washing in Everett
 
-Call or text **(425) 446-0547** or [request a quote online](/contact). Licensed, insured, 4.9-star
-rated — [reviews here](/reviews).
+Call or text **(425) 446-0547** or [request a quote online](/contact/). Licensed, insured, 4.9-star
+rated — [reviews here](/reviews/).

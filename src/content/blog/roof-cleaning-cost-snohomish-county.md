@@ -18,7 +18,7 @@ the first question is almost always the same: **what is this going to cost me?**
 ## The short answer
 
 For a typical single-family home in Snohomish County, a professional [roof soft
-wash](/services/roof-cleaning) runs **$299 to $1,200**. Most jobs land in the middle of that band.
+wash](/services/roof-cleaning/) runs **$299 to $1,200**. Most jobs land in the middle of that band.
 Larger homes, steep or complex rooflines, and heavy lichen push toward the top; a small rambler
 with light algae staining sits near the bottom.
 
@@ -57,9 +57,9 @@ sides are the cheapest to service.
 
 ### Where you are
 
-Travel matters. Because we are based in [Lake Stevens](/service-area/lake-stevens-wa), homes there
-and in [Everett](/service-area/everett-wa), [Marysville](/service-area/marysville-wa),
-[Snohomish](/service-area/snohomish-wa) and [Granite Falls](/service-area/granite-falls-wa) get
+Travel matters. Because we are based in [Lake Stevens](/service-area/lake-stevens-wa/), homes there
+and in [Everett](/service-area/everett-wa/), [Marysville](/service-area/marysville-wa/),
+[Snohomish](/service-area/snohomish-wa/) and [Granite Falls](/service-area/granite-falls-wa/) get
 priority scheduling with no travel fee. The same job an hour away costs more to get to.
 
 ## Soft wash vs. pressure washing — the expensive mistake
@@ -71,7 +71,7 @@ granules off**, taking years off the roof's life and voiding the manufacturer's 
 pressure-washed roof can look clean for a season and then fail early — a $9,000 problem to fix a
 $149 "deal."
 
-A [soft wash](/services/soft-washing) uses low pressure — barely more than a garden hose — and
+A [soft wash](/services/soft-washing/) uses low pressure — barely more than a garden hose — and
 professional biocides that kill moss, lichen and Gloeocapsa algae (the black streaking) at the
 root. Nothing is blasted. The growth dies, then rain and wind clear it over the following weeks.
 It is the method every shingle manufacturer and the [ARMA](https://www.asphaltroofing.org/)
@@ -92,13 +92,13 @@ If a quote does not say "soft wash" or "no pressure," ask before you book.
 
 In our climate, most Snohomish County roofs need a soft wash **every 2 to 4 years**. Roofs under
 heavy fir shade or on the north side of a hill are closer to every two years. Keeping the
-[gutters clear](/services/gutter-cleaning) and the roof clear of debris stretches that interval
+[gutters clear](/services/gutter-cleaning/) and the roof clear of debris stretches that interval
 out, and keeps each visit cheaper because there is less growth to remove.
 
 ## Getting a number for your roof
 
 Send a few photos of the roof — especially the shaded slopes — and your address. We will come back
-the same day with a firm price and the method spelled out. [Get a free quote](/contact#quote) or
+the same day with a firm price and the method spelled out. [Get a free quote](/contact/#quote) or
 call <a href="tel:+14254460547">(425) 446-0547</a>.
 
 *Prices in this article are 2026 ranges for Snohomish County, Washington and are for general

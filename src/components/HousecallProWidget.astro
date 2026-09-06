@@ -38,10 +38,10 @@ const {
               <p class="mt-4 font-display text-base font-semibold text-text">Reserve your spot online</p>
               <p class="mx-auto mt-1.5 max-w-xs text-xs text-text-mute">Live crew availability, instant confirmation — about a minute start to finish.</p>
               <div class="mt-5 flex flex-col justify-center gap-2 sm:flex-row">
-                <button type="button" class="btn btn-primary text-sm" onclick="window.__hcpBook ? __hcpBook() : (location.href='/contact#quote')">Book online</button>
+                <button type="button" class="btn btn-primary text-sm" onclick="window.__hcpBook ? __hcpBook() : (location.href='/contact/#quote')">Book online</button>
                 <a href={SITE.phoneHref} class="btn btn-ghost text-sm"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
               </div>
-              <a href="/contact#quote" class="mt-3 inline-block text-xs text-text-mute underline-offset-4 transition hover:text-text hover:underline">Prefer to send photos? Request a quote &rarr;</a>
+              <a href="/contact/#quote" class="mt-3 inline-block text-xs text-text-mute underline-offset-4 transition hover:text-text hover:underline">Prefer to send photos? Request a quote &rarr;</a>
             </div>
           </div>
           {/* Housecall Pro online booking — the third-party script is deferred
@@ -76,7 +76,7 @@ const {
                 var tries = 0;
                 var iv = setInterval(function () {
                   if (window.HCPWidget) { clearInterval(iv); HCPWidget.openModal(); }
-                  else if (++tries > 40) { clearInterval(iv); location.href = '/contact#quote'; }
+                  else if (++tries > 40) { clearInterval(iv); location.href = '/contact/#quote'; }
                 }, 100);
               };
             })();

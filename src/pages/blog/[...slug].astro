@@ -29,7 +29,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
 <BaseLayout
   title={data.title}
   description={data.description}
-  canonical={`/blog/${post.slug}`}
+  canonical={`/blog/${post.slug}/`}
   image={data.heroImage}
   type="article"
   publishedTime={data.pubDate.toISOString()}
@@ -42,8 +42,8 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
     }),
     breadcrumbLd([
       { name: 'Home', path: '/' },
-      { name: 'Journal', path: '/blog' },
-      { name: data.title, path: `/blog/${post.slug}` },
+      { name: 'Journal', path: '/blog/' },
+      { name: data.title, path: `/blog/${post.slug}/` },
     ]),
   ]}
 >
@@ -54,7 +54,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
       </div>
       <div class="container-x py-14 sm:py-16 lg:py-20">
         <nav aria-label="Breadcrumb" class="mb-5 text-xs text-text-mute">
-          <a href="/" class="hover:text-text">Home</a> / <a href="/blog" class="hover:text-text">Journal</a> / <span class="text-text-dim">{data.category}</span>
+          <a href="/" class="hover:text-text">Home</a> / <a href="/blog/" class="hover:text-text">Journal</a> / <span class="text-text-dim">{data.category}</span>
         </nav>
         <div class="flex flex-wrap items-center gap-3 text-xs text-text-mute">
           <span class="rounded-full border border-jet/40 bg-jet/10 px-2.5 py-1 font-display font-semibold uppercase tracking-eyebrow text-jet-hi">{data.category}</span>
@@ -87,12 +87,12 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
           <div class="font-display text-sm font-semibold uppercase tracking-eyebrow text-text-mute">Explore Olson Pro Wash</div>
           <div class="mt-4 flex flex-wrap gap-2.5">
             {[
-              { href: '/services/roof-cleaning', label: 'Roof Cleaning' },
-              { href: '/services/house-washing', label: 'House Washing' },
-              { href: '/services/gutter-cleaning', label: 'Gutter Cleaning' },
-              { href: '/services', label: 'All services' },
-              { href: '/service-area', label: 'Service area' },
-              { href: '/faq', label: 'FAQ' },
+              { href: '/services/roof-cleaning/', label: 'Roof Cleaning' },
+              { href: '/services/house-washing/', label: 'House Washing' },
+              { href: '/services/gutter-cleaning/', label: 'Gutter Cleaning' },
+              { href: '/services/', label: 'All services' },
+              { href: '/service-area/', label: 'Service area' },
+              { href: '/faq/', label: 'FAQ' },
             ].map((l) => (
               <a href={l.href} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{l.label}</a>
             ))}
@@ -104,7 +104,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
         <div class="panel p-6">
           <div class="font-display text-sm font-bold text-text">Free quote in your inbox today</div>
           <p class="mt-2 text-sm text-text-dim">Send a couple photos of the problem area. We reply with a method and a price.</p>
-          <a href="/contact#quote" class="btn btn-primary mt-4 w-full text-sm">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/contact/#quote" class="btn btn-primary mt-4 w-full text-sm">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
           <a href={SITE.phoneHref} class="btn btn-ghost mt-2 w-full text-sm"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
         </div>
       </aside>
@@ -116,7 +116,7 @@ const readingTime = data.readingTime ?? remarkPluginFrontmatter?.minutesRead ?? 
           <h2 class="font-display text-xl font-bold text-text">Keep reading</h2>
           <div class="mt-6 grid gap-6 sm:grid-cols-2">
             {related.map((p) => (
-              <a href={`/blog/${p.slug}`} class="panel lift group flex gap-4 overflow-hidden p-4">
+              <a href={`/blog/${p.slug}/`} class="panel lift group flex gap-4 overflow-hidden p-4">
                 <Photo src={p.data.heroImage} alt={p.data.heroAlt} width={1600} height={900} sizes="128px" class="h-24 w-32 shrink-0 rounded-lg object-cover" />
                 <div>
                   <div class="text-xs text-text-mute">{p.data.category}</div>

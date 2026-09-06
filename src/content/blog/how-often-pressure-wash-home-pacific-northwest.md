@@ -22,14 +22,14 @@ Here's a realistic schedule, followed by the signs that mean you shouldn't wait 
 
 ### House siding — every 12 months
 
-An annual [house wash](/services/house-washing) keeps algae and mildew from getting a foothold,
+An annual [house wash](/services/house-washing/) keeps algae and mildew from getting a foothold,
 protects the finish, and stops the green film that dulls your color. Homes under heavy tree cover
 or near the water often benefit from a lighter touch-up wash mid-year.
 
 ### Roof — every 1 to 2 years (soft wash only)
 
 In the PNW, roofs grow **moss and lichen**, not just black streaks — and moss is the bigger threat.
-A professional [roof soft wash](/services/roof-cleaning) kills it at the root, then a full rinse
+A professional [roof soft wash](/services/roof-cleaning/) kills it at the root, then a full rinse
 clears the loosened growth. High pressure strips granules and voids most shingle
 warranties, so a soft wash is the method ARMA and the shingle makers call for. Left alone, moss lifts shingle edges and traps water until the deck rots.
 
@@ -46,7 +46,7 @@ year keeps it bright; wait longer and the staining sets in.
 ### Gutters — twice a year
 
 With this much conifer debris, spring and fall clean-outs are the realistic minimum. Bundle the
-a [gutter-brightening](/services/gutter-brightening) add-on with your annual house wash.
+a [gutter-brightening](/services/gutter-brightening/) add-on with your annual house wash.
 
 ### Fences — every 1 to 2 years
 
@@ -76,5 +76,5 @@ cleaning is far easier on your exterior than letting moss dig in and then blasti
 Bundling into a single annual appointment is cheaper per surface and keeps the whole property on
 the same clock. Olson Pro Wash offers recurring plans that lock in the lower per-visit rate.
 
-**Not sure where your home stands?** [Send a few photos](/contact#quote) and we'll tell you what
+**Not sure where your home stands?** [Send a few photos](/contact/#quote) and we'll tell you what
 needs attention now and what can wait.

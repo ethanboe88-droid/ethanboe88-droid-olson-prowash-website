@@ -24,7 +24,7 @@ wrong idea for anything layered, coated, or fragile.
 **Soft washing** relies on chemistry. A detergent-and-cleaning-agent solution is applied at garden-
 hose pressure, left to **dwell** so it kills moss, algae and lichen at the root, then rinsed. The
 pressure never gets near the roof — the solution does the work. This is what we use for
-[roof cleaning](/services/roof-cleaning) and [house washing](/services/house-washing).
+[roof cleaning](/services/roof-cleaning/) and [house washing](/services/house-washing/).
 
 ## Why pressure washing damages shingles
 
@@ -62,14 +62,14 @@ that.
 Plenty of times — just not on your roof. Controlled high pressure through a surface cleaner is the
 correct tool for:
 
-- Concrete [driveways, walkways and patios](/services/driveway-concrete-cleaning)
+- Concrete [driveways, walkways and patios](/services/driveway-concrete-cleaning/)
 - Paver and stone hardscapes
 - Unpainted masonry and block walls
 - Heavy equipment, dumpster pads, commercial flatwork
 
 The skill is matching the method to the surface. A good contractor owns both a pressure washer and
 a soft wash setup and knows which one your project needs. Our
-[soft wash vs pressure wash guide for your whole home](/blog/soft-wash-vs-pressure-wash-washington-home)
+[soft wash vs pressure wash guide for your whole home](/blog/soft-wash-vs-pressure-wash-washington-home/)
 breaks it down surface by surface.
 
 ## What our roof soft wash includes
@@ -109,5 +109,5 @@ Not when done correctly — we pre-wet and rinse landscaping and control runoff 
 
 ## Get a roof soft wash quote
 
-Call or text **(425) 446-0547**, or [send photos through the quote form](/contact) and I'll tell
+Call or text **(425) 446-0547**, or [send photos through the quote form](/contact/) and I'll tell
 you exactly what your roof needs — and what it doesn't.

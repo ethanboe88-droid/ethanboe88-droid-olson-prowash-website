@@ -28,7 +28,7 @@ Because it's a bonded film rather than surface grime, the usual tools do nothing
 
 - **A garden hose or pressure washer** just sheets water over it. You can stand there for ten
   minutes and watch the stripes not move.
-- **A regular [gutter cleaning](/services/gutter-cleaning)** clears the *inside* of the trough —
+- **A regular [gutter cleaning](/services/gutter-cleaning/)** clears the *inside* of the trough —
   leaves, needle sludge, downspout clogs. It was never meant to touch the outside face, so a
   freshly cleaned gutter can still be covered in stripes.
 - **Scrubbing by hand** with dish soap lightens them slightly and takes forever, and you'll
@@ -44,7 +44,7 @@ comes off far easier than one that's been baking on for five years.
 
 ## How gutter brightening removes them
 
-[Gutter brightening](/services/gutter-brightening) is a dedicated detergent process, not pressure
+[Gutter brightening](/services/gutter-brightening/) is a dedicated detergent process, not pressure
 washing. On our jobs it runs like this:
 
 1. **Protect below.** Siding, plants and walkways under the run get wetted down and covered so the
@@ -72,11 +72,11 @@ that after a look rather than promising showroom-white on a 20-year-old gutter.
 
 Gutter brightening is most cost-effective **bundled with work we're already set up for**:
 
-- With a **[house wash](/services/house-washing)** — the gutters are the one part a house wash
+- With a **[house wash](/services/house-washing/)** — the gutters are the one part a house wash
   skips, so adding brightening finishes the job.
-- With a **[gutter cleaning](/services/gutter-cleaning)** — inside and outside handled in the same
+- With a **[gutter cleaning](/services/gutter-cleaning/)** — inside and outside handled in the same
   visit.
-- With a **[roof soft wash](/services/roof-cleaning)** — clean the roof, then brighten the faces
+- With a **[roof soft wash](/services/roof-cleaning/)** — clean the roof, then brighten the faces
   the roof runoff has been staining.
 
 As a stand-alone visit it runs a little more because it's a dedicated trip. Either way, pricing is
@@ -86,10 +86,10 @@ under an older roof, a light re-do every couple of years keeps them sharp.
 ## Bottom line
 
 Tiger stripes are bonded oxidation from roof runoff, not dirt — which is why they survive a
-cleaning and a pressure washer. A detergent-based [gutter brightening](/services/gutter-brightening)
+cleaning and a pressure washer. A detergent-based [gutter brightening](/services/gutter-brightening/)
 is what actually takes them off, and it's the difference between a house that looks *clean* and a
 house that looks *almost clean*.
 
-**Not sure how bad yours are?** [Send a photo of the gutter face](/contact#quote) and we'll tell
+**Not sure how bad yours are?** [Send a photo of the gutter face](/contact/#quote) and we'll tell
 you whether it's a quick brighten or a heavier re-do — and what it'd cost bundled with your next
 wash.

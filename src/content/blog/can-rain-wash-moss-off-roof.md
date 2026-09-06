@@ -38,11 +38,11 @@ wettest.
 **Myth: "It goes away on its own in summer."**
 Reality: It goes *dormant* and turns brown in the dry stretch, then greens back up with the first
 September rain. It never left. See
-[how long does roof cleaning last](/blog/how-long-does-roof-cleaning-last).
+[how long does roof cleaning last](/blog/how-long-does-roof-cleaning-last/).
 
 **Myth: "Moss is just cosmetic, so who cares if it stays."**
 Reality: Moss lifts shingle edges and holds water against the roof, shortening its life. Full
-breakdown in [does moss actually damage your roof](/blog/does-moss-damage-your-roof).
+breakdown in [does moss actually damage your roof](/blog/does-moss-damage-your-roof/).
 
 **Myth: "I'll just scrape it off with a broom."**
 Reality: Dry scraping tears granules off the shingles and leaves the root structure and spores
@@ -50,7 +50,7 @@ behind, so it regrows in a couple months — now on a damaged roof.
 
 ## What actually clears a roof
 
-A [soft wash](/services/soft-washing): a cleaning solution applied at low pressure, left to
+A [soft wash](/services/soft-washing/): a cleaning solution applied at low pressure, left to
 **dwell** so it kills the moss, algae and lichen at the root, then a gentle rinse and a clearing
 of the dead growth. No force, no granule loss, warranty-safe per
 <a href="https://www.asphaltroofing.org/" target="_blank" rel="noopener noreferrer">ARMA</a> guidelines. That's the whole trick — you kill it, you
@@ -58,8 +58,8 @@ don't blast it.
 
 After that, keeping the roof clear of fir needles and leaf litter and trimming back overhanging
 branches is what keeps rain from growing it back quickly. Our
-[roof cleaning service](/services/roof-cleaning) covers the treatment; a
-[maintenance plan](/services/maintenance-plans) covers keeping it clear.
+[roof cleaning service](/services/roof-cleaning/) covers the treatment; a
+[maintenance plan](/services/maintenance-plans/) covers keeping it clear.
 
 ## Frequently asked questions
 
@@ -79,5 +79,5 @@ strips — they streak the roof and fade out.
 
 ## Get it cleared properly
 
-Call or text **(425) 446-0547** or [send photos through the quote form](/contact) and I'll tell
+Call or text **(425) 446-0547** or [send photos through the quote form](/contact/) and I'll tell
 you what your roof needs.

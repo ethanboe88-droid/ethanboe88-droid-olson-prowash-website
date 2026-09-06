@@ -16,7 +16,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'How do I get a quote, and does it cost anything?',
-        a: `Quotes are free. Text or email a few photos of the problem area, or book a walk-through — most estimates come back the same day, itemized, with no pressure to book. Call <a href="${SITE.phoneHref}">${SITE.phone}</a> or use the <a href="/contact#quote">quote form</a>.`,
+        a: `Quotes are free. Text or email a few photos of the problem area, or book a walk-through — most estimates come back the same day, itemized, with no pressure to book. Call <a href="${SITE.phoneHref}">${SITE.phone}</a> or use the <a href="/contact/#quote">quote form</a>.`,
       },
       {
         q: 'What does a typical job cost?',
@@ -37,11 +37,11 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'What is the difference between pressure washing and soft washing?',
-        a: 'Pressure washing uses mechanical force for hard surfaces that can take it — concrete, brick, pavers, stone. <a href="/services/soft-washing">Soft washing</a> uses low pressure and professional detergents for anything force would damage: roof shingles, siding, stucco, cedar and painted wood. Using the wrong one is the most common way exteriors get damaged.',
+        a: 'Pressure washing uses mechanical force for hard surfaces that can take it — concrete, brick, pavers, stone. <a href="/services/soft-washing/">Soft washing</a> uses low pressure and professional detergents for anything force would damage: roof shingles, siding, stucco, cedar and painted wood. Using the wrong one is the most common way exteriors get damaged.',
       },
       {
         q: 'Will you pressure wash my roof?',
-        a: 'Our recommended method is a low-pressure <a href="/services/roof-cleaning">roof soft wash</a> — what ARMA and the shingle manufacturers call for. Biocides kill the moss, lichen and black algae at the root, then we rinse the roof clean. High pressure strips the protective granules and voids the warranty; a lower-cost budget powder treatment is also offered.',
+        a: 'Our recommended method is a low-pressure <a href="/services/roof-cleaning/">roof soft wash</a> — what ARMA and the shingle manufacturers call for. Biocides kill the moss, lichen and black algae at the root, then we rinse the roof clean. High pressure strips the protective granules and voids the warranty; a lower-cost budget powder treatment is also offered.',
       },
       {
         q: 'Is the process safe for my plants, pets and kids?',
@@ -70,7 +70,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: 'How often should this be done in the Pacific Northwest?',
-        a: 'House washing once a year, roof soft washing every 2–4 years (sooner under heavy fir shade), and gutter cleaning twice a year where there are conifers nearby. <a href="/services/gutter-guard-installation">Gutter guards</a> and keeping the roof clear stretch those intervals out.',
+        a: 'House washing once a year, roof soft washing every 2–4 years (sooner under heavy fir shade), and gutter cleaning twice a year where there are conifers nearby. <a href="/services/gutter-guard-installation/">Gutter guards</a> and keeping the roof clear stretch those intervals out.',
       },
     ],
   },
@@ -79,7 +79,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'Which cities do you serve?',
-        a: `We cover ${CITIES.length} core cities across Snohomish County and North King County — ${CITIES.map((c) => c.name).join(', ')} — roughly a 25-mile radius around ${SITE.address.locality}. See the <a href="/service-area">service area</a> page for local details on each.`,
+        a: `We cover ${CITIES.length} core cities across Snohomish County and North King County — ${CITIES.map((c) => c.name).join(', ')} — roughly a 25-mile radius around ${SITE.address.locality}. See the <a href="/service-area/">service area</a> page for local details on each.`,
       },
       {
         q: 'Do you charge a travel fee?',
@@ -118,11 +118,11 @@ const allItems = groups.flatMap((g) => g.items);
   canonical="/faq"
   keywords="pressure washing FAQ, roof cleaning questions, soft washing vs pressure washing, how much does house washing cost, is roof cleaning safe, Lake Stevens WA"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'FAQ', path: '/faq/' }]),
     webPageLd({
       name: 'Frequently Asked Questions — Olson Pro Wash',
       description: 'Common questions about pressure washing, roof cleaning, soft washing, gutters, pricing and service area in Snohomish & King County, WA.',
-      path: '/faq',
+      path: '/faq/',
       speakableSelectors: ['h1', 'summary'],
     }),
     faqLd(allItems),
@@ -153,10 +153,10 @@ const allItems = groups.flatMap((g) => g.items);
       <SectionHeading eyebrow="Keep looking" title="Where to go next" />
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {[
-          { href: '/faq/gutter-guards', t: 'Gutter guard FAQ', d: 'Raptor stainless micro-mesh — spec, rain performance, cost and warranty.' },
-          { href: '/services', t: 'All services', d: 'Ten exterior services, each with its own page and pricing.' },
-          { href: '/service-area', t: 'Service area', d: `Local detail for all ${CITIES.length} cities we cover.` },
-          { href: '/blog', t: 'The Journal', d: 'Guides on moss, methods and maintenance timing.' },
+          { href: '/faq/gutter-guards/', t: 'Gutter guard FAQ', d: 'Raptor stainless micro-mesh — spec, rain performance, cost and warranty.' },
+          { href: '/services/', t: 'All services', d: 'Ten exterior services, each with its own page and pricing.' },
+          { href: '/service-area/', t: 'Service area', d: `Local detail for all ${CITIES.length} cities we cover.` },
+          { href: '/blog/', t: 'The Journal', d: 'Guides on moss, methods and maintenance timing.' },
         ].map((c) => (
           <a href={c.href} class="reveal panel lift group p-5">
             <span class="font-display text-sm font-bold text-text">{c.t}</span>

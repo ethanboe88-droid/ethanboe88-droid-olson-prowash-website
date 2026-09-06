@@ -64,13 +64,13 @@ spike every fall.
 - Any sign of fascia rot, pull-away, or chronic overflow
 - You'd just rather not spend a Saturday on a ladder in the cold
 
-Our [gutter cleaning service](/services/gutter-cleaning) is a full interior scoop-out, every
+Our [gutter cleaning service](/services/gutter-cleaning/) is a full interior scoop-out, every
 downspout flushed and flow-tested, and a pitch-and-hanger check, with photos on completion. Note
 that a standard gutter cleaning clears the *inside* — the black staining on the *outside* faces is
-handled by our separate [gutter brightening](/services/gutter-brightening) service (see
-[tiger stripes explained](/blog/tiger-stripes-on-gutters-explained)). If you're tired of the
+handled by our separate [gutter brightening](/services/gutter-brightening/) service (see
+[tiger stripes explained](/blog/tiger-stripes-on-gutters-explained/)). If you're tired of the
 twice-a-year ritual entirely, ask about
-[Raptor gutter guards](/blog/raptor-gutter-guards-pacific-northwest).
+[Raptor gutter guards](/blog/raptor-gutter-guards-pacific-northwest/).
 
 ## Frequently asked questions
 
@@ -82,13 +82,13 @@ After the bulk of the leaf drop, usually late October to mid-November, but befor
 rain sets in. Sometimes that means a second quick pass in December.
 
 **Can you do the roof at the same time?**
-Yes — a [roof cleaning](/services/roof-cleaning) plus gutters is a common bundle and cheaper
+Yes — a [roof cleaning](/services/roof-cleaning/) plus gutters is a common bundle and cheaper
 together.
 
 **Do you offer a recurring plan?**
-Yes — our [maintenance plans](/services/maintenance-plans) put gutter clean-outs on a schedule at
+Yes — our [maintenance plans](/services/maintenance-plans/) put gutter clean-outs on a schedule at
 a lower per-visit rate.
 
 ## Book your fall gutter cleaning
 
-Call or text **(425) 446-0547** or [request a quote online](/contact) before the maples let go.
+Call or text **(425) 446-0547** or [request a quote online](/contact/) before the maples let go.

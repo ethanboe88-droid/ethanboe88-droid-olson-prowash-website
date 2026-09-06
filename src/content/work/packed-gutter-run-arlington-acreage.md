@@ -29,14 +29,14 @@ and the crawlspace vents.
   until it ran clean.
 - **Flow-tested every run.** Water was run across all the gutters on that elevation to confirm
   full flow to the ground.
-- **Faces brightened.** The customer added our [gutter brightening](/services/gutter-brightening)
+- **Faces brightened.** The customer added our [gutter brightening](/services/gutter-brightening/)
   add-on, so the "tiger stripe" staining on the exterior faces came off and the line looked new.
 
 ## The result
 
 The run drains properly again and the overflow at the foundation stopped. With this many trees
 and this much linear footage, the customer added a
-[Raptor gutter guard](/services/gutter-guard-installation) section on the worst elevation so it
+[Raptor gutter guard](/services/gutter-guard-installation/) section on the worst elevation so it
 doesn't pack in again next fall.
 
-*Gutters overflowing? [Send a photo](/contact#quote) and we'll quote it.*
+*Gutters overflowing? [Send a photo](/contact/#quote) and we'll quote it.*

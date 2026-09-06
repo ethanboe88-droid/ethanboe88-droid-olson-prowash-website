@@ -44,19 +44,19 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
 <BaseLayout
   title={`${title} | ${SITE.name}`}
   description={description}
-  canonical={`/service-area/${city.slug}`}
+  canonical={`/service-area/${city.slug}/`}
   image={city.photo}
   keywords={`pressure washing ${city.name} WA, roof cleaning ${city.name}, house washing ${city.name}, gutter cleaning ${city.name}, soft washing, moss removal, ${city.county}, Olson Pro Wash`}
   jsonLd={[
     breadcrumbLd([
       { name: 'Home', path: '/' },
-      { name: 'Service Area', path: '/service-area' },
-      { name: `${city.name}, ${SITE.address.region}`, path: `/service-area/${city.slug}` },
+      { name: 'Service Area', path: '/service-area/' },
+      { name: `${city.name}, ${SITE.address.region}`, path: `/service-area/${city.slug}/` },
     ]),
     webPageLd({
       name: title,
       description,
-      path: `/service-area/${city.slug}`,
+      path: `/service-area/${city.slug}/`,
       image: city.photo,
       speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
     }),
@@ -68,7 +68,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
     eyebrow={`Service area · ${city.county}`}
     title={`${city.name} pressure washing &amp; <span class='text-jet-grad'>roof cleaning</span>`}
     intro={city.intro}
-    crumbs={[{ label: 'Service Area', href: '/service-area' }, { label: `${city.name}, ${SITE.address.region}` }]}
+    crumbs={[{ label: 'Service Area', href: '/service-area/' }, { label: `${city.name}, ${SITE.address.region}` }]}
   />
 
   <!-- Local context -->
@@ -90,7 +90,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
         <p class="mt-4 text-sm text-text-mute">Near {city.landmarks.join(' · ')}</p>
 
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/contact#quote" data-magnetic class="btn btn-primary">Free quote in {city.name} <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/contact/#quote" data-magnetic class="btn btn-primary">Free quote in {city.name} <Icon name="arrow" class="h-4 w-4" /></a>
           <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
         </div>
       </div>
@@ -112,7 +112,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
         <SectionHeading eyebrow={`Most requested in ${city.name}`} title="What we do most here" />
         <div class="mt-10 grid gap-5 sm:grid-cols-3">
           {top.map((s, i) => (
-            <a href={s!.detailPage ?? `/services#${s!.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${i * 70}ms`}>
+            <a href={s!.detailPage ?? `/services/#${s!.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${i * 70}ms`}>
               <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s!.icon} class="h-5 w-5" /></span>
               <h3 class="mt-4 font-display text-lg font-bold text-text">{s!.title}</h3>
               <p class="mt-2 text-sm leading-relaxed text-text-dim">{s!.short}</p>
@@ -130,7 +130,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
       <SectionHeading eyebrow="Full service list" title={`Every service we offer in ${city.name}`} intro={`One local crew for the whole property. Tap any service for full details and ${city.county} pricing.`} />
       <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => (
-          <a href={s.detailPage ?? `/services#${s.slug}`} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
+          <a href={s.detailPage ?? `/services/#${s.slug}`} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
             <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
             <span class="min-w-0 flex-1">
               <span class="block font-display text-sm font-bold text-text">{s.title}</span>
@@ -178,9 +178,9 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
       <SectionHeading eyebrow="Nearby" title="Other areas we serve" />
       <ul class="mt-8 flex flex-wrap gap-2.5">
         {nearby.map((c) => (
-          <li><a href={`/service-area/${c.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
+          <li><a href={`/service-area/${c.slug}/`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
         ))}
-        <li><a href="/service-area" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">All service areas <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
+        <li><a href="/service-area/" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">All service areas <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
       </ul>
     </div>
   </section>

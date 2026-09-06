@@ -25,7 +25,7 @@ the job. The 45–75°F range is ideal, and that's most of spring and fall in th
 
 **It lines up with the work you'd bundle.** Spring cleaning after the winter moss push, or fall
 cleaning before the heavy rains return — either way you can fold in
-[gutter cleaning](/services/gutter-cleaning) and a [house wash](/services/house-washing).
+[gutter cleaning](/services/gutter-cleaning/) and a [house wash](/services/house-washing/).
 
 ## Why not winter
 
@@ -44,7 +44,7 @@ exactly how far it's spread. It's also our busiest stretch, so booking is tighte
 
 If your roof clearly needs it, summer is perfectly workable — just know the moss is still there
 under that brown, dormant look. See
-[can rain wash moss off your roof](/blog/can-rain-wash-moss-off-roof) for why it greens right back
+[can rain wash moss off your roof](/blog/can-rain-wash-moss-off-roof/) for why it greens right back
 up in September.
 
 ## A simple seasonal guide
@@ -67,7 +67,7 @@ up in September.
   temperature rules apply.
 
 For how often to repeat it, see
-[how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest).
+[how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest/).
 
 ## Frequently asked questions
 
@@ -87,5 +87,5 @@ For spring and fall windows, two to four weeks. Summer fills up fastest.
 
 ## Book your roof cleaning
 
-Call or text **(425) 446-0547** or [request a quote online](/contact) and we'll get you into the
+Call or text **(425) 446-0547** or [request a quote online](/contact/) and we'll get you into the
 next good weather window.

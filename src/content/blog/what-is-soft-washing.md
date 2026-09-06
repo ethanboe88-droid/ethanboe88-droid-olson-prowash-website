@@ -47,17 +47,17 @@ and the growth.
 
 | Surface | Method |
 | --- | --- |
-| Asphalt shingle & metal [roofs](/services/roof-cleaning) | Soft wash — always |
-| Vinyl, fiber-cement, aluminum, wood [siding](/services/house-washing) | Soft wash |
+| Asphalt shingle & metal [roofs](/services/roof-cleaning/) | Soft wash — always |
+| Vinyl, fiber-cement, aluminum, wood [siding](/services/house-washing/) | Soft wash |
 | Stucco and EIFS | Soft wash |
 | Painted or stained wood, trim, soffits, fascia | Soft wash |
 | Composite decking, pergolas, fences | Soft wash / low pressure |
-| Concrete driveways, walks, [patios](/services/driveway-concrete-cleaning) | Pressure wash (surface cleaner) |
+| Concrete driveways, walks, [patios](/services/driveway-concrete-cleaning/) | Pressure wash (surface cleaner) |
 | Pavers, stone, unpainted masonry | Pressure wash |
 
 The rule of thumb: if it's porous and tough, pressure wash it. If it's coated, layered, or up
 high, soft wash it. Our
-[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home) goes
+[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home/) goes
 surface by surface.
 
 ## Is it safe for plants and pets?
@@ -103,4 +103,4 @@ There's a faint chlorine smell during the wash that clears as it dries and rinse
 ## Get a soft wash quote
 
 Roof, siding, or both — call or text **(425) 446-0547** or
-[send photos through the quote form](/contact).
+[send photos through the quote form](/contact/).

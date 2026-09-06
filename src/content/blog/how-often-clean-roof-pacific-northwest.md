@@ -34,7 +34,7 @@ Douglas firs can grow visible moss in a single winter.
 | Heavy tree cover, north-facing slopes, near water | 1.5–2 years |
 | Already had thick moss removed | Re-treat at 2 years to stay ahead of it |
 
-A [roof soft wash](/services/roof-cleaning) done on this kind of schedule is maintenance — it
+A [roof soft wash](/services/roof-cleaning/) done on this kind of schedule is maintenance — it
 keeps the roof clear and the shingles protected. Waiting until the moss is thick turns it into a
 bigger, more expensive job, and by then the shingles have already taken damage.
 
@@ -65,7 +65,7 @@ root and buys 2–3 years. A scrape-and-blow job regrows in months.
 - It's been more than 3 years and you can't remember the last cleaning
 
 If you're seeing lifted shingles, don't wait for the calendar — that's water getting under the
-roof. Our post on [what happens if you don't clean your roof](/blog/what-happens-if-you-dont-clean-roof)
+roof. Our post on [what happens if you don't clean your roof](/blog/what-happens-if-you-dont-clean-roof/)
 walks through how that progresses.
 
 ## Frequently asked questions
@@ -75,18 +75,18 @@ On a sunny, open roof, maybe. On a shaded PNW roof, you'll pay for it in shingle
 a cleaning is a rounding error next to a roof replacement.
 
 **Does cleaning the roof more often wear it out?**
-No — a low-pressure [soft wash](/services/soft-washing) is gentle enough to repeat indefinitely.
+No — a low-pressure [soft wash](/services/soft-washing/) is gentle enough to repeat indefinitely.
 It's *pressure washing* and *moss left to dig in* that wear a roof out.
 
 **What's the best time of year?**
 Late spring or early fall. See
-[when is the best time to clean your roof in Washington](/blog/best-time-clean-roof-washington-state).
+[when is the best time to clean your roof in Washington](/blog/best-time-clean-roof-washington-state/).
 
 **Should I get on a plan?**
-If your roof is heavily shaded, a [maintenance plan](/services/maintenance-plans) keeps it on
+If your roof is heavily shaded, a [maintenance plan](/services/maintenance-plans/) keeps it on
 schedule at a lower per-visit rate and folds in gutter clean-outs.
 
 ## Not sure where your roof stands?
 
 Send a few photos and I'll tell you whether it needs attention now or can wait a year. Call or text
-**(425) 446-0547** or [use the quote form](/contact).
+**(425) 446-0547** or [use the quote form](/contact/).

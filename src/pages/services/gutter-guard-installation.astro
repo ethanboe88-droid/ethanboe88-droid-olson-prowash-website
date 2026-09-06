@@ -59,7 +59,7 @@ const faqs = [
   },
   {
     q: 'Do I still need to have my gutters cleaned after guards are installed?',
-    a: 'Almost never. Fine dust and pollen can build a thin film on top of the mesh over several years — a quick rinse from a ladder or a <a href="/services/gutter-cleaning">soft wash</a> clears it. You will not be scooping needles out again.',
+    a: 'Almost never. Fine dust and pollen can build a thin film on top of the mesh over several years — a quick rinse from a ladder or a <a href="/services/gutter-cleaning/">soft wash</a> clears it. You will not be scooping needles out again.',
   },
   {
     q: 'Will Raptor micro-mesh keep up with a Pacific Northwest downpour?',
@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: 'Does it work with a moss-prone roof or a metal roof?',
-    a: 'Yes on both. On shingle roofs we recommend pairing it with a <a href="/services/roof-cleaning">roof soft wash</a> so you are not sending years of moss debris onto fresh guards. On metal and standing-seam roofs we fasten Raptor appropriately to the gutter and fascia without penetrating the roofing.',
+    a: 'Yes on both. On shingle roofs we recommend pairing it with a <a href="/services/roof-cleaning/">roof soft wash</a> so you are not sending years of moss debris onto fresh guards. On metal and standing-seam roofs we fasten Raptor appropriately to the gutter and fascia without penetrating the roofing.',
   },
   {
     q: 'What is the warranty?',
@@ -97,13 +97,13 @@ const priceRanges = [
   jsonLd={[
     breadcrumbLd([
       { name: 'Home', path: '/' },
-      { name: 'Services', path: '/services' },
-      { name: 'Gutter Guard Installation', path: '/services/gutter-guard-installation' },
+      { name: 'Services', path: '/services/' },
+      { name: 'Gutter Guard Installation', path: '/services/gutter-guard-installation/' },
     ]),
     webPageLd({
       name: 'Raptor Gutter Guard Installation in Lake Stevens, WA',
       description: 'Professional installation of Raptor Type 304 stainless steel micro-mesh gutter guards across Snohomish & King County.',
-      path: '/services/gutter-guard-installation',
+      path: '/services/gutter-guard-installation/',
       image: '/images/p-gutterguard.jpg',
       speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
     }),
@@ -111,7 +111,7 @@ const priceRanges = [
     howToLd({
       name: 'How Olson Pro Wash installs Raptor gutter guards',
       description: 'Assess, clean and re-pitch the gutters, install the Raptor stainless micro-mesh guard, then flow-test — in one visit.',
-      path: '/services/gutter-guard-installation',
+      path: '/services/gutter-guard-installation/',
       steps: steps.map((s) => ({ name: s.t, text: s.d })),
     }),
     faqLd(faqs),
@@ -121,7 +121,7 @@ const priceRanges = [
     eyebrow="Service · Gutter protection"
     title="Raptor gutter guards, <span class='text-jet-grad'>installed right</span>"
     intro={svc.short}
-    crumbs={[{ label: 'Services', href: '/services' }, { label: 'Gutter Guard Installation' }]}
+    crumbs={[{ label: 'Services', href: '/services/' }, { label: 'Gutter Guard Installation' }]}
   />
 
   <!-- Intro + before/after -->
@@ -131,7 +131,7 @@ const priceRanges = [
         <SectionHeading eyebrow="Why it matters here" title="Open gutters lose in the Northwest" class="!max-w-none" />
         <p class="mt-6 text-lg leading-relaxed text-text-dim">{svc.description}</p>
         <div class="mt-7 flex flex-wrap items-center gap-3">
-          <a href="/contact#quote" data-magnetic class="btn btn-primary">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/contact/#quote" data-magnetic class="btn btn-primary">Get a Free Quote <Icon name="arrow" class="h-4 w-4" /></a>
           <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{svc.price}</span>
         </div>
       </div>
@@ -265,7 +265,7 @@ const priceRanges = [
             </li>
           ))}
         </ul>
-        <a href="/contact#quote" class="btn btn-primary mt-5 w-full text-sm">Get my exact number <Icon name="arrow" class="h-4 w-4" /></a>
+        <a href="/contact/#quote" class="btn btn-primary mt-5 w-full text-sm">Get my exact number <Icon name="arrow" class="h-4 w-4" /></a>
       </div>
     </div>
   </section>
@@ -276,8 +276,8 @@ const priceRanges = [
       <div>
         <SectionHeading eyebrow="Gutter guard FAQ" title="Before you book" />
         <div class="mt-6 flex flex-col gap-2.5 text-sm">
-          <a href="/faq/gutter-guards" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Full gutter guard FAQ <Icon name="arrow" class="h-4 w-4" /></a>
-          <a href="/blog/raptor-gutter-guards-pacific-northwest" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Why we chose Raptor for the PNW <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/faq/gutter-guards/" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Full gutter guard FAQ <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/blog/raptor-gutter-guards-pacific-northwest/" class="inline-flex items-center gap-1.5 font-semibold text-jet-hi link-underline">Why we chose Raptor for the PNW <Icon name="arrow" class="h-4 w-4" /></a>
         </div>
       </div>
       <Faq items={faqs} />

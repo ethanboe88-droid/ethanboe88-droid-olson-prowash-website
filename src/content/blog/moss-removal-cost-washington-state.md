@@ -36,9 +36,9 @@ removal is maintenance, not a one-time fix.
 | Deck or patio (wood or composite) | $99 – $400 |
 
 Roof moss is the big one, and it's really the same job as a
-[roof soft wash](/services/roof-cleaning) — the price tracks roof size, pitch, access and how
+[roof soft wash](/services/roof-cleaning/) — the price tracks roof size, pitch, access and how
 established the growth is. Flatwork and walls are usually handled as part of a
-[pressure washing](/services/pressure-washing) visit.
+[pressure washing](/services/pressure-washing/) visit.
 
 ## "Removal only" vs. treatment — what's the difference?
 
@@ -65,18 +65,18 @@ streaks the roof and does little once it's dulled.
 The single biggest factor is debris. A roof or walkway that stays covered in fir needles and leaf
 litter holds moisture and re-grows moss fast. Keeping it swept and clear, and trimming back
 branches that overhang, is what stretches a treatment from two years to four. A recurring
-[maintenance plan](/services/maintenance-plans) handles that for you.
+[maintenance plan](/services/maintenance-plans/) handles that for you.
 
 ## Frequently asked questions
 
 **Is moss actually hurting my roof, or is it just ugly?**
 Both. Moss holds water against the shingles and lifts their edges, which shortens roof life. We
-cover this in detail in [does moss actually damage your roof](/blog/does-moss-damage-your-roof).
+cover this in detail in [does moss actually damage your roof](/blog/does-moss-damage-your-roof/).
 
 **Can I just wait for a dry summer to kill it?**
 No. Moss goes dormant and brown in August, then greens right back up with the first September
 rain. Dry weather hides it; it doesn't remove it. See
-[can rain wash moss off your roof](/blog/can-rain-wash-moss-off-roof).
+[can rain wash moss off your roof](/blog/can-rain-wash-moss-off-roof/).
 
 **Do you guarantee it won't come back?**
 We guarantee the treatment does its job — the moss is killed and removed. We can't guarantee our
@@ -93,4 +93,4 @@ Late spring or early fall. We avoid hard freezes.
 ## Get a moss removal quote
 
 Send photos of the roof, walkway or wall and I'll get you a firm number. Call or text
-**(425) 446-0547** or [request a quote online](/contact).
+**(425) 446-0547** or [request a quote online](/contact/).

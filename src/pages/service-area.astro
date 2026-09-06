@@ -38,12 +38,12 @@ const areaFaqs = [
   canonical="/service-area"
   keywords="pressure washing near me, roof cleaning Snohomish County, house washing King County, Lake Stevens Everett Marysville Arlington Bothell Kirkland Sammamish Issaquah Bellevue Seattle Granite Falls"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Service Area', path: '/service-area' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Service Area', path: '/service-area/' }]),
     webPageLd({
       type: 'CollectionPage',
       name: 'Service Area — Olson Pro Wash',
       description: 'Cities and communities served across Snohomish County and North King County, WA.',
-      path: '/service-area',
+      path: '/service-area/',
       speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
     }),
     faqLd(areaFaqs),
@@ -86,7 +86,7 @@ const areaFaqs = [
         <SectionHeading eyebrow={county} title={`Serving ${county.replace(' County', '')} County`} />
         <div class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {cities.map((c, i) => (
-            <a href={`/service-area/${c.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${(i % 3) * 60}ms`}>
+            <a href={`/service-area/${c.slug}/`} class="reveal panel lift group p-6" style={`--reveal-delay:${(i % 3) * 60}ms`}>
               <div class="flex items-center gap-2">
                 <span class="grid h-9 w-9 place-items-center rounded-lg border border-hairline bg-white/[0.03] text-jet-hi"><Icon name="pin" class="h-5 w-5" /></span>
                 <h3 class="font-display text-lg font-bold text-text">{c.name}, WA</h3>
@@ -123,7 +123,7 @@ const areaFaqs = [
       <ul class="mt-10 flex flex-wrap gap-2.5">
         {SERVICES.map((s) => (
           <li>
-            <a href={s.detailPage ?? `/services#${s.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}</a>
+            <a href={s.detailPage ?? `/services/#${s.slug}`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{s.title}</a>
           </li>
         ))}
       </ul>

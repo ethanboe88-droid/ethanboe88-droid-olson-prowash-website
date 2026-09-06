@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
     price: 'from $299',
     icon: 'roof',
     span: 'xl',
-    detailPage: '/services/roof-cleaning',
+    detailPage: '/services/roof-cleaning/',
     edge: 'at the root',
     whyLocal: [
       { icon: 'drop', t: 'Marine humidity', d: 'Persistent damp off Puget Sound keeps north-facing slopes wet for weeks at a time, so moss spores never really stop working.' },
@@ -91,7 +91,7 @@ export const SERVICES: Service[] = [
     price: 'from $199',
     icon: 'house',
     span: 'wide',
-    detailPage: '/services/house-washing',
+    detailPage: '/services/house-washing/',
     edge: 'gentle on the finish',
     whyLocal: [
       { icon: 'foam', t: 'Green algae film', d: 'That dull green cast on north and east walls is airborne algae feeding on moisture. Pressure drives it into the substrate — soft washing dissolves it.' },
@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
     faqs: [
       { q: 'Is soft washing safe for my plants?', a: 'Yes. We pre-wet and rinse all landscaping around the work area and use detergents at a controlled dilution. Plant protection is a standard part of every wash.' },
       { q: 'Will it get the green off the north side?', a: 'That is exactly what it is for. The green is algae, and the detergent kills it at the root rather than smearing it around the way pressure does.' },
-      { q: 'Can you do just the gutter faces?', a: 'Gutter-face brightening is an optional add-on to a house wash — or we can do it alongside a <a href="/services/roof-cleaning">roof</a> or <a href="/services/gutter-cleaning">gutter cleaning</a>.' },
+      { q: 'Can you do just the gutter faces?', a: 'Gutter-face brightening is an optional add-on to a house wash — or we can do it alongside a <a href="/services/roof-cleaning/">roof</a> or <a href="/services/gutter-cleaning/">gutter cleaning</a>.' },
     ],
     priceNote:
       'Most single-story homes run $199–$400 and two-story homes $400–$700, based on square footage, stories and siding condition. Bundled with a roof wash for a lower combined rate.',
@@ -129,7 +129,7 @@ export const SERVICES: Service[] = [
     price: 'from $99',
     icon: 'jet',
     span: 'unit',
-    detailPage: '/services/pressure-washing',
+    detailPage: '/services/pressure-washing/',
     edge: 'dialed to the surface',
     whyLocal: [
       { icon: 'driveway', t: 'Moss in the seams', d: 'Shaded Northwest concrete grows moss and black algae in every control joint. A surface cleaner pulls it out and our post-treatment keeps it from coming straight back.' },
@@ -143,8 +143,8 @@ export const SERVICES: Service[] = [
       { t: 'Post-treat & rinse', d: 'A post-treatment goes down across the concrete — killing the organic growth left in the pores and joints and brightening the surface toward new — then the whole area and adjacent siding are rinsed down.' },
     ],
     faqs: [
-      { q: 'What is the difference between this and soft washing?', a: 'Pressure washing uses mechanical force for hard surfaces that can take it — concrete, brick, pavers, stone. <a href="/services/soft-washing">Soft washing</a> uses low pressure and detergent for anything force would damage: siding, roofs, wood.' },
-      { q: 'How long will the concrete stay looking new?', a: 'The post-treatment kills the organic growth in the pores and slows what regrows in the joints, so a cleaned-and-treated surface holds its look noticeably longer than a plain rinse. In deep shade it will still green up eventually — a light yearly touch-up or a <a href="/services/maintenance-plans">maintenance plan</a> keeps it ahead.' },
+      { q: 'What is the difference between this and soft washing?', a: 'Pressure washing uses mechanical force for hard surfaces that can take it — concrete, brick, pavers, stone. <a href="/services/soft-washing/">Soft washing</a> uses low pressure and detergent for anything force would damage: siding, roofs, wood.' },
+      { q: 'How long will the concrete stay looking new?', a: 'The post-treatment kills the organic growth in the pores and slows what regrows in the joints, so a cleaned-and-treated surface holds its look noticeably longer than a plain rinse. In deep shade it will still green up eventually — a light yearly touch-up or a <a href="/services/maintenance-plans/">maintenance plan</a> keeps it ahead.' },
       { q: 'Will it damage my pavers or take out the sand?', a: 'Not the way we do it. We keep the pressure and angle controlled, and we can replace polymeric jointing sand as an add-on if a surface needs it.' },
       { q: 'Can you get oil stains out of the driveway?', a: 'Usually a good deal lighter. For oil and grease we bring hot water and a degreaser; deep, old staining fades but may not disappear completely.' },
     ],
@@ -168,7 +168,7 @@ export const SERVICES: Service[] = [
     price: 'from $199',
     icon: 'foam',
     span: 'unit',
-    detailPage: '/services/soft-washing',
+    detailPage: '/services/soft-washing/',
     edge: 'detergent, not force',
     whyLocal: [
       { icon: 'foam', t: 'Kills growth at the root', d: 'Algae, mildew and lichen come back fast when you only blast the surface. Soft-wash chemistry kills the organism so it stays gone longer.' },
@@ -200,13 +200,13 @@ export const SERVICES: Service[] = [
     benefits: [
       'Debris hand-cleared and hauled away, not blown around',
       'All downspouts flushed and flow-tested',
-      '<a href="/services/gutter-brightening">Gutter-face brightening</a> available as an add-on',
+      '<a href="/services/gutter-brightening/">Gutter-face brightening</a> available as an add-on',
       'Before/after photos from the ladder',
     ],
     price: 'from $99',
     icon: 'gutter',
     span: 'unit',
-    detailPage: '/services/gutter-cleaning',
+    detailPage: '/services/gutter-cleaning/',
     edge: 'cleared and flow-tested',
     whyLocal: [
       { icon: 'leaf', t: 'Needles pack solid', d: 'Fir and pine needles knit into a mat that holds water and rots the fascia. They have to come out by hand, not by blower alone.' },
@@ -220,9 +220,9 @@ export const SERVICES: Service[] = [
       { t: 'Photo report', d: 'We send photos from the ladder showing the cleared troughs and the confirmed flow.' },
     ],
     faqs: [
-      { q: 'Do you clean the outside of the gutters too?', a: 'That is our <a href="/services/gutter-brightening">Gutter Brightening</a> add-on — a soft wash of the exterior faces that removes the black "tiger stripe" staining, not just the debris inside. It is quoted on top of the cleaning, or bundled at a lower combined rate.' },
+      { q: 'Do you clean the outside of the gutters too?', a: 'That is our <a href="/services/gutter-brightening/">Gutter Brightening</a> add-on — a soft wash of the exterior faces that removes the black "tiger stripe" staining, not just the debris inside. It is quoted on top of the cleaning, or bundled at a lower combined rate.' },
       { q: 'How often should gutters be cleaned around here?', a: 'Twice a year for most homes with any conifers nearby — late spring after the seed drop and late fall after the leaves. Open lots with no trees can often go once a year.' },
-      { q: 'Can you install guards so I stop doing this?', a: 'Yes — see our <a href="/services/gutter-guard-installation">gutter guard installation</a> page. We clean and re-pitch the gutters first, then fit micro-mesh guards.' },
+      { q: 'Can you install guards so I stop doing this?', a: 'Yes — see our <a href="/services/gutter-guard-installation/">gutter guard installation</a> page. We clean and re-pitch the gutters first, then fit micro-mesh guards.' },
     ],
     priceNote:
       'Single-story homes generally run $99–$200 and two-story homes $200–$350, based on linear footage and how packed the gutters are. Bundled rates when added to a roof wash, house wash or gutter brightening.',
@@ -239,12 +239,12 @@ export const SERVICES: Service[] = [
       'Removes the black "tiger stripe" staining a rinse can’t touch',
       'Low-pressure detergent process — safe for painted aluminum',
       'Whole gutter line matched, faces and end returns',
-      'Best value added to a <a href="/services/gutter-cleaning">gutter cleaning</a> or <a href="/services/house-washing">house wash</a>',
+      'Best value added to a <a href="/services/gutter-cleaning/">gutter cleaning</a> or <a href="/services/house-washing/">house wash</a>',
     ],
     price: 'from $79',
     icon: 'foam',
     span: 'unit',
-    detailPage: '/services/gutter-brightening',
+    detailPage: '/services/gutter-brightening/',
     edge: 'tiger stripes, gone',
     whyLocal: [
       { icon: 'drop', t: 'Rain writes the stripes', d: 'Puget Sound rain runs a film of roof and road residue down the gutter face on every storm. Over a few Northwest winters it bonds into the black streaks a hose cannot move.' },
@@ -259,7 +259,7 @@ export const SERVICES: Service[] = [
     ],
     faqs: [
       { q: 'What are the black streaks on my gutters?', a: 'They are "tiger stripes" — a bonded film of asphalt residue, pollen and pollutant fallout that rain washes down the gutter face and slowly oxidizes onto the paint. A regular rinse, or even a full gutter cleaning, will not remove them; it takes a detergent made for the job.' },
-      { q: 'Can you do just the gutters, or does it have to be with other work?', a: 'Either. It is most cost-effective added to a <a href="/services/gutter-cleaning">gutter cleaning</a> or <a href="/services/house-washing">house wash</a> since we are already set up, but we do stand-alone gutter brightening too.' },
+      { q: 'Can you do just the gutters, or does it have to be with other work?', a: 'Either. It is most cost-effective added to a <a href="/services/gutter-cleaning/">gutter cleaning</a> or <a href="/services/house-washing/">house wash</a> since we are already set up, but we do stand-alone gutter brightening too.' },
       { q: 'Will it hurt the paint or finish on my gutters?', a: 'No — it is a low-pressure detergent process, not pressure washing. It lifts the stain and oxidation while leaving the factory finish intact. Very old, chalky gutters may not come fully back to white; we will tell you honestly after a look.' },
       { q: 'How long does it stay looking clean?', a: 'A few years, depending on how much roof and traffic pollution runs down the face. Homes on busy roads or under older roofs stripe faster — a light re-do every couple of years keeps them sharp.' },
     ],
@@ -284,7 +284,7 @@ export const SERVICES: Service[] = [
     price: 'from $8 / linear ft',
     icon: 'gutterGuard',
     span: 'wide',
-    detailPage: '/services/gutter-guard-installation',
+    detailPage: '/services/gutter-guard-installation/',
     edge: 'stop cleaning gutters',
     whyLocal: [
       { icon: 'leaf', t: 'Conifer country', d: 'Fir and cedar needles slip through screens and pack a trough solid — twice a year, every year. Raptor\'s 900-openings-per-inch mesh stops them at the surface.' },
@@ -323,7 +323,7 @@ export const SERVICES: Service[] = [
     price: 'from $99',
     icon: 'deck',
     span: 'unit',
-    detailPage: '/services/deck-patio-cleaning',
+    detailPage: '/services/deck-patio-cleaning/',
     edge: 'pressure matched to the board',
     whyLocal: [
       { icon: 'deck', t: 'Wood vs. composite', d: 'Cedar and pressure-treated lumber want low pressure and a brightener; Trex and composite want detergent and almost no pressure. The wrong call furs the wood or voids the warranty.' },
@@ -361,7 +361,7 @@ export const SERVICES: Service[] = [
     price: 'from $99',
     icon: 'driveway',
     span: 'unit',
-    detailPage: '/services/driveway-concrete-cleaning',
+    detailPage: '/services/driveway-concrete-cleaning/',
     edge: 'no zebra stripes',
     whyLocal: [
       { icon: 'driveway', t: 'Even finish, every pass', d: 'Wand-only cleaning leaves arcs and stripes. A rotary surface cleaner holds a consistent distance so the whole slab comes out one shade.' },
@@ -399,7 +399,7 @@ export const SERVICES: Service[] = [
     price: 'quoted per site',
     icon: 'commercial',
     span: 'unit',
-    detailPage: '/services/commercial-services',
+    detailPage: '/services/commercial-services/',
     edge: 'on your schedule',
     whyLocal: [
       { icon: 'commercial', t: 'The storefront is the first impression', d: 'Gum, spills, cobwebs and a grimy entrance read as "closed" even when you are open. A clean exterior is the cheapest marketing you have.' },
@@ -435,7 +435,7 @@ export const SERVICES: Service[] = [
     price: 'from $179',
     icon: 'leaf',
     span: 'wide',
-    detailPage: '/services/landscaping',
+    detailPage: '/services/landscaping/',
     edge: 'the other half of curb appeal',
     whyLocal: [
       { icon: 'leaf', t: 'One LLC, both halves', d: 'Clean siding next to overgrown beds still looks neglected. We do the wash and the grounds so the whole property reads "cared for".' },
@@ -472,7 +472,7 @@ export const SERVICES: Service[] = [
     price: 'from $399 first season',
     icon: 'lights',
     span: 'unit',
-    detailPage: '/services/christmas-light-installation',
+    detailPage: '/services/christmas-light-installation/',
     edge: 'cut to your rooflines',
     whyLocal: [
       { icon: 'clock', t: 'Dark by 4:30', d: 'Puget Sound winters are long and grey. Lights up right after Thanksgiving buy months of curb appeal exactly when the neighborhood needs it.' },

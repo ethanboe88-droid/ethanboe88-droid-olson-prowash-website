@@ -19,12 +19,12 @@ const studies = (await getCollection('work', ({ data }) => !data.draft)).sort(
   canonical="/work"
   keywords="pressure washing before and after Snohomish County, roof cleaning case study Lake Stevens, gutter cleaning results Arlington, Olson Pro Wash projects"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/work' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Our Work', path: '/work/' }]),
     webPageLd({
       type: 'CollectionPage',
       name: 'Our Work — Olson Pro Wash',
       description: 'Project case studies across Snohomish & King County, WA — roof cleaning, gutter clean-outs and exterior restoration, with the method and the results.',
-      path: '/work',
+      path: '/work/',
     }),
   ]}
 >
@@ -39,7 +39,7 @@ const studies = (await getCollection('work', ({ data }) => !data.draft)).sort(
     <div class="container-x">
       <div class="grid gap-6 md:grid-cols-2">
         {studies.map((s, i) => (
-          <a href={`/work/${s.slug}`} class="reveal panel lift group flex flex-col overflow-hidden" style={`--reveal-delay:${(i % 2) * 70}ms`}>
+          <a href={`/work/${s.slug}/`} class="reveal panel lift group flex flex-col overflow-hidden" style={`--reveal-delay:${(i % 2) * 70}ms`}>
             <div class="relative aspect-[16/10] overflow-hidden">
               <Photo src={s.data.image} alt={s.data.imageAlt} width={1400} height={1400}
                      sizes="(min-width: 768px) 560px, 100vw" class="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
@@ -59,9 +59,9 @@ const studies = (await getCollection('work', ({ data }) => !data.draft)).sort(
       </div>
 
       <div class="reveal mt-10 flex flex-wrap gap-2.5">
-        <a href="/gallery" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Before &amp; after gallery</a>
-        <a href="/reviews" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Reviews</a>
-        <a href="/services" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">All services</a>
+        <a href="/gallery/" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Before &amp; after gallery</a>
+        <a href="/reviews/" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Reviews</a>
+        <a href="/services/" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">All services</a>
       </div>
     </div>
   </section>

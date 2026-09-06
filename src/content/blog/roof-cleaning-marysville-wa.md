@@ -38,11 +38,11 @@ moisture on the shingles and feeds regrowth fast.
 4. **Rinse** fully and gently.
 5. **Clear** loosened debris off the roof and out of the gutters.
 
-It's a [soft wash](/services/soft-washing), never a pressure wash — done to
+It's a [soft wash](/services/soft-washing/), never a pressure wash — done to
 <a href="https://www.asphaltroofing.org/" target="_blank" rel="noopener noreferrer">ARMA</a> and shingle-manufacturer guidelines so your warranty
-stays intact. Full details on our [roof cleaning service page](/services/roof-cleaning), and the
+stays intact. Full details on our [roof cleaning service page](/services/roof-cleaning/), and the
 method explained in
-[soft wash vs pressure wash for your roof](/blog/soft-wash-vs-pressure-wash-roof).
+[soft wash vs pressure wash for your roof](/blog/soft-wash-vs-pressure-wash-roof/).
 
 ## 2026 pricing
 
@@ -53,22 +53,22 @@ method explained in
 | Two-story, ~2,000–3,000 sq ft roof | $650 – $950 |
 | Steep-pitch or heavy moss, 3,000+ sq ft | $950 – $1,300 |
 
-Bundle a [gutter cleaning](/services/gutter-cleaning) or [house wash](/services/house-washing) and
+Bundle a [gutter cleaning](/services/gutter-cleaning/) or [house wash](/services/house-washing/) and
 it's cheaper per service. Our
-[roof cleaning cost guide](/blog/roof-cleaning-cost-lake-stevens-wa) breaks down what moves the
+[roof cleaning cost guide](/blog/roof-cleaning-cost-lake-stevens-wa/) breaks down what moves the
 number.
 
 ## How to book
 
-Call or text **(425) 446-0547**, or [send a few photos through the quote form](/contact). I'll get
+Call or text **(425) 446-0547**, or [send a few photos through the quote form](/contact/). I'll get
 you a firm price, usually same day. We're licensed and insured in Washington (registration
-#OLSONLP747MF) and 4.9-star rated — reviews are [here](/reviews).
+#OLSONLP747MF) and 4.9-star rated — reviews are [here](/reviews/).
 
 ## Frequently asked questions
 
 **Do you service all of Marysville?**
 Yes — plus Lake Stevens, Everett, Arlington, Snohomish, Bothell and Kenmore. Full list on our
-[service area page](/service-area).
+[service area page](/service-area/).
 
 **How long does it take?**
 Two to four hours for most homes, one visit. Heavy moss jobs may need a short return as the dead
@@ -76,7 +76,7 @@ growth releases.
 
 **How often should a Marysville roof be cleaned?**
 Every 2–3 years; sooner on shaded, tree-covered lots.
-[More here](/blog/how-often-clean-roof-pacific-northwest).
+[More here](/blog/how-often-clean-roof-pacific-northwest/).
 
 **Is it safe for my plants and pets?**
 Yes, done correctly — pre-wet, rinsed, runoff controlled per
@@ -84,4 +84,4 @@ Yes, done correctly — pre-wet, rinsed, runoff controlled per
 
 ## Get your Marysville roof quote
 
-**(425) 446-0547** or [request a quote online](/contact).
+**(425) 446-0547** or [request a quote online](/contact/).

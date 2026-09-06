@@ -11,7 +11,7 @@ heroAlt: "Olson Pro Wash running a surface cleaner on a concrete driveway in Sno
 
 "Pressure washing" covers a lot of ground — a driveway, a whole house, a deck, a fence, a patio —
 and each one prices differently. So a flat "what do you charge?" is hard to answer without knowing
-what you're looking at. Here's how [pressure washing](/services/pressure-washing) actually prices
+what you're looking at. Here's how [pressure washing](/services/pressure-washing/) actually prices
 out around Snohomish County in 2026, surface by surface.
 
 ## Price ranges by surface
@@ -30,7 +30,7 @@ out around Snohomish County in 2026, surface by surface.
 Concrete flatwork — driveways, walks, patios — is where "pressure washing" is literally the right
 tool: controlled high pressure through a surface cleaner for an even, streak-free finish. Siding,
 roofs and painted or stained surfaces are **not** pressure washed; those get a low-pressure
-[soft wash](/services/soft-washing) instead, which is why a "house pressure washing" quote should
+[soft wash](/services/soft-washing/) instead, which is why a "house pressure washing" quote should
 really be a soft wash quote.
 
 ## What affects the price
@@ -92,7 +92,7 @@ back.
 
 **Is a house wash the same as pressure washing?**
 No. A house wash is a low-pressure soft wash with detergent — safe for siding, paint and trim.
-See our [soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home).
+See our [soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-washington-home/).
 
 **Do you bundle services?**
 Yes. Driveway + house wash + gutters in one visit is cheaper per service than three separate trips,
@@ -101,4 +101,4 @@ and it's our most common booking.
 ## Get a quote
 
 Tell me what you're looking at — driveway, house, deck, all of it — and I'll get you a firm number.
-Call or text **(425) 446-0547** or [use the quote form](/contact).
+Call or text **(425) 446-0547** or [use the quote form](/contact/).

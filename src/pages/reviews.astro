@@ -23,11 +23,11 @@ const platforms = [
   canonical="/reviews"
   keywords="Olson Pro Wash reviews, pressure washing reviews Lake Stevens WA, roof cleaning reviews Snohomish County, best rated pressure washer near me"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Reviews', path: '/reviews' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Reviews', path: '/reviews/' }]),
     webPageLd({
       name: 'Reviews — Olson Pro Wash',
       description: 'Customer reviews and ratings for Olson Pro Wash across Snohomish & King County, WA.',
-      path: '/reviews',
+      path: '/reviews/',
       speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
     }),
     localBusinessLd,
@@ -97,7 +97,7 @@ const platforms = [
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a href={SITE.googleReviewUrl} target="_blank" rel="noopener" class="btn btn-primary text-sm"><Icon name="google" class="h-4 w-4" /> Review us on Google</a>
-          <a href="/work" class="btn btn-ghost text-sm">See the work <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/work/" class="btn btn-ghost text-sm">See the work <Icon name="arrow" class="h-4 w-4" /></a>
         </div>
       </div>
     </div>

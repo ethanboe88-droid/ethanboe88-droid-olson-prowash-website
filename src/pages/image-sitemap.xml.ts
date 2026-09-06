@@ -75,7 +75,11 @@ const about: Entry = {
   images: [{ url: `${base}/images/founder.jpg`, caption: `${SITE.founder}, founder of ${SITE.legalName}`, title: SITE.founder }],
 };
 
-const entries: Entry[] = [home, gallery, roofService, ...services, ...cities, about];
+// Trailing slash on every page URL — matches trailingSlash: 'always' + canonical.
+const entries: Entry[] = [home, gallery, roofService, ...services, ...cities, about].map((e) => ({
+  ...e,
+  loc: e.loc.endsWith('/') ? e.loc : e.loc + '/',
+}));
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">

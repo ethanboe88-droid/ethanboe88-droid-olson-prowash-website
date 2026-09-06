@@ -18,12 +18,12 @@ const [featured, ...others] = posts;
   description="Practical advice on roof cleaning, moss control, soft washing and exterior maintenance for homes and businesses in Lake Stevens and the Puget Sound region."
   canonical="/blog"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Journal', path: '/blog/' }]),
     webPageLd({
       type: 'CollectionPage',
       name: 'Journal — Olson Pro Wash',
       description: 'Roof cleaning, moss control and exterior maintenance guides for Lake Stevens and the Puget Sound region.',
-      path: '/blog',
+      path: '/blog/',
     }),
   ]}
 >
@@ -37,7 +37,7 @@ const [featured, ...others] = posts;
   <section class="section">
     <div class="container-x">
       {featured && (
-        <a href={`/blog/${featured.slug}`} class="reveal panel lift group grid overflow-hidden lg:grid-cols-2">
+        <a href={`/blog/${featured.slug}/`} class="reveal panel lift group grid overflow-hidden lg:grid-cols-2">
           <div class="relative aspect-[16/10] lg:aspect-auto">
             <Photo src={featured.data.heroImage} alt={featured.data.heroAlt} width={1600} height={900}
                    loading="eager" sizes="(min-width: 1024px) 600px, 100vw" class="absolute inset-0 h-full w-full object-cover" />
@@ -57,7 +57,7 @@ const [featured, ...others] = posts;
 
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {others.map((post, i) => (
-          <a href={`/blog/${post.slug}`} class="reveal panel lift group flex flex-col overflow-hidden" style={`--reveal-delay:${(i % 3) * 70}ms`}>
+          <a href={`/blog/${post.slug}/`} class="reveal panel lift group flex flex-col overflow-hidden" style={`--reveal-delay:${(i % 3) * 70}ms`}>
             <div class="relative aspect-[16/10]"><Photo src={post.data.heroImage} alt={post.data.heroAlt} width={1600} height={900} sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" class="absolute inset-0 h-full w-full object-cover" /></div>
             <div class="flex flex-1 flex-col p-6">
               <div class="flex items-center gap-2 text-xs text-text-mute">
@@ -80,14 +80,14 @@ const [featured, ...others] = posts;
         <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Start here</p>
         <div class="mt-4 flex flex-wrap gap-2.5">
           {[
-            { href: '/services/roof-cleaning', label: 'Roof Cleaning' },
-            { href: '/services/house-washing', label: 'House Washing' },
-            { href: '/services/soft-washing', label: 'Soft Washing' },
-            { href: '/services/gutter-cleaning', label: 'Gutter Cleaning' },
-            { href: '/services/gutter-guard-installation', label: 'Gutter Guards' },
-            { href: '/services', label: 'All services' },
-            { href: '/service-area', label: 'Where we work' },
-            { href: '/faq', label: 'FAQ' },
+            { href: '/services/roof-cleaning/', label: 'Roof Cleaning' },
+            { href: '/services/house-washing/', label: 'House Washing' },
+            { href: '/services/soft-washing/', label: 'Soft Washing' },
+            { href: '/services/gutter-cleaning/', label: 'Gutter Cleaning' },
+            { href: '/services/gutter-guard-installation/', label: 'Gutter Guards' },
+            { href: '/services/', label: 'All services' },
+            { href: '/service-area/', label: 'Where we work' },
+            { href: '/faq/', label: 'FAQ' },
           ].map((l) => (
             <a href={l.href} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{l.label}</a>
           ))}

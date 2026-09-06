@@ -79,12 +79,12 @@ install buys you is the prep and the finish:
    before we pack up.
 
 It's a one-visit job on most homes, and it
-[bundles well with a roof soft wash](/services/roof-cleaning) — you don't want years of loosened
+[bundles well with a roof soft wash](/services/roof-cleaning/) — you don't want years of loosened
 moss washing onto brand-new guards.
 
 ## What changes after install
 
-You stop [cleaning your gutters](/services/gutter-cleaning) twice a year. That's the point.
+You stop [cleaning your gutters](/services/gutter-cleaning/) twice a year. That's the point.
 
 You're not completely hands-off forever — over several years, fine dust and pollen can build a thin
 film on top of the mesh, and a quick rinse from a ladder or a soft wash clears it. But the annual
@@ -101,9 +101,9 @@ Raptor is a strong fit if you have:
 It's less of a fit if your gutters are already rusted through or pulling off the fascia — in that
 case we'll quote gutter replacement first and show you photos of why.
 
-If you're in [Lake Stevens, Everett, Snohomish, Monroe, Granite Falls](/service-area) or anywhere
+If you're in [Lake Stevens, Everett, Snohomish, Monroe, Granite Falls](/service-area/) or anywhere
 across Snohomish and North King County and you're tired of the ladder,
-[send us photos of your gutters and roofline](/contact#quote) — we'll come measure and give you a
+[send us photos of your gutters and roofline](/contact/#quote) — we'll come measure and give you a
 firm per-foot number on Raptor.
 
 *Sources: manufacturer specifications from [raptorgutterguard.com](https://raptorgutterguard.com/stainless-steel/);

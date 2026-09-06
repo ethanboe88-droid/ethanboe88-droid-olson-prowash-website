@@ -31,18 +31,18 @@ const serviceFaqs = [
   canonical="/services"
   keywords="pressure washing services Snohomish County, roof cleaning, soft washing, house washing, gutter cleaning, gutter guard installation, deck cleaning, driveway cleaning, commercial pressure washing, Lake Stevens WA"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Services', path: '/services/' }]),
     webPageLd({
       type: 'CollectionPage',
       name: 'Services — Olson Pro Wash',
       description: 'Roof cleaning, house washing, pressure & soft washing, gutter cleaning, gutter guards, deck, driveway, commercial and landscaping.',
-      path: '/services',
+      path: '/services/',
     }),
     ...SERVICES.map(serviceLd),
     howToLd({
       name: 'How an Olson Pro Wash exterior cleaning job works',
       description: 'The four steps from quote to finished, damage-free clean.',
-      path: '/services',
+      path: '/services/',
       steps: processSteps.map((s) => ({ name: s.t, text: s.d })),
     }),
     faqLd(serviceFaqs),
@@ -84,7 +84,7 @@ const serviceFaqs = [
               </ul>
               <div class="reveal mt-7 flex flex-wrap items-center gap-3">
                 <a href={s.detailPage} data-magnetic class="btn btn-primary">Explore {s.title} <Icon name="arrow" class="h-4 w-4" /></a>
-                <a href="/contact#quote" class="btn btn-ghost">Free quote</a>
+                <a href="/contact/#quote" class="btn btn-ghost">Free quote</a>
                 <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
               </div>
             </div>
@@ -125,7 +125,7 @@ const serviceFaqs = [
             <h2 class="display mt-3 text-[clamp(1.6rem,3.6vw,2.2rem)]">Put it on a maintenance plan</h2>
             <p class="mt-3 max-w-xl text-text-dim">Scheduled, flat-rate visits — gutters, roof watch and washing — at a lower per-visit rate than one-off work. No lock-in.</p>
           </div>
-          <a href="/services/maintenance-plans" data-magnetic class="btn btn-primary w-full lg:w-auto">See the plans <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href="/services/maintenance-plans/" data-magnetic class="btn btn-primary w-full lg:w-auto">See the plans <Icon name="arrow" class="h-4 w-4" /></a>
         </div>
       </div>
     </div>

@@ -42,12 +42,12 @@ it's a recognized problem, not a myth.
 | **Year 1–2** | Green fuzz along edges and valleys, black algae streaking. Mostly cosmetic — but the roots are establishing. |
 | **Year 3–5** | Thick moss cushions. Shingle edges lifting. Granule loss accelerating. Damp spots in the attic after long rains. |
 | **Year 5+** | Underlayment saturated in spots, decking beginning to rot, leaks at valleys and penetrations. Now it's a repair, not a cleaning. |
-| **The bill** | A $299–$950 [soft wash](/services/roof-cleaning) at year 2 vs. $1,500+ in repairs — or a $12,000–$25,000 full replacement years early. |
+| **The bill** | A $299–$950 [soft wash](/services/roof-cleaning/) at year 2 vs. $1,500+ in repairs — or a $12,000–$25,000 full replacement years early. |
 
 Washington State University's <a href="https://hortsense.cahnr.wsu.edu/" target="_blank" rel="noopener noreferrer">Hortsense</a> notes moss re-
 establishes quickly in shade and moisture, so a roof that's been let go usually needs treatment
 *plus* a plan to keep it clear. Our
-[what happens if you don't clean your roof](/blog/what-happens-if-you-dont-clean-roof) post covers
+[what happens if you don't clean your roof](/blog/what-happens-if-you-dont-clean-roof/) post covers
 the insurance and home-value side.
 
 ## Moss vs. algae vs. lichen — know what you're looking at
@@ -59,7 +59,7 @@ the insurance and home-value side.
 - **Lichen**: crusty, flat, gray-green patches that look almost painted on. Bonds tightly to the
   granule surface and is the most stubborn to remove — it needs a proper dwell time to release.
 
-All three are handled by the same [soft wash](/services/soft-washing) approach: treat, let it
+All three are handled by the same [soft wash](/services/soft-washing/) approach: treat, let it
 dwell to kill at the root, rinse, clear. Which is present just affects how long the treatment
 needs to work.
 
@@ -68,9 +68,9 @@ needs to work.
 1. **Have it soft washed** — treated, killed at the root, rinsed, and the dead growth cleared.
    Never pressure washed; that strips granules and voids warranties.
 2. **Keep debris off** — needles and leaves feed regrowth. Blow the roof off a couple times a
-   year, or fold it into a [maintenance plan](/services/maintenance-plans).
+   year, or fold it into a [maintenance plan](/services/maintenance-plans/).
 3. **Trim overhanging branches** — more sun and airflow, less shade and drip.
-4. **Clean the gutters** — a backed-up [gutter](/services/gutter-cleaning) keeps the whole roof
+4. **Clean the gutters** — a backed-up [gutter](/services/gutter-cleaning/) keeps the whole roof
    edge wet.
 
 ## Frequently asked questions
@@ -93,4 +93,4 @@ jeopardize a claim or renewal.
 ## Get an honest assessment
 
 Send photos of your roof and I'll tell you what's growing, how far along it is, and what it needs.
-Call or text **(425) 446-0547** or [request a quote](/contact).
+Call or text **(425) 446-0547** or [request a quote](/contact/).

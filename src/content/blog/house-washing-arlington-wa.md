@@ -16,7 +16,7 @@ along 67th and Burn Road. Here's what a house wash actually covers.
 
 ## What house washing includes
 
-A house wash is a **low-pressure [soft wash](/services/house-washing)** — detergent and a cleaning
+A house wash is a **low-pressure [soft wash](/services/house-washing/)** — detergent and a cleaning
 solution do the work, applied at garden-hose pressure so nothing gets forced behind the siding or
 into window seals. On a typical Arlington home we clean:
 
@@ -29,8 +29,8 @@ into window seals. On a typical Arlington home we clean:
 
 **Gutter faces are not part of a standard house wash.** The black "tiger stripe" staining on the
 outside of the gutters is a bonded oxidation that needs its own detergent process — that's our
-optional [gutter brightening](/services/gutter-brightening) add-on. More on that in
-[tiger stripes on your gutters, explained](/blog/tiger-stripes-on-gutters-explained).
+optional [gutter brightening](/services/gutter-brightening/) add-on. More on that in
+[tiger stripes on your gutters, explained](/blog/tiger-stripes-on-gutters-explained/).
 
 ## Why soft wash, not pressure
 
@@ -39,13 +39,13 @@ It also just knocks the top layer of algae off instead of killing it, so it's ba
 soft wash kills the growth at the root and lasts 2+ years. The
 <a href="https://www.epa.gov/saferchoice" target="_blank" rel="noopener noreferrer">EPA's Safer Choice</a> program is a good reference on the kinds of
 detergents that clean effectively without unnecessary harm — the solution matters more than the
-pressure. Full explanation in [what is soft washing](/blog/what-is-soft-washing).
+pressure. Full explanation in [what is soft washing](/blog/what-is-soft-washing/).
 
 ## Before and after
 
 A house wash is one of those jobs where the difference from the street is dramatic — dull, green-
 tinged siding comes back to its actual color, and the shaded north side stops looking like a
-different house. See examples in our [gallery](/gallery).
+different house. See examples in our [gallery](/gallery/).
 
 ## 2026 pricing
 
@@ -55,9 +55,9 @@ different house. See examples in our [gallery](/gallery).
 | Two-story | $400 – $700 |
 | Large / complex rooflines / heavy staining | $650 – $900 |
 
-Bundle a [roof cleaning](/services/roof-cleaning) or [gutter cleaning](/services/gutter-cleaning)
+Bundle a [roof cleaning](/services/roof-cleaning/) or [gutter cleaning](/services/gutter-cleaning/)
 and it's cheaper per service. Full breakdown in our
-[Snohomish County pressure washing cost guide](/blog/pressure-washing-cost-snohomish-county).
+[Snohomish County pressure washing cost guide](/blog/pressure-washing-cost-snohomish-county/).
 
 ## Frequently asked questions
 
@@ -77,9 +77,9 @@ Two to four hours depending on size and stories.
 
 **Do you serve all of Arlington?**
 Yes, plus Lake Stevens, Marysville, Everett, Snohomish, Bothell and Kenmore. See our
-[service area](/service-area).
+[service area](/service-area/).
 
 ## Book a house wash in Arlington
 
-Call or text **(425) 446-0547** or [request a quote online](/contact). Licensed, insured, 4.9-star
-rated — [reviews here](/reviews).
+Call or text **(425) 446-0547** or [request a quote online](/contact/). Licensed, insured, 4.9-star
+rated — [reviews here](/reviews/).

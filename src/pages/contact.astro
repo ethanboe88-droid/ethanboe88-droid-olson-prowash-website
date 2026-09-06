@@ -14,12 +14,12 @@ import { breadcrumbLd, webPageLd } from '../data/schema';
   description={`Request a free pressure washing, roof cleaning or landscaping quote from Olson Pro Wash. Call ${SITE.phone}. Serving Lake Stevens & Snohomish County, WA.`}
   canonical="/contact"
   jsonLd={[
-    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]),
+    breadcrumbLd([{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact/' }]),
     webPageLd({
       type: 'ContactPage',
       name: 'Contact & Free Quote — Olson Pro Wash',
       description: `Request a free quote or call ${SITE.phone}. Serving Lake Stevens, Snohomish & King County, WA.`,
-      path: '/contact',
+      path: '/contact/',
       speakableSelectors: ['h1', 'h2'],
     }),
   ]}
@@ -106,7 +106,7 @@ import { breadcrumbLd, webPageLd } from '../data/schema';
         </ul>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="#quote" data-magnetic class="btn btn-primary">Check my address <Icon name="arrow" class="h-4 w-4" /></a>
-          <a href="/service-area" class="btn btn-ghost">See all cities we serve</a>
+          <a href="/service-area/" class="btn btn-ghost">See all cities we serve</a>
         </div>
       </div>
       <div class="reveal bezel overflow-hidden rounded-2xl">

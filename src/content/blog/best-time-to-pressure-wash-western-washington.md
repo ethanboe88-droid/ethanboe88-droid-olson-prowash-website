@@ -21,7 +21,7 @@ cleaning well is the difference between a result that lasts a year and one that 
 region:
 
 - **Drier, warmer weather** helps detergents work and surfaces dry properly.
-- **The big pollen and seed drop is over** by late spring, so a [house wash](/services/house-washing)
+- **The big pollen and seed drop is over** by late spring, so a [house wash](/services/house-washing/)
   in May or June stays clean through summer.
 - **You get the whole dry season** to enjoy the result before the rain returns.
 - **Longer days** mean we can schedule bigger jobs — combined roof, house and gutter visits — in
@@ -36,23 +36,23 @@ months:
 
 | Service | Best window | Can be done off-season? |
 | --- | --- | --- |
-| [House washing](/services/house-washing) | May – September | Yes, in dry spells above ~40°F |
-| [Roof soft washing](/services/roof-cleaning) | April – October | Yes — light rain is fine, product still works |
-| [Gutter cleaning](/services/gutter-cleaning) | Late fall + late spring | Yes, year-round |
-| [Driveway & concrete](/services/driveway-concrete-cleaning) | April – October | Yes in dry weather; avoid hard freezes |
-| [Deck & patio](/services/deck-patio-cleaning) | May – September (needs dry time to re-seal) | Cleaning yes; sealing needs a dry stretch |
-| [Gutter guard installation](/services/gutter-guard-installation) | Year-round | Yes |
+| [House washing](/services/house-washing/) | May – September | Yes, in dry spells above ~40°F |
+| [Roof soft washing](/services/roof-cleaning/) | April – October | Yes — light rain is fine, product still works |
+| [Gutter cleaning](/services/gutter-cleaning/) | Late fall + late spring | Yes, year-round |
+| [Driveway & concrete](/services/driveway-concrete-cleaning/) | April – October | Yes in dry weather; avoid hard freezes |
+| [Deck & patio](/services/deck-patio-cleaning/) | May – September (needs dry time to re-seal) | Cleaning yes; sealing needs a dry stretch |
+| [Gutter guard installation](/services/gutter-guard-installation/) | Year-round | Yes |
 
-[Soft washing](/services/soft-washing) in particular is not weather-dependent the way pressure
+[Soft washing](/services/soft-washing/) in particular is not weather-dependent the way pressure
 washing is — the chemistry does the work, so a grey drizzly day is perfectly fine.
 
 ## Timing each job so it lasts
 
 ### Roof cleaning — spring or early fall
 
-A [roof soft wash](/services/roof-cleaning) in spring clears the moss that thickened over winter
+A [roof soft wash](/services/roof-cleaning/) in spring clears the moss that thickened over winter
 before it can damage anything. Early fall works too, and has a bonus: it clears the roof right
-before the heavy leaf and needle drop, so your freshly cleaned [gutters](/services/gutter-cleaning)
+before the heavy leaf and needle drop, so your freshly cleaned [gutters](/services/gutter-cleaning/)
 do not immediately fill with dead moss.
 
 ### Gutter cleaning — twice, on the shoulders of the wet season
@@ -64,7 +64,7 @@ both.
 
 ### House washing — late spring
 
-Wash after the pollen and cottonwood fluff have finished, and the [green algae film](/services/house-washing)
+Wash after the pollen and cottonwood fluff have finished, and the [green algae film](/services/house-washing/)
 on the north and east walls comes off with it. You then get the full dry season looking clean.
 
 ### Deck cleaning — early summer, if you are sealing
@@ -79,5 +79,5 @@ is harder — and more expensive — to remove, and a gutter that overflows thro
 cause damage that costs far more than the cleaning would have.
 
 If your roof or siding already looks bad, the best time is now. We work
-[across Snohomish and North King County](/service-area) through most weather. [Send a few
-photos](/contact#quote) and we will tell you what it needs and when to book it.
+[across Snohomish and North King County](/service-area/) through most weather. [Send a few
+photos](/contact/#quote) and we will tell you what it needs and when to book it.

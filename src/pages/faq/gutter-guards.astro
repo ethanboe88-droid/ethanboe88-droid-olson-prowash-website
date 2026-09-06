@@ -48,7 +48,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: 'What about moss and roof grit washing down from the roof?',
-        a: 'The mesh blocks grit at the surface, where it dries out and blows or rinses off. On a shingle roof we strongly recommend a <a href="/services/roof-cleaning">roof soft wash</a> before or with the install so you are not sending years of loosened moss onto brand-new guards.',
+        a: 'The mesh blocks grit at the surface, where it dries out and blows or rinses off. On a shingle roof we strongly recommend a <a href="/services/roof-cleaning/">roof soft wash</a> before or with the install so you are not sending years of loosened moss onto brand-new guards.',
       },
       {
         q: 'Does it hold up to snow and ice?',
@@ -94,7 +94,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
       },
       {
         q: 'Is it cheaper if I bundle it with other work?',
-        a: 'Yes. Adding gutter guards to a <a href="/services/roof-cleaning">roof wash</a> or <a href="/services/house-washing">house wash</a> visit is discounted because we are already on site and set up.',
+        a: 'Yes. Adding gutter guards to a <a href="/services/roof-cleaning/">roof wash</a> or <a href="/services/house-washing/">house wash</a> visit is discounted because we are already on site and set up.',
       },
       {
         q: 'What is the warranty?',
@@ -111,7 +111,7 @@ const groups: { heading: string; items: { q: string; a: string }[] }[] = [
     items: [
       {
         q: 'Will I ever have to clean my gutters again?',
-        a: 'Not the way you do now. Over several years a thin film of dust and pollen can build on top of the mesh — a quick rinse from a ladder or a <a href="/services/gutter-cleaning">soft wash</a> clears it. The twice-a-year scoop-out of wet needle sludge is done.',
+        a: 'Not the way you do now. Over several years a thin film of dust and pollen can build on top of the mesh — a quick rinse from a ladder or a <a href="/services/gutter-cleaning/">soft wash</a> clears it. The twice-a-year scoop-out of wet needle sludge is done.',
       },
       {
         q: 'What if a section stops draining later?',
@@ -135,13 +135,13 @@ const allItems = groups.flatMap((g) => g.items);
   jsonLd={[
     breadcrumbLd([
       { name: 'Home', path: '/' },
-      { name: 'FAQ', path: '/faq' },
-      { name: 'Gutter Guards', path: '/faq/gutter-guards' },
+      { name: 'FAQ', path: '/faq/' },
+      { name: 'Gutter Guards', path: '/faq/gutter-guards/' },
     ]),
     webPageLd({
       name: 'Raptor Gutter Guard FAQ — Olson Pro Wash',
       description: 'Common questions about Raptor Type 304 stainless steel micro-mesh gutter guards and professional installation in Snohomish & King County, WA.',
-      path: '/faq/gutter-guards',
+      path: '/faq/gutter-guards/',
       speakableSelectors: ['h1', 'summary'],
     }),
     faqLd(allItems),
@@ -151,15 +151,15 @@ const allItems = groups.flatMap((g) => g.items);
     eyebrow="Answers · Gutter guards"
     title="Raptor gutter guard <span class='text-jet-grad'>FAQ</span>"
     intro="Everything homeowners ask us about Raptor stainless steel micro-mesh — the spec, how it handles our rain, fitting it to your gutters, cost and warranty."
-    crumbs={[{ label: 'FAQ', href: '/faq' }, { label: 'Gutter Guards' }]}
+    crumbs={[{ label: 'FAQ', href: '/faq/' }, { label: 'Gutter Guards' }]}
   />
 
   <section class="section">
     <div class="container-x">
       <div class="reveal flex flex-wrap gap-2.5">
-        <a href="/services/gutter-guard-installation" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">Gutter guard installation <Icon name="arrow" class="h-3.5 w-3.5" /></a>
-        <a href="/blog/raptor-gutter-guards-pacific-northwest" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Why we chose Raptor</a>
-        <a href="/faq" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">General FAQ</a>
+        <a href="/services/gutter-guard-installation/" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">Gutter guard installation <Icon name="arrow" class="h-3.5 w-3.5" /></a>
+        <a href="/blog/raptor-gutter-guards-pacific-northwest/" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">Why we chose Raptor</a>
+        <a href="/faq/" class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">General FAQ</a>
       </div>
     </div>
   </section>

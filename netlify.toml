@@ -44,7 +44,7 @@
 
 [[redirects]]
   from = "/quote"
-  to = "/contact"
+  to = "/contact/"
   status = 301
 
 # dist/404.html is served automatically by Netlify for unmatched routes.

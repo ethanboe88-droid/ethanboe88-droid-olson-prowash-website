@@ -42,5 +42,5 @@ Clean shingles, an even tone across the whole plane, and no granule loss. The he
 spots kept browning and dropping over the following few weeks, which is normal. This roof should
 go two to four years before it needs another wash.
 
-*Want this for your roof? [Send us a photo](/contact#quote) — most roof-wash quotes come back the
+*Want this for your roof? [Send us a photo](/contact/#quote) — most roof-wash quotes come back the
 same day.*

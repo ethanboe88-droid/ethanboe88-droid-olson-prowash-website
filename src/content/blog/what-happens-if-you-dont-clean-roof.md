@@ -17,7 +17,7 @@ Here's what actually happens, year by year, and what it costs compared with stay
 **Year 1–2 — cosmetic (but the clock's started).**
 Green fuzz along the shingle edges and in the valleys. Black algae streaks down the slopes. Looks
 bad from the street; the roof is still structurally fine. This is the cheapest possible time to
-treat it — a straightforward [soft wash](/services/roof-cleaning), $299–$950 for most homes.
+treat it — a straightforward [soft wash](/services/roof-cleaning/), $299–$950 for most homes.
 
 **Year 3–5 — structural.**
 Moss cushions thicken and creep *under* the shingle edges, lifting them. Wind gets under lifted
@@ -58,22 +58,22 @@ keeping your policy affordable.
 A green, streaked roof is the first thing a buyer's eye lands on, and it reads as "deferred
 maintenance — what else did they skip?" Real-estate agents routinely have roofs cleaned before
 listing because it's one of the highest-return prep items. Appraisers and inspectors note roof
-condition directly. A [house wash](/services/house-washing) and roof cleaning together are a
+condition directly. A [house wash](/services/house-washing/) and roof cleaning together are a
 few hundred dollars that can move a sale price by thousands and shorten days-on-market.
 
 ## What "staying ahead of it" looks like
 
 1. **Soft wash every 2–3 years** — treated, killed at the root, rinsed, cleared. Never pressure
    washed.
-2. **Keep debris off** the roof and out of the [gutters](/services/gutter-cleaning) — needles and
+2. **Keep debris off** the roof and out of the [gutters](/services/gutter-cleaning/) — needles and
    leaves feed regrowth and keep the edge wet.
 3. **Trim overhanging branches** for sun and airflow.
-4. **Consider a [maintenance plan](/services/maintenance-plans)** if your roof is heavily shaded.
+4. **Consider a [maintenance plan](/services/maintenance-plans/)** if your roof is heavily shaded.
 
 More on timing in
-[how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest),
+[how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest/),
 and on the damage mechanism in
-[does moss actually damage your roof](/blog/does-moss-damage-your-roof).
+[does moss actually damage your roof](/blog/does-moss-damage-your-roof/).
 
 ## Frequently asked questions
 
@@ -97,4 +97,4 @@ voids them.
 ## Get an honest assessment
 
 Send photos of your roof and I'll tell you where it is on this timeline and what it needs. Call or
-text **(425) 446-0547** or [request a quote](/contact).
+text **(425) 446-0547** or [request a quote](/contact/).

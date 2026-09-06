@@ -43,7 +43,7 @@ bulbs are replaceable without losing the run.
 
 ## It's a service, not just an install
 
-[Our Christmas light installation](/services/christmas-light-installation) covers the whole
+[Our Christmas light installation](/services/christmas-light-installation/) covers the whole
 season, not just the day the lights go up:
 
 1. **Measure & design.** We lay out the look with you — warm white or multicolor, C9 / C7 /
@@ -74,5 +74,5 @@ Steep, wet, moss-slick winter roofs are the worst place in the year to be on a l
 full-service model means you're inside with the lights on a timer while someone else handles the
 roof — in November to hang, mid-season if something fails, and in January to take it all down.
 
-**Want a number for your house?** [Send a photo of the front](/contact#quote) with the rooflines
+**Want a number for your house?** [Send a photo of the front](/contact/#quote) with the rooflines
 you'd want lit and we'll put together a design and a firm first-season quote.

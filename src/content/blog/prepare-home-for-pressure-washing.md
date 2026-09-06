@@ -11,7 +11,7 @@ heroAlt: "Olson Pro Wash service truck parked at a home on house washing day"
 
 Prepping for a wash takes about fifteen minutes and makes the whole day go smoother — faster work,
 a better result, and nothing of yours in the splash zone. Here's the checklist we send customers
-before a [house wash](/services/house-washing) or [pressure washing](/services/pressure-washing)
+before a [house wash](/services/house-washing/) or [pressure washing](/services/pressure-washing/)
 visit.
 
 ## The homeowner checklist
@@ -61,7 +61,7 @@ photos or electronics on the other side of that wall as a precaution.
 - Pre-wetting and covering landscaping
 - Moving lightweight furniture and putting it back
 - Protecting downspout outlets and light fixtures as needed
-- Choosing the right method and pressure for each surface — [soft wash](/services/soft-washing)
+- Choosing the right method and pressure for each surface — [soft wash](/services/soft-washing/)
   for siding and painted surfaces, controlled pressure for concrete
 - Containing and directing runoff away from storm drains, per
   <a href="https://ecology.wa.gov/" target="_blank" rel="noopener noreferrer">Washington Department of Ecology</a> guidance
@@ -96,10 +96,10 @@ garden-hose pressure — it's gentler than a rainstorm.
 Tell us where it is. Pre-wet, covered, rinsed — we do this on every job.
 
 **Can you do the roof and gutters the same day?**
-Yes — [roof cleaning](/services/roof-cleaning) and [gutter cleaning](/services/gutter-cleaning)
+Yes — [roof cleaning](/services/roof-cleaning/) and [gutter cleaning](/services/gutter-cleaning/)
 bundle well with a house wash and cost less together.
 
 ## Book your wash
 
-Call or text **(425) 446-0547** or [request a quote online](/contact). We'll send this checklist
+Call or text **(425) 446-0547** or [request a quote online](/contact/). We'll send this checklist
 with your confirmation.

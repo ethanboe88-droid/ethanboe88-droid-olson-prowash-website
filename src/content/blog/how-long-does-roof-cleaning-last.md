@@ -9,7 +9,7 @@ heroImage: "/images/ba-roof-3.jpg"
 heroAlt: "Before and after roof soft wash on a low-slope valley — heavy needle buildup rinsed clean"
 ---
 
-A properly done [roof soft wash](/services/roof-cleaning) keeps a Pacific Northwest roof visibly
+A properly done [roof soft wash](/services/roof-cleaning/) keeps a Pacific Northwest roof visibly
 clean and moss-free for **about 2 to 3 years**. Some roofs go longer; heavily shaded ones under
 trees are closer to 18 months. The number depends less on the cleaning and more on what happens to
 the roof afterward.
@@ -31,7 +31,7 @@ fast the clock runs back down is about exposure and debris.
   sunny exposures.
 - **Tree debris.** Fir needles and leaf litter hold moisture on the shingles and feed regrowth.
   This is the #1 accelerant.
-- **Clogged gutters.** A backed-up [gutter](/services/gutter-cleaning) keeps the whole roof edge
+- **Clogged gutters.** A backed-up [gutter](/services/gutter-cleaning/) keeps the whole roof edge
   wet.
 - **Low-slope sections.** Porch roofs and valleys that don't drain fast stay wet and grow moss
   first.
@@ -54,7 +54,7 @@ also cuts down the debris load.
 
 **Get on a maintenance schedule.** A light re-treatment at the 2-year mark — before moss re-
 establishes — is faster and cheaper than waiting for thick growth. Our
-[maintenance plans](/services/maintenance-plans) fold roof, gutters and a house wash into one
+[maintenance plans](/services/maintenance-plans/) fold roof, gutters and a house wash into one
 recurring visit at a lower per-visit rate.
 
 **Skip the zinc strips.** We don't install them and don't recommend them — they streak the roof,
@@ -82,7 +82,7 @@ restoration.
 
 **How do I know when it's time again?**
 Green fuzz returning along the edges and valleys, black streaking coming back, or growth in the
-gutters. See [how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest).
+gutters. See [how often should you clean your roof in the PNW](/blog/how-often-clean-roof-pacific-northwest/).
 
 **Does a metal roof stay clean longer?**
 Usually yes — smoother surface, better drainage — but shaded metal still grows algae and needs
@@ -91,9 +91,9 @@ periodic soft washing.
 **Do you offer a warranty on the cleaning?**
 We stand behind the work — the moss is killed and cleared when we leave. Longevity after that
 comes down to exposure and upkeep, which is what the maintenance plan is for. See our
-[guarantee](/guarantee).
+[guarantee](/guarantee/).
 
 ## Keep your roof clear
 
-Call or text **(425) 446-0547** or [request a quote](/contact) and ask about getting on a
+Call or text **(425) 446-0547** or [request a quote](/contact/) and ask about getting on a
 maintenance schedule.

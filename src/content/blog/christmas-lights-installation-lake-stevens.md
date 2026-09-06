@@ -11,7 +11,7 @@ heroAlt: "Olson Pro Wash technician hanging warm-white C9 Christmas lights along
 
 Lake Stevens does the holidays right — the lake, the tree lighting, whole streets lit up. If you
 want your house to be one of the sharp ones without spending a cold weekend on a wet roof, here's
-how our [Christmas light installation](/services/christmas-light-installation) works, what it
+how our [Christmas light installation](/services/christmas-light-installation/) works, what it
 costs, and why the calendar fills up fast.
 
 ## What's included
@@ -29,9 +29,9 @@ costs, and why the calendar fills up fast.
 - **Labeled storage.** Your custom set is stored so next year's re-hang is fast and cheaper.
 
 You own the lights after the first season. Full detail on the
-[service page](/services/christmas-light-installation), and the case for custom-cut over
+[service page](/services/christmas-light-installation/), and the case for custom-cut over
 store-bought in
-[custom-cut Christmas lights vs. store-bought strings](/blog/custom-cut-christmas-lights-vs-store-bought).
+[custom-cut Christmas lights vs. store-bought strings](/blog/custom-cut-christmas-lights-vs-store-bought/).
 
 ## Pricing
 
@@ -93,9 +93,9 @@ photo and we'll design to it.
 
 **Do you serve outside Lake Stevens?**
 Yes — Marysville, Everett, Arlington, Snohomish, Bothell and Kenmore. See our
-[service area](/service-area).
+[service area](/service-area/).
 
 ## Book your install date
 
-Call or text **(425) 446-0547** or [request a quote online](/contact). The earlier you book, the
+Call or text **(425) 446-0547** or [request a quote online](/contact/). The earlier you book, the
 more of the calendar you get to choose from.

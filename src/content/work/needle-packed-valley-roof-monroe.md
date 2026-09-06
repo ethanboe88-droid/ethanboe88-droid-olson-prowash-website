@@ -32,7 +32,7 @@ planes.
 ## The result
 
 The valley is clear and the whole roof reads one tone again. In the Skykomish valley, roofs like
-this one do best on a two-to-three-year wash cycle — a [maintenance plan](/services/maintenance-plans)
+this one do best on a two-to-three-year wash cycle — a [maintenance plan](/services/maintenance-plans/)
 keeps each visit quick and cheaper because the growth never gets a full head start.
 
-*[Send a photo of your roof](/contact#quote) for a same-day quote.*
+*[Send a photo of your roof](/contact/#quote) for a same-day quote.*

@@ -44,8 +44,8 @@ A correct job on an asphalt shingle roof is a **soft wash**, not a pressure wash
 
 It's done to <a href="https://www.asphaltroofing.org/" target="_blank" rel="noopener noreferrer">ARMA</a> and shingle-manufacturer cleaning guidelines
 so your warranty stays intact. See our full
-[roof cleaning service page](/services/roof-cleaning) for the details, and our
-[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-roof) for why the method
+[roof cleaning service page](/services/roof-cleaning/) for the details, and our
+[soft wash vs pressure wash guide](/blog/soft-wash-vs-pressure-wash-roof/) for why the method
 matters.
 
 ## How to choose a roof cleaning company
@@ -58,8 +58,8 @@ someone gets hurt on your property, that's your problem.
 **Ask what pressure they use on shingles.** The right answer is "low pressure, the solution does
 the work." If they talk about blasting or a certain PSI on the shingles, keep calling.
 
-**Look for local reviews and real photos.** Ours are on our [reviews page](/reviews) and
-[gallery](/gallery). Generic stock photos and no named local reviews are a warning sign.
+**Look for local reviews and real photos.** Ours are on our [reviews page](/reviews/) and
+[gallery](/gallery/). Generic stock photos and no named local reviews are a warning sign.
 
 **Get the scope in writing.** Roof, gutters cleared, plants protected, rinse included — it should
 all be spelled out.
@@ -76,24 +76,24 @@ all be spelled out.
 
 The composite at the top of this post is a real local job — a moss-matted, needle-covered roof
 brought back to clean shingles with a soft wash and a follow-up debris clearing. More are in the
-[gallery](/gallery) and written up in [our project work](/work). Heavy jobs sometimes take a short
+[gallery](/gallery/) and written up in [our project work](/work/). Heavy jobs sometimes take a short
 return visit as the dead moss fully releases; we tell you that up front.
 
 ## Frequently asked questions
 
 **How much does roof cleaning cost in Lake Stevens?**
 Most homes run $299–$950. Full breakdown in our
-[Lake Stevens roof cleaning cost guide](/blog/roof-cleaning-cost-lake-stevens-wa).
+[Lake Stevens roof cleaning cost guide](/blog/roof-cleaning-cost-lake-stevens-wa/).
 
 **How long does it take?**
 Two to four hours for most homes, single visit.
 
 **How often should I have it done?**
 Every two to three years here. See
-[how often should you clean your roof in the Pacific Northwest](/blog/how-often-clean-roof-pacific-northwest).
+[how often should you clean your roof in the Pacific Northwest](/blog/how-often-clean-roof-pacific-northwest/).
 
 **Do you also do the gutters and house?**
-Yes — [gutter cleaning](/services/gutter-cleaning) and a [house wash](/services/house-washing) are
+Yes — [gutter cleaning](/services/gutter-cleaning/) and a [house wash](/services/house-washing/) are
 commonly bundled with the roof and cost less done together.
 
 **Is the treatment safe for my garden and pets?**
@@ -102,5 +102,5 @@ Yes, handled correctly — pre-wet, rinsed, runoff controlled per
 
 ## Book your roof cleaning
 
-Call or text **(425) 446-0547**, or [send photos through the quote form](/contact). I'll give you a
+Call or text **(425) 446-0547**, or [send photos through the quote form](/contact/). I'll give you a
 firm price and an honest read on what your roof needs.

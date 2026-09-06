@@ -29,7 +29,7 @@ shaded slopes.
   courses got a low-pressure soft wash with a biocide to kill the moss and algae at the root.
 - **Gutters hand-cleared.** Every run was cleared by hand and bagged — nothing blown onto the
   roof or the beds — and each downspout was flushed and flow-tested.
-- **Faces brightened.** The customer added [gutter brightening](/services/gutter-brightening) — a
+- **Faces brightened.** The customer added [gutter brightening](/services/gutter-brightening/) — a
   soft wash of the exterior faces — so the whole line looked new, not just empty.
 - **Walked it together.** We confirmed full flow through every downspout before packing up.
 
@@ -37,7 +37,7 @@ shaded slopes.
 
 The roof reads one even tone again and the gutters actually drain. Because both jobs happened on
 the same visit, the customer paid a bundled rate instead of two separate trip charges. On a lot
-this wooded, the honest next step is [Raptor gutter guards](/services/gutter-guard-installation)
+this wooded, the honest next step is [Raptor gutter guards](/services/gutter-guard-installation/)
 so the trough stops filling in the first place.
 
-*[Send photos of your roof and gutters](/contact#quote) for a combined quote.*
+*[Send photos of your roof and gutters](/contact/#quote) for a combined quote.*

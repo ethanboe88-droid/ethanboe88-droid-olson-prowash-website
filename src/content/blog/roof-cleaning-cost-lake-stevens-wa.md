@@ -19,7 +19,7 @@ fair quote from one that's going to cost you a roof.
 
 ## The short answer
 
-For a typical single-family home in Lake Stevens, a professional [roof soft wash](/services/roof-cleaning)
+For a typical single-family home in Lake Stevens, a professional [roof soft wash](/services/roof-cleaning/)
 runs **$299 to about $950**, with most homes landing in the **$450–$750** range. Larger footprints,
 steep pitches, and heavy moss push it higher. Small ramblers with light streaking come in at the
 bottom of the range.
@@ -55,11 +55,11 @@ following weeks. Heavier growth costs more.
 **Surroundings.** Big-leaf maples and Douglas firs directly over the roof mean more debris, more
 shade, and faster regrowth — some companies price that in.
 
-**Add-ons.** Most Lake Stevens homeowners bundle a [gutter cleaning](/services/gutter-cleaning) and
-a [house wash](/services/house-washing) with the roof while we're already set up on site, which is
+**Add-ons.** Most Lake Stevens homeowners bundle a [gutter cleaning](/services/gutter-cleaning/) and
+a [house wash](/services/house-washing/) with the roof while we're already set up on site, which is
 cheaper per service than booking them separately. If you want the black "tiger stripe" staining
 taken off the outside of the gutters, that's our separate
-[gutter brightening](/services/gutter-brightening) service.
+[gutter brightening](/services/gutter-brightening/) service.
 
 ## What's included in our roof cleaning
 
@@ -77,7 +77,7 @@ We offer a **premium soft wash** (the method we recommend for asphalt shingle) a
 you through both when we quote.
 
 For a broader county-wide breakdown, see our
-[roof cleaning cost guide for Snohomish County](/blog/roof-cleaning-cost-snohomish-county).
+[roof cleaning cost guide for Snohomish County](/blog/roof-cleaning-cost-snohomish-county/).
 
 ## How to spot a risky quote
 
@@ -90,8 +90,8 @@ For a broader county-wide breakdown, see our
 - **No proof of license or insurance.** In Washington you can
   <a href="https://www.lni.wa.gov/licensing-permits/contractors/verify-a-contractor-tradesperson-or-business/" target="_blank" rel="noopener noreferrer">verify any contractor</a>
   through L&I in about thirty seconds. We're licensed and insured — registration #OLSONLP747MF.
-- **No before/after work and no reviews.** Ours are on our [reviews page](/reviews) and in our
-  [project gallery](/gallery).
+- **No before/after work and no reviews.** Ours are on our [reviews page](/reviews/) and in our
+  [project gallery](/gallery/).
 
 ## Frequently asked questions
 
@@ -120,5 +120,5 @@ booking we run in Lake Stevens.
 ## Get a firm number for your roof
 
 Every roof is a little different, so the real answer comes from a look at yours. Call or text
-**(425) 446-0547**, or [send a few photos through our quote form](/contact) and I'll get you a
+**(425) 446-0547**, or [send a few photos through our quote form](/contact/) and I'll get you a
 firm price — no sales pitch, no pressure.

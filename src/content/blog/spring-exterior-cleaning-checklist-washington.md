@@ -30,25 +30,25 @@ hand off.
 
 ### Roof — hire out
 Check for moss cushions along edges and in valleys, black streaking, and lifted shingles. In our
-climate most roofs want a [soft wash](/services/roof-cleaning) every 2–3 years — spring is a prime
+climate most roofs want a [soft wash](/services/roof-cleaning/) every 2–3 years — spring is a prime
 window. Never pressure washed; it strips granules and voids warranties
 (<a href="https://www.asphaltroofing.org/" target="_blank" rel="noopener noreferrer">ARMA</a> guidance). More in
-[when is the best time to clean your roof in Washington](/blog/best-time-clean-roof-washington-state).
+[when is the best time to clean your roof in Washington](/blog/best-time-clean-roof-washington-state/).
 
 ### Gutters — DIY or hire out
 Scoop the troughs, flush every downspout, flow-test, check the pitch and hangers, and look at the
 fascia behind the gutter for rot. Two-story or steep roof? Hire it out — ladder falls spike in
-spring. Our [gutter cleaning](/services/gutter-cleaning) includes a flow test and completion
+spring. Our [gutter cleaning](/services/gutter-cleaning/) includes a flow test and completion
 photos.
 
 ### Siding — hire out (soft wash)
 That green-gray film on the north and shaded walls is algae. A low-pressure
-[house wash](/services/house-washing) clears it and lasts 2+ years. Not a pressure-washing
-job — see [what is soft washing](/blog/what-is-soft-washing).
+[house wash](/services/house-washing/) clears it and lasts 2+ years. Not a pressure-washing
+job — see [what is soft washing](/blog/what-is-soft-washing/).
 
 ### Driveway, walkways & patio — DIY or hire out
 Winter leaves moss in the shade and tannin stains under the trees.
-[Pressure washing with a surface cleaner](/services/driveway-concrete-cleaning) gives an even
+[Pressure washing with a surface cleaner](/services/driveway-concrete-cleaning/) gives an even
 finish; our concrete post-treatment kills the growth in the pores and brightens it back toward
 new. A homeowner with a surface-cleaner attachment can do concrete; skip the wand-only "zebra
 stripe" method.
@@ -63,13 +63,13 @@ pressure to brighten without furring the wood. Essential prep before any stain o
 ### Gutter faces — add-on
 The black "tiger stripe" staining on the *outside* of the gutters isn't removed by a gutter
 cleaning or a house wash — it's a separate detergent process, our
-[gutter brightening](/services/gutter-brightening) service. Background in
-[tiger stripes explained](/blog/tiger-stripes-on-gutters-explained).
+[gutter brightening](/services/gutter-brightening/) service. Background in
+[tiger stripes explained](/blog/tiger-stripes-on-gutters-explained/).
 
 ### Landscaping — DIY or hire out
 Cut back winter dieback, edge the beds, fresh bark, and — important for the roof — **trim branches
 back off the roofline** for more sun and less debris. We handle
-[landscaping](/services/landscaping) from $179 if you'd rather not.
+[landscaping](/services/landscaping/) from $179 if you'd rather not.
 
 ### Fencing & retaining walls — DIY or hire out
 Algae and moss on the shaded sides. Low pressure and the right pre-treatment.
@@ -91,7 +91,7 @@ Algae and moss on the shaded sides. Low pressure and the right pre-treatment.
 
 Most Washington homeowners get the best value doing **roof + gutters + house wash + driveway in a
 single visit** — it's cheaper per service than four separate trips, and it puts the whole property
-on the same clock. Our [maintenance plans](/services/maintenance-plans) lock in a lower per-visit
+on the same clock. Our [maintenance plans](/services/maintenance-plans/) lock in a lower per-visit
 rate if you want it handled every year without thinking about it.
 
 ## Frequently asked questions
@@ -112,4 +112,4 @@ Yes — send photos and tell me what you want covered and I'll price the bundle.
 
 ## Book your spring reset
 
-Call or text **(425) 446-0547** or [request a quote online](/contact).
+Call or text **(425) 446-0547** or [request a quote online](/contact/).
