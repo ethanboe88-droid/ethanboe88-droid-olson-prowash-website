@@ -47,4 +47,31 @@
   to = "/contact/"
   status = 301
 
+# Old blog slugs from before the Wisconsin -> Lake Stevens relocation.
+# Point them at their current equivalents so inbound links and Google keep working.
+[[redirects]]
+  from = "/blog/best-pressure-washing-services-northwest-wisconsin"
+  to = "/blog/best-pressure-washing-services-lake-stevens-wa/"
+  status = 301
+[[redirects]]
+  from = "/blog/best-pressure-washing-services-northwest-wisconsin/"
+  to = "/blog/best-pressure-washing-services-lake-stevens-wa/"
+  status = 301
+[[redirects]]
+  from = "/blog/how-often-should-you-pressure-wash-your-home"
+  to = "/blog/how-often-pressure-wash-home-pacific-northwest/"
+  status = 301
+[[redirects]]
+  from = "/blog/how-often-should-you-pressure-wash-your-home/"
+  to = "/blog/how-often-pressure-wash-home-pacific-northwest/"
+  status = 301
+[[redirects]]
+  from = "/blog/soft-wash-vs-pressure-wash"
+  to = "/blog/soft-wash-vs-pressure-wash-washington-home/"
+  status = 301
+[[redirects]]
+  from = "/blog/soft-wash-vs-pressure-wash/"
+  to = "/blog/soft-wash-vs-pressure-wash-washington-home/"
+  status = 301
+
 # dist/404.html is served automatically by Netlify for unmatched routes.
