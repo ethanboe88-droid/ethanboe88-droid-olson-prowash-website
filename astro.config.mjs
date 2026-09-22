@@ -6,7 +6,7 @@ import { visit } from 'unist-util-visit';
 // Update `site` to the production domain before deploying.
 // Stable content revision date — matches SITE.lastContentUpdate. Bump on real
 // content changes so <lastmod> stays honest instead of changing every build.
-const LASTMOD = '2026-09-02T02:00:00.000Z';
+const LASTMOD = '2026-09-21T18:00:00.000Z';
 
 // Give internal links in Markdown a trailing slash so they match
 // trailingSlash: 'always' and never take a redirect hop.
