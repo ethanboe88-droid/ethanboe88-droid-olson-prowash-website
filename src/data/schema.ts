@@ -319,3 +319,43 @@ export const blogPostingLd = (post: {
   about: { '@id': `${base}/#business` },
   speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '.prose > p:first-of-type'] },
 });
+
+// One Service node scoped to a single service AND a single city — for the
+// /services/<service>/<city>/ combination pages (currently gutter cleaning).
+export const serviceCityLd = (
+  s: (typeof SERVICES)[number],
+  city: { name: string; slug: string; geo: { lat: number; lng: number } }
+) => {
+  const priceMatch = s.price.match(/\$([\d,]+(?:\.\d+)?)/);
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${base}/services/${s.slug}/${city.slug}/#service`,
+    name: `${s.title} in ${city.name}, ${REGION}`,
+    description: `${s.description} Serving ${city.name}, Washington and the surrounding area.`,
+    serviceType: s.title,
+    category: 'Exterior cleaning',
+    image: [`${base}${'photo' in s && s.photo ? s.photo : SITE.ogImage}`],
+    provider: { '@id': `${base}/#business` },
+    areaServed: {
+      '@type': 'City',
+      name: `${city.name}, ${REGION}`,
+      geo: { '@type': 'GeoCoordinates', latitude: city.geo.lat, longitude: city.geo.lng },
+    },
+    url: `${base}/services/${s.slug}/${city.slug}/`,
+    offers: {
+      '@type': 'Offer',
+      priceCurrency: 'USD',
+      ...(priceMatch ? { price: priceMatch[1].replace(/,/g, '') } : {}),
+      description: s.price,
+      availability: 'https://schema.org/InStock',
+      areaServed: 'US-WA',
+    },
+    hoursAvailable: SITE.openingHoursSpec.map((o) => ({
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: o.days,
+      opens: o.opens,
+      closes: o.closes,
+    })),
+  };
+};

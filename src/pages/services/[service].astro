@@ -196,7 +196,7 @@ const heroTitle = `${s.title}, <span class='text-jet-grad'>${s.edge}</span>`;
             <ul class="mt-4 grid gap-2.5 sm:grid-cols-2">
               {g.cities.map((c) => (
                 <li>
-                  <a href={`/service-area/${c.slug}/`}
+                  <a href={s.slug === 'gutter-cleaning' ? `/services/gutter-cleaning/${c.slug}/` : `/service-area/${c.slug}/`}
                      class="group flex items-center justify-between gap-2 rounded-xl border border-hairline bg-white/[0.02] px-3.5 py-2.5 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">
                     <span>{s.title} in <span class="text-text">{c.name}</span>, {SITE.address.region}</span>
                     <Icon name="arrow" class="h-3.5 w-3.5 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5" />

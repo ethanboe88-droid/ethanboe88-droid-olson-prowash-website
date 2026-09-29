@@ -1,0 +1,183 @@
+---
+// Gutter cleaning, scoped to one city at a time — /services/gutter-cleaning/<city>/
+// Built alongside src/pages/services/[service].astro and
+// src/pages/service-area/[city].astro; reuses the same components/data so it
+// stays visually and structurally in line with the rest of the site. Content
+// is genuinely unique per city (src/data/gutterCleaningCities.ts), not a
+// reworded copy, to avoid the thin/duplicate-content trap of swapped-name
+// location pages.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import JetDivider from '../../../components/JetDivider.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import Faq from '../../../components/Faq.astro';
+import Icon from '../../../components/Icon.astro';
+import Photo from '../../../components/Photo.astro';
+import { SITE } from '../../../data/site';
+import { CITIES, type City } from '../../../data/cities';
+import { getService } from '../../../data/services';
+import { getGutterCityContent } from '../../../data/gutterCleaningCities';
+import { breadcrumbLd, webPageLd, serviceCityLd, faqLd } from '../../../data/schema';
+
+export function getStaticPaths() {
+  return CITIES.map((city) => ({ params: { city: city.slug }, props: { city } }));
+}
+
+type Props = { city: City };
+const { city } = Astro.props;
+
+const s = getService('gutter-cleaning')!;
+const content = getGutterCityContent(city.slug)!;
+const nearby = CITIES.filter((c) => c.slug !== city.slug).slice(0, 6);
+
+const faqs = [
+  content.faq,
+  {
+    q: `Do you charge extra to come to ${city.name} for gutter cleaning?`,
+    a:
+      city.driveTime === 'our home base'
+        ? `No. ${city.name} is where we're based — no travel fee, and it gets priority scheduling.`
+        : `No travel fee for ${city.name} — it's inside our core service area (${city.driveTime}). Free, itemized quotes, most back the same day.`,
+  },
+];
+
+const title = `Gutter Cleaning in ${city.name}, ${SITE.address.region}`;
+const description = `Gutter cleaning in ${city.name}, WA — full interior scoop-out, every downspout flushed and flow-tested. ${s.price}. Free quotes: ${SITE.phone}.`;
+const heroTitle = `Gutter Cleaning in ${city.name}, <span class='text-jet-grad'>${s.edge}</span>`;
+---
+<BaseLayout
+  title={`${title} | ${SITE.name}`}
+  description={description}
+  canonical={`/services/gutter-cleaning/${city.slug}/`}
+  image={s.photo ?? SITE.ogImage}
+  keywords={`gutter cleaning ${city.name} WA, gutter cleaning near me, gutter clean out ${city.name}, gutter cleaning cost ${city.name}, ${city.county}, Olson Pro Wash`}
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services/' },
+      { name: 'Gutter Cleaning', path: '/services/gutter-cleaning/' },
+      { name: `${city.name}, ${SITE.address.region}`, path: `/services/gutter-cleaning/${city.slug}/` },
+    ]),
+    webPageLd({
+      name: title,
+      description,
+      path: `/services/gutter-cleaning/${city.slug}/`,
+      image: s.photo,
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    serviceCityLd(s, city),
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow={`Gutter Cleaning · ${city.county}`}
+    title={heroTitle}
+    intro={content.angle}
+    crumbs={[
+      { label: 'Services', href: '/services/' },
+      { label: 'Gutter Cleaning', href: '/services/gutter-cleaning/' },
+      { label: city.name },
+    ]}
+  />
+
+  <!-- What actually clogs gutters here + photo -->
+  <section class="section">
+    <div class="container-x grid items-center gap-12 lg:grid-cols-2">
+      <div class="reveal">
+        <SectionHeading eyebrow={`Why ${city.name} needs it`} title="What actually clogs gutters here" class="!max-w-none" />
+        <p class="mt-6 text-lg leading-relaxed text-text-dim">{content.angle}</p>
+        <p class="mt-4 text-sm text-text-mute">
+          {city.housing}. {city.driveTime === 'our home base' ? 'This is our home base.' : `${city.driveTime.charAt(0).toUpperCase() + city.driveTime.slice(1)}.`}
+        </p>
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="/contact/#quote" data-magnetic class="btn btn-primary">Free Quote in {city.name} <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+          <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+        </div>
+      </div>
+
+      <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2">
+        <Photo src={s.photo!} alt={`Olson Pro Wash gutter cleaning in ${city.name}, WA`} width={1500} height={1000}
+               sizes="(min-width: 1024px) 560px, 100vw" class="aspect-[3/2] w-full object-cover" />
+        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Gutter Cleaning · {city.name}, {SITE.address.region}</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <!-- Neighborhoods we cover -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="Where we work" title={`Gutter cleaning across ${city.name}`} />
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-text-dim">
+        From {city.neighborhoods.slice(0, -1).join(', ')} to {city.neighborhoods[city.neighborhoods.length - 1]},
+        Olson Pro Wash covers every corner of {city.name} — you'll usually spot our truck somewhere near {city.landmarks.slice(0, 3).join(', ')}.
+      </p>
+      <div class="mt-6">
+        <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Neighborhoods we cover</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {city.neighborhoods.map((n) => (
+            <li class="rounded-full border border-hairline bg-white/[0.03] px-3 py-1.5 text-sm text-text-dim">{n}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- When to schedule it here -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x max-w-3xl">
+      <SectionHeading eyebrow="How often" title={`When to schedule it in ${city.name}`} class="!max-w-none" />
+      <p class="mt-6 text-lg leading-relaxed text-text-dim">{content.frequency}</p>
+      <p class="mt-4 text-sm text-text-mute">
+        Curious what's actually involved? See the full
+        <a href="/services/gutter-cleaning/" class="font-semibold text-jet-hi link-underline">gutter cleaning process</a> —
+        hand-clear, flush, flow-test, photo report — the same standard on every visit, in {city.name} or anywhere else we work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section">
+    <div class="container-x">
+      <div class="reveal panel grid gap-6 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <span class="eyebrow">What it costs in {city.name}</span>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-text-dim">{s.priceNote}</p>
+          <p class="mt-3 text-sm text-text-mute">Want it on a schedule? <a href="/services/maintenance-plans/" class="font-semibold text-jet-hi link-underline">Put it on a maintenance plan</a> for a lower per-visit rate.</p>
+        </div>
+        <a href="/contact/#quote" class="btn btn-primary w-full lg:w-auto">Get my exact number <Icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+    </div>
+  </section>
+
+  <JetDivider flip />
+
+  <!-- FAQ -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow={`${city.name} FAQ`} title="Gutter cleaning questions, answered" />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <!-- Nearby -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Nearby" title="Gutter cleaning in other cities" />
+      <ul class="mt-8 flex flex-wrap gap-2.5">
+        {nearby.map((c) => (
+          <li><a href={`/services/gutter-cleaning/${c.slug}/`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
+        ))}
+        <li><a href={`/service-area/${city.slug}/`} class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">Everything we do in {city.name} <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading={`Ready for spotless gutters in ${city.name}?`}
+    sub={`Free, itemized quotes for ${city.name} and the surrounding area. Most estimates back the same day.`}
+  />
+</BaseLayout>

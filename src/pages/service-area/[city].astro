@@ -23,6 +23,11 @@ const { city } = Astro.props;
 const nearby = CITIES.filter((c) => c.slug !== city.slug).slice(0, 6);
 const top = city.topServices.map((s) => getService(s)).filter(Boolean);
 
+// Gutter cleaning has its own per-city page; every other service still
+// points at its single detail page.
+const servicePath = (svc: (typeof SERVICES)[number]) =>
+  svc.slug === 'gutter-cleaning' ? `/services/gutter-cleaning/${city.slug}/` : (svc.detailPage ?? `/services/#${svc.slug}`);
+
 const sharedFaqs = [
   {
     q: `Do you charge extra to come to ${city.name}?`,
@@ -112,7 +117,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
         <SectionHeading eyebrow={`Most requested in ${city.name}`} title="What we do most here" />
         <div class="mt-10 grid gap-5 sm:grid-cols-3">
           {top.map((s, i) => (
-            <a href={s!.detailPage ?? `/services/#${s!.slug}`} class="reveal panel lift group p-6" style={`--reveal-delay:${i * 70}ms`}>
+            <a href={servicePath(s!)} class="reveal panel lift group p-6" style={`--reveal-delay:${i * 70}ms`}>
               <span class="grid h-11 w-11 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s!.icon} class="h-5 w-5" /></span>
               <h3 class="mt-4 font-display text-lg font-bold text-text">{s!.title}</h3>
               <p class="mt-2 text-sm leading-relaxed text-text-dim">{s!.short}</p>
@@ -130,7 +135,7 @@ const description = `Roof cleaning, house & pressure washing, gutters, gutter gu
       <SectionHeading eyebrow="Full service list" title={`Every service we offer in ${city.name}`} intro={`One local crew for the whole property. Tap any service for full details and ${city.county} pricing.`} />
       <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {SERVICES.map((s, i) => (
-          <a href={s.detailPage ?? `/services/#${s.slug}`} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
+          <a href={servicePath(s)} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
             <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
             <span class="min-w-0 flex-1">
               <span class="block font-display text-sm font-bold text-text">{s.title}</span>
