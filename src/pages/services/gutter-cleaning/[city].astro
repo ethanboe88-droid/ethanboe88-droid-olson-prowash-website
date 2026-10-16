@@ -15,7 +15,8 @@ import Faq from '../../../components/Faq.astro';
 import Icon from '../../../components/Icon.astro';
 import Photo from '../../../components/Photo.astro';
 import { SITE } from '../../../data/site';
-import { CITIES, type City } from '../../../data/cities';
+import ServiceCityLinks from '../../../components/ServiceCityLinks.astro';
+import { CITIES, nearestCities, type City } from '../../../data/cities';
 import { getService } from '../../../data/services';
 import { getGutterCityContent } from '../../../data/gutterCleaningCities';
 import { breadcrumbLd, webPageLd, serviceCityLd, faqLd } from '../../../data/schema';
@@ -29,7 +30,7 @@ const { city } = Astro.props;
 
 const s = getService('gutter-cleaning')!;
 const content = getGutterCityContent(city.slug)!;
-const nearby = CITIES.filter((c) => c.slug !== city.slug).slice(0, 6);
+const nearby = nearestCities(city, 6);
 
 const faqs = [
   content.faq,
@@ -98,9 +99,9 @@ const heroTitle = `Gutter Cleaning in ${city.name}, <span class='text-jet-grad'>
       </div>
 
       <figure class="reveal bezel overflow-hidden rounded-2xl bg-ink-2">
-        <Photo src={s.photo!} alt={`Olson Pro Wash gutter cleaning in ${city.name}, WA`} width={1500} height={1000}
+        <Photo src={s.photo!} alt={s.photoAlt ?? 'Olson Pro Wash clearing debris from a home gutter by hand'} width={1500} height={1000}
                sizes="(min-width: 1024px) 560px, 100vw" class="aspect-[3/2] w-full object-cover" />
-        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Gutter Cleaning · {city.name}, {SITE.address.region}</figcaption>
+        <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">Gutter Cleaning · Snohomish &amp; King County, {SITE.address.region}</figcaption>
       </figure>
     </div>
   </section>
@@ -156,12 +157,15 @@ const heroTitle = `Gutter Cleaning in ${city.name}, <span class='text-jet-grad'>
   <JetDivider flip />
 
   <!-- FAQ -->
-  <section class="section bg-ink-1/50">
+  <section class="section">
     <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
       <SectionHeading eyebrow={`${city.name} FAQ`} title="Gutter cleaning questions, answered" />
       <Faq items={faqs} />
     </div>
   </section>
+
+  <!-- Other services in this city -->
+  <ServiceCityLinks city={city} currentSlug="gutter-cleaning" />
 
   <!-- Nearby -->
   <section class="section">

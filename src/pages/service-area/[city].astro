@@ -25,8 +25,7 @@ const top = city.topServices.map((s) => getService(s)).filter(Boolean);
 
 // Gutter cleaning has its own per-city page; every other service still
 // points at its single detail page.
-const servicePath = (svc: (typeof SERVICES)[number]) =>
-  svc.slug === 'gutter-cleaning' ? `/services/gutter-cleaning/${city.slug}/` : (svc.detailPage ?? `/services/#${svc.slug}`);
+const servicePath = (svc: (typeof SERVICES)[number]) => `/services/${svc.slug}/${city.slug}/`;
 
 const sharedFaqs = [
   {

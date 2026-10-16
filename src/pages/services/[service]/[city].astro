@@ -1,0 +1,244 @@
+---
+// One service in one city — /services/<service>/<city>/
+// Covers every service except gutter cleaning, which keeps its own page
+// (src/pages/services/gutter-cleaning/[city].astro). Built from the same
+// components and data as services/[service].astro and service-area/[city].astro
+// so it stays visually and structurally in line with the rest of the site.
+// All copy comes from src/data/serviceCity/* — written per service AND per
+// city, not generated from a swapped-name template.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHero from '../../../components/PageHero.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import JetDivider from '../../../components/JetDivider.astro';
+import CtaBanner from '../../../components/CtaBanner.astro';
+import BeforeAfter from '../../../components/BeforeAfter.astro';
+import Faq from '../../../components/Faq.astro';
+import Icon from '../../../components/Icon.astro';
+import Photo from '../../../components/Photo.astro';
+import ServiceCityLinks from '../../../components/ServiceCityLinks.astro';
+import { SITE } from '../../../data/site';
+import { CITIES, nearestCities, type City } from '../../../data/cities';
+import { SERVICES, type Service } from '../../../data/services';
+import { getServiceCityContent } from '../../../data/serviceCity';
+import { breadcrumbLd, webPageLd, serviceCityLd, faqLd } from '../../../data/schema';
+
+export function getStaticPaths() {
+  const paths: { params: { service: string; city: string }; props: { service: Service; city: City } }[] = [];
+  for (const service of SERVICES) {
+    if (service.slug === 'gutter-cleaning') continue; // has its own dedicated page
+    for (const city of CITIES) {
+      paths.push({ params: { service: service.slug, city: city.slug }, props: { service, city } });
+    }
+  }
+  return paths;
+}
+
+type Props = { service: Service; city: City };
+const { service: s, city } = Astro.props;
+
+const content = getServiceCityContent(s.slug, city.slug);
+if (!content) throw new Error(`Missing service × city content for ${s.slug} / ${city.slug}`);
+
+const nearby = nearestCities(city, 6);
+
+// lowercased title for mid-sentence use, keeping proper nouns capitalised
+const titleLc = s.title.toLowerCase().replace(/\bchristmas\b/g, 'Christmas');
+
+const listJoin = (arr: string[]) =>
+  arr.length <= 1 ? (arr[0] ?? '') : `${arr.slice(0, -1).join(', ')} and ${arr[arr.length - 1]}`;
+const hoods = listJoin(city.neighborhoods);
+const marks = listJoin(city.landmarks.slice(0, 3));
+
+// A coverage line phrased for each service, so the paragraph reads differently
+// page to page instead of repeating one frame on every service in a city.
+const coverFrames: Record<string, string> = {
+  'roof-cleaning': `We soft wash roofs across ${city.name} — ${hoods}. Our truck is a regular sight near ${marks}.`,
+  'house-washing': `Whole-home washes are booked all over ${city.name}, from ${hoods}. You'll often find our truck near ${marks}.`,
+  'pressure-washing': `Flatwork and hardscape across ${city.name} — ${hoods}. We work near ${marks} on a regular basis.`,
+  'soft-washing': `Delicate-surface jobs come up everywhere in ${city.name}, from ${hoods}. Look for the truck around ${marks}.`,
+  'gutter-brightening': `We brighten gutter lines throughout ${city.name} — ${hoods} — and spend plenty of time near ${marks}.`,
+  'gutter-guard-installation': `Guard installs are quoted anywhere in ${city.name}, from ${hoods}. We're regularly on the road near ${marks}.`,
+  'deck-patio-cleaning': `Decks and patios get cleaned across ${city.name}, from ${hoods}. Our crew works near ${marks} throughout the season.`,
+  'driveway-concrete-cleaning': `Driveways and walkways across ${city.name} — ${hoods}. We're frequently out near ${marks}.`,
+  'commercial-services': `We maintain commercial properties throughout ${city.name}, from ${hoods}. Our crews work around ${marks}.`,
+  'landscaping': `Landscaping jobs are scheduled across ${city.name} — ${hoods}. Our crew is regularly near ${marks}.`,
+  'christmas-light-installation': `We hang lights all over ${city.name}, from ${hoods}. Come November our trucks are out near ${marks}.`,
+};
+const coverLine = coverFrames[s.slug] ?? `We serve ${city.name} — ${hoods}, near ${marks}.`;
+
+const planRelevant = !['christmas-light-installation', 'gutter-guard-installation', 'landscaping'].includes(s.slug);
+
+const faqs = [
+  content.faq,
+  {
+    q: `Do you charge extra to come to ${city.name} for ${titleLc}?`,
+    a:
+      city.driveTime === 'our home base'
+        ? `No. ${city.name} is where we're based — no travel fee, and it gets priority scheduling.`
+        : `No travel fee for ${city.name} — it's inside our core service area (${city.driveTime}). Free, itemized quotes, most back the same day.`,
+  },
+];
+
+const title = `${s.title} in ${city.name}, ${SITE.address.region}`;
+
+// Meta description: unique per page (neighborhood names), kept under 160 chars.
+const descCandidates = [
+  `${s.title} in ${city.name}, WA — serving ${city.neighborhoods[0]}, ${city.neighborhoods[1]} and nearby. ${s.price}. Licensed & insured. Free quotes: ${SITE.phone}.`,
+  `${s.title} in ${city.name}, WA — serving ${city.neighborhoods[0]} and nearby. ${s.price}. Licensed & insured. Free quotes: ${SITE.phone}.`,
+  `${s.title} in ${city.name}, WA. ${s.price}. Licensed & insured. Free quotes: ${SITE.phone}.`,
+  `${s.title} in ${city.name}, WA, ${s.price}. Licensed & insured. Free quotes: ${SITE.phone}.`,
+  `${s.title} in ${city.name}, WA. ${s.price}. Free quotes: ${SITE.phone}.`,
+];
+const description = descCandidates.find((d) => d.length <= 160) ?? descCandidates[descCandidates.length - 1];
+
+const heroTitle = `${s.title} in ${city.name}, <span class='text-jet-grad'>${s.edge}</span>`;
+const hasMedia = s.slug === 'roof-cleaning' || !!s.photo;
+const path = `/services/${s.slug}/${city.slug}/`;
+---
+<BaseLayout
+  title={`${title} | ${SITE.name}`}
+  description={description}
+  canonical={path}
+  image={s.photo ?? SITE.ogImage}
+  keywords={`${s.title.toLowerCase()} ${city.name} WA, ${s.title.toLowerCase()} near me, ${s.title.toLowerCase()} ${city.county}, ${s.title.toLowerCase()} cost ${city.name}, Olson Pro Wash`}
+  jsonLd={[
+    breadcrumbLd([
+      { name: 'Home', path: '/' },
+      { name: 'Services', path: '/services/' },
+      { name: s.title, path: s.detailPage },
+      { name: `${city.name}, ${SITE.address.region}`, path },
+    ]),
+    webPageLd({
+      name: title,
+      description,
+      path,
+      image: s.photo ?? SITE.ogImage,
+      speakableSelectors: ['h1', 'section:nth-of-type(1) p'],
+    }),
+    serviceCityLd(s, city, content.lead),
+    faqLd(faqs),
+  ]}
+>
+  <PageHero
+    eyebrow={`${s.title} · ${city.county}`}
+    title={heroTitle}
+    intro={content.lead}
+    crumbs={[
+      { label: 'Services', href: '/services/' },
+      { label: s.title, href: s.detailPage },
+      { label: city.name },
+    ]}
+  />
+
+  <!-- The local picture + media -->
+  <section class="section">
+    <div class:list={['container-x gap-12', hasMedia ? 'grid items-center lg:grid-cols-2' : 'max-w-4xl']}>
+      <div class="reveal">
+        <SectionHeading eyebrow={`Why ${city.name}`} title={`What to know about ${titleLc} in ${city.name}`} class="!max-w-none" />
+        <p class="mt-6 text-lg leading-relaxed text-text-dim">{content.angle}</p>
+        <p class="mt-4 text-sm text-text-mute">
+          {city.housing}. {city.driveTime === 'our home base' ? 'This is our home base.' : `${city.driveTime.charAt(0).toUpperCase() + city.driveTime.slice(1)}.`}
+        </p>
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <a href="/contact/#quote" data-magnetic class="btn btn-primary">Free Quote in {city.name} <Icon name="arrow" class="h-4 w-4" /></a>
+          <a href={SITE.phoneHref} class="btn btn-ghost"><Icon name="phone" class="h-4 w-4" /> {SITE.phone}</a>
+          <span class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+        </div>
+      </div>
+
+      {hasMedia && (
+        <div class="reveal">
+          {s.slug === 'roof-cleaning' ? (
+            <BeforeAfter before="/images/roof-before.jpg" after="/images/roof-after.jpg" start={54}
+              label="Roof soft wash — before / after"
+              beforeAlt="Mossy, streaked roof before soft washing" afterAlt="The same roof after an Olson Pro Wash soft wash" />
+          ) : (
+            <figure class="bezel overflow-hidden rounded-2xl bg-ink-2">
+              <Photo src={s.photo!} alt={s.photoAlt ?? `${s.title} by Olson Pro Wash`} width={1500} height={1000}
+                     sizes="(min-width: 1024px) 560px, 100vw" class="aspect-[3/2] w-full object-cover" />
+              <figcaption class="border-t border-hairline px-4 py-3 text-xs text-text-mute">{s.title} · Snohomish &amp; King County, {SITE.address.region}</figcaption>
+            </figure>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <JetDivider />
+
+  <!-- Where we work -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading eyebrow="Where we work" title={`${s.title} across ${city.name}`} />
+      <p class="mt-6 max-w-3xl text-lg leading-relaxed text-text-dim">{coverLine}</p>
+      <div class="mt-6">
+        <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">Neighborhoods we cover</p>
+        <ul class="mt-3 flex flex-wrap gap-2">
+          {city.neighborhoods.map((n) => (
+            <li class="rounded-full border border-hairline bg-white/[0.03] px-3 py-1.5 text-sm text-text-dim">{n}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timing -->
+  <section class="section">
+    <div class="container-x max-w-3xl">
+      <SectionHeading eyebrow="Timing" title={`When to schedule ${titleLc} in ${city.name}`} class="!max-w-none" />
+      <p class="mt-6 text-lg leading-relaxed text-text-dim">{content.timing}</p>
+      <p class="mt-4 text-sm text-text-mute">
+        Want the whole picture? See the full
+        <a href={s.detailPage} class="font-semibold text-jet-hi link-underline">{titleLc} service page</a> —
+        what's included, how it's done, and what it costs — the same standard on every visit, in {city.name} or anywhere else we work.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <div class="reveal panel grid gap-6 p-6 sm:p-8 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div>
+          <span class="eyebrow">What it costs in {city.name}</span>
+          <p class="mt-3 max-w-2xl text-lg leading-relaxed text-text-dim">{s.priceNote}</p>
+          {planRelevant && (
+            <p class="mt-3 text-sm text-text-mute">Want it on a schedule? <a href="/services/maintenance-plans/" class="font-semibold text-jet-hi link-underline">Put it on a maintenance plan</a> for a lower per-visit rate.</p>
+          )}
+        </div>
+        <a href="/contact/#quote" class="btn btn-primary w-full lg:w-auto">Get my exact number <Icon name="arrow" class="h-4 w-4" /></a>
+      </div>
+    </div>
+  </section>
+
+  <JetDivider flip />
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <SectionHeading eyebrow={`${city.name} FAQ`} title={`${s.title} questions, answered`} />
+      <Faq items={faqs} />
+    </div>
+  </section>
+
+  <!-- Other services in this city -->
+  <ServiceCityLinks city={city} currentSlug={s.slug} />
+
+  <!-- Nearby cities, same service -->
+  <section class="section">
+    <div class="container-x">
+      <SectionHeading eyebrow="Nearby" title={`${s.title} in nearby cities`} />
+      <ul class="mt-8 flex flex-wrap gap-2.5">
+        {nearby.map((c) => (
+          <li><a href={`/services/${s.slug}/${c.slug}/`} class="inline-flex rounded-full border border-hairline px-3.5 py-2 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">{c.name}, {SITE.address.region}</a></li>
+        ))}
+        <li><a href={`/service-area/${city.slug}/`} class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">Everything we do in {city.name} <Icon name="arrow" class="h-3.5 w-3.5" /></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBanner
+    heading={`Ready for ${titleLc} in ${city.name}?`}
+    sub={`Free, itemized quotes for ${city.name} and the surrounding area. Most estimates back the same day.`}
+  />
+</BaseLayout>

@@ -8,10 +8,16 @@ import JetDivider from '../../components/JetDivider.astro';
 import Icon from '../../components/Icon.astro';
 import Photo from '../../components/Photo.astro';
 import { SITE } from '../../data/site';
+import { CITIES } from '../../data/cities';
 import { getService } from '../../data/services';
 import { breadcrumbLd, serviceLd, faqLd, howToLd, webPageLd } from '../../data/schema';
 
 const svc = getService('gutter-guard-installation')!;
+
+const cityGroups = [
+  { county: 'Snohomish County', cities: CITIES.filter((c) => c.county === 'Snohomish County') },
+  { county: 'King County', cities: CITIES.filter((c) => c.county === 'King County') },
+];
 
 const problems = [
   { icon: 'leaf', t: 'Conifer country', d: 'Fir and cedar needles are fine enough to slip through screens and pack a trough solid — twice a year, every year.' },
@@ -281,6 +287,40 @@ const priceRanges = [
         </div>
       </div>
       <Faq items={faqs} />
+    </div>
+  </section>
+
+  <!-- Service area -->
+  <section class="section bg-ink-1/50">
+    <div class="container-x">
+      <SectionHeading
+        eyebrow="Service area"
+        title="Gutter guard installation in every city we serve"
+        intro="Same crew, same standard, no travel fee inside the area. Pick your city for local notes on gutter guards — conditions, neighborhoods and a free quote."
+      />
+      <div class="mt-10 grid gap-10 lg:grid-cols-2">
+        {cityGroups.map((g) => (
+          <div class="reveal">
+            <p class="font-display text-xs font-semibold uppercase tracking-eyebrow text-text-mute">{g.county}</p>
+            <ul class="mt-4 grid gap-2.5 sm:grid-cols-2">
+              {g.cities.map((c) => (
+                <li>
+                  <a href={`/services/gutter-guard-installation/${c.slug}/`}
+                     class="group flex items-center justify-between gap-2 rounded-xl border border-hairline bg-white/[0.02] px-3.5 py-2.5 text-sm text-text-dim transition hover:border-jet/60 hover:text-text">
+                    <span>Gutter Guards in <span class="text-text">{c.name}</span>, {SITE.address.region}</span>
+                    <Icon name="arrow" class="h-3.5 w-3.5 shrink-0 opacity-60 transition-transform group-hover:translate-x-0.5" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <div class="mt-8">
+        <a href="/service-area/" class="inline-flex items-center gap-1.5 rounded-full border border-jet/40 bg-jet/10 px-3.5 py-2 text-sm text-jet-hi transition hover:border-jet/60">
+          See the full service area <Icon name="arrow" class="h-3.5 w-3.5" />
+        </a>
+      </div>
     </div>
   </section>
 

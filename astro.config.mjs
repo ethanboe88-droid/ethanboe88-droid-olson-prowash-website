@@ -6,7 +6,7 @@ import { visit } from 'unist-util-visit';
 // Update `site` to the production domain before deploying.
 // Stable content revision date — matches SITE.lastContentUpdate. Bump on real
 // content changes so <lastmod> stays honest instead of changing every build.
-const LASTMOD = '2026-09-28T19:00:00.000Z';
+const LASTMOD = '2026-10-16T19:00:00.000Z';
 
 // Give internal links in Markdown a trailing slash so they match
 // trailingSlash: 'always' and never take a redirect hop.
@@ -45,6 +45,7 @@ export default defineConfig({
         item.lastmod = LASTMOD;
         if (path === '/') item.priority = 1.0;
         else if (/^\/(services|contact)\/$/.test(path)) item.priority = 0.9;
+        else if (/^\/services\/[^/]+\/[^/]+\/$/.test(path)) item.priority = 0.6;
         else if (/^\/services\/.+\/$/.test(path)) item.priority = 0.8;
         else if (/^\/(gallery|about|service-area|faq|reviews|guarantee|work)\/$/.test(path)) item.priority = 0.7;
         else if (/^\/faq\/[^/]+\/$/.test(path)) item.priority = 0.6;

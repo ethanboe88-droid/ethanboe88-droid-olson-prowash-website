@@ -324,7 +324,8 @@ export const blogPostingLd = (post: {
 // /services/<service>/<city>/ combination pages (currently gutter cleaning).
 export const serviceCityLd = (
   s: (typeof SERVICES)[number],
-  city: { name: string; slug: string; geo: { lat: number; lng: number } }
+  city: { name: string; slug: string; geo: { lat: number; lng: number } },
+  localNote?: string
 ) => {
   const priceMatch = s.price.match(/\$([\d,]+(?:\.\d+)?)/);
   return {
@@ -332,7 +333,7 @@ export const serviceCityLd = (
     '@type': 'Service',
     '@id': `${base}/services/${s.slug}/${city.slug}/#service`,
     name: `${s.title} in ${city.name}, ${REGION}`,
-    description: `${s.description} Serving ${city.name}, Washington and the surrounding area.`,
+    description: `${s.description} ${localNote ?? `Serving ${city.name}, Washington and the surrounding area.`}`,
     serviceType: s.title,
     category: 'Exterior cleaning',
     image: [`${base}${'photo' in s && s.photo ? s.photo : SITE.ogImage}`],

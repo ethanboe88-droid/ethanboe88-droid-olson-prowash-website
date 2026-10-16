@@ -1,0 +1,30 @@
+---
+// "One crew for the whole property" — links from a service × city page to the
+// other ten services' pages in the SAME city. Gives every page real internal
+// links into its siblings (good for crawl paths and local topical authority).
+import Icon from './Icon.astro';
+import SectionHeading from './SectionHeading.astro';
+import { SERVICES } from '../data/services';
+import type { City } from '../data/cities';
+
+interface Props { city: City; currentSlug: string; }
+const { city, currentSlug } = Astro.props;
+const others = SERVICES.filter((s) => s.slug !== currentSlug);
+---
+<section class="section bg-ink-1/50">
+  <div class="container-x">
+    <SectionHeading eyebrow={`More in ${city.name}`} title={`One crew for the whole property in ${city.name}`} />
+    <div class="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {others.map((s, i) => (
+        <a href={`/services/${s.slug}/${city.slug}/`} class="reveal panel lift group flex items-center gap-3.5 p-4" style={`--reveal-delay:${(i % 3) * 55}ms`}>
+          <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-hairline bg-white/[0.03] text-jet-hi group-hover:text-text"><Icon name={s.icon} class="h-5 w-5" /></span>
+          <span class="min-w-0 flex-1">
+            <span class="block font-display text-sm font-bold text-text">{s.title} in {city.name}</span>
+            <span class="mt-0.5 block font-display text-[11px] font-semibold uppercase tracking-eyebrow text-text-mute">{s.price}</span>
+          </span>
+          <Icon name="arrow" class="h-4 w-4 shrink-0 text-text-mute transition-transform group-hover:translate-x-1 group-hover:text-jet-hi" />
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

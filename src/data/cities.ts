@@ -459,3 +459,21 @@ export const CITIES: City[] = [
 ];
 
 export const getCity = (slug: string) => CITIES.find((c) => c.slug === slug);
+
+// Great-circle distance in km — used to list the genuinely nearest cities
+// (rather than the first few in the array) on service × city pages.
+const distanceKm = (a: { lat: number; lng: number }, b: { lat: number; lng: number }) => {
+  const R = 6371;
+  const rad = (d: number) => (d * Math.PI) / 180;
+  const dLat = rad(b.lat - a.lat);
+  const dLng = rad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+};
+
+export const nearestCities = (city: City, n = 6): City[] =>
+  CITIES.filter((c) => c.slug !== city.slug)
+    .map((c) => ({ c, d: distanceKm(city.geo, c.geo) }))
+    .sort((x, y) => x.d - y.d)
+    .slice(0, n)
+    .map((x) => x.c);
