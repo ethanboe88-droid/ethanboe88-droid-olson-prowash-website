@@ -80,6 +80,8 @@ export const SITE = {
   googlePlaceId: 'ChIJSb7HmsxamiDjdWoiyM5Htw',
   googleBusinessUrl:
     'https://www.google.com/maps/place/Olson+Landscaping+%26+Pro+Wash+LLC/@47.8453325,-122.1268744,15z',
+  // Short share link to the Google Business Profile — used by the footer button.
+  googleShareUrl: 'https://share.google/oTCZzYF4HlFbXreK0',
   googleReviewUrl:
     'https://search.google.com/local/writereview?placeid=ChIJSb7HmsxamiDjdWoiyM5Htw',
   social: {

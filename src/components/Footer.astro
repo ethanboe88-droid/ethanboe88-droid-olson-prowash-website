@@ -21,7 +21,7 @@ import { SERVICES } from '../data/services';
             { href: SITE.social.yelp, icon: 'yelp', label: 'Yelp' },
             { href: SITE.social.nextdoor, icon: 'nextdoor', label: 'Nextdoor' },
             { href: SITE.social.yahoo, icon: 'yahoo', label: 'Yahoo Local' },
-            { href: SITE.googleBusinessUrl, icon: 'google', label: 'Google Business Profile' },
+            { href: SITE.googleShareUrl, icon: 'google', label: 'Google Business Profile' },
           ].filter((s) => s.href).map((s) => (
             <a href={s.href} target="_blank" rel="noopener" aria-label={s.label}
                class="grid h-10 w-10 place-items-center rounded-xl border border-hairline text-text-dim transition hover:border-jet/60 hover:text-text">
